@@ -124,4 +124,12 @@ spriteTypes = {
 		name = "GFX_portrait_ALT_laika_small"
 		textureFile = "gfx/interface/ideas/ALT_laika.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ALT_tourism_influx"
+		textureFile = "gfx/interface/ideas/ALT_tourism_influx.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_apache_complete"
+		textureFile = "gfx/interface/ideas/ALT_apache_complete.dds"
+	}
 }
