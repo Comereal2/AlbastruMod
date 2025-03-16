@@ -1,12 +1,8 @@
 capital = 31
-
-oob = "irassi_units"
-
+oob = "riassi_units"
 set_convoys = 20
 set_research_slots = 3
-
 set_war_support = 0.25
-
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -21,13 +17,13 @@ set_technology = {
 }
 
 recruit_character = RIA_emekri_zoulatesh
-
 set_politics = {
 	ruling_party = democratic
 	last_election = "1935.7.21"
 	election_frequency = 48
 	elections_allowed = yes
 }
+
 set_popularities = {
 	democratic = 78
 	fascism = 4
@@ -35,5 +31,10 @@ set_popularities = {
 	neutrality = 3
 }
 
-add_ideas = { RIA_young_democracy_idea RIA_no_military_idea RIA_no_corruption_idea RIA_booming_economy_idea disarmed_nation}
-
+add_ideas = {
+	RIA_young_democracy_idea
+	RIA_no_military_idea
+	RIA_no_corruption_idea
+	RIA_booming_economy_idea
+	disarmed_nation
+}
