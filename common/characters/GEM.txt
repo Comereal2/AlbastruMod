@@ -1,0 +1,59 @@
+#Author: Comereal
+characters = {
+	GEM_cameron_montag = {
+		name = "Cameron Montag"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	GEM_kylie_sorenson = {
+		name = "Kylie Sorenson"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	GEM_jessica_williams = {
+		name = "Jessica Williams"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	GEM_max_lieu = {
+		name = "Max Lieu"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			traits = {
+			}
+			id = -1
+		}
+	}
+}

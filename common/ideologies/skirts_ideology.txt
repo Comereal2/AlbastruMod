@@ -1,0 +1,55 @@
+#Author: Comereal
+ideologies = {
+	skirts = {
+		types = {
+			femboys = {}
+			tomboys = {}
+			cuties = {}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_SKIRTS_1"
+			"FACTION_NAME_SKIRTS_2"
+			"FACTION_NAME_SKIRTS_3"
+			"FACTION_NAME_SKIRTS_4"
+			"FACTION_NAME_SKIRTS_5"
+			"FACTION_NAME_SKIRTS_6"
+		}
+		
+		color = { 226 74 216 }
+		
+		rules = {
+			can_create_collaboration_government = yes
+			can_declare_war_on_same_ideology = yes
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+		}
+		
+		can_collaborate = yes
+		can_host_government_in_exile = yes
+		war_impact_on_world_tension = 0.25
+		faction_impact_on_world_tension = 0.1
+		
+		modifiers = {
+			
+		}
+		
+		faction_modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.80
+			civilian_intel_to_others = 15.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 10.0
+			airforce_intel_to_others = 10.0
+			hidden_modifier = { join_faction_tension = -0.1 }
+			embargo_cost_factor = 1
+			lend_lease_tension = 0.50
+		}
+		
+		ai_fascist = yes
+		ai_ideology_wanted_units_factor = 1.45
+	}
+}

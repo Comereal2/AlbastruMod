@@ -1,0 +1,88 @@
+#Author: Comereal
+ideas = {
+	country = {
+		ARB_balanced_governance = {
+			picture = ARB_balanced_governance
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				war_support_factor = -0.05
+			}
+		}
+		ARB_environmental_obligations = {
+			picture = ARB_environmental_obligations
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				local_resources_factor = -0.05
+				trade_opinion_factor = 0.05
+			}
+		}
+		ARB_defensive_doctrine = {
+			picture = ARB_defensive_doctrine
+			removal_cost = -1
+			modifier = {
+				defence = 0.05
+				recruitable_population_factor = -0.05
+			}
+		}
+		ARB_regional_supremacy = {
+			picture = ARB_regional_supremacy
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		ARB_political_debate = {
+			picture = ARB_political_debate
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		ARB_expanded_welfare = {
+			picture = ARB_expanded_welfare
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+		ARB_reformed_bureaucracy = {
+			picture = ARB_reformed_bureaucracy
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				political_advisor_cost_factor = -0.05
+			}
+		}
+		ARB_integrated_industry = {
+			picture = ARB_integrated_industry
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		ARB_new_cybersecurity_directive = {
+			picture = ARB_new_cybersecurity_directive
+			removal_cost = -1
+			modifier = {
+				encryption_factor = 0.15
+				decryption_factor = 0.15
+			}
+		}
+	}
+	industrial_concern = {
+		ARB_defence_contractors = {
+			picture = ARB_defence_contractors
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+	}
+}

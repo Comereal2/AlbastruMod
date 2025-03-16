@@ -1,0 +1,7 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_cameron_montag"
+		texturefile = "gfx/leaders/GEM/CameronMontag.dds"
+	}
+}

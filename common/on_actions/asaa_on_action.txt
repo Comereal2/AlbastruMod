@@ -1,0 +1,41 @@
+#Author: Comereal
+on_actions = {
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { has_country_flag = asaa_member }
+				}
+				ROOT = {
+					set_country_flag = asaa_member
+					country_event = { id = altir.8 }
+				}
+			}
+		}
+	}
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { has_country_flag = asaa_member }
+				}
+				FROM = {
+					set_country_flag = asaa_member
+					country_event = { id = altir.8 }
+				}
+			}
+		}
+	}
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { has_country_flag = asaa_member }
+				}
+				ROOT = {
+					clr_country_flag = asaa_member
+				}
+			}
+		}
+	}
+}

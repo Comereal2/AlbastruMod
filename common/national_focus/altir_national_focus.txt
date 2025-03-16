@@ -1,0 +1,1982 @@
+#Author: Comereal
+#CURRENT STUFF TO CHANGE WHEN MERGE HAPPENS
+# ALT_ask_bluu_for_support - uncomment event call
+# ALT_follow_valtheronesia - uncomment event call
+# ALT_the_alliance_finalized and its sub-tree - add all ASAA tags to invite inside decision
+# ALT_demand_lost_lands - add the events for demanding land from RIA + add perma claims
+# ALT_isolate_riassi and everything after - uncomment + uncomment inside events used
+# Complete event altir.22
+focus_tree = {
+	id = ALT_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ALT
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 0
+		y = 1500
+	}
+	#POLITICAL
+	focus = {
+		id = ALT_abolish_the_supreme_suzerain
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 2
+		y = 0
+		allow_branch = {
+			NOT = {
+				has_completed_focus = ALT_concentrate_power
+			}
+			NOT = {
+				has_idea = ALT_scientific_nation
+			}
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cost = 5
+		mutually_exclusive = {
+			focus = ALT_concentrate_power
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		cancelable = no
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		select_effect = {
+			set_variable = {
+				var = focus_taken
+				value = 1
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+			add_political_power = 70
+			add_ideas = {
+				ALT_supreme_suzerain_deposed
+			}
+			hidden_effect = {
+				country_event = {
+					id = altir.0
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_a_brand_new_government
+		icon = GFX_goal_ALT_a_brand_new_government
+		x = 0
+		y = 1
+		relative_position_id = ALT_abolish_the_supreme_suzerain
+		cost = 5
+		prerequisite = {
+			focus = ALT_abolish_the_supreme_suzerain
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ALT_supreme_suzerain_deposed
+				add_idea = ALT_unstable_society
+			}
+			country_event = {
+				id = altir.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_follow_valtheronesia
+		icon = GFX_focus_AUS_danubian_socialist_communes
+		x = 2
+		y = 1
+		relative_position_id = ALT_a_brand_new_government
+		cost = 5
+		available = {
+			NOT = {
+				OR = {
+					has_completed_focus = ALT_towards_a_democratic_altir
+					has_completed_focus = ALT_a_bright_red_future
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = ALT_a_brand_new_government
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			#VAL = {
+			#	country_event = { altir.11 }
+			#}
+		}
+	}
+	focus = {
+		id = ALT_ask_bluu_for_support
+		icon = GFX_goal_ALT_ask_bluu_for_support
+		x = -2
+		y = 1
+		relative_position_id = ALT_a_brand_new_government
+		cost = 5
+		available = {
+			NOT = {
+				OR = {
+					has_completed_focus = ALT_towards_a_democratic_altir
+					has_completed_focus = ALT_a_bright_red_future
+				}
+			}
+		}
+		prerequisite = {
+			focus = ALT_a_brand_new_government
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+			#BLU = {
+			#	country_event = { altir.12 }
+			#}
+		}
+	}
+	focus = {
+		id = ALT_denounce_the_old_system
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 0
+		y = 1
+		relative_position_id = ALT_a_brand_new_government
+		cost = 5
+		available = {
+			NOT = {
+				OR = {
+					has_completed_focus = ALT_towards_a_democratic_altir
+					has_completed_focus = ALT_a_bright_red_future
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = {
+			focus = ALT_a_brand_new_government
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.25
+			}
+		}
+	}
+	focus = {
+		id = ALT_towards_a_democratic_altir
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 2
+		relative_position_id = ALT_a_brand_new_government
+		available = {
+			democratic > 0.4
+		}
+		bypass = {
+		}
+		cost = 5
+		prerequisite = {
+			focus = ALT_a_brand_new_government
+		}
+		mutually_exclusive = {
+			focus = ALT_a_bright_red_future
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				last_election = "1936.01.01"
+				elections_allowed = yes
+				election_frequency = 48
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_create_a_democracy
+		icon = GFX_focus_usa_voter_registration_act
+		x = 3
+		y = 1
+		relative_position_id = ALT_towards_a_democratic_altir
+		cost = 10
+		prerequisite = {
+			focus = ALT_towards_a_democratic_altir
+			focus = ALT_a_bright_red_future
+		}
+		mutually_exclusive = {
+			focus = ALT_a_red_centralized_government
+			focus = ALT_establish_free_elections
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_politics = {
+					elections_allowed = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = ALT_a_bright_red_future
+		icon = GFX_goal_support_communism
+		x = 3
+		y = 2
+		relative_position_id = ALT_a_brand_new_government
+		available = {
+			communism > 0.4
+		}
+		bypass = {
+		}
+		cost = 5
+		prerequisite = {
+			focus = ALT_a_brand_new_government
+		}
+		mutually_exclusive = {
+			focus = ALT_towards_a_democratic_altir
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				last_election = "1936.01.01"
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_a_red_centralized_government
+		icon = GFX_goal_ALT_red_government
+		x = 1
+		y = 1
+		relative_position_id = ALT_a_bright_red_future
+		cost = 10
+		prerequisite = {
+			focus = ALT_a_bright_red_future
+		}
+		mutually_exclusive = {
+			focus = ALT_create_a_democracy
+			focus = ALT_establish_free_elections
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_centralize_the_economy
+		icon = GFX_focus_DEN_limited_regulations
+		x = 1
+		y = 1
+		relative_position_id = ALT_a_red_centralized_government
+		cost = 5
+		prerequisite = {
+			focus = ALT_a_red_centralized_government
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = ALT_economic_reforms
+				days = 140
+			}
+			custom_effect_tooltip = ALT_centralize_the_economy_ctt
+			effect_tooltip = {
+				add_ideas = ALT_centralized_economy
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_establish_free_elections
+		icon = GFX_focus_BEL_v_for_victory
+		x = -1
+		y = 1
+		relative_position_id = ALT_towards_a_democratic_altir
+		cost = 10
+		prerequisite = {
+			focus = ALT_towards_a_democratic_altir
+		}
+		mutually_exclusive = {
+			focus = ALT_create_a_democracy
+			focus = ALT_a_red_centralized_government
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_concentrate_power
+		icon = GFX_focus_AFG_retire_the_uncles
+		x = 13
+		y = 0
+		relative_position_id = ALT_abolish_the_supreme_suzerain
+		allow_branch = {
+			NOT = {
+				has_completed_focus = ALT_abolish_the_supreme_suzerain
+			}
+			NOT = {
+				has_idea = ALT_scientific_nation
+			}
+		}
+		cost = 5
+		mutually_exclusive = {
+			focus = ALT_abolish_the_supreme_suzerain
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		select_effect = {
+			set_variable = {
+				var = focus_taken
+				value = 1
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.2
+			}
+			add_political_power = 70
+			hidden_effect = {
+				country_event = {
+					id = altir.0
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_revise_foreign_policy
+		icon = GFX_goal_support_fascism
+		x = 5
+		y = 1
+		relative_position_id = ALT_concentrate_power
+		cost = 5
+		prerequisite = {
+			focus = ALT_concentrate_power
+		}
+		mutually_exclusive = {
+			focus = ALT_continue_the_status_quo
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+			remove_country_leader_trait = popular_figurehead
+			remove_country_leader_trait = humble
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_invite_banned_nationalists
+		icon = GFX_focus_CHL_counter_operation_bolivar
+		x = -1
+		y = 1
+		relative_position_id = ALT_revise_foreign_policy
+		cost = 5
+		prerequisite = {
+			focus = ALT_revise_foreign_policy
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = {
+				ALT_growing_racism
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_outlaw_the_bfr
+		icon = GFX_focus_BRA_utilize_security_law
+		x = 1
+		y = 1
+		relative_position_id = ALT_revise_foreign_policy
+		prerequisite = {
+			focus = ALT_revise_foreign_policy
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = ALT_demoracy_outlawed
+			add_manpower = -5000
+			random_other_country = {
+				limit = {
+					has_government = democratic
+				}
+				country_event = altir.23
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_continue_the_status_quo
+		icon = GFX_focus_generic_self_management
+		x = -3
+		y = 1
+		relative_position_id = ALT_concentrate_power
+		available = {
+		}
+		bypass = {
+		}
+		cost = 5
+		prerequisite = {
+			focus = ALT_concentrate_power
+		}
+		mutually_exclusive = {
+			focus = ALT_revise_foreign_policy
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 70
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Isolationist branch
+	focus = {
+		id = ALT_isolationist_approach
+		icon = GFX_focus_SWI_federal_police
+		x = -2
+		y = 1
+		relative_position_id = ALT_continue_the_status_quo
+		available = {
+			has_war = no
+		}
+		cost = 10
+		prerequisite = {
+			focus = ALT_continue_the_status_quo
+		}
+		mutually_exclusive = {
+			focus = ALT_preventionist_approach
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			set_rule = {
+				can_send_volunteers = no
+				can_only_justify_war_on_threat_country = yes
+				can_join_factions = no
+			}
+			add_ideas = closed_economy
+			add_ideas = {
+				ALT_isolationism
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_focus_on_the_economy
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 0
+		y = 1
+		relative_position_id = ALT_isolationist_approach
+		cost = 10
+		prerequisite = {
+			focus = ALT_isolationist_approach
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_ideas = {
+				ALT_booming_economy
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_develop_altir
+		icon = GFX_focus_generic_improve_the_administration
+		x = 1
+		y = 1
+		relative_position_id = ALT_focus_on_the_economy
+		cost = 10
+		prerequisite = {
+			focus = ALT_focus_on_the_economy
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_develop_altir_ctt
+			hidden_effect = {
+				set_country_flag = {
+					flag = developed_states
+					value = 0
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_invest_into_civilian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		relative_position_id = ALT_focus_on_the_economy
+		cost = 10
+		prerequisite = {
+			focus = ALT_focus_on_the_economy
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_BALANCE_OF_POWER
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ALT_booming_economy
+				add_idea = ALT_booming_economy1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_expand_research_centers
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+		relative_position_id = ALT_invest_into_civilian_industry
+		cost = 10
+		prerequisite = {
+			focus = ALT_develop_altir
+			focus = ALT_invest_into_civilian_industry
+		}
+		available = {
+			is_power_balance_in_range = {
+				id = ALT_power_balance
+				range > ALT_balance_range
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_BALANCE_OF_POWER
+		}
+		completion_reward = {
+			add_ideas = {
+				ALT_expanded_research
+			}
+			add_power_balance_value = {
+				id = ALT_power_balance
+				value = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_develop_secret_projects
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x = -1
+		y = 1
+		relative_position_id = ALT_expand_research_centers
+		cost = 10
+		prerequisite = {
+			focus = ALT_expand_research_centers
+		}
+		available = {
+			OR = {
+				air_facility > 0
+				nuclear_facility > 0
+				naval_facility > 0
+				land_facility > 0
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_ideas = {
+				ALT_develop_facilities
+			}
+		}
+	}
+	focus = {
+		id = ALT_dig_up_more_resources
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		x = 0
+		y = 1
+		relative_position_id = ALT_develop_altir
+		cost = 5
+		prerequisite = {
+			focus = ALT_develop_altir
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_dig_up_more_resources_att
+				has_country_flag = {
+					flag = developed_states
+					value > 4
+				}
+			}
+			is_power_balance_in_range = {
+				id = ALT_power_balance
+				range < ALT_balance_range
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_dig_up_more_resources_ctt
+			add_power_balance_value = {
+				id = ALT_power_balance
+				value = -0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_the_last_bastion
+		icon = GFX_focus_CHL_development_inwards
+		x = -1
+		y = 1
+		relative_position_id = ALT_dig_up_more_resources
+		cost = 10
+		prerequisite = {
+			focus = ALT_expand_research_centers
+			focus = ALT_dig_up_more_resources
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = {
+				ALT_the_last_bastion_i
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_to_stand_the_test_of_time
+		icon = GFX_focus_DEN_civilian_preparations
+		x = 0
+		y = 1
+		relative_position_id = ALT_the_last_bastion
+		cost = 10
+		prerequisite = {
+			focus = ALT_the_last_bastion
+		}
+		prerequisite = {
+			focus = ALT_develop_secret_projects
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_to_stand_the_test_of_time_ctt
+			swap_ideas = {
+				remove_idea = ALT_the_last_bastion_i
+				add_idea = ALT_the_last_bastion_i1
+			}
+			swap_ideas = {
+				remove_idea = ALT_isolationism
+				add_idea = ALT_isolationism1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_disarm_the_nation
+		icon = GFX_goal_ALT_disarmed_nation
+		x = 3
+		y = 1
+		relative_position_id = ALT_isolationist_approach
+		cost = 5
+		prerequisite = {
+			focus = ALT_isolationist_approach
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = disarmed_nation
+			add_ideas = ALT_less_military_spending
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_make_a_powerful_civilian_economy
+		icon = GFX_focus_AFG_a_modern_economy
+		x = 0
+		y = 1
+		relative_position_id = ALT_disarm_the_nation
+		cost = 5
+		prerequisite = {
+			focus = ALT_disarm_the_nation
+		}
+		prerequisite = {
+			focus = ALT_focus_on_the_economy
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_ideas = improved_civilian_economy
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_allow_odezyan_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 1
+		relative_position_id = ALT_make_a_powerful_civilian_economy
+		cost = 10
+		prerequisite = {
+			focus = ALT_make_a_powerful_civilian_economy
+		}
+		prerequisite = {
+			focus = ALT_develop_altir
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_dig_up_more_resources_att
+				has_country_flag = {
+					flag = developed_states
+					value > 4
+				}
+			}
+		}
+		completion_reward = {
+			country_event = altir.21
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_eliminate_extremists
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = -2
+		y = 1
+		relative_position_id = ALT_isolationist_approach
+		cost = 5
+		prerequisite = {
+			focus = ALT_isolationist_approach
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = ALT_banned_nationalism
+			add_stability = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.15
+			}
+			add_manpower = -5000
+			random_other_country = {
+				limit = {
+					has_government = fascism
+				}
+				country_event = altir.13
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_preventionist_approach
+		icon = GFX_focus_generic_devaluation
+		x = -3
+		y = 1
+		relative_position_id = ALT_revise_foreign_policy
+		bypass = {
+			has_war = yes
+		}
+		cost = 5
+		prerequisite = {
+			focus = ALT_continue_the_status_quo
+			focus = ALT_revise_foreign_policy
+		}
+		mutually_exclusive = {
+			focus = ALT_isolationist_approach
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = {
+				ALT_proactive_foreign_policy
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Preventionist ASAA branch
+	focus = {
+		id = ALT_the_beginning_of_a_great_alliance
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 0
+		y = 1
+		relative_position_id = ALT_preventionist_approach
+		bypass = {
+			is_in_faction = yes
+		}
+		cost = 10
+		prerequisite = {
+			focus = ALT_preventionist_approach
+		}
+		mutually_exclusive = {
+			focus = ALT_altir_stands_alone
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = ALT_strained_burocracy
+				days = 70
+			}
+			add_country_leader_trait = liberal_democratic_paragon
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_build_the_hq
+		icon = GFX_focus_AFG_parliamentary_democracy
+		x = -2
+		y = 1
+		relative_position_id = ALT_the_beginning_of_a_great_alliance
+		cost = 5
+		prerequisite = {
+			focus = ALT_the_beginning_of_a_great_alliance
+		}
+		available = {
+			NOT = {
+				has_idea = ALT_strained_burocracy
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			country_event = altir.22
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_add_extra_departments
+		icon = GFX_focus_BEL_belgian_gates
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_build_the_hq
+		prerequisite = {
+			focus = ALT_build_the_hq
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_add_extra_departments_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_create_space_department
+		icon = GFX_focus_AUS_saurerwerke
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = ALT_add_extra_departments
+		prerequisite = {
+			focus = ALT_add_extra_departments
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_ideas = ALT_space_department
+			custom_effect_tooltip = empty_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ALT_laika
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_appoint_advisors
+		icon = GFX_focus_ARG_balancing_act
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_the_beginning_of_a_great_alliance
+		prerequisite = {
+			focus = ALT_the_beginning_of_a_great_alliance
+		}
+		available = {
+			NOT = {
+				has_idea = ALT_strained_burocracy
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ALT_anto_gabar
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_create_the_template
+		icon = GFX_focus_BRA_the_polaca
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = ALT_the_beginning_of_a_great_alliance
+		prerequisite = {
+			focus = ALT_the_beginning_of_a_great_alliance
+		}
+		available = {
+			NOT = {
+				has_idea = ALT_strained_burocracy
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = ALT_strained_burocracy
+				days = 70
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_find_another_use
+		icon = GFX_focus_BRA_repeale_national_security_law
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_create_the_template
+		prerequisite = {
+			focus = ALT_create_the_template
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_command_power = 10
+			army_experience = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = ALT_the_early_draft
+		icon = GFX_goal_ALT_the_early_draft
+		x = 0
+		y = 1
+		relative_position_id = ALT_appoint_advisors
+		bypass = {
+			is_in_faction = yes
+		}
+		cost = 5
+		prerequisite = {
+			focus = ALT_appoint_advisors
+		}
+		prerequisite = {
+			focus = ALT_build_the_hq
+		}
+		prerequisite = {
+			focus = ALT_create_the_template
+		}
+		available = {
+			NOT = {
+				has_idea = ALT_strained_burocracy
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			country_event = {
+				id = altir.3
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_the_alliance_finalized
+		icon = GFX_goal_ALT_the_alliance_finalized
+		x = 0
+		y = 1
+		relative_position_id = ALT_the_early_draft
+		available = {
+			always = no
+		}
+		bypass = {
+			is_in_faction = yes
+			is_faction_leader = no
+		}
+		cost = 5
+		prerequisite = {
+			focus = ALT_the_early_draft
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					check_variable = {
+						var = article_1_is_accepted
+						value = 0
+						compare = equals
+					}
+				}
+				add_ideas = {
+					ALT_asaa_border_agreement
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = article_2_is_accepted
+						value = 0
+						compare = equals
+					}
+				}
+				add_ideas = {
+					ALT_asaa_economic_agreement
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = article_3_is_accepted
+						value = 0
+						compare = equals
+					}
+				}
+				add_ideas = {
+					ALT_asaa_research_agreement
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = article_4_is_accepted
+						value = 0
+						compare = equals
+					}
+				}
+				add_ideas = {
+					ALT_asaa_military_agreement
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_invite_south_helios
+		icon = GFX_goal_ALT_the_alliance_finalized
+		x = 0
+		y = 1
+		relative_position_id = ALT_the_alliance_finalized
+		cost = 5
+		prerequisite = {
+			focus = ALT_the_alliance_finalized
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_invite_south_helios_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_invite_northern_helios
+		icon = GFX_goal_ALT_the_alliance_finalized
+		x = -4
+		y = 1
+		relative_position_id = ALT_the_alliance_finalized
+		cost = 5
+		prerequisite = {
+			focus = ALT_the_alliance_finalized
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_invite_northern_helios_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_expand_overseas
+		icon = GFX_goal_ALT_the_alliance_finalized
+		x = -2
+		y = 1
+		relative_position_id = ALT_the_alliance_finalized
+		cost = 10
+		prerequisite = {
+			focus = ALT_the_alliance_finalized
+		}
+		prerequisite = {
+			focus = ALT_add_extra_departments
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_expand_overseas_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_invite_sulia
+		icon = GFX_goal_ALT_the_alliance_finalized
+		x = 0
+		y = 1
+		relative_position_id = ALT_expand_overseas
+		cost = 5
+		prerequisite = {
+			focus = ALT_expand_overseas
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_invite_sulia_att
+				has_country_flag = sulia_department_built
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_invite_sulia_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_invite_orium
+		icon = GFX_goal_ALT_the_alliance_finalized
+		x = -2
+		y = 1
+		relative_position_id = ALT_expand_overseas
+		cost = 5
+		prerequisite = {
+			focus = ALT_expand_overseas
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_invite_orium_att
+				has_country_flag = orium_department_built
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_invite_orium_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_invite_lomezia
+		icon = GFX_goal_ALT_the_alliance_finalized
+		x = 2
+		y = 1
+		relative_position_id = ALT_expand_overseas
+		cost = 5
+		prerequisite = {
+			focus = ALT_expand_overseas
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_invite_lomezia_att
+				has_country_flag = lomezia_department_built
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_invite_lomezia_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_further_faction_integration0
+		icon = GFX_focus_generic_monarchy_1
+		x = 2
+		y = 1
+		relative_position_id = ALT_the_alliance_finalized
+		cost = 10
+		allow_branch = {
+			check_variable = {
+				asaa_complexity = 0
+			}
+			NOT = {
+				has_idea = ALT_scientific_nation
+			}
+		}
+		prerequisite = {
+			focus = ALT_the_alliance_finalized
+		}
+		prerequisite = {
+			focus = ALT_find_another_use
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_further_faction_integration_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_further_faction_integration1
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 0
+		relative_position_id = ALT_further_faction_integration0
+		cost = 15
+		allow_branch = {
+			check_variable = {
+				asaa_complexity = 1
+			}
+			NOT = {
+				has_idea = ALT_scientific_nation
+			}
+		}
+		prerequisite = {
+			focus = ALT_the_alliance_finalized
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_further_faction_integration_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_further_faction_integration2
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 0
+		relative_position_id = ALT_further_faction_integration0
+		cost = 20
+		allow_branch = {
+			check_variable = {
+				asaa_complexity = 2
+			}
+			NOT = {
+				has_idea = ALT_scientific_nation
+			}
+		}
+		prerequisite = {
+			focus = ALT_the_alliance_finalized
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_further_faction_integration_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_further_faction_integration3
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 0
+		relative_position_id = ALT_further_faction_integration0
+		cost = 25
+		allow_branch = {
+			check_variable = {
+				asaa_complexity = 3
+			}
+			NOT = {
+				has_idea = ALT_scientific_nation
+			}
+		}
+		prerequisite = {
+			focus = ALT_the_alliance_finalized
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_further_faction_integration_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_further_faction_integration4
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 0
+		relative_position_id = ALT_further_faction_integration0
+		cost = 30
+		allow_branch = {
+			check_variable = {
+				asaa_complexity = 4
+			}
+			NOT = {
+				has_idea = ALT_scientific_nation
+			}
+		}
+		prerequisite = {
+			focus = ALT_the_alliance_finalized
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_further_faction_integration_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_one_faction_one_state
+		icon = GFX_focus_ARG_balancing_act
+		x = 0
+		y = 1
+		relative_position_id = ALT_further_faction_integration0
+		cost = 20
+		prerequisite = {
+			focus = ALT_further_faction_integration0
+			focus = ALT_further_faction_integration1
+			focus = ALT_further_faction_integration2
+			focus = ALT_further_faction_integration3
+			focus = ALT_further_faction_integration4
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			set_cosmetic_tag = ASAA_ALT
+			custom_effect_tooltip = ALT_one_faction_one_state_ctt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						has_country_flag = asaa_member
+					}
+					every_core_state = {
+						add_core_of = ROOT
+					}
+					ROOT = {
+						annex_country = {
+							target = PREV
+							transfer_troops = yes
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#Preventionist Fascist branch
+	focus = {
+		id = ALT_altir_stands_alone
+		icon = GFX_focus_FIN_the_lone_wolf
+		x = 6
+		y = 1
+		relative_position_id = ALT_preventionist_approach
+		available = {
+			is_in_faction = no
+		}
+		cost = 5
+		prerequisite = {
+			focus = ALT_preventionist_approach
+		}
+		prerequisite = {
+			focus = ALT_revise_foreign_policy
+		}
+		mutually_exclusive = {
+			focus = ALT_the_beginning_of_a_great_alliance
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			set_rule = {
+				can_join_factions = no
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				long_name = ALT_das_long
+				name = ALT_das
+			}
+			add_country_leader_trait = NOR_ruthless_administrator
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_increase_military_power
+		icon = GFX_focus_AFG_royal_guard
+		x = -2
+		y = 1
+		relative_position_id = ALT_altir_stands_alone
+		prerequisite = {
+			focus = ALT_altir_stands_alone
+		}
+		cost = 5
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		completion_reward = {
+			add_country_leader_trait = SWE_ardent_conservative
+			add_ideas = {
+				ALT_increased_military_power
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_ensure_safety_on_the_border
+		icon = GFX_focus_AFG_against_kabul
+		x = 0
+		y = 1
+		relative_position_id = ALT_altir_stands_alone
+		prerequisite = {
+			focus = ALT_altir_stands_alone
+		}
+		cost = 5
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = ALT_build_forts
+				days = 140
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_influence_odezya
+		icon = GFX_focus_BEL_resist_and_bite
+		x = -1
+		y = 1
+		relative_position_id = ALT_ensure_safety_on_the_border
+		prerequisite = {
+			focus = ALT_ensure_safety_on_the_border
+		}
+		available = {
+			country_exists = ODZ
+		}
+		cost = 5
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			ODZ = {
+				add_ideas = {
+					ALT_fascist_supporters
+				}
+				country_event = altir.9
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_demand_lost_lands
+		icon = GFX_goal_generic_forceful_treaty
+		x = 2
+		y = 1
+		relative_position_id = ALT_ensure_safety_on_the_border
+		prerequisite = {
+			focus = ALT_ensure_safety_on_the_border
+		}
+		bypass = {
+			NOT = {
+				country_exists = HOL
+			}
+		}
+		cost = 5
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = ALT_coup_odezya
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = 0
+		y = 1
+		relative_position_id = ALT_influence_odezya
+		cost = 5
+		prerequisite = {
+			focus = ALT_influence_odezya
+		}
+		prerequisite = {
+			focus = ALT_demand_lost_lands
+		}
+		mutually_exclusive = {
+			focus = ALT_isolate_riassi
+		}
+		available = {
+			ODZ = {
+				fascism > 0.3
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			ODZ = {
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+					name = ALT_das
+					long_name = ALT_das_long
+				}
+			}
+		}
+	}
+	focus = {
+		id = ALT_pressure_odezya
+		icon = GFX_goal_generic_territory_or_war
+		x = 0
+		y = 1
+		relative_position_id = ALT_coup_odezya
+		cost = 10
+		available = {
+			ODZ = {
+				has_government = fascism
+			}
+		}
+		prerequisite = {
+			focus = ALT_coup_odezya
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			ODZ = {
+				country_event = altir.14
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	focus = {
+		id = ALT_isolate_riassi
+		icon = GFX_goal_generic_military_sphere
+		x = 1
+		y = 1
+		relative_position_id = ALT_demand_lost_lands
+		cost = 10
+		prerequisite = {
+			focus = ALT_demand_lost_lands
+		}
+		mutually_exclusive = {
+			focus = ALT_coup_odezya
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			every_country = {
+				#limit = {
+				#	has_guaranteed = RIA
+				#}
+				#country_event = { altir.20 }
+			}
+		}
+	}
+	focus = {
+		id = ALT_demand_annexation
+		icon = GFX_goal_demand_sudetenland
+		x = 0
+		y = 1
+		relative_position_id = ALT_isolate_riassi
+		cost = 10
+		prerequisite = {
+			focus = ALT_isolate_riassi
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			#RIA = {
+			#	country_event = altir.17
+			#}
+		}
+	}
+	#Hidden POLITICAL, SKIRTS
+	focus = {
+		id = ALT_a_time_for_the_cute
+		icon = GFX_goal_ALT_a_time_for_the_cute
+		x = 4
+		y = 0
+		relative_position_id = ALT_abolish_the_supreme_suzerain
+		allow_branch = {
+			has_idea = ALT_scientific_nation
+		}
+		cost = 5
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###################################
+	#
+	#   #######    ######    ######
+	#   #         #         #      #
+	#   #######   #         #      #
+	#   #         #         #      #
+	#   #######    ######    ######
+	#
+	###################################
+	focus = {
+		id = ALT_eco_start
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 12
+		y = 0
+		relative_position_id = ALT_concentrate_power
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_eco_1
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = ALT_eco_start
+		prerequisite = {
+			focus = ALT_eco_start
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###########################
+	#
+	#   #   #   #   #
+	#   ## ##   #   #
+	#   # # #   #   #
+	#   #   #   #   #
+	#   #   #   #   #####
+	#
+	############################
+	focus = {
+		id = ALT_mil_start
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 5
+		y = 0
+		relative_position_id = ALT_eco_start
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

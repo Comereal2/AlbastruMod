@@ -1,0 +1,160 @@
+#Author: Comereal
+capital = 36
+oob = "altir_units"
+set_research_slots = 4
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	basic_train = 1
+	motorised_infantry = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_party_name = {
+	ideology = neutrality
+	long_name = ALT_das_long
+	name = ALT_das
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = ALT_das_long
+	name = ALT_das
+}
+
+set_party_name = {
+	ideology = democratic
+	long_name = ALT_democratic_p_long
+	name = ALT_democratic_p
+}
+
+set_party_name = {
+	ideology = communism
+	long_name = ALT_communism_p_long
+	name = ALT_communism_p
+}
+
+set_party_name = {
+	ideology = skirts
+	long_name = ALT_skirts_p_long
+	name = ALT_skirts_p
+}
+
+set_popularities = {
+	democratic = 10
+	fascism = 5
+	communism = 5
+	neutrality = 80
+}
+
+set_power_balance = {
+	id = ALT_power_balance
+	left_side = ALT_worker_side
+	right_side = ALT_scientist_side
+	set_value = 0.1
+}
+
+recruit_character = ALT_supreme_suzerain
+recruit_character = ALT_f_supreme_suzerain
+recruit_character = ALT_anto_gabar
+recruit_character = ALT_laika
+add_ideas = {
+	ALT_unquestionable_authority
+	ALT_ghost_of_the_helios_empire
+	ALT_technocratic_nation
+}
+
+recruit_character = ALG_ar
+recruit_character = ALG_acr
+recruit_character = ALG_mt
+recruit_character = ALG_stc
+recruit_character = ALG_aa2
+recruit_character = ALG_acgs
+recruit_character = ALG_ncm
+recruit_character = ALG_nccr
+recruit_character = ALG_coi
+recruit_character = ALG_democratic_guy
+recruit_character = ALG_acd2
+recruit_character = ALG_acas
+recruit_character = ALG_communist_guy
+recruit_character = ALG_ncs
+recruit_character = ALG_awt
+recruit_character = ALG_pot
+recruit_character = ALG_fascist_guy
+recruit_character = ALG_ai2
+recruit_character = ALG_nt
+recruit_character = ALG_aco2
+set_convoys = 200
+1939.1.1 = {
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = large_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	set_technology = {
+		tech_support = 1
+		tech_recon = 1
+		support_weapons = 1
+		gw_artillery = 1
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+	complete_special_project = {
+		project = sp:sp_air_radar
+	}
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 25
+		fascism = 20
+		communism = 5
+		neutrality = 50
+	}
+}

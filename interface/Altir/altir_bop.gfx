@@ -1,0 +1,11 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_bop_worker_side"
+		texturefile = "gfx/interface/bop/bop_ALT_worker_side.dds"
+	}
+	spriteType = {
+		name = "GFX_bop_scientist_side"
+		texturefile = "gfx/interface/bop/bop_ALT_scientist_side.dds"
+	}
+}

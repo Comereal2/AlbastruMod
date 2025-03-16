@@ -1,0 +1,15 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_news_event_altir_01"
+		texturefile = "gfx/event_pictures/Altir/news_event_altir_01.dds"
+	}
+	spriteType = {
+		name = "GFX_event_altir_01"
+		texturefile = "gfx/event_pictures/Altir/event_altir_01.dds"
+	}
+	spriteType = {
+		name = "GFX_event_altir_02"
+		texturefile = "gfx/event_pictures/Altir/event_altir_02.dds"
+	}
+}

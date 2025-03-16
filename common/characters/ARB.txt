@@ -1,0 +1,59 @@
+#Author: Comereal
+characters = {
+	ARB_calyar_ilyas_yordan = {
+		name = "Calyar Ilyas-Yordan"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	ARB_livia_moss = {
+		name = "Livia Moss"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	ARB_alden_thornwell = {
+		name = "Alden Thornwell"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	ARB_gideon_brax = {
+		name = "Gideon Brax"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			traits = {
+			}
+			id = -1
+		}
+	}
+}

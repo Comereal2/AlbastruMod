@@ -1,0 +1,14 @@
+characters={
+	RIA_emekri_zoulatesh={
+		name=RIA_character_emekri_zoulatesh
+		portraits={
+			civilian={
+				large=GFX_portrait_RIA_character
+			} 
+		}
+		country_leader={
+			ideology=socialism
+			traits={ railroad_enthusiast the_gentleman_president champion_of_peace_5 }
+		}
+	}
+}

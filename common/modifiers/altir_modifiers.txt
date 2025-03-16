@@ -1,0 +1,8 @@
+#Author: Comereal
+
+skirt_production_bop_modifier = {
+	power_balance_daily = 0.02
+}
+decreased_science_funding_bop_modifier = {
+	power_balance_daily = -0.02
+}

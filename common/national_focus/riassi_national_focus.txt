@@ -1,0 +1,2886 @@
+focus_tree = {
+	id = riassi_focus
+	country = { 
+		base = 0
+		modifier = {
+			add = 10
+			tag = RIA
+		}
+	}
+
+	continuous_focus_position = { x = 50 y = 2000 }
+
+    #second democratic term
+	focus = {
+		id = RIA_second_democratic_term
+		icon = GFX_goal_support_democracy
+		x = 20
+		y = 0
+		cost = 10
+
+		available = {
+		    has_government = democratic
+			NOT = { has_completed_focus = RIA_snap_election }
+		}
+			completion_reward = {
+			country_event = rias_event.1
+		}
+	}
+	focus = {
+		id = RIA_riassi_aid_for_all
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		relative_position_id = RIA_second_democratic_term
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = RIA_second_democratic_term
+	    }
+		available = {
+			NOT = { has_completed_focus = RIA_stock_market_crash }
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = RIA_riassi_aid_for_all_idea
+			every_other_country = {
+				limit = {
+					has_government = democratic
+				}
+					add_opinion_modifier = {
+					target = RIA
+					modifier = aided_industry
+					}
+			}
+		}
+	}
+	focus = {
+		id = RIA_government_transparency
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		relative_position_id = RIA_second_democratic_term
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RIA_second_democratic_term
+		}
+		available = {
+			has_government = democratic
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		 }
+	}
+	focus = {
+		id = RIA_legalize_recreational_drugs
+		icon = GFX_focus_BRA_support_sugar_barons
+		cost = 10
+		relative_position_id = RIA_second_democratic_term
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = RIA_riassi_aid_for_all
+			focus = RIA_government_transparency
+		}
+		completion_reward = {
+			add_ideas = RIA_legalized_drugs_idea
+		}
+		available = {
+			NOT = { has_completed_focus = RIA_promote_conservative_ideals }
+			has_government = democratic 
+		}
+	}
+	#stock market crash
+	focus = {
+		id = RIA_stock_market_crash
+		icon = GFX_focus_ETH_adopt_the_lira 
+		cost = 0
+		x = 40
+		y = 0
+		completion_reward = { }
+
+		available = {
+			always = no
+		}
+	}
+	focus = {
+		id = RIA_the_ss_plan
+		icon = GFX_goal_generic_construct_civilian
+		cost = 1
+		relative_position_id = RIA_stock_market_crash
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_stock_market_crash
+		}
+		mutually_exclusive = {
+			focus = RIA_the_lf_plan
+		}
+		completion_reward = { 
+			remove_ideas = RIA_riassi_aid_for_all_idea
+
+			swap_ideas = {
+				remove_idea = RIA_crashed_economy_idea_1
+		        add_idea = RIA_crashed_economy_idea_2
+			}
+			swap_ideas = {
+				remove_idea = RIA_political_deadlock_idea_1
+				add_idea = RIA_political_deadlock_idea_2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_the_lf_plan
+		icon = GFX_goal_generic_defence
+		cost = 1
+		relative_position_id = RIA_stock_market_crash
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_stock_market_crash
+		}
+		mutually_exclusive = {
+			focus = RIA_the_ss_plan
+		}
+		completion_reward = { 
+			add_political_power = 50
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			remove_ideas = RIA_riassi_aid_for_all_idea
+
+			swap_ideas = {
+				remove_idea = RIA_crashed_economy_idea_1
+				add_idea = RIA_crashed_economy_idea_3
+			}
+			swap_ideas = {
+				remove_idea = RIA_political_deadlock_idea_1
+				add_idea = RIA_political_deadlock_idea_3
+			}
+		}
+	}
+	#economic recovery
+	focus = {
+		id = RIA_begin_economic_recovery
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		relative_position_id = RIA_stock_market_crash
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = RIA_the_ss_plan
+			focus = RIA_the_lf_plan
+		}
+		completion_reward = { 
+			add_political_power = -50
+			if = {
+				limit = {
+					has_idea = RIA_crashed_economy_idea_2
+				}
+			
+			swap_ideas = {
+				remove_idea = RIA_crashed_economy_idea_2
+				add_idea = RIA_crashed_economy_idea_4
+			    }
+		    }
+			else = {
+				swap_ideas = {
+					remove_idea = RIA_crashed_economy_idea_3
+					add_idea = RIA_crashed_economy_idea_5
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_support_the_farmers
+		icon = GFX_focus_generic_agricultural_subsidies
+		cost = 5
+		relative_position_id = RIA_begin_economic_recovery
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_begin_economic_recovery
+		}
+		
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = -25
+			add_timed_idea = { idea = RIA_farmers_supported_idea days = 365 }
+		}
+	}
+	focus = {
+		id = RIA_protect_small_companies
+		icon = GFX_focus_DEN_no_regulations
+		cost = 5
+		relative_position_id = RIA_support_the_farmers
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_support_the_farmers
+		}
+
+		completion_reward = {
+			add_political_power = -25
+			if = {
+				limit = {
+					has_idea = RIA_crashed_economy_idea_4
+				}
+			
+			swap_ideas = {
+				remove_idea = RIA_crashed_economy_idea_4
+				add_idea = RIA_crashed_economy_idea_6
+			    }
+		    }
+			else = {
+				swap_ideas = {
+					remove_idea = RIA_crashed_economy_idea_5
+					add_idea = RIA_crashed_economy_idea_7
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_nationalize_key_industries
+		icon = GFX_focus_DEN_heavy_regulations
+		cost = 5
+		relative_position_id = RIA_protect_small_companies
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_protect_small_companies
+		}
+
+		completion_reward = {
+			add_political_power = -50
+			if = {
+				limit = {
+					has_idea = RIA_crashed_economy_idea_6
+				}
+			
+			swap_ideas = {
+				remove_idea = RIA_crashed_economy_idea_6
+				add_idea = RIA_crashed_economy_idea_8
+			    }
+		    }
+			else = {
+				swap_ideas = {
+					remove_idea = RIA_crashed_economy_idea_7
+					add_idea = RIA_crashed_economy_idea_9
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_stop_foregin_acquisitions
+		icon = GFX_focus_generic_annex_country_2
+		cost = 5
+		relative_position_id = RIA_nationalize_key_industries
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_nationalize_key_industries
+		}
+
+		completion_reward = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+			if = {
+				limit = {
+					has_idea = RIA_crashed_economy_idea_8
+				}
+			
+			swap_ideas = {
+				remove_idea = RIA_crashed_economy_idea_8
+				add_idea = RIA_crashed_economy_idea_10
+			    }
+		    }
+			else = {
+				swap_ideas = {
+					remove_idea = RIA_crashed_economy_idea_9
+					add_idea = RIA_crashed_economy_idea_11
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = RIA_protectionism
+		icon = GFX_goal_generic_defence
+		cost = 5
+		relative_position_id = RIA_stop_foregin_acquisitions
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_stop_foregin_acquisitions
+		}
+
+		available = {
+			NOT = { 
+				has_idea = limited_exports
+				has_idea = closed_economy
+			}
+		}
+		completion_reward = { 
+			add_stability = 0.05
+			add_ideas = limited_exports
+		}
+	}
+	focus = {
+		id = RIA_regulate_the_stock_market
+		icon = GFX_focus_DEN_limited_regulations
+		cost = 5
+		relative_position_id = RIA_stop_foregin_acquisitions
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_stop_foregin_acquisitions
+		}
+		
+		completion_reward = {
+			add_political_power = -50
+			if = {
+				limit = {
+					has_idea = RIA_crashed_economy_idea_10
+				}
+			
+			swap_ideas = {
+				remove_idea = RIA_crashed_economy_idea_10
+				add_idea = RIA_crashed_economy_idea_12
+			    }
+		    }
+			else = {
+				swap_ideas = {
+					remove_idea = RIA_crashed_economy_idea_11
+					add_idea = RIA_crashed_economy_idea_13
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_finalize_economic_recovery
+		icon = GFX_focus_generic_currency_reforms
+		cost = 5
+		relative_position_id = RIA_regulate_the_stock_market
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_regulate_the_stock_market
+		}
+		completion_reward = {
+            add_political_power = -50
+			add_popularity = {
+				ideology = ROOT
+				popularity = 0.05
+			}
+			if = {
+				limit = {
+					has_idea = RIA_crashed_economy_idea_12
+				}
+			remove_ideas = RIA_crashed_economy_idea_12
+			}
+			else = {
+				remove_ideas = RIA_crashed_economy_idea_13
+			}
+		}
+	}
+	#mining branch
+	focus = {
+		id = RIA_open_new_mines
+		icon = GFX_focus_generic_mining_industry
+		cost = 5
+		relative_position_id = RIA_finalize_economic_recovery
+		x = -3
+		y = 1
+
+		prerequisite = {
+			focus = RIA_finalize_economic_recovery
+		}
+		available = {
+			has_tech = excavation1
+		}
+
+		completion_reward = {
+			794 = {
+				add_resource = {
+					type = tungsten
+					amount = 12
+				}
+			}
+			31 = {
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_expand_the_mines
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		relative_position_id = RIA_open_new_mines
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_open_new_mines
+		}
+		available = {
+			has_tech = excavation3
+		}
+		completion_reward = {
+			794 = {
+				add_resource = {
+					type = tungsten
+					amount = 12
+				}
+			}
+			31 = {
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+			22 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			}
+			19 = {
+				add_resource = {
+					type = aluminium
+					amount = 15
+				}
+			}
+			166 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+			792 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+	#high-speed railways
+	focus = {
+		id = RIA_build_new_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		relative_position_id = RIA_finalize_economic_recovery
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = RIA_finalize_economic_recovery
+		}
+
+		completion_reward = {
+			build_railway = {
+			    level = 2
+			    path = { 915 9882 3915 6766 }
+			    start_province = 915
+			    target_province = 6766
+			}
+			build_railway = {
+			    level = 1
+			    path = { 6878 9857 932 3735 13233 }
+			    start_province = 6878
+			    target_province = 13233
+			}
+			build_railway = {
+			    level = 1
+			    path = { 11709 752 11718 3771 6618 620 }
+			    start_province = 11709
+			    target_province = 620
+			}
+			build_railway = {
+			    level = 1
+			    path = { 3598 6792 11565 }
+			    start_province = 3598
+			    target_province = 11565
+			}
+			
+			add_timed_idea = {
+				idea = RIA_building_railways_idea
+				days = 70
+			}
+		}
+	}
+	focus = {
+		id = RIA_start_high_speed_rail_construction
+		icon = GFX_focus_GER_kriegslokomotive
+		cost = 10
+		relative_position_id = RIA_build_new_railways
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_build_new_railways
+		}
+		available = {
+			NOT = { has_idea = RIA_building_railways_idea }
+		}
+
+		completion_reward = {
+			build_railway = {
+			    level = 2
+			    path = { 6766 943 9723 6960 }
+			    start_province = 6766
+			    target_province = 6960
+			}
+			build_railway = {
+				level = 1
+				path = { 6960 3946 9853 9824 }
+				start_province = 6960
+				target_province = 9824
+			}
+			build_railway = {
+			    level = 2
+			    path = { 9824 854 9764 }
+			    start_province = 9824
+			    target_province = 9764
+			}
+			build_railway = {
+				level = 1
+				path = { 9764 6812 6966 13223 3954 3816 }
+				start_province = 9764
+				target_province = 3816
+			}
+			build_railway = {
+			    level = 1
+			    path = { 6766 3749 11699 11697 743 6756 740 }
+			    start_province = 6766
+			    target_province = 740
+			}
+			build_railway = {
+			    level = 1
+			    path = { 6766 11702 6775 11720 9717 9737 }
+			    start_province = 6766
+			    target_province = 9737
+			}
+			build_railway = {
+			    level = 1
+			    path = { 6766 3915 9882 915 11821 9813 3816 }
+			    start_province = 6766
+			    target_province = 3816
+			}
+			build_railway = {
+			    level = 1
+			    path = { 6960 9898 }
+			    start_province = 6960
+			    target_province = 9898
+			}
+			build_railway = {
+			    level = 2
+			    path = { 3816 6878 9857 932 3735 13233 740 }
+			    start_province = 3816
+			    target_province = 740
+			}
+			build_railway = {
+			    level = 2
+			    path = { 9737 6777 9710 743 }
+			    start_province = 9737
+			    target_province = 743
+			}
+			
+			add_timed_idea = {
+				idea = RIA_building_railways_idea
+				days = 140
+			}
+		}
+	}
+	focus = {
+		id = RIA_finish_high_speed_rail_construction
+		icon = GFX_focus_BEL_engine_of_the_economy
+		cost = 10
+		relative_position_id = RIA_start_high_speed_rail_construction
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_start_high_speed_rail_construction
+		}
+		available = {
+			NOT = { has_idea = RIA_building_railways_idea }
+		}
+		completion_reward = {
+			
+			build_railway = {
+			    level = 2
+			    path = { 6766 943 9723 6960 3946 9853 9824 854 9764 }
+			    start_province = 6766
+			    target_province = 9764
+			}
+			build_railway = {
+				level = 2
+				path = { 9764 6812 6966 13223 3954 3816 }
+				start_province = 9764
+				target_province = 3816
+			}
+			build_railway = {
+			    level = 2
+			    path = { 6766 3915 9882 915 11821 9813 3816 }
+			    start_province = 6766
+			    target_province = 3816
+			}
+			build_railway = {
+			    level = 2
+			    path = { 3816 6878 9857 932 3735 13233 740 }
+			    start_province = 3816
+			    target_province = 740
+			}
+			build_railway = {
+			    level = 2
+			    path = { 6766 3749 11699 11697 743 6756 740 }
+			    start_province = 6766
+			    target_province = 740
+			}
+			build_railway = {
+			    level = 2
+			    path = { 6766 11702 6775 11720 9717 9737 }
+			    start_province = 6766
+			    target_province = 9737
+			}
+
+			
+			add_timed_idea = {
+				idea = RIA_building_railways_idea
+				days = 140
+			}
+		}
+	}
+	#prio economic growth
+	focus = {
+		id = RIA_prioritize_economic_growth
+		icon = GFX_focus_generic_modernize_industry
+		cost = 10
+		relative_position_id = RIA_finalize_economic_recovery
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_finalize_economic_recovery
+		}
+		mutually_exclusive = {
+			focus = RIA_expand_the_military_industrial_complex
+		}
+		completion_reward = {
+			add_ideas = RIA_economic_growth_prioritized_idea
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_expand_the_tourism_industry
+		icon = GFX_goal_generic_air_fighter2
+		cost = 5
+		relative_position_id = RIA_prioritize_economic_growth
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_prioritize_economic_growth
+		}
+
+		bypass = {
+			has_war = yes
+			has_civil_war = yes
+		}
+
+		completion_reward = {
+			add_ideas = RIA_tourism_industry_idea
+			random_owned_controlled_state = {
+				prioritize = { 31 }
+				if = {
+					limit = { 
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = air_base
+						level = 6
+						instant_build = yes
+					}
+				}
+			}
+		}
+    }
+	focus = {
+		id = RIA_modernize_the_roads
+		icon = GFX_focus_generic_road_investment
+		cost = 5
+		relative_position_id = RIA_expand_the_tourism_industry
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_expand_the_tourism_industry
+		}
+		prerequisite = {
+			focus = RIA_start_high_speed_rail_construction
+		}
+
+		completion_reward = {
+			add_timed_idea = { 
+				idea = RIA_infrastructure_investments_idea
+				days = 365
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#military-industrial complex
+    focus = {
+		id = RIA_expand_the_military_industrial_complex
+		icon = GFX_focus_generic_tank_production
+		cost = 10
+		relative_position_id = RIA_finalize_economic_recovery
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_finalize_economic_recovery
+		}
+		mutually_exclusive = {
+			focus = RIA_prioritize_economic_growth
+		}
+		completion_reward = { 
+			if = {
+				limit = {
+					NOT = { has_idea = partial_economic_mobilisation }
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = partial_economic_mobilisation        
+			}
+			else_if = {
+				limit = {
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = war_economy        
+			}
+            else = {
+                add_political_power = 150
+            }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_restart_plorvex_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		relative_position_id = RIA_expand_the_military_industrial_complex
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_expand_the_military_industrial_complex
+		}
+
+		completion_reward = {
+			random_core_state = {
+				prioritize = { 166 }
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			add_tech_bonus = {
+				name = SWE_husqvarna_vapenfabrik
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+
+			add_tech_bonus = {
+				name = SWE_husqvarna_vapenfabrik
+				bonus = 1.0
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	focus = {
+		id = RIA_improve_production_methods
+		icon = GFX_goal_generic_production2
+		cost = 5
+		relative_position_id = RIA_restart_plorvex_arms_industry
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_restart_plorvex_arms_industry
+		}
+		completion_reward = {
+			add_ideas = RIA_improved_production_methods_idea
+		 }
+	}
+	focus = {
+		id = RIA_start_fuel_refining
+		icon = GFX_goal_generic_oil_refinery
+		cost = 5
+		relative_position_id = RIA_restart_plorvex_arms_industry
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_restart_plorvex_arms_industry
+		}
+		prerequisite = {
+			focus = RIA_expand_the_mines
+		}
+		available = {
+			has_tech = synth_oil_experiments
+		}
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+				}
+				prioritize = { 19 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = GER_coal_liquefaction
+				bonus = 1
+				uses = 2
+				category = synth_resources
+			}
+		 }
+	}
+	#final parts economic tree
+	focus = {
+		id = RIA_expand_university_of_riastok
+		icon = GFX_focus_research
+		cost = 10
+		relative_position_id = RIA_improve_production_methods
+		x = 1
+		y = 1
+		
+		prerequisite = {
+			focus = RIA_improve_production_methods
+			focus = RIA_modernize_the_roads
+		}
+		available = {
+			num_of_civilian_factories > 30
+		}
+		
+		completion_reward = { 
+			add_research_slot = 1
+		}
+	}
+	#political crisis
+	focus = {
+		id = announce_RIA_snap_elections
+		icon = GFX_goal_generic_propaganda
+		cost = 1
+		relative_position_id = RIA_begin_economic_recovery
+		x = -15
+		y = 0
+
+		prerequisite = {
+			focus = RIA_the_ss_plan
+			focus = RIA_the_lf_plan
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = RIA_political_deadlock_idea_2
+				}
+			
+			swap_ideas = {
+				remove_idea = RIA_political_deadlock_idea_2
+				add_idea = RIA_political_deadlock_idea_4
+			    }
+		    }
+			else = {
+				swap_ideas = {
+					remove_idea = RIA_political_deadlock_idea_3
+					add_idea = RIA_political_deadlock_idea_5
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_snap_election
+		icon = GFX_focus_CHL_1938_chilean_presidential_election
+		cost = 5
+		relative_position_id = announce_RIA_snap_elections
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = announce_RIA_snap_elections
+		}
+		completion_reward = {
+			country_event = rias_event.3
+		}
+	}
+	focus = {
+		id = RIA_stalemate
+		icon = GFX_focus_generic_national_security
+		cost = 0
+		relative_position_id = RIA_snap_election
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_snap_election
+		}
+		
+		
+		available = {
+			always = no
+		}
+	}
+	focus = {
+		id = RIA_prepare_for_new_elections
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
+		cost = 5
+		relative_position_id = RIA_stalemate
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_stalemate
+		}
+
+        completion_reward = {
+			add_political_power = 70
+		}
+	}
+	focus = {
+		id = RIA_increasing_political_violence
+		icon = GFX_focus_generic_workers
+		cost = 5
+		relative_position_id = RIA_stalemate
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_stalemate
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_ideas = RIA_political_violence_idea
+			unlock_decision_tooltip = RIA_establish_dem_para_org
+		}
+	
+	}
+	focus = {
+		id = second_RIA_snap_election
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		cost = 5
+		relative_position_id = RIA_prepare_for_new_elections
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_prepare_for_new_elections
+		}
+		prerequisite = {
+			focus = RIA_increasing_political_violence
+		}
+
+		completion_reward = {
+			country_event = rias_event.4
+		}
+	}
+	#democratic coalition
+	focus = { 
+		id = RIA_grand_coalition
+		icon = GFX_focus_BEL_belgian_gates
+		cost = 0
+		relative_position_id = second_RIA_snap_election
+		x = 5
+		y = 1
+
+		prerequisite = {
+			focus = second_RIA_snap_election
+		}
+		mutually_exclusive = {
+			focus = RIA_treading_the_line
+		}
+
+		available = {
+			always = no
+		}
+
+	}
+	focus = {
+		id = RIA_coalition_talks
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 5
+		relative_position_id = RIA_grand_coalition
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_grand_coalition
+		}
+		mutually_exclusive = {
+			focus = RIA_march_on_riastok
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RIA_grand_coalition_idea
+				add_idea = RIA_grand_coalition_idea_2
+			    }
+		}
+	}
+	focus = {
+		id = RIA_anti_fascist_efforts
+		icon = GFX_focus_AUS_ban_dnsap
+		cost = 5
+		relative_position_id = RIA_coalition_talks
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_coalition_talks
+	    }
+
+		completion_reward = {
+			
+            add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+
+			if = {
+				limit = {
+					has_idea = RIA_grand_coalition_idea_2
+				}
+				swap_ideas = {
+					remove_idea = RIA_grand_coalition_idea_2
+					add_idea = RIA_grand_coalition_idea_4
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = RIA_grand_coalition_idea_3
+						add_idea = RIA_grand_coalition_idea_5
+					}
+				}
+			}
+		}
+    }
+	focus = {
+		id = RIA_promote_unity_within_the_coalition
+		icon = GFX_goal_generic_major_alliance
+		cost = 5
+		relative_position_id = RIA_coalition_talks
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_coalition_talks
+	    }
+
+		completion_reward = {
+			
+			add_political_power = 50
+
+			if = {
+				limit = {
+					has_idea = RIA_grand_coalition_idea_2
+				}
+				swap_ideas = {
+					remove_idea = RIA_grand_coalition_idea_2
+					add_idea = RIA_grand_coalition_idea_3
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = RIA_grand_coalition_idea_4
+						add_idea = RIA_grand_coalition_idea_5
+					}
+				}
+			}
+		}
+    }
+	focus = {
+		id = disband_the_RIA_grand_coalition
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 5
+		relative_position_id = RIA_coalition_talks
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = RIA_anti_fascist_efforts
+		}
+		prerequisite = {
+			focus = RIA_promote_unity_within_the_coalition
+		}
+		available = {
+			NOT = { fascism > 0.08 }
+		}
+
+		completion_reward = {
+            add_stability = 0.05
+			remove_ideas = RIA_grand_coalition_idea_5
+			remove_ideas = RIA_political_violence_idea
+		}
+	}
+	focus = {
+		id = RIA_minority_government
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 5
+		relative_position_id = disband_the_RIA_grand_coalition
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = disband_the_RIA_grand_coalition
+		}
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = RIA_slow_return_to_normalcy
+		icon = GFX_focus_SWE_refuge_from_war
+		cost = 5
+		relative_position_id = disband_the_RIA_grand_coalition
+		x = 0
+		y = 2
+		 
+		prerequisite = {
+			focus = RIA_minority_government
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = RIA_dp_ss_merger
+		icon = GFX_goal_generic_improve_relations
+		cost = 5
+		relative_position_id = RIA_coalition_talks
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = RIA_coalition_talks
+		}
+		available = {
+			has_completed_focus = RIA_the_ss_plan
+			NOT = { has_completed_focus = RIA_the_lf_plan}
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.025
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = RIA_democratic_solidarity_long
+				name = RIA_democratic_solidarity
+			}
+		}
+	}
+	#communist path
+	focus = {
+		id = RIA_work_with_the_commies
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 5
+		relative_position_id = RIA_dp_ss_merger
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_dp_ss_merger
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.01
+			}
+			add_stability = -0.025
+		}
+	}
+	focus = {
+		id = RIA_communists_in_the_government
+		icon = GFX_focus_generic_soviet_politics
+		cost = 5
+		relative_position_id = RIA_work_with_the_commies
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_work_with_the_commies
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.025
+			}
+			add_stability = -0.05
+			remove_ideas = RIA_no_corruption_idea
+		}
+	}
+	focus = {
+		id = RIA_back_in_business
+		icon = GFX_goal_support_communism
+		cost = 10
+		relative_position_id = RIA_communists_in_the_government
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = RIA_communists_in_the_government
+		}
+		prerequisite = {
+			focus = RIA_minority_government
+		}
+		available = {
+			communism > 0.45
+		}
+		mutually_exclusive = {
+			focus = RIA_the_republic_survives
+		}
+		completion_reward = {
+			add_stability = -0.1
+			remove_ideas = RIA_young_democracy_idea
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+	}
+	focus = {
+		id = RIA_march_on_riastok
+		icon = GFX_focus_generic_fascist_troops
+		cost = 0
+		relative_position_id = RIA_grand_coalition
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_grand_coalition
+		}
+		mutually_exclusive = {
+			focus = RIA_coalition_talks
+		}
+		available = {
+			always = no
+		}
+	}
+	#democratic civil war
+	focus = {
+		id = RIA_march_failure
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 0
+		relative_position_id = RIA_march_on_riastok
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_march_on_riastok
+		}
+		mutually_exclusive = {
+			focus = RIA_march_success
+		}
+		available = {
+			always = no
+		}
+	}
+	focus = {
+		id = RIA_ban_fascism
+		icon = GFX_focus_POL_ban_nazi_party
+		cost = 5
+		relative_position_id = RIA_march_failure
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_march_failure
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			set_political_party = {
+				ideology = fascism
+				popularity = 0
+			}
+			add_ideas = RIA_fascism_banned_idea
+			remove_ideas = RIA_no_corruption_idea
+			swap_ideas = {
+				remove_idea = RIA_failed_coup_idea
+				add_idea = RIA_failed_coup_idea_2
+			}
+		}
+	}
+	focus = {
+		id = RIA_prohibit_para_orgs
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		relative_position_id = RIA_ban_fascism
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_ban_fascism
+		}
+
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+			if = {
+				limit = {
+					has_idea = RIA_democratic_paramilitary_idea
+				}
+				remove_ideas = RIA_democratic_paramilitary_idea
+			}
+			swap_ideas = {
+				remove_idea = RIA_failed_coup_idea_2
+				add_idea = RIA_failed_coup_idea_3
+			}
+		}
+	}
+	focus = {
+		id = RIA_reject_extremism
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		relative_position_id = RIA_prohibit_para_orgs
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_prohibit_para_orgs
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			add_stability = -0.05
+			remove_ideas = RIA_failed_coup_idea_3
+			remove_ideas = RIA_political_violence_idea
+		}
+	}
+	focus = {
+		id = RIA_the_republic_survives
+		icon = GFX_goal_support_democracy
+		cost = 10
+		relative_position_id = RIA_reject_extremism
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_reject_extremism
+			focus = RIA_slow_return_to_normalcy
+		}
+		available = {
+			has_completed_focus = RIA_finalize_economic_recovery
+			has_government = democratic
+		}
+		mutually_exclusive = {
+			focus = RIA_back_in_business
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			if = {
+				limit = {
+					has_completed_focus = RIA_march_on_riastok
+				}
+				add_stability = 0.25
+			}
+			else = {
+				add_stability = 0.1
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = RIA_young_democracy_idea
+				add_idea = RIA_experienced_democracy_idea
+			}
+		}
+	}
+	#fascist civil war
+	focus = {
+		id = RIA_march_success
+		icon = GFX_goal_support_fascism
+		cost = 0
+		relative_position_id = RIA_march_on_riastok
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_march_on_riastok
+		}
+		mutually_exclusive = {
+			focus = RIA_march_failure
+		}
+		available = {
+			always = no
+		}
+	}
+	focus = {
+		id = RIA_eliminate_the_opposition
+		icon = GFX_focus_generic_conspiracy
+		cost = 5
+		relative_position_id = RIA_march_success
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_march_success
+		}
+		available = {
+			has_government = fascism
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			swap_ideas = {
+				remove_idea = RIA_democratic_resistance_idea
+				add_idea = RIA_democratic_resistance_idea_2
+			}
+			kill_ideology_leader = democratic
+			kill_ideology_leader = communism
+		}
+	}
+	focus = {
+		id = RIA_violent_suppression
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
+		relative_position_id = RIA_eliminate_the_opposition
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_eliminate_the_opposition
+		}
+		available = {
+			has_government = fascism
+		}
+
+		completion_reward = {
+			add_political_power = -25
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			swap_ideas = {
+				remove_idea = RIA_democratic_resistance_idea_2
+				add_idea = RIA_democratic_resistance_idea_3
+			}
+		}
+	}
+	focus = {
+		id = RIA_retake_yentrok
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		relative_position_id = RIA_violent_suppression
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_violent_suppression
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+		available = {
+			has_government = fascism
+		}
+	}
+	focus = {
+		id = RIA_death_of_the_republic
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 5
+		relative_position_id = RIA_retake_yentrok
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_retake_yentrok
+		}
+		available = {
+			has_government = fascism
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			remove_ideas = RIA_democratic_resistance_idea_3
+			remove_ideas = RIA_political_violence_idea
+		}
+	}
+	#fascist coalition
+	focus = { 
+		id = RIA_treading_the_line
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		cost = 0
+		relative_position_id = second_RIA_snap_election
+		x = -5
+		y = 1
+
+		prerequisite = {
+			focus = second_RIA_snap_election
+		}
+		mutually_exclusive = {
+			focus = RIA_grand_coalition
+		}
+
+		available = {
+			always = no
+		}
+	}
+	#fascist takeover
+	focus = {
+		id = RIA_appeal_to_the_center
+		icon = GFX_focus_generic_concessions
+		cost = 5
+		relative_position_id = RIA_treading_the_line
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = RIA_treading_the_line
+		}
+		mutually_exclusive = {
+			focus = RIA_undermine_the_fascists
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = RIA_treading_the_line_idea
+				add_idea = RIA_treading_the_line_idea_2
+			}
+			retire_ideology_leader = fascism
+		}
+	}
+	focus = {
+		id = RIA_take_over_ministries
+		icon = GFX_focus_SWI_embrace_panoramaheim
+		cost = 5
+		relative_position_id = RIA_appeal_to_the_center
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_appeal_to_the_center
+		}
+
+		completion_reward = {
+			add_political_power = -25
+			swap_ideas = {
+				remove_idea = RIA_treading_the_line_idea_2
+				add_idea = RIA_treading_the_line_idea_3
+			}
+		}
+	}
+	focus = {
+		id = RIA_subtle_propaganda
+		icon = GFX_focus_generic_fascist_propaganda
+		cost = 5
+		relative_position_id = RIA_take_over_ministries
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_take_over_ministries
+		}
+
+		completion_reward = {
+			add_political_power = -25
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+		    }
+			add_ideas = RIA_fascist_propaganda_idea
+	    }
+	}
+	focus = {
+		id = RIA_restrict_voting_rights
+		icon = GFX_focus_usa_voter_registration_act
+		cost = 5
+		relative_position_id = RIA_subtle_propaganda
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_subtle_propaganda
+		}
+		available = {
+			fascism > 0.5
+		}
+
+		completion_reward = {
+			add_political_power = -25
+			swap_ideas = {
+				remove_idea = RIA_treading_the_line_idea_3
+				add_idea = RIA_treading_the_line_idea_4
+			}
+		}
+	}
+	focus = {
+		id = RIA_demand_the_presidency
+		icon = GFX_focus_SWE_organize_a_putsch
+		cost = 5
+		relative_position_id = RIA_restrict_voting_rights
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_restrict_voting_rights
+		}
+		available = {
+			fascism > 0.65
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			remove_ideas = RIA_treading_the_line_idea_4
+			remove_ideas = RIA_political_violence_idea
+			remove_ideas = RIA_young_democracy_idea
+		}
+	}
+	focus = {
+		id = RIA_fascism_achieved
+		icon = GFX_goal_support_fascism
+		cost = 5
+		relative_position_id = RIA_demand_the_presidency
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_demand_the_presidency
+		}
+		available = {
+			has_government = fascism
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	#conservative democracy
+	focus = {
+		id = RIA_undermine_the_fascists
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 5
+		relative_position_id = RIA_treading_the_line
+		x = -3
+		y = 1
+
+		prerequisite = {
+			focus = RIA_treading_the_line
+		}
+		mutually_exclusive = {
+			focus = RIA_appeal_to_the_center
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			swap_ideas = {
+				remove_idea = RIA_treading_the_line_idea
+				add_idea = RIA_treading_the_line_idea_5
+			}
+		}
+	}
+	focus = {
+		id = RIA_right_wing_republicanism
+		icon = GFX_focus_NOR_send_the_king_back_to_denmark
+		cost = 5
+		relative_position_id = RIA_undermine_the_fascists
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_undermine_the_fascists
+		}
+		mutually_exclusive = {
+			focus = RIA_monarchist_movement
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = RIA_promote_conservative_ideals
+		icon = GFX_focus_generic_limited_social_mobilization
+		cost = 5
+		relative_position_id = RIA_right_wing_republicanism
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_right_wing_republicanism
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RIA_treading_the_line_idea_5
+				add_idea = RIA_treading_the_line_idea_6
+			}
+			if = {
+				limit = {
+					has_idea = RIA_legalized_drugs_idea
+				}
+				remove_ideas = RIA_legalized_drugs_idea
+			}
+		}
+	}
+	focus = {
+		id = RIA_anti_communist_rethoric
+		icon = GFX_goal_anti_comintern_pact
+		cost = 5
+		relative_position_id = RIA_promote_conservative_ideals
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_promote_conservative_ideals
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			swap_ideas = {
+				remove_idea = RIA_treading_the_line_idea_6
+				add_idea = RIA_treading_the_line_idea_7
+			}
+		}
+	}
+	focus = {
+		id = RIA_strengthen_the_central_government
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5
+		relative_position_id = RIA_anti_communist_rethoric
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_anti_communist_rethoric
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = RIA_a_new_republic
+		icon = GFX_goal_support_democracy
+		cost = 10
+		relative_position_id = RIA_strengthen_the_central_government
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_strengthen_the_central_government
+		}
+		available = {
+			has_completed_focus = RIA_finalize_economic_recovery
+			has_government = democratic
+		}
+
+		completion_reward = {
+			remove_ideas = RIA_treading_the_line_idea_7
+			remove_ideas = RIA_political_violence_idea
+			swap_ideas = {
+				remove_idea = RIA_young_democracy_idea
+				add_idea = RIA_experienced_democracy_idea
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+	#monarchist path
+	focus = {
+		id = RIA_monarchist_movement
+		icon = GFX_focus_generic_monarchist_sentiment
+		cost = 0
+		relative_position_id = RIA_undermine_the_fascists
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_undermine_the_fascists
+		}
+		mutually_exclusive = {
+			focus = RIA_right_wing_republicanism
+		}
+		available = {
+			always = no
+		}
+	}
+	focus = {
+		id = RIA_expand_support
+		icon = GFX_focus_generic_monarchy_2
+		cost = 5
+		relative_position_id = RIA_monarchist_movement
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_monarchist_movement
+		}
+
+		completion_reward = {
+			add_political_power = -25
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = RIA_monarchist_movement_idea
+				add_idea = RIA_monarchist_movement_idea_2
+			}
+		}
+	}
+	focus = {
+		id = RIA_permit_royals_in_rias
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 5
+		relative_position_id = RIA_expand_support
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_expand_support
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_political_power = 50
+			add_stability = -0.05
+			swap_ideas = {
+				remove_idea = RIA_monarchist_movement_idea_2
+				add_idea = RIA_monarchist_movement_idea_3
+			}
+			set_party_name = {
+				ideology = neutrality
+				name = RIA_king_party
+				long_name = RIA_king_party_long
+			}
+		}
+	}
+	focus = {
+		id = RIA_monarchist_referendum
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 5
+		relative_position_id = RIA_permit_royals_in_rias
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_permit_royals_in_rias
+		}
+		available = {
+			neutrality > 0.5
+		}
+		completion_reward = {
+			country_event = rias_event.6
+		}
+	}
+	focus = {
+		id = RIA_constitutional_monarchy
+		icon = GFX_focus_GER_monarchy_compromise
+		cost = 0
+		relative_position_id = RIA_monarchist_referendum
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_monarchist_referendum
+		}
+		mutually_exclusive = {
+			focus = RIA_absolute_monarchy
+		}
+		available = {
+			always = no
+		}
+	}
+	focus = {
+		id = RIA_absolute_monarchy
+		icon = GFX_focus_generic_monarchy_1
+		cost = 0
+		relative_position_id = RIA_monarchist_referendum
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_monarchist_referendum
+		}
+		mutually_exclusive = {
+			focus = RIA_constitutional_monarchy
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	#military tree
+	focus = {
+		id = RIA_defense_of_the_nation
+		icon = GFX_goal_generic_small_arms
+		cost = 5
+		x = 50
+		y = 0
+
+		available = {
+			threat > 0.1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = RIA_omozenith_idea
+		}
+	}
+	#defense compromise
+	focus = {
+		id = RIA_defense_compromise
+		icon = GFX_focus_SWE_defense_act
+		cost = 10
+		relative_position_id = RIA_defense_of_the_nation
+		x = -3
+		y = 1
+
+		prerequisite = {
+			focus = RIA_defense_of_the_nation
+		}
+		mutually_exclusive = {
+			focus = RIA_begin_full_remilitarization
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RIA_omozenith_idea
+				add_idea = RIA_omozenith_idea_2
+			}
+			swap_ideas = {
+				remove_idea = RIA_no_military_idea
+				add_idea = RIA_no_military_idea_2
+			}
+		}
+	}
+	focus = {
+		id = RIA_build_bunkers
+		icon = GFX_goal_generic_fortify_city
+		cost = 5
+		relative_position_id = RIA_defense_compromise
+		x = 1
+		y = 1
+		
+		prerequisite = {
+			focus = RIA_defense_compromise
+		}
+		
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = SPR_no_pasaran_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_victory_point = yes
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_victory_point > 2
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_victory_point > 9
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_victory_point > 29
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_aerial_defense
+		icon = GFX_goal_generic_construct_military
+		cost = 10
+		relative_position_id = RIA_build_bunkers
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_build_bunkers
+		}
+		completion_reward = { 
+			every_owned_state = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+			    }
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_anti_air
+			}
+		}
+	}
+	focus = {
+		id = RIA_study_the_construction_of_forts
+		icon = GFX_focus_generic_university_3
+		cost = 10
+		relative_position_id = RIA_build_bunkers
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_build_bunkers
+		}
+		completion_reward = { 
+			add_ideas = RIA_fort_idea
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = cat_fortification
+			}
+		}
+	}
+	focus = {
+		id = RIA_employ_civilian_workshops
+		icon = GFX_goal_generic_production
+		cost = 10
+		relative_position_id = RIA_defense_compromise
+		x = -1
+		y = 1
+		
+		prerequisite = {
+			focus = RIA_defense_compromise
+		}
+
+		completion_reward = { 
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+			}
+		}
+	}
+	focus = {
+		id = RIA_recruit_civilian_volunteers
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		cost = 10
+		relative_position_id = RIA_employ_civilian_workshops
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_employ_civilian_workshops
+		}
+		bypass = {
+			NOT = {
+				has_idea = disarmed_nation
+			}
+		}
+
+		completion_reward = {
+			add_ideas = volunteer_only
+			add_manpower = 25000
+		}
+	}
+	focus = {
+		id = RIA_bolster_patriotism
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		relative_position_id = RIA_study_the_construction_of_forts
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_recruit_civilian_volunteers
+		}
+		prerequisite = {
+			focus = RIA_study_the_construction_of_forts
+		}
+		completion_reward = { 
+			add_war_support = 0.1
+			add_ideas = RIA_defensive_spirit_idea
+		}
+	}
+	#full remilitarization
+	focus = {
+		id = RIA_begin_full_remilitarization
+		icon = GFX_focus_secret_rearmament
+		cost = 10
+		relative_position_id = RIA_defense_of_the_nation
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = RIA_defense_of_the_nation
+		}
+		mutually_exclusive = {
+			focus = RIA_defense_compromise
+		}
+	}
+	#New Elections
+	focus = {
+		id = RIA_hold_new_elections
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
+		cost = 10
+		x = 65
+		y = 0
+
+		available = {
+			date > 1939.7.21
+			has_government = democratic
+				OR = { 
+					has_completed_focus = RIA_the_republic_survives
+	                has_completed_focus = RIA_a_new_republic
+					has_completed_focus = RIA_constitutional_monarchy
+			}
+		}
+		completion_reward = { 
+			if = {
+				limit = {
+					has_completed_focus = RIA_the_republic_survives
+				}
+				country_event = rias_election_event.1
+			}
+			else = {
+				country_event = rias_election_event.2
+			}
+		}
+	}
+	#democratic win
+	focus = {
+		id = RIA_democratic_win
+		icon = GFX_focus_generic_red_flags
+		cost = 0
+        relative_position_id = RIA_hold_new_elections
+		x = -5
+		y = 1
+
+		available = {
+			always = no
+		}
+		mutually_exclusive = {
+			focus = RIA_liberal_win
+			focus = RIA_conservative_win
+		}
+
+		prerequisite = {
+			focus = RIA_hold_new_elections
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = RIA_reestablish_riassi_aid_for_all
+		icon = GFX_focus_generic_treaty
+		cost = 5
+		relative_position_id = RIA_democratic_win
+		x = -3
+		y = 1
+
+		prerequisite = {
+			focus = RIA_democratic_win
+		}
+		available = {
+			has_completed_focus = RIA_finalize_economic_recovery
+		}
+
+		bypass = {
+			has_idea = RIA_riassi_aid_for_all_idea
+		}
+
+		completion_reward = { 
+			add_political_power = 50
+			add_ideas = RIA_riassi_aid_for_all_idea
+		}
+	}
+	focus = {
+		id = RIA_expand_riassi_aid_for_all
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 5
+		relative_position_id = RIA_reestablish_riassi_aid_for_all
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_reestablish_riassi_aid_for_all
+		}
+		available = {
+			has_idea = RIA_riassi_aid_for_all_idea
+		}
+
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = RIA_riassi_aid_for_all_idea
+				add_idea = RIA_riassi_aid_for_all_idea_2
+			}
+			every_other_country = {
+				limit = {
+					has_government = democratic
+				}
+					add_opinion_modifier = {
+					target = RIA
+					modifier = aided_industry
+					}
+			}
+		}
+	}
+	focus = {
+		id = RIA_promote_democracy_in_neighbors
+		icon = GFX_portrait_RIA_characte
+		cost = 10
+		relative_position_id = RIA_democratic_win
+		x = 0
+		y = 1
+		
+		prerequisite = {
+			focus = RIA_democratic_win
+		}
+
+		mutually_exclusive = {
+			focus = RIA_neutral_foregin_policy
+		}
+		
+		completion_reward = { }
+	}
+	focus = {
+		id = RIA_democratize_helios
+		icon = GFX_portrait_RIA_characte
+		cost = 10
+		relative_position_id = RIA_promote_democracy_in_neighbors
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_promote_democracy_in_neighbors
+		}
+
+		completion_reward = { }
+	}
+	focus = {
+		id = RIA_everyone_gets_democracy
+		icon = GFX_portrait_RIA_characte
+		cost = 10
+		relative_position_id = RIA_democratize_helios
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_democratize_helios
+		}
+
+		prerequisite = {
+			focus = RIA_expand_riassi_aid_for_all
+		}
+
+		completion_reward = { }
+	}
+	focus = {
+		id = RIA_protect_democracy
+		icon = GFX_portrait_RIA_characte
+		cost = 10
+		relative_position_id = RIA_promote_democracy_in_neighbors
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_promote_democracy_in_neighbors
+		}
+
+		completion_reward = { }
+	}
+	focus = {
+		id = RIA_request_democratic_protection
+		icon = GFX_portrait_RIA_characte
+		cost = 10
+		relative_position_id = RIA_protect_democracy
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_protect_democracy
+		}
+
+		available = {
+			any_neighbor_country = {
+				has_government = fascism
+			}
+		}
+
+		completion_reward = { }
+	}
+	focus = {
+		id = RIA_neutral_foregin_policy
+		icon = GFX_portrait_RIA_characte
+		cost = 10
+		relative_position_id = RIA_democratic_win
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = RIA_democratic_win
+			focus = RIA_liberal_win
+		}
+
+		mutually_exclusive = {
+			focus = RIA_promote_democracy_in_neighbors
+		}
+
+		completion_reward = { 
+			add_ideas = neutrality_idea
+		}
+	}
+	focus = {
+		id = RIA_league_of_neutral_nations
+		icon = GFX_portrait_RIA_characte
+		cost = 10
+		relative_position_id = RIA_neutral_foregin_policy
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_neutral_foregin_policy
+		}
+
+		available = {
+			has_idea = neutrality_idea
+		}
+		completion_reward = { }
+	}
+	#liberal win
+	focus = {
+		id = RIA_liberal_win
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 0
+        relative_position_id = RIA_hold_new_elections
+		x = 0
+		y = 1
+
+		available = {
+			always = no
+		}
+		mutually_exclusive = {
+			focus = RIA_conservative_win
+			focus = RIA_democratic_win
+		}
+
+		prerequisite = {
+			focus = RIA_hold_new_elections
+		}
+		completion_reward = { }
+	}
+	#conservative win
+	focus = {
+		id = RIA_conservative_win
+		icon = GFX_focus_generic_blue_flags
+		cost = 0
+        relative_position_id = RIA_hold_new_elections
+		x = 5
+		y = 1
+
+		available = {
+			always = no
+		}
+		mutually_exclusive = {
+			focus = RIA_liberal_win
+			focus = RIA_democratic_win
+		}
+
+		prerequisite = {
+			focus = RIA_hold_new_elections
+		}
+		completion_reward = { }
+	}
+}

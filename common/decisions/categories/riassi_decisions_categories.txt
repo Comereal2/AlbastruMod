@@ -1,0 +1,29 @@
+RIA_decisions_cat = {
+	icon = generic_political_actions
+	allowed = {
+		tag = RIA
+	}
+}
+RIA_paramilitary_cat = {
+	icon = generic_political_actions
+	allowed = {
+		tag = RIA
+	}
+	visible = {
+        has_government = democratic
+		has_completed_focus = RIA_increasing_political_violence
+		
+		}
+}
+RIA_democracy_expansion_cat = {
+	icon = generic_political_actions
+	allowed = {
+		tag = RIA
+	}
+
+	visible = {
+		has_government = democratic
+		has_completed_focus = RIA_promote_democracy_in_neighbors
+		NOT = { is_puppet = yes }
+	}
+}

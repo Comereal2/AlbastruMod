@@ -1,0 +1,967 @@
+#Author: Comereal
+asaa_actions = {
+	ALT_propose_integration_decision = {
+		priority = 80
+		icon = GFX_decision_hol_exchange_intelligence_data
+		target_array = ROOT.faction_members
+		target_trigger = {
+			FROM = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			FROM = {
+				is_government_in_exile = no
+				is_in_faction_with = ROOT
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = ALT_asaa_is_integrating
+			}
+			FROM = {
+				is_in_faction_with = ROOT
+			}
+			hidden_trigger = {
+				OR = {
+					has_completed_focus = ALT_further_faction_integration0
+					has_completed_focus = ALT_further_faction_integration1
+					has_completed_focus = ALT_further_faction_integration2
+					has_completed_focus = ALT_further_faction_integration3
+					has_completed_focus = ALT_further_faction_integration4
+				}
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					is_subject = yes
+					is_government_in_exile = yes
+					exists = no
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		cancel_effect = {
+			clr_country_flag = ALT_asaa_is_integrating
+		}
+		complete_effect = {
+			set_country_flag = ALT_asaa_is_integrating
+		}
+		remove_effect = {
+			clr_country_flag = ALT_asaa_is_integrating
+			FROM = {
+				country_event = {
+					id = asaa.1
+					hours = 6
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				ROOT = {
+					set_autonomy = {
+						target = FROM
+						autonomy_state = autonomy_eu_member
+						freedom_level = 0.5
+					}
+				}
+			}
+			custom_effect_tooltip = generic_more_likely_to_accept_tt
+			custom_effect_tooltip = more_likely_to_accept_federalization_tt
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_invite_south_helios = {
+		priority = 80
+		icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+		target_array = global.countries
+		target_trigger = {
+			FROM = {
+				OR = {
+					#Add all southern Helios tags here
+					tag = ODZ
+				}
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_invite_south_helios
+		}
+		cancel_trigger = {
+			FROM = {
+				is_in_faction = yes
+			}
+		}
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = asaa.4
+					hours = 6
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				ROOT = {
+					add_to_faction = FROM
+				}
+			}
+			custom_effect_tooltip = generic_more_likely_to_accept_tt
+			custom_effect_tooltip = more_likely_to_accept_federalization_tt
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_invite_northern_helios = {
+		priority = 80
+		icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+		target_array = global.countries
+		target_trigger = {
+			FROM = {
+				OR = {
+					#Add all northern Helios tags here
+				}
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_invite_northern_helios
+		}
+		cancel_trigger = {
+			FROM = {
+				is_in_faction = yes
+			}
+		}
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = asaa.4
+					hours = 6
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				ROOT = {
+					add_to_faction = FROM
+				}
+			}
+			custom_effect_tooltip = generic_more_likely_to_accept_tt
+			custom_effect_tooltip = more_likely_to_accept_federalization_tt
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_invite_lomezia = {
+		priority = 80
+		icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+		target_array = global.countries
+		target_trigger = {
+			FROM = {
+				OR = {
+					#Add all Lomezian tags here
+					tag = GEM
+					tag = HEX
+				}
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_invite_lomezia
+		}
+		cancel_trigger = {
+			FROM = {
+				is_in_faction = yes
+			}
+		}
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = asaa.4
+					hours = 6
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				ROOT = {
+					add_to_faction = FROM
+				}
+			}
+			custom_effect_tooltip = generic_more_likely_to_accept_tt
+			custom_effect_tooltip = more_likely_to_accept_federalization_tt
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_invite_orium = {
+		priority = 80
+		icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+		target_array = global.countries
+		target_trigger = {
+			FROM = {
+				OR = {
+					#Add all Orium tags here
+				}
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_invite_orium
+		}
+		cancel_trigger = {
+			FROM = {
+				is_in_faction = yes
+			}
+		}
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = asaa.4
+					hours = 6
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				ROOT = {
+					add_to_faction = FROM
+				}
+			}
+			custom_effect_tooltip = generic_more_likely_to_accept_tt
+			custom_effect_tooltip = more_likely_to_accept_federalization_tt
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_invite_sulia = {
+		priority = 80
+		icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+		target_array = global.countries
+		target_trigger = {
+			FROM = {
+				OR = {
+					#Add all Sulian tags here
+				}
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_invite_sulia
+		}
+		cancel_trigger = {
+			FROM = {
+				is_in_faction = yes
+			}
+		}
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = asaa.4
+					hours = 6
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				ROOT = {
+					add_to_faction = FROM
+				}
+			}
+			custom_effect_tooltip = generic_more_likely_to_accept_tt
+			custom_effect_tooltip = more_likely_to_accept_federalization_tt
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_build_lomezia_department = {
+		priority = 80
+		icon = GFX_decision_hol_exchange_intelligence_data
+		cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		allowed = {
+			tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_add_extra_departments
+		}
+		remove_effect = {
+			hidden_effect = {
+				set_country_flag = lomezia_department_built
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_build_orium_department = {
+		priority = 80
+		icon = GFX_decision_hol_exchange_intelligence_data
+		cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		allowed = {
+			tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_add_extra_departments
+		}
+		remove_effect = {
+			hidden_effect = {
+				set_country_flag = orium_department_built
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_build_sulia_department = {
+		priority = 80
+		icon = GFX_decision_hol_exchange_intelligence_data
+		cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		allowed = {
+			tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_add_extra_departments
+		}
+		remove_effect = {
+			hidden_effect = {
+				set_country_flag = sulia_department_built
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+}
+
+develop_altir_actions = {
+	ALT_develop_state = {
+		priority = 80
+		icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+		target_array = ROOT.owned_controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_core_of = ALT
+			}
+		}
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		on_map_mode = map_only
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_develop_altir
+		}
+		available = {
+			FROM = {
+				is_fully_controlled_by = ALT
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				NOT = {
+					is_fully_controlled_by = ALT
+				}
+			}
+		}
+		cancel_effect = {
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				add_state_modifier = {
+					#ALT_developed_area
+					modifier = {
+						local_building_slots_factor = 0.2
+						local_factories = 0.1
+						local_manpower = 0.1
+						state_resources_factor = 0.1
+					}
+				}
+			}
+			hidden_effect = {
+				modify_country_flag = {
+					flag = developed_states
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_dig_up_state_resources_oil = {
+		priority = 80
+		icon = GFX_decision_oil
+		target_array = ROOT.owned_controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_core_of = ALT
+				has_resources_amount = {
+					resource = oil
+					amount > 0
+					delivered = yes
+				}
+			}
+		}
+		cost = 25
+		days_remove = 15
+		fire_only_once = yes
+		on_map_mode = map_only
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_develop_altir
+			has_completed_focus = ALT_dig_up_more_resources
+		}
+		available = {
+			FROM = {
+				is_fully_controlled_by = ALT
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				NOT = {
+					is_fully_controlled_by = ALT
+				}
+			}
+		}
+		cancel_effect = {
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_dig_up_state_resources_alu = {
+		priority = 80
+		icon = GFX_decision_aluminium
+		target_array = ROOT.owned_controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_core_of = ALT
+				has_resources_amount = {
+					resource = aluminium
+					amount > 0
+					delivered = yes
+				}
+			}
+		}
+		cost = 25
+		days_remove = 15
+		fire_only_once = yes
+		on_map_mode = map_only
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_develop_altir
+			has_completed_focus = ALT_dig_up_more_resources
+		}
+		available = {
+			FROM = {
+				is_fully_controlled_by = ALT
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				NOT = {
+					is_fully_controlled_by = ALT
+				}
+			}
+		}
+		cancel_effect = {
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_dig_up_state_resources_rub = {
+		priority = 80
+		icon = GFX_decision_rubber
+		target_array = ROOT.owned_controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_core_of = ALT
+				has_resources_amount = {
+					resource = rubber
+					amount > 0
+					delivered = yes
+				}
+			}
+		}
+		cost = 25
+		days_remove = 15
+		fire_only_once = yes
+		on_map_mode = map_only
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_develop_altir
+			has_completed_focus = ALT_dig_up_more_resources
+		}
+		available = {
+			FROM = {
+				is_fully_controlled_by = ALT
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				NOT = {
+					is_fully_controlled_by = ALT
+				}
+			}
+		}
+		cancel_effect = {
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_dig_up_state_resources_tun = {
+		priority = 80
+		icon = GFX_decision_tungsten
+		target_array = ROOT.owned_controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_core_of = ALT
+				has_resources_amount = {
+					resource = tungsten
+					amount > 0
+					delivered = yes
+				}
+			}
+		}
+		cost = 25
+		days_remove = 15
+		fire_only_once = yes
+		on_map_mode = map_only
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_develop_altir
+			has_completed_focus = ALT_dig_up_more_resources
+		}
+		available = {
+			FROM = {
+				is_fully_controlled_by = ALT
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				NOT = {
+					is_fully_controlled_by = ALT
+				}
+			}
+		}
+		cancel_effect = {
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_dig_up_state_resources_stl = {
+		priority = 80
+		icon = GFX_decision_steel
+		target_array = ROOT.owned_controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_core_of = ALT
+				has_resources_amount = {
+					resource = steel
+					amount > 0
+					delivered = yes
+				}
+			}
+		}
+		cost = 25
+		days_remove = 15
+		fire_only_once = yes
+		on_map_mode = map_only
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_develop_altir
+			has_completed_focus = ALT_dig_up_more_resources
+		}
+		available = {
+			FROM = {
+				is_fully_controlled_by = ALT
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				NOT = {
+					is_fully_controlled_by = ALT
+				}
+			}
+		}
+		cancel_effect = {
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_dig_up_state_resources_chr = {
+		priority = 80
+		icon = GFX_decision_chromium
+		target_array = ROOT.owned_controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_core_of = ALT
+				has_resources_amount = {
+					resource = chromium
+					amount > 0
+					delivered = yes
+				}
+			}
+		}
+		cost = 25
+		days_remove = 15
+		fire_only_once = yes
+		on_map_mode = map_only
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_develop_altir
+			has_completed_focus = ALT_dig_up_more_resources
+		}
+		available = {
+			FROM = {
+				is_fully_controlled_by = ALT
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				NOT = {
+					is_fully_controlled_by = ALT
+				}
+			}
+		}
+		cancel_effect = {
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				add_resource = {
+					type = chromium
+					amount = 5
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_expand_states = {
+		priority = 80
+		icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+		target_array = ROOT.owned_controlled_states
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_core_of = ALT
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = no
+				}
+			}
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = FROM
+			}
+		}
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_to_stand_the_test_of_time
+		}
+		available = {
+			FROM = {
+				is_fully_controlled_by = ALT
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				NOT = {
+					is_fully_controlled_by = ALT
+				}
+			}
+		}
+		cancel_effect = {
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			FROM = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+}
+
+ALT_bop_category = {
+	ALT_DEBUG_deactivate_BOP = {
+		priority = 91
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			remove_power_balance = {
+				id = ALT_power_balance
+			}
+		}
+	}
+	ALT_build_science_labs = {
+		priority = 91
+		cost = 50
+		days_re_enable = 60
+		complete_effect = {
+			add_power_balance_value = {
+				id = ALT_power_balance
+				value = 0.1
+				tooltip_side = ALT_scientist_side
+			}
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	ALT_increase_skirt_production = {
+		priority = 91
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			add_power_balance_value = {
+				id = ALT_power_balance
+				value = 0.1
+				tooltip_side = ALT_scientist_side
+			}
+			add_power_balance_modifier = {
+				id = ALT_power_balance
+				modifier = skirt_production_bop_modifier
+			}
+		}
+	}
+	ALT_promote_factories = {
+		priority = 91
+		cost = 50
+		days_re_enable = 60
+		complete_effect = {
+			add_power_balance_value = {
+				id = ALT_power_balance
+				value = -0.1
+				tooltip_side = ALT_worker_side
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	ALT_decrease_scientific_funding = {
+		priority = 91
+		cost = 100
+		visible = {
+			NOT = {
+				has_country_flag = decreased_funding
+			}
+		}
+		complete_effect = {
+			add_power_balance_value = {
+				id = ALT_power_balance
+				value = -0.1
+				tooltip_side = ALT_worker_side
+			}
+			add_power_balance_modifier = {
+				id = ALT_power_balance
+				modifier = decreased_science_funding_bop_modifier
+			}
+			add_ideas = {
+				ALT_decreased_scientific_funding
+			}
+			hidden_effect = {
+				set_country_flag = decreased_funding
+			}
+		}
+	}
+	ALT_increase_scientific_funding = {
+		priority = 91
+		cost = 100
+		visible = {
+			has_country_flag = decreased_funding
+		}
+		complete_effect = {
+			add_power_balance_value = {
+				id = ALT_power_balance
+				value = 0.1
+				tooltip_side = ALT_scientist_side
+			}
+			remove_power_balance_modifier = {
+				id = ALT_power_balance
+				modifier = decreased_science_funding_bop_modifier
+			}
+			remove_ideas = {
+				ALT_decreased_scientific_funding
+			}
+			hidden_effect = {
+				clr_country_flag = decreased_funding
+			}
+		}
+	}
+}

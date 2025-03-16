@@ -1,0 +1,271 @@
+﻿l_english:
+
+ RIA_second_democratic_term:0 "Second Democratic Term"
+ RIA_second_democratic_term_desc:0 "It is the second term of the Democratic Party, and it's going great."
+ 
+ RIA_riassi_aid_for_all:0 "Riassi Aid for All"
+ RIA_riassi_aid_for_all_desc:0 "Rias is overflowing with money from the economic boom. By allocating a part of the yearly budget to an aid-programme designed to help people all across Albastru, we can improve our position on the international arena while making Albastru a better place."
+ 
+ RIA_government_transparency:0 "Government Transparency"
+ RIA_government_transparency_desc:0 "The government needs to become more transparent in order to make our society more democratic and increase the population's trust in the political system."
+
+ RIA_legalize_recreational_drugs:0 "Legalize Recreational Drugs"
+ RIA_legalize_recreational_drugs_desc:0 "Having drugs like Cannabis or Marijuana be illegal while alcohol is legal is completely unreasonable. As long as we create a government monopoly on recreational drugs we should be able to legalize them without causing too much harm on society. Hey, it might even be a source of income for the state!"
+
+ RIA_stock_market_crash:0 "Stock Market Crash"
+ RIA_stock_market_crash_desc:0 "The Stock Market has crashed, and Rias is in deep trouble. If something isn't done soon, the damage done might become irreparable..."
+
+ RIA_the_ss_plan:0 "The SS Plan"
+ RIA_the_ss_plan_desc:0 "The SS wants to increase government spending and start a bunch of infrastructure projects in order to help the population get back on track. By supporting the SS, the LF will be alienated from the government and subsequently vote against it in a vote of no confidence, sinking the government."
+
+ RIA_the_lf_plan:0 "The LF Plan"
+ RIA_the_lf_plan_desc:0 "The LF wants to cut government spending and enact austerity measures to secure money for the government. With this money they want to bail out the big banks and support major companies to prevent them from collapseing. This is unpopular with the population, but also with the SS. If the LF plan was to pass, they would definitely leave the government as a result."
+
+ RIA_begin_economic_recovery:0 "Begin Economic Recovery"
+ RIA_begin_economic_recovery_desc:0 "The faster we get the economy back on track, the better the situation becomes. By doing buyouts of larger companies we can ensure that companies survive, while the government still gets something in return."
+
+ RIA_support_the_farmers:0 "Support the Farmers"
+ RIA_support_the_farmers_desc:0 "In times of crisis, we need to ensure that the basic needs of our population are met. That's why we need to support the farmers; so that they can continue producing food for the population without disturbances."
+
+ RIA_protect_small_companies:0 "Protect Small Companies"
+ RIA_protect_small_companies_desc:0 "Protecting Small Companies is an important part in rebuilding an economy, it doesn't matter what ideology you belive in. If you let them go bankrupt, larger corporations might take their place and create mini-monopolies, and that's not good for anyone."
+
+ RIA_nationalize_key_industries:0 "Nationalize Key Industries"
+ RIA_nationalize_key_industries_desc:0 "In order to save as many parts of the riassi economy as possible, we should nationalize some of the industries that have been hit the worst. That way we can ensure that Rias doesn't lose the most vital industries."
+
+ RIA_stop_foregin_acquisitions:0 "Stop Foregin Acquisitions"
+ RIA_stop_foregin_acquisitions_desc:0 "Since the economic crash, many foregin companies have been acquiring riassi companies and moving them to their own nations. This is deeply unpopular, which Dolaf Hertil, leader of the PF, is taking advantage of. If we were to stop these acquisitions, we could slow the economic downturn and maybe win over some voters at the same time."
+
+ RIA_protectionism:0 "Protectionism"
+ RIA_protectionism_desc:0 "We need to protect the domestic market from foregin companies and their harmful acquisitions."
+
+ RIA_regulate_the_stock_market:0 "Regulate the Stock Market"
+ RIA_regulate_the_stock_market_desc:0 "If we regulate the stock market to better protect companies and people in case of a recession, we can prevent crashes as big as this one in the future."
+
+ RIA_finalize_economic_recovery:0 "Finalize Economic Recovery"
+ RIA_finalize_economic_recovery_desc:0 "We have done enough reforms and the economy has finally exited the recession. However, it will take some time until the economy is back on pre-crash levels, but we can at least start investing in new industries and economic expansion."
+
+ RIA_open_new_mines:0 "Open new Mines"
+ RIA_open_new_mines_desc:0 "NOT DONE"
+
+ RIA_expand_the_mines:0 "Expand the Mines"
+ RIA_expand_the_mines_desc:0 "NOT DONE"
+ 
+ RIA_start_fuel_refining:0 "Start Fuel Refining"
+ RIA_start_fuel_refining_desc:0 "The army needs oil and rubber to function properly, which is something we can provide with the right technology."
+
+ RIA_expand_the_military_industrial_complex:0 "Expand the Military-Industrial Complex"
+ RIA_expand_the_military_industrial_complex_desc:0 "It's time for Rias to rearm itself. Instead of prioritizing economic growth, we should expand the military-industrial complex and start the mobilization of society."
+
+ RIA_restart_plorvex_arms_industry:0 "Restart Plorvex Arms Industries"
+ RIA_restart_plorvex_arms_industry_desc:0 "Plorvex once had a thriving arms industry, but since our nations commitment to peace and disarmament it has completely disappeared. Let's go and restart it, for the sake of our nations future."
+
+ RIA_improve_production_methods:0 "Improve Production Methods"
+ RIA_improve_production_methods_desc:0 "NOT DONE"
+
+ RIA_build_new_railways:0 "Build New Railways"
+ RIA_build_new_railways_desc:0 "The Riassi Railway Network has long been neglected. It's time to change that with a multiple step process that will turn the Riassi Railways into the best in the world! The first step in doing so is to fill the railway gaps throughout the nation."
+
+ RIA_start_high_speed_rail_construction:0 "Start High-Speed Rail Construction"
+ RIA_start_high_speed_rail_construction_desc:0 "The second step is to start replacing the old mainlines with high-speed lines. This will however take time, so the high-speed lines will for now only be half-completed."
+
+ RIA_finish_high_speed_rail_construction:0 "Finish High-Speed Rail Construction"
+ RIA_finish_high_speed_rail_construction_desc:0 "The third and last step is to finish the high-speed lines that were started in step two. When this is done, Rias will have the Greatest Railway System ever built!"
+
+ RIA_prioritize_economic_growth:0 "Prioritize Economic Growth"
+ RIA_prioritize_economic_growth_desc:0 "NOT DONE"
+
+ RIA_expand_the_tourism_industry:0 "Expand the Tourism Industry"
+ RIA_expand_the_tourism_industry_desc:0 "NOT DONE"
+
+ RIA_modernize_the_roads:0 "Modernize the Roads"
+ RIA_modernize_the_roads_desc:0 "NOT DONE"
+
+ RIA_expand_university_of_riastok:0 "Expand the University of Riastok"
+ RIA_expand_university_of_riastok_desc:0 "The Riassi economy has grown a lot during the last years, but our educational facilities have not expanded to meet that growth. By investing in the University of Riastok, we can change make sure our schools have the capacity to support a larger economy."
+
+ announce_RIA_snap_elections:0 "Announce Snap Elections"
+ announce_RIA_snap_elections_desc:0 "With the political deadlock after the stock market crash sinking the government, president Emekri has announced Snap Elections."
+
+ RIA_snap_election:0 "Snap Election"
+ RIA_snap_election_desc:0 "The Snap Election is here, but who will come out on top? That's for the people to decide."
+ 
+ RIA_stalemate:0 "Stalemate"
+ RIA_stalemate_desc:0 "No party secured a majority in the elections, and the political deadlock continues. It is difficult to see the light at the end of the tunnel."
+
+ RIA_prepare_for_new_elections:0 "Prepare for New Elections"
+ RIA_prepare_for_new_elections_desc:0 "No one won in the snap election, so president Emekri only has one choice; call for new Snap Elections. Let's hope these will be the last..."
+
+ RIA_increasing_political_violence:0 "Increasing Political Violence"
+ RIA_increasing_political_violence_desc:0 "Since the Snap Election political violence in Rias has been skyrocketing. Especially the far-right paramilitary group The Patriots, who are closely connected to the PF, have been troublesome."
+
+ second_RIA_snap_election:0 "Second Snap Election"
+ second_RIA_snap_election_desc:0 "Once again the people will have to decide the future of Rias. Let's hope that this time someone actually wins."
+
+ RIA_grand_coalition:0 "Grand Coalition"
+ RIA_grand_coalition_desc:0 "A Grand Coalition has been formed to stop the PF from getting power."
+
+ RIA_coalition_talks:0 "Coalition Talks"
+ RIA_coalition_talks_desc:0 "A Grand Coalition always requires that the parties participating can coordinate. In this situation it is especially important, as good coordination makes the fight against the fascists easier."
+
+ RIA_anti_fascist_efforts:0 "Anti-Fascist Efforts"
+ RIA_anti_fascist_efforts_desc:0 "The primary focus of the grand coalition is to keep the Patriotic Front from gaining power. A good way of doing that is to start a combined anti-fascist effort between all coalition parties."
+
+ RIA_promote_unity_within_the_coalition:0 "Promote Unity Within the Coalition" 
+ RIA_promote_unity_within_the_coalition_desc:0 "We need to show the population that the Grand Coalition is a better option than the PF. By promoting unity within the coalition, at least until the PF is no longer a threat to riassi democracy, we can achieve exactly that." 
+
+ disband_the_RIA_grand_coalition:0 "Disband the Coalition"
+ disband_the_RIA_grand_coalition_desc:0 "The Patriotic Front has been losing a lot in the polls, now to the extent that they no longer can be seen as a threat to our democracy. Thus, it's time to disband the grand coalition."
+
+ RIA_minority_government:0 "Minority Government"
+ RIA_minority_government_desc:0 "With the fascists no longer being a threat and the grand coalition disbanded, Emekri and the DP are forming a minority government until the next elections."
+
+ RIA_slow_return_to_normalcy:0 "Slow Return to Normalcy"
+ RIA_slow_return_to_normalcy_desc:0 "The troubles are snart over, and it's time to start the slow return to Normalcy. We will see a peaceful Rias soon in the future."
+
+ RIA_dp_ss_merger:0 "DP-SS Merger"
+ RIA_dp_ss_merger_desc:0 "After the last snap election, the Socialist Solidarity lost so many votes that they almost didn't make it in to the parliament. To strenghten both parties, the ruling Democratic Party, who sits pretty close ideologically, has agreed to merge the two parties to achieve better electoral success. However, this will likely lead to some of the more left-leaning parts of the SS joining the communists instead."
+
+ RIA_work_with_the_commies:0 "Work with the Commies"
+ RIA_work_with_the_commies_desc:0 "The Communists have proven to be a good partner during the Grand Coalition. Let's expand this cooperation further."
+
+ RIA_communists_in_the_government:0 "Communists in the Government"
+ RIA_communists_in_the_government_desc:0 "The Commies are really good at handeling the government, we should invite them to take a more active role in governing."
+ 
+ RIA_back_in_business:0 "Back In Business"
+ RIA_back_in_business_desc:0 "The Communists have regained power by infiltrating the government and taking it over from the inside and now they are going to end the democratic experiment that should never even have started."
+
+ RIA_march_on_riastok:0 "March On Riastok"
+ RIA_march_on_riastok_desc:0 "Angered by the Grand Coalition that was established solely to keep them out of power and thinking they had popular support, the PF has started an march to Riastok to attempt to overthrow the government."
+
+ RIA_march_success:0 "Success"
+ RIA_march_success_desc:0 "NOT DONE"
+
+ RIA_eliminate_the_opposition:0 "Eliminate the Opposition"
+ RIA_eliminate_the_opposition_desc:0 "NOT DONE"
+
+ RIA_violent_suppression:0 "Violent Suppression"
+ RIA_violent_suppression_desc:0 "NOT DONE"
+
+ RIA_retake_yentrok:0 "Retake Yentrok"
+ RIA_retake_yentrok_desc:0 "EFFECTS NOT COMPLETED, GIVES 150pp INSTEAD!"
+
+ RIA_death_of_the_republic:0 "Death of the Republic"
+ RIA_death_of_the_republic_desc:0 "NOT DONE"
+
+ RIA_march_failure:0 "Failure"
+ RIA_march_failure_desc:0 "Thanks to the Democratic Paramilitary Organization we have managed to defend our democracy from the fascists. Long live the Republic!"
+ 
+ RIA_ban_fascism:0 "Ban Fascism"
+ RIA_ban_fascism_desc:0 "The fascists can't be allowed to ever enter parliament and wreak havoc on our democracy. We need to ban them, even if it might hurt our political freedom, it is worth it in the long run."
+
+ RIA_prohibit_para_orgs:0 "Prohibit Paramilitary Organisations"
+ RIA_prohibit_para_orgs_desc:0 "If it weren't for the paramilitary groups the fascists had, they would probably never even gotten close to topple our democracy. If we ban paramilitary organizations, this might not happen again."
+
+ RIA_reject_extremism:0 "Reject Extremism"
+ RIA_reject_extremism_desc:0 "The political extremes, both right and left, are dangerous to the stability of our nation. As the communists didn't participate in the coup we can't ban them, but we can discourage supporting them. This might be the final part of healing our nation from the coup."
+
+ RIA_the_republic_survives:0 "The Republic Survives"
+ RIA_the_republic_survives_desc:0 "Our Republic has gone trough many hardships, but we survived. It's now time to once again look into the birght future of Rias, whatever might be."
+
+ RIA_treading_the_line:0 "Treading The Line"
+ RIA_treading_the_line_desc:0 "The Rias Unite have allied with the PF. They are playing with fire."
+
+ RIA_appeal_to_the_center:0 "Appeal to the Center"
+ RIA_appeal_to_the_center_desc:0 "NOT DONE"
+
+ RIA_take_over_ministries:0 "Take over Ministries"
+ RIA_take_over_ministries_desc:0 "NOT DONE"
+
+ RIA_subtle_propaganda:0 "Subtle Propaganda"
+ RIA_subtle_propaganda_desc:0 "NOT DONE"
+
+ RIA_restrict_voting_rights:0 "Restrict Voting Rights"
+ RIA_restrict_voting_rights_desc:0 "NOT DONE"
+
+ RIA_demand_the_presidency:0 "Demand the Presidency"
+ RIA_demand_the_presidency_desc:0 "NOT DONE"
+
+ RIA_fascism_achieved:0 "Fascism Acheived"
+ RIA_fascism_achieved_desc:0 "NOT DONE"
+
+ RIA_undermine_the_fascists:0 "Undermine the Fascists"
+ RIA_undermine_the_fascists_desc:0 "NOT DONE"
+
+ RIA_right_wing_republicanism:0 "Right-wing Republicanism"
+ RIA_right_wing_republicanism_desc:0 "NOT DONE"
+
+ RIA_promote_conservative_ideals:0 "Promote Conservative Ideals"
+ RIA_promote_conservative_ideals_desc:0 "NOT DONE"
+
+ RIA_anti_communist_rethoric:0 "Anti-Communist Rethoric"
+ RIA_anti_communist_rethoric_desc:0 "NOT DONE"
+
+ RIA_strengthen_the_central_government:0 "Strengthen the Central Government"
+ RIA_strengthen_the_central_government_desc:0 "NOT DONE"
+
+ RIA_a_new_republic:0 "A New Republic"
+ RIA_a_new_republic_desc:0 "NOT DONE"
+
+ RIA_monarchist_movement:0 "Monarchist Movement"
+ RIA_monarchist_movemnet_desc:0 "NOT DONE"
+ 
+ RIA_expand_support:0 "Expand Support"
+ RIA_expand_support_desc:0 "NOT DONE"
+
+ RIA_permit_royals_in_rias:0 "Permit Royals in Rias"
+ RIA_permit_royals_in_rias_desc:0 "NOT DONE"
+
+ RIA_monarchist_referendum:0 "Monarchist Referendum"
+ RIA_monarchist_referendum_desc:0 "NOT DONE"
+
+ RIA_constitutional_monarchy:0 "Constitutional Monarchy"
+ RIA_constitutional_monarchy_desc:0 "NOT DONE"
+
+ RIA_absolute_monarchy:0 "Absolute Monarchy"
+ RIA_absolute_monarchy_desc:0 "NOT DONE"
+
+ RIA_defense_of_the_nation:0 "Defense of the Nation"
+ RIA_defense_of_the_nation_desc:0 "The world is rapidly changing for the worse, so it's about time we revise our defense and improve it. Currently we have a system where the nation relies on the population for defense, but that might not be enough. How will we approach"
+
+ RIA_defense_compromise:0 "Defense Compromise"
+ RIA_defense_compromise_desc:0 "While we need to invest more into the army, the population still plays an important role in the defense of the nation. Instead of fully remilitarizing, the best way forward is to mix the old system with a modern military."
+
+ RIA_build_bunkers:0 "Build Bunkers"
+ RIA_build_bunkers_desc:0 "In order to protect our population in the case of war, we need to build extensive bunker networks in our cities. This will not only better protect the cities, it will also make the population feel a lot more secure."
+
+ RIA_aerial_defense:0 "Aerial Defense"
+ RIA_aerial_defense_desc:0 "Even if we successfully defend ourselves on land, it will all be for nothing if we get bombed to death. Thus, it's appropriate to invest in expansive aerial defenses all over Rias."
+
+ RIA_study_the_construction_of_forts:0 "Study the Construction of Forts"
+ RIA_study_the_construction_of_forts_desc:0 "If we want to protect our nation while still keeping a relatively small army, we need to find other ways to defend ourselves. One way is to build large fortifications, so we should sent our top military scientists to study fortifications from all around the world."
+
+ RIA_begin_full_remilitarization:0 "Begin full Remilitarization"
+ RIA_begin_full_remilitarization_desc:0 "We can't rely on the population to defend Rias, we need to invest into an army and put the Omozenith defense behind us."
+
+ RIA_employ_civilian_workshops:0 "Employ Civilian Workshops"
+ RIA_employ_civilian_workshops_desc:0 "If we want to be able to defend our nation, the population needs to be active in the defense. By employing civilian workshops to make arms, we can increase the nation's war readiness."
+
+ RIA_recruit_civilian_volunteers:0 "Recruit Civilian Volunteers"
+ RIA_recruit_civilian_volunteers_desc:0 "There are many riassis ready to defend their nation. We should conscript them so that they can defend their nation on the battlefield if it's necessary."
+
+ RIA_bolster_patriotism:0 "Bolster Patriotism"
+ RIA_bolster_patriotism_desc:0 "While a good army is esencial to defend a nation, it is just as important to have a population that's willing to fight."
+
+ RIA_hold_new_elections:0 "Hold New Elections"
+ RIA_hold_new_elections_desc:0 "It's time for a new general election. The last few years have changed Rias a lot, and anyone could win this election."
+
+ RIA_democratic_win:0 "Democratic Win"
+ RIA_democratic_win_desc:0 "Emekri and the Democrats have won the recent election! Let's see what they get up to over the next four years."
+
+ RIA_reestablish_riassi_aid_for_all:0 "Reestablish Riassi Aid for All"
+ RIA_reestablish_riassi_aid_for_all_desc:0 "Now that the economic crisis is over, we can reestablish the Riassi Aid for All and once again start walking down the path of making the world a better place"
+
+ RIA_expand_riassi_aid_for_all:0 "Expand Riassi Aid for All"
+ RIA_expand_riassi_aid_for_all_desc:0 "The aid we currently send is not enough, we need to double the amount we send to be able to help even more people in these trying times."
+
+ RIA_liberal_win:0 "Liberal Win"
+ RIA_liberal_win_desc:0 "The Liberal Future have unexpectedly won the election, presenting a unique chance for them to liberalize Rias in a way that has never been seen before."
+
+ RIA_conservative_win:0 "Conservative Win"
+ RIA_conservative_win_desc:0 "The Rias Unite have won the election. Now they have the mandate to return old traditions to Rias and undoing many communist policies."

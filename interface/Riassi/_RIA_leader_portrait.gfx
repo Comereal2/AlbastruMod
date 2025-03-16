@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_RIA_character"
+		texturefile = "gfx/leaders/RIA/emekri.tga"
+	}
+}

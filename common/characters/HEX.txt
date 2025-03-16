@@ -1,0 +1,59 @@
+#Author: Comereal
+characters = {
+	HEX_mark_servestis = {
+		name = "Mark Servestis"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	HEX_nicole_frius = {
+		name = "Nicole Frius"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	HEX_james = {
+		name = "James"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	HEX_david_durange = {
+		name = "David Durange"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			traits = {
+			}
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,52 @@
+RIA_decisions_cat = {
+	RIA_hold_a_speech = {
+		icon = generic_political_discourse
+		available = {
+			has_stability < 1
+		}
+		visible = {
+			always = yes
+		}
+		cost = 10
+		days_re_enable = 210
+		complete_effect = {
+			add_stability = 0.025
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.2
+				has_political_power > 160
+			}
+			modifier = {
+				factor = 2
+				has_political_power > 300
+			}
+		}
+	}
+}
+RIA_paramilitary_cat = {
+	RIA_establish_dem_para_org = {
+		icon = generic_political_discourse
+
+		visible = {
+			has_completed_focus = RIA_increasing_political_violence
+		}
+
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			add_ideas = RIA_democratic_paramilitary_idea
+		}
+	}
+}
+RIA_democracy_expansion_cat = {
+	RIA_promote_democracy_in_neighbors = {
+		icon = generic_political_discourse
+
+		visible = {
+			has_completed_focus = RIA_promote_democracy_in_neighbors
+		}
+	}
+}

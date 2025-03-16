@@ -1,0 +1,247 @@
+#Author: Comereal
+focus_tree = {
+	id = ARB_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARB
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 0
+		y = 1500
+	}
+	#POLITICAL
+	focus = {
+		id = ARB_fate_of_the_republic
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 5
+		y = 0
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ARB_reaffirm_the_republic
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = ARB_fate_of_the_republic
+		prerequisite = {
+			focus = ARB_fate_of_the_republic
+		}
+		mutually_exclusive = {
+			focus = ARB_empower_the_regions
+			focus = ARB_encourage_political_debate
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ARB_empower_the_regions
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ARB_fate_of_the_republic
+		prerequisite = {
+			focus = ARB_fate_of_the_republic
+		}
+		mutually_exclusive = {
+			focus = ARB_reaffirm_the_republic
+			focus = ARB_encourage_political_debate
+		}
+		completion_reward = {
+			add_ideas = ARB_regional_supremacy
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ARB_encourage_political_debate
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = ARB_fate_of_the_republic
+		prerequisite = {
+			focus = ARB_fate_of_the_republic
+		}
+		mutually_exclusive = {
+			focus = ARB_reaffirm_the_republic
+			focus = ARB_empower_the_regions
+		}
+		completion_reward = {
+			add_ideas = ARB_political_debate
+			custom_effect_tooltip = ARB_encourage_political_debate_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ARB_crackdown_on_extremism
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = ARB_reaffirm_the_republic
+		available = {
+			has_stability > 0.5
+		}
+		prerequisite = {
+			focus = ARB_reaffirm_the_republic
+			focus = ARB_empower_the_regions
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_stability = 0.05
+			add_ideas = ARB_political_debate
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ARB_reform_the_bureaucracy
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ARB_reaffirm_the_republic
+		prerequisite = {
+			focus = ARB_reaffirm_the_republic
+		}
+		completion_reward = {
+			add_ideas = ARB_reformed_bureaucracy
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###################################
+	#
+	#   #######    ######    ######
+	#   #         #         #      #
+	#   #######   #         #      #
+	#   #         #         #      #
+	#   #######    ######    ######
+	#
+	###################################
+	focus = {
+		id = ARB_public_welfare_expansion
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 8
+		y = 0
+		relative_position_id = ARB_fate_of_the_republic
+		available = {
+			OR = {
+				has_idea = free_trade
+				has_idea = export_focus
+			}
+		}
+		completion_reward = {
+			add_ideas = ARB_expanded_welfare
+			country_event = arborgreen.1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ARB_military_industrial_integration
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = ARB_public_welfare_expansion
+		prerequisite = {
+			focus = ARB_public_welfare_expansion
+		}
+		completion_reward = {
+			add_ideas = ARB_integrated_industry
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = ARB_defence_contractors
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ARB_national_cybersecurity_directive
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = ARB_public_welfare_expansion
+		prerequisite = {
+			focus = ARB_public_welfare_expansion
+		}
+		completion_reward = {
+			add_ideas = ARB_new_cybersecurity_directive
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ARB_expand_the_agricultural_sector
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ARB_public_welfare_expansion
+		prerequisite = {
+			focus = ARB_public_welfare_expansion
+		}
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###########################
+	#
+	#   #   #   #   #
+	#   ## ##   #   #
+	#   # # #   #   #
+	#   #   #   #   #
+	#   #   #   #   #####
+	#
+	############################
+	focus = {
+		id = ARB_strengthen_military_leadership
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 5
+		y = 0
+		relative_position_id = ARB_public_welfare_expansion
+		completion_reward = {
+			army_experience = 50
+			country_event = arborgreen.2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

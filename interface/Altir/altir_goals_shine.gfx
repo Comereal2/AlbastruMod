@@ -1,0 +1,31 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_goal_ALT_a_brand_new_government_shine"
+		texturefile = "gfx/interface/goals/focus_ALT_a_brand_new_government.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_a_time_for_the_cute_shine"
+		texturefile = "gfx/interface/goals/focus_ALT_a_time_for_the_cute.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_the_early_draft_shine"
+		texturefile = "gfx/interface/goals/focus_ALT_the_early_draft.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_the_alliance_finalized_shine"
+		texturefile = "gfx/interface/goals/focus_ALT_the_alliance_finalized.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_red_government_shine"
+		texturefile = "gfx/interface/goals/focus_ALT_red_government.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_disarmed_nation_shine"
+		texturefile = "gfx/interface/goals/focus_ALT_disarmed_nation.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_ask_bluu_for_support_shine"
+		texturefile = "gfx/interface/goals/focus_ALT_ask_bluu_for_support.png"
+	}
+}

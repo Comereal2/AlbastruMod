@@ -1,0 +1,21 @@
+#Author: Comereal
+add_namespace = arborgreen
+country_event = {
+	id = arborgreen.1
+	title = arborgreen.1.t
+	desc = arborgreen.1.d
+	is_triggered_only = yes
+	option = {
+		name = arborgreen.1.a
+	}
+}
+
+country_event = {
+	id = arborgreen.2
+	title = arborgreen.2.t
+	desc = arborgreen.2.d
+	is_triggered_only = yes
+	option = {
+		name = arborgreen.2.a
+	}
+}

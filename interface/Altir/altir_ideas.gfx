@@ -1,0 +1,127 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_ALT_unquestionable_authority"
+		texturefile = "gfx/interface/ideas/ALT_unquestionable_authority.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_wavering_loyalty"
+		texturefile = "gfx/interface/ideas/ALT_wavering_loyalty.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_suspended_belief"
+		texturefile = "gfx/interface/ideas/ALT_suspended_belief.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_supreme_suzerain_deposed"
+		texturefile = "gfx/interface/ideas/ALT_supreme_suzerain_deposed.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_communism_supported"
+		texturefile = "gfx/interface/ideas/ALT_communism_supported.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_democracy_supported"
+		texturefile = "gfx/interface/ideas/ALT_democracy_supported.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_isolationism"
+		texturefile = "gfx/interface/ideas/ALT_isolationism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_booming_economy"
+		texturefile = "gfx/interface/ideas/ALT_booming_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_proactive_foreign_policy"
+		texturefile = "gfx/interface/ideas/ALT_proactive_foreign_policy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_scientific_nation"
+		texturefile = "gfx/interface/ideas/ALT_scientific_nation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_asaa_agreement"
+		texturefile = "gfx/interface/ideas/ALT_asaa_agreement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_strained_burocracy"
+		texturefile = "gfx/interface/ideas/ALT_strained_burocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_expanded_research"
+		texturefile = "gfx/interface/ideas/ALT_expanded_research.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_decreased_scientific_funding"
+		texturefile = "gfx/interface/ideas/ALT_decreased_scientific_funding.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_the_last_bastion"
+		texturefile = "gfx/interface/ideas/ALT_the_last_bastion.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_develop_facilities"
+		texturefile = "gfx/interface/ideas/ALT_develop_facilities.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_increased_military_power"
+		texturefile = "gfx/interface/ideas/ALT_increased_military_power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_fascist_supporters"
+		texturefile = "gfx/interface/ideas/ALT_fascist_supporters.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_improved_civilian_economy"
+		texturefile = "gfx/interface/ideas/idea_improved_civilian_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_unstable_society"
+		texturefile = "gfx/interface/ideas/ALT_unstable_society.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_economic_reforms"
+		texturefile = "gfx/interface/ideas/ALT_economic_reforms.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_centralized_economy"
+		texturefile = "gfx/interface/ideas/ALT_centralized_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_banned_nationalism"
+		texturefile = "gfx/interface/ideas/ALT_banned_nationalism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_less_military_spending"
+		texturefile = "gfx/interface/ideas/ALT_less_military_spending.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_economic_concessions_bad"
+		texturefile = "gfx/interface/ideas/idea_improved_civilian_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_economic_concessions_good"
+		texturefile = "gfx/interface/ideas/idea_improved_civilian_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_ghost_of_the_helios_empire"
+		textureFile = "gfx/interface/ideas/ALT_ghost_of_the_helios_empire.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_technocratic_nation"
+		textureFile = "gfx/interface/ideas/ALT_technocratic_nation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_odezyan_trade"
+		textureFile = "gfx/interface/ideas/ALT_odezyan_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALT_anto_gabar_small"
+		textureFile = "gfx/interface/ideas/ALT_anto_gabar.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALT_laika_small"
+		textureFile = "gfx/interface/ideas/ALT_laika.dds"
+	}
+}

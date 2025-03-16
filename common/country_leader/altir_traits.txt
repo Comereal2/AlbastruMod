@@ -1,0 +1,12 @@
+#Author: Comereal
+leader_traits = {
+	ALT_space_dog = {
+		random = no
+		research_speed_factor = 0.05
+		nuclear_production_factor = 0.2
+		army_speed_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

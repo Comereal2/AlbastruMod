@@ -1,0 +1,7 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_supreme_suzerain"
+		texturefile = "gfx/leaders/ALT/SupremeSuzerain.dds"
+	}
+}

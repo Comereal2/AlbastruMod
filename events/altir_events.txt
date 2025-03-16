@@ -1,0 +1,1046 @@
+﻿#Author: Comereal
+###########################
+# Altirian Events
+###########################
+add_namespace = altir
+#Refresh Focus Tree
+country_event = {
+	id = altir.0
+	hidden = yes
+	immediate = {
+		mark_focus_tree_layout_dirty = yes
+	}
+	is_triggered_only = yes
+	timeout_days = 1
+}
+
+#The Supreme Suzerain Deposed
+country_event = {
+	id = altir.1
+	title = altir.1.t
+	desc = altir.1.d
+	picture = GFX_event_altir_01
+	is_triggered_only = yes
+	option = {
+		name = altir.1.a
+		ai_chance = {
+			factor = 90
+		}
+		add_ideas = {
+			ALT_democracy_supported
+		}
+	}
+	option = {
+		name = altir.1.b
+		ai_chance = {
+			factor = 10
+		}
+		add_ideas = {
+			ALT_communism_supported
+		}
+	}
+}
+
+#The Skirt Strikes
+country_event = {
+	id = altir.2
+	title = altir.2.t
+	desc = altir.2.d
+	picture = GFX_event_altir_02
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = ALT
+		check_variable = {
+			var = focus_taken
+			value = 0
+		}
+	}
+	option = {
+		name = altir.2.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = focus_taken
+					value = 0
+					compare = equals
+				}
+			}
+			add_ideas = {
+				ALT_scientific_nation
+			}
+			remove_power_balance = {
+				id = ALT_power_balance
+			}
+			set_politics = {
+				ruling_party = skirts
+				elections_allowed = no
+				last_election = "1936.01.01"
+				long_name = ALT_skirts_p_long
+				name = ALT_skirts_p
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = skirts
+					popularity = 0.5
+				}
+				country_event = {
+					id = altir.0
+				}
+			}
+		}
+	}
+}
+
+#ASAA Event chain
+country_event = {
+	id = altir.3
+	title = altir.3.t
+	desc = altir.3.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				var = asaa_complexity
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = altir.3.a
+		custom_effect_tooltip = altir.3.a.tooltip
+		hidden_effect = {
+			set_variable = {
+				var = article_1_is_accepted
+				value = 0
+			}
+			add_to_variable = {
+				var = asaa_complexity
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			country_event = {
+				id = altir.4
+				days = 1
+				random_days = 10
+			}
+		}
+	}
+	option = {
+		name = altir.3.b
+		custom_effect_tooltip = altir.3.b.tooltip
+		hidden_effect = {
+			set_variable = {
+				var = article_1_is_accepted
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			country_event = {
+				id = altir.4
+				days = 1
+				random_days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = altir.4
+	title = altir.4.t
+	desc = altir.4.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	option = {
+		name = altir.4.a
+		custom_effect_tooltip = altir.4.a.tooltip
+		hidden_effect = {
+			set_variable = {
+				var = article_2_is_accepted
+				value = 0
+			}
+			add_to_variable = {
+				var = asaa_complexity
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			country_event = {
+				id = altir.5
+				days = 1
+				random_days = 10
+			}
+		}
+	}
+	option = {
+		name = altir.4.b
+		custom_effect_tooltip = altir.4.b.tooltip
+		hidden_effect = {
+			set_variable = {
+				var = article_2_is_accepted
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			country_event = {
+				id = altir.5
+				days = 1
+				random_days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = altir.5
+	title = altir.5.t
+	desc = altir.5.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	option = {
+		name = altir.5.a
+		custom_effect_tooltip = altir.5.a.tooltip
+		hidden_effect = {
+			set_variable = {
+				var = article_3_is_accepted
+				value = 0
+			}
+			add_to_variable = {
+				var = asaa_complexity
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			country_event = {
+				id = altir.6
+				days = 1
+				random_days = 10
+			}
+		}
+	}
+	option = {
+		name = altir.5.b
+		custom_effect_tooltip = altir.5.b.tooltip
+		hidden_effect = {
+			set_variable = {
+				var = article_3_is_accepted
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			country_event = {
+				id = altir.6
+				days = 1
+				random_days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = altir.6
+	title = altir.6.t
+	desc = altir.6.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	option = {
+		name = altir.6.a
+		custom_effect_tooltip = altir.6.a.tooltip
+		hidden_effect = {
+			set_variable = {
+				var = article_4_is_accepted
+				value = 0
+			}
+			add_to_variable = {
+				var = asaa_complexity
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			country_event = {
+				id = altir.7
+				days = 1
+				random_days = 10
+			}
+		}
+	}
+	option = {
+		name = altir.6.b
+		custom_effect_tooltip = altir.6.b.tooltip
+		hidden_effect = {
+			set_variable = {
+				var = article_4_is_accepted
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			country_event = {
+				id = altir.7
+				days = 1
+				random_days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = altir.7
+	title = altir.7.t
+	desc = altir.7.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	option = {
+		name = altir.7.a
+		ai_chance = {
+			factor = 100
+		}
+		complete_national_focus = ALT_the_alliance_finalized
+		create_faction = "Albastru Sovereign Administration Area"
+		hidden_effect = {
+			set_country_flag = asaa_member
+			country_event = {
+				id = altir.0
+			}
+		}
+	}
+	option = {
+		name = altir.7.b
+		ai_chance = {
+			factor = 0
+		}
+		country_event = {
+			id = altir.3
+			days = 1
+			random_days = 10
+		}
+	}
+	option = {
+		name = altir.7.c
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = ALT_the_beginning_of_a_great_alliance
+				uncomplete_children = yes
+				refund_political_power = no
+			}
+		}
+		if = {
+			limit = {
+				has_completed_focus = ALT_revise_foreign_policy
+			}
+			complete_national_focus = ALT_altir_stands_alone
+		}
+		else = {
+			hidden_effect = {
+				uncomplete_national_focus = {
+					focus = ALT_preventionist_approach
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+				remove_ideas = {
+					ALT_proactive_foreign_policy
+				}
+			}
+			complete_national_focus = ALT_isolationist_approach
+		}
+	}
+}
+
+country_event = {
+	id = altir.8
+	picture = GFX_report_event_generic
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				check_variable = {
+					var = ALT.article_1_is_accepted
+					value = 0
+					compare = equals
+				}
+			}
+			add_ideas = {
+				ALT_asaa_border_agreement
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = ALT.article_2_is_accepted
+					value = 0
+					compare = equals
+				}
+			}
+			add_ideas = {
+				ALT_asaa_economic_agreement
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = ALT.article_3_is_accepted
+					value = 0
+					compare = equals
+				}
+			}
+			add_ideas = {
+				ALT_asaa_research_agreement
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = ALT.article_4_is_accepted
+					value = 0
+					compare = equals
+				}
+			}
+			add_ideas = {
+				ALT_asaa_military_agreement
+			}
+		}
+		country_event = {
+			id = altir.0
+		}
+	}
+	timeout_days = 1
+}
+
+country_event = {
+	id = altir.9
+	title = altir.9.t
+	desc = altir.9.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	option = {
+		name = altir.9.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = altir.9.b
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = altir.10
+	hidden = yes
+	trigger = {
+		tag = ALT
+	}
+	is_triggered_only = yes
+	timeout_days = 1
+	option = {
+		name = altir.10.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = focus_taken
+					value = 0
+					compare = equals
+				}
+			}
+			country_event = {
+				id = altir.2
+			}
+		}
+	}
+}
+
+country_event = {
+	#Altir asks Val Communism support
+	id = altir.11
+	title = altir.11.t
+	desc = altir.11.d
+	is_triggered_only = yes
+	option = {
+		#Support a little
+		name = altir.11.a
+		ai_chance = {
+			factor = 100
+		}
+		ALT = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+		add_stability = 0.05
+	}
+	option = {
+		#Support a lot
+		name = altir.11.b
+		ai_chance = {
+			factor = 100
+		}
+		ALT = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			add_political_power = 70
+			add_manpower = 10000
+		}
+		add_manpower = -10000
+		add_stability = 0.15
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {
+	#Altir asks Bluu Democracy Support
+	id = altir.12
+	title = altir.11.t
+	desc = altir.11.d
+	is_triggered_only = yes
+	option = {
+		#Support a little
+		name = altir.11.a
+		ai_chance = {
+			factor = 100
+		}
+		ALT = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+		add_stability = 0.05
+	}
+	option = {
+		#Support a lot
+		name = altir.11.b
+		ai_chance = {
+			factor = 100
+		}
+		ALT = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+			add_political_power = 70
+			add_manpower = 10000
+		}
+		add_manpower = -10000
+		add_stability = 0.15
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {
+	#Expel nationalists
+	id = altir.13
+	title = altir.13.t
+	desc = altir.13.d
+	is_triggered_only = yes
+	option = {
+		name = altir.13.a
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+		add_manpower = 5000
+		add_stability = -0.05
+	}
+	option = {
+		name = altir.13.b
+		random_other_country = {
+			limit = {
+				has_government = fascism
+			}
+			country_event = altir.13
+		}
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	#Altir demands subjugation
+	id = altir.14
+	title = altir.14.t
+	desc = altir.14.d
+	is_triggered_only = yes
+	option = {
+		name = altir.14.a
+		ai_chance = {
+			factor = 100
+		}
+		FROM = {
+			puppet = {
+				target = PREV
+				end_wars = yes
+				end_civil_wars = no
+			}
+		}
+	}
+	option = {
+		name = altir.14.b
+	}
+}
+
+country_event = {
+	#Country accepts subjugation
+	id = altir.15
+	title = altir.15.t
+	desc = altir.15.d
+	is_triggered_only = yes
+	option = {
+		name = altir.15.a
+	}
+}
+
+country_event = {
+	#Country declines subjugation
+	id = altir.16
+	title = altir.16.t
+	desc = altir.16.d
+	is_triggered_only = yes
+	option = {
+		name = altir.16.a
+		create_wargoal = {
+			target = FROM
+			type = puppet_wargoal_focus
+			expire = 365
+		}
+	}
+}
+
+country_event = {
+	#Demand annexation
+	id = altir.17
+	title = altir.17.t
+	desc = altir.17.d
+	is_triggered_only = yes
+	option = {
+		name = altir.17.a
+		ai_chance = {
+			factor = 0
+		}
+		FROM = {
+			add_core_of = PREV
+			annex_country = {
+				target = PREV
+				transfer_troops = yes
+			}
+			country_event = altir.18
+		}
+	}
+	option = {
+		name = altir.17.b
+		ai_chance = {
+			factor = 100
+		}
+		FROM = {
+			country_event = altir.19
+		}
+	}
+}
+
+country_event = {
+	id = altir.18
+	title = altir.18.t
+	desc = altir.18.d
+	is_triggered_only = yes
+	option = {
+		name = altir.18.a
+	}
+}
+
+country_event = {
+	id = altir.19
+	title = altir.19.t
+	desc = altir.19.d
+	is_triggered_only = yes
+	option = {
+		name = altir.19.a
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	#Ask to remove Riassi guarantee
+	id = altir.20
+	title = altir.20.t
+	desc = altir.20.d
+	is_triggered_only = yes
+	option = {
+		name = altir.20.a
+		ai_chance = {
+			factor = 100
+		}
+		#diplomatic_relation = {
+		#	country = RIA
+		#	relation = non_aggression_pact
+		#	active = no
+		#}
+		#add_opinion_modifier = {
+		#	target = RIA
+		#	modifier = protest_action
+		#}
+		#RIA = {
+		#	add_opinion_modifier = {
+		#		target = RIA
+		#		modifier = protest_action
+		#	}
+		#}
+	}
+	option = {
+		name = altir.20.b
+		send_embargo = ALT
+		ALT = {
+			create_wargoal = {
+				target = PREV
+				type = topple_government
+			}
+		}
+	}
+	option = {
+		name = altir.20.c
+		add_ideas = ALT_economic_concessions_bad
+		ALT = {
+			add_ideas = ALT_economic_concessions_good
+		}
+	}
+}
+
+country_event = {
+	id = altir.21
+	title = altir.21.t
+	desc = altir.21.d
+	is_triggered_only = yes
+	option = {
+		name = altir.21.a
+		add_ideas = ALT_odezyan_trade
+		add_tech_bonus = {
+			bonus = -0.1
+			uses = 1
+			category = industry
+		}
+		ODZ = {
+			add_ideas = ALT_altirian_research
+		}
+		give_market_access = ODZ
+	}
+	option = {
+		name = altir.21.b
+		add_ideas = ALT_odezyan_trade
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -2000
+		}
+		ODZ = {
+			add_ideas = ALT_altirian_weapons
+		}
+		give_market_access = ODZ
+	}
+	option = {
+		name = altir.21.c
+		add_ideas = ALT_odezyan_trade
+		add_manpower = -1000
+		ODZ = {
+			add_ideas = ALT_altirian_workers
+		}
+		give_market_access = ODZ
+	}
+}
+
+country_event = {
+	id = altir.22
+	title = altir.22.t
+	desc = altir.22.d
+	is_triggered_only = yes
+	option = {
+		name = altir.22.a
+		#Add victory points to Altiria
+	}
+	option = {
+		name = altir.22.b
+		#Add victory points to neutral island
+	}
+}
+
+country_event = {
+	#Expel nationalists
+	id = altir.23
+	title = altir.13.t
+	desc = altir.23.d
+	is_triggered_only = yes
+	option = {
+		name = altir.13.a
+		ai_chance = {
+			factor = 100
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		add_manpower = 5000
+		add_stability = -0.05
+	}
+	option = {
+		name = altir.13.b
+		random_other_country = {
+			limit = {
+				has_government = democratic
+			}
+			country_event = altir.23
+		}
+		add_stability = 0.05
+	}
+}
+
+add_namespace = altirnews
+#The Skirt Takeover
+news_event = {
+	id = altirnews.1
+	title = altirnews.1.t
+	desc = altirnews.1.d
+	picture = GFX_news_event_altir_01
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = altirnews.1.a
+		trigger = {
+			NOT = {
+				TAG = ALT
+			}
+		}
+	}
+	option = {
+		name = altirnews.1.b
+		trigger = {
+			TAG = ALT
+		}
+	}
+}
+
+add_namespace = asaa
+country_event = {
+	id = asaa.1
+	title = asaa.1.t
+	desc = asaa.1.d
+	picture = GFX_report_event_generic_sign_treaty3
+	is_triggered_only = yes
+	option = {
+		name = asaa.1.a
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 5
+				has_government = ROOT
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = ROOT
+					value > 24
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = asaa.2
+				hours = 6
+			}
+		}
+	}
+	option = {
+		name = asaa.1.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 5
+				has_opinion = {
+					target = ROOT
+					value < -24
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = asaa.3
+				hours = 6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = asaa.2
+	title = asaa.2.t
+	desc = asaa.2.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = asaa.2.a
+		ai_chance = {
+			base = 10
+		}
+		set_autonomy = {
+			target = FROM
+			autonomy_state = autonomy_eu_member
+			freedom_level = 0.5
+			end_wars = no
+		}
+	}
+}
+
+country_event = {
+	id = asaa.3
+	title = asaa.3.t
+	desc = asaa.3.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+	option = {
+		#darn
+		name = asaa.3.a
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		name = asaa.3.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = FROM
+					value < -25
+				}
+			}
+		}
+		remove_from_faction = FROM
+	}
+}
+
+country_event = {
+	id = asaa.4
+	title = asaa.4.t
+	desc = asaa.4.d
+	picture = GFX_report_event_generic_sign_treaty3
+	is_triggered_only = yes
+	option = {
+		name = asaa.4.a
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 5
+				has_government = ROOT
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = ROOT
+					value > 24
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = asaa.5
+				hours = 6
+			}
+		}
+	}
+	option = {
+		name = asaa.4.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 5
+				has_opinion = {
+					target = ROOT
+					value < -24
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = asaa.6
+				hours = 6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = asaa.5
+	title = asaa.5.t
+	desc = asaa.5.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+	option = {
+		name = asaa.5.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_faction = FROM
+	}
+}
+
+country_event = {
+	id = asaa.6
+	title = asaa.6.t
+	desc = asaa.6.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+	option = {
+		#darn
+		name = asaa.6.a
+		ai_chance = {
+			base = 5
+		}
+	}
+}

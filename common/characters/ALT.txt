@@ -1,0 +1,79 @@
+#Author: Comereal
+characters = {
+	ALT_supreme_suzerain = {
+		name = "Supreme Suzerain"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_supreme_suzerain"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = {
+				headstrong
+				humble
+				popular_figurehead3
+			}
+			id = -1
+		}
+	}
+	ALT_f_supreme_suzerain = {
+		name = "Supreme Suzerain"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_supreme_suzerain"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {
+				headstrong
+				humble
+				popular_figurehead3
+			}
+			id = -1
+		}
+	}
+	ALT_anto_gabar = {
+		name = "Anto Gabar"
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_ALT_anto_gabar_small"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = ALT_anto_gabar
+			available = {
+				has_completed_focus = ALT_appoint_advisors
+			}
+			traits = {
+				tenacious_negotiator
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ALT_laika = {
+		name = "Laika"
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_ALT_laika_small"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = political_advisor
+			idea_token = ALT_laika
+			visible = {
+				has_completed_focus = ALT_create_space_department
+			}
+			traits = {
+				SLO_vodca_trait
+				ALT_space_dog
+			}
+		}
+	}
+}

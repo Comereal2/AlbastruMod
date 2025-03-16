@@ -1,0 +1,114 @@
+#Author: Comereal
+
+ALT_power_balance = {
+	initial_value = 0.1
+	left_side = ALT_worker_side
+	right_side = ALT_scientist_side
+	decision_category = ALT_bop_category
+	
+	#Neutral
+	range = {
+		id = ALT_balance_range
+		min = -0.1
+		max = 0.1
+		modifier = {}
+		on_activate = {}
+		on_deactivate = {}
+	}
+	
+	#Scientists
+	side = {
+		id = ALT_scientist_side
+		icon = GFX_bop_scientist_side
+		
+		range = {
+			id = ALT_scientist_low
+			min = 0.1
+			max = 0.3
+			modifier = {
+				political_power_gain = 0.25
+				research_speed_factor = 0.05
+			}
+			on_activate = {}
+			on_deactivate = {}
+		}
+		
+		range = {
+			id = ALT_scientist_medium
+			min = 0.3
+			max = 0.7
+			modifier = {
+				political_power_gain = 0.5
+				research_speed_factor = 0.15
+				production_speed_buildings_factor = -0.1
+			}
+			on_activate = {}
+			on_deactivate = {}
+		}
+		
+		range = {
+			id = ALT_scientist_high
+			min = 0.7
+			max = 1
+			modifier = {
+				political_power_gain = -0.5
+				research_speed_factor = 0.3
+				production_speed_buildings_factor = -0.2
+			}
+			on_activate = {
+				hidden_effect = { country_event = { id = altir.10 } }
+			}
+			on_deactivate = {}
+		}
+	}
+	
+	#Workers
+	side = {
+		id = ALT_worker_side
+		icon = GFX_bop_worker_side
+		
+		range = {
+			id = ALT_worker_low
+			min = -0.3
+			max = -0.1
+			modifier = {
+				political_power_gain = 0.25
+				fuel_gain_factor_from_states = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+			on_activate = {}
+			on_deactivate = {}
+		}
+		
+		range = {
+			id = ALT_worker_medium
+			min = -0.7
+			max = -0.3
+			modifier = {
+				political_power_gain = 0.5
+				fuel_gain_factor_from_states = 0.2
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.15
+				research_speed_factor = -0.05
+			}
+			on_activate = {}
+			on_deactivate = {}
+		}
+		
+		range = {
+			id = ALT_worker_high
+			min = -1
+			max = -0.7
+			modifier = {
+				political_power_gain = -0.5
+				fuel_gain_factor_from_states = 0.75
+				production_speed_buildings_factor = 0.5
+				consumer_goods_factor = -0.3
+				research_speed_factor = -0.2
+			}
+			on_activate = {}
+			on_deactivate = {}
+		}
+	}
+}

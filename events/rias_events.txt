@@ -1,0 +1,438 @@
+add_namespace = rias_event
+add_namespace = march_event
+add_namespace = rias_train_event
+add_namespace = rias_election_event
+
+country_event = {
+	id = rias_event.1
+	title = rias_event.1.t
+	desc = rias_event.1.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = rias_event.1.a
+		
+			add_stability = 0.05
+		    add_political_power = 15
+		
+		
+	}
+}
+country_event = {
+	id = rias_event.2
+	title = rias_event.2.t
+	desc = rias_event.2.d
+	picture = GFX_report_event_worker_protests
+
+	trigger = { tag = RIA date > 1937.1.1 date < 1937.1.31 }
+    
+	mean_time_to_happen = { days = 5 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = rias_event.2.a
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_stability = -0.2
+		remove_ideas = RIA_booming_economy_idea
+		add_ideas = RIA_crashed_economy_idea_1 
+		add_ideas = RIA_political_deadlock_idea_1
+		
+		complete_national_focus = RIA_stock_market_crash
+	}
+}	
+country_event = {
+	id = rias_event.3
+	title = rias_event.3.t
+	desc = rias_event.3.d
+	picture = GFX_report_event_election_vote
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = rias_event.3.e
+
+		if = {
+			limit = {
+			has_idea = RIA_political_deadlock_idea_5
+			}
+		swap_ideas = {
+			remove_idea = RIA_political_deadlock_idea_5
+			add_idea = RIA_political_deadlock_idea_7
+		    }
+	    }
+		else = {
+			swap_ideas = {
+				remove_idea = RIA_political_deadlock_idea_4
+				add_idea = RIA_political_deadlock_idea_6
+			}
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		complete_national_focus = RIA_stalemate
+	}
+}
+country_event = {
+	id = rias_event.4
+	title = rias_event.4.t
+	desc = rias_event.4.d
+	picture = GFX_report_event_election_vote
+
+    is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = rias_event.4.a
+
+		complete_national_focus = RIA_grand_coalition
+
+
+		if = {
+			limit = {
+			has_idea = RIA_political_deadlock_idea_7
+			}
+		swap_ideas = {
+			remove_idea = RIA_political_deadlock_idea_7
+			add_idea = RIA_grand_coalition_idea
+		    }
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = RIA_political_deadlock_idea_6
+				add_idea = RIA_grand_coalition_idea
+			}
+		}
+
+	}
+
+	option = {
+		name = rias_event.4.b
+
+		complete_national_focus = RIA_treading_the_line
+
+		set_party_name = {
+			ideology = democratic
+			long_name = RIA_rias_unite_long
+			name = RIA_rias_unite
+		}
+		retire_country_leader = yes
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+
+		if = {
+			limit = {
+				has_idea = RIA_political_deadlock_idea_7
+				}
+		
+		swap_ideas = {
+			remove_idea = RIA_political_deadlock_idea_7
+			add_idea = RIA_treading_the_line_idea
+		    }
+	    }
+		else = {
+			swap_ideas = {
+				remove_idea = RIA_political_deadlock_idea_6
+				add_idea = RIA_treading_the_line_idea
+			}
+		}
+		remove_ideas = RIA_no_corruption_idea
+	}
+}
+country_event = {
+	id = rias_event.5
+	title = rias_event.5.t
+	desc = rias_event.5.d
+	picture = GFX_news_event_generic_parliament
+
+	trigger = { tag = RIA has_completed_focus = RIA_undermine_the_fascists }
+    
+	mean_time_to_happen = { days = 2 }
+
+	fire_only_once = yes
+
+	option = {
+		name = rias_event.5.a
+
+		complete_national_focus = RIA_monarchist_movement
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		}
+		add_ideas = RIA_monarchist_movement_idea
+	}
+	option = {
+		name = rias_event.5.b
+
+	}
+}
+country_event = {
+	id = rias_event.6
+	title = rias_event.6.t
+	desc = rias_event.6.d
+	picture = GFX_report_event_election_vote
+	 
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = rias_event.6.a
+		
+		add_political_power = 150
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.35
+		}
+		add_ideas = RIA_king_constitutional_monarchy
+		complete_national_focus = RIA_constitutional_monarchy
+		remove_ideas = RIA_monarchist_movement_idea_3
+		remove_ideas = RIA_treading_the_line_idea_5
+		swap_ideas = {
+			remove_idea = RIA_young_democracy_idea
+			add_idea = RIA_experienced_democracy_idea
+		}
+		set_cosmetic_tag = COSMETICTAG_RIA_democratic
+	}
+	option = {
+		name = rias_event.6.b
+
+		add_political_power = 150
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		remove_ideas = RIA_treading_the_line_idea_5
+		remove_ideas = RIA_monarchist_movement_idea_3
+		remove_ideas = RIA_young_democracy_idea
+	}
+}
+country_event = {
+	id = march_event.1
+	title = march_event.1.t
+	desc = march_event.1.d
+	picture = GFX_report_event_bul_partisans_plovdiv
+
+	trigger = { tag = RIA has_completed_focus = RIA_grand_coalition has_stability < 0.35 fascism > 0.4 NOT = { has_completed_focus = RIA_coalition_talks } }
+	mean_time_to_happen = { days = 3 }
+
+	fire_only_once = yes
+
+	option = {
+		name = march_event.1.a
+
+		complete_national_focus = RIA_march_on_riastok
+		add_stability = -0.25
+		if = {
+			limit = {
+				has_idea = democratic_paramilitary_idea
+			}
+			country_event = march_event.2
+		}
+		else = {
+			country_event = march_event.3
+		}
+	}
+	option = {
+		name = march_event.1.b
+
+		complete_national_focus = RIA_march_on_riastok
+		add_stability = -0.25
+		country_event = march_event.3
+	}
+}
+country_event = {
+	id = march_event.2
+	title = march_event.2.t
+	desc = march_event.2.d
+	picture = GFX_report_event_bul_partisans_plovdiv
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = march_event.2.a
+
+		complete_national_focus = RIA_march_failure
+
+		swap_ideas = {
+			remove_idea = RIA_grand_coalition_idea
+			add_idea = RIA_failed_coup_idea
+		}
+		add_trait = {
+			character = RIA_my_leader
+			ideology = socialism
+			trait = great_survivor
+	   }
+	}
+}
+country_event = {
+	id = march_event.3
+	title = march_event.3.t
+	desc = march_event.3.d
+	picture = GFX_report_event_bul_partisans_plovdiv
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = march_event.3.a
+
+		complete_national_focus = RIA_march_success
+
+		remove_ideas = RIA_no_corruption_idea
+		remove_ideas = RIA_young_democracy_idea
+
+		swap_ideas = {
+			remove_idea = RIA_grand_coalition_idea
+			add_idea = RIA_democratic_resistance_idea
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+	}
+}
+country_event = {
+	id = rias_train_event.1
+	title = rias_train_event.1.t
+	desc = rias_train_event.1.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = { tag = RIA has_completed_focus = RIA_finish_high_speed_rail_construction NOT = { has_idea = RIA_building_railways_idea } }
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = rias_train_event.1.a
+
+		add_political_power = 100
+		add_stability = 0.05
+		add_ideas = RIA_high_speed_railways_idea
+
+	}
+}
+country_event = {
+	id = rias_election_event.1
+	title = rias_election_event.1.t
+	desc = rias_election_event.1.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = rias_election_event.1.a
+
+		add_stability = 0.1
+		add_political_power = 150
+
+		complete_national_focus = RIA_democratic_win
+	}
+	option = {
+		name = rias_election_event.1.b
+
+		add_stability = -0.05
+		add_political_power = 100
+
+		set_party_name = {
+			ideology = democratic
+			long_name = RIA_rias_unite_long
+			name = RIA_rias_unite
+		}
+		retire_country_leader = yes
+
+		complete_national_focus = RIA_conservative_win
+	}
+	option = {
+		name = rias_election_event.1.c
+
+		add_stability = -0.05
+		add_political_power = 100
+
+		set_party_name = {
+			ideology = democratic
+			long_name = RIA_liberal_future_long
+			name = RIA_liberal_future
+		}
+		retire_country_leader = yes
+
+		complete_national_focus = RIA_liberal_win
+	}
+}
+country_event = {
+	id = rias_election_event.2
+	title = rias_election_event.2.t
+	desc = rias_election_event.2.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = rias_election_event.2.a
+
+		add_stability = 0.1
+		add_political_power = 150
+
+		complete_national_focus = RIA_conservative_win
+	}
+	option = {
+		name = rias_election_event.2.b
+
+		add_stability = -0.05
+		add_political_power = 100
+
+		set_party_name = {
+			ideology = democratic
+			long_name = RIA_democratic_party_long
+			name = RIA_democratic_party
+		}
+
+		promote_character = RIA_emekri_zoulatesh
+
+		complete_national_focus = RIA_democratic_win
+	}
+	option = {
+		name = rias_election_event.2.c
+
+		add_stability = -0.05
+		add_political_power = 100
+
+		set_party_name = {
+			ideology = democratic
+			long_name = RIA_liberal_future_long
+			name = RIA_liberal_future
+		}
+		retire_country_leader = yes
+
+		complete_national_focus = RIA_liberal_win
+	}
+}
