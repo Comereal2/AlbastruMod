@@ -1,0 +1,62 @@
+#Author: Comereal
+capital = 785
+oob = "valtheronesia_units"
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_trucks = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	basic_train = 1
+	interwar_antiair = 1
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1935.7.21"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 12
+	fascism = 8
+	communism = 78
+	neutrality = 2
+}
+
+recruit_character = VAL_carlos_estevan
+recruit_character = VAL_augusto_freitas
+recruit_character = VAL_committee
+
+set_party_name = {
+	ideology = neutrality
+	long_name = VAL_neutrality_p_long
+	name = VAL_neutrality_p
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = VAL_fascism_p_long
+	name = VAL_fascism_p
+}
+
+set_party_name = {
+	ideology = democratic
+	long_name = VAL_democratic_p_long
+	name = VAL_democratic_p
+}
+
+set_party_name = {
+	ideology = communism
+	long_name = VAL_communism_p_long
+	name = VAL_communism_p
+}
+
+set_party_name = {
+	ideology = skirts
+	long_name = ALT_skirts_p_long
+	name = ALT_skirts_p
+}

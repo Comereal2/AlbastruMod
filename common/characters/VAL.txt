@@ -1,0 +1,45 @@
+#Author: Comereal
+characters = {
+	VAL_carlos_estevan = {
+		name = "Carlos Estevan"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	VAL_committee = {
+		name = "Revolutionary Committee of Valtheronesia"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	VAL_augusto_freitas = {
+		name = "Augusto Freitas"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			traits = {
+			}
+			id = -1
+		}
+	}
+}
