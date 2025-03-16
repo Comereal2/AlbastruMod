@@ -1972,7 +1972,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_build_railways
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_build_railways
 		cost = 5
 		x = 0
 		y = 1

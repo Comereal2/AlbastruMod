@@ -48,4 +48,8 @@ spriteTypes = {
 		name = "GFX_goal_ALT_invite_sulia_shine"
 		textureFile = "gfx/interface/goals/ALT_invite_sulia.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_build_railways_shine"
+		textureFile = "gfx/interface/goals/ALT_build_railroads.png"
+	}
 }
