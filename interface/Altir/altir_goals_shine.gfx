@@ -28,4 +28,40 @@ spriteTypes = {
 		name = "GFX_goal_ALT_ask_bluu_for_support_shine"
 		texturefile = "gfx/interface/goals/focus_ALT_ask_bluu_for_support.png"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_build_apache_shine"
+		texturefile = "gfx/interface/goals/ALT_build_apache.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_expand_tourism_shine"
+		texturefile = "gfx/interface/goals/ALT_expand_tourism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_invite_lomezia_shine"
+		texturefile = "gfx/interface/goals/ALT_invite_lomezia.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_invite_south_helios_shine"
+		texturefile = "gfx/interface/goals/ALT_invite_south_helios.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_invite_sulia_shine"
+		textureFile = "gfx/interface/goals/ALT_invite_sulia.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_build_railways_shine"
+		textureFile = "gfx/interface/goals/ALT_build_railroads.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_invite_north_helios_shine"
+		textureFile = "gfx/interface/goals/ALT_invite_northern_helios.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_invite_orium_shine"
+		textureFile = "gfx/interface/goals/ALT_invite_orium.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_expand_overseas_shine"
+		textureFile = "gfx/interface/goals/ALT_world.png"
+	}
 }
