@@ -28,4 +28,12 @@ spriteTypes = {
 		name = "GFX_goal_ALT_ask_bluu_for_support_shine"
 		texturefile = "gfx/interface/goals/focus_ALT_ask_bluu_for_support.png"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_build_apache_shine"
+		texturefile = "gfx/interface/goals/ALT_build_apache.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_expand_tourism_shine"
+		texturefile = "gfx/interface/goals/ALT_expand_tourism.png"
+	}
 }

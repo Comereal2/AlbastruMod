@@ -1937,7 +1937,7 @@ focus_tree = {
 	###################################
 	focus = {
 		id = ALT_build_apache
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_build_apache
 		cost = 5
 		x = 12
 		y = 0
@@ -1951,7 +1951,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_expand_tourism
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_expand_tourism
 		cost = 5
 		x = -2
 		y = 1
