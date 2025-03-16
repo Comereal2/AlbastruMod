@@ -25,6 +25,10 @@ RIA = {
 	color = rgb { 255 61 103 }
 	color_ui = rgb { 255 61 103 }
 }
+KAI = {
+	color = rgb { 242 79 212 }
+	color_ui = rgb { 242 79 212 }
+}
 GER = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }
