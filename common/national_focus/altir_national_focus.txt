@@ -4,7 +4,6 @@
 # ALT_follow_valtheronesia - uncomment event call
 # ALT_the_alliance_finalized and its sub-tree - add all ASAA tags to invite inside decision
 # ALT_demand_lost_lands - add the events for demanding land from RIA + add perma claims
-# ALT_isolate_riassi and everything after - uncomment + uncomment inside events used
 # Complete event altir.22
 focus_tree = {
 	id = ALT_focus_tree
@@ -1866,10 +1865,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			every_country = {
-				#limit = {
-				#	has_guaranteed = RIA
-				#}
-				#country_event = { altir.20 }
+				limit = {
+					has_guaranteed = RIA
+				}
+				country_event = altir.20
 			}
 		}
 	}
@@ -1891,9 +1890,9 @@ focus_tree = {
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward = {
-			#RIA = {
-			#	country_event = altir.17
-			#}
+			RIA = {
+				country_event = altir.17
+			}
 		}
 	}
 	#Hidden POLITICAL, SKIRTS

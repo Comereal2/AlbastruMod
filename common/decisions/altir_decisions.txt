@@ -90,6 +90,7 @@ asaa_actions = {
 			FROM = {
 				OR = {
 					#Add all southern Helios tags here
+					tag = RIA
 					tag = ODZ
 				}
 			}
@@ -183,6 +184,7 @@ asaa_actions = {
 					#Add all Lomezian tags here
 					tag = GEM
 					tag = HEX
+					tag = ARB
 				}
 			}
 		}
