@@ -851,6 +851,94 @@ develop_altir_actions = {
 			base = 10
 		}
 	}
+	ALT_apache_stage_1 = {
+		priority = 80
+		icon = GFX_decision_category_generic_industry
+		cost = 150
+		days_remove = 100
+		fire_only_once = yes
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_build_apache
+			NOT = {
+				has_country_flag = apache_stage_1
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = ALT_apache_stage_1_ctt
+			hidden_effect = {
+				set_country_flag = apache_stage_1
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_apache_stage_2 = {
+		priority = 80
+		icon = GFX_decision_category_generic_industry
+		cost = 150
+		days_remove = 100
+		fire_only_once = yes
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_build_apache
+			NOT = {
+				has_country_flag = apache_stage_2
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_apache_stage_2_att
+				has_country_flag = apache_stage_1
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = ALT_apache_stage_2_ctt
+			hidden_effect = {
+				set_country_flag = apache_stage_2
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	ALT_apache_stage_3 = {
+		priority = 80
+		icon = GFX_decision_category_generic_industry
+		cost = 150
+		days_remove = 100
+		fire_only_once = yes
+		allowed = {
+			original_tag = ALT
+		}
+		visible = {
+			has_completed_focus = ALT_build_apache
+			NOT = {
+				has_country_flag = apache_stage_3
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_apache_stage_3_att
+				has_country_flag = apache_stage_2
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = ALT_apache_stage_3_ctt
+			add_ideas = ALT_apache_complete
+			hidden_effect = {
+				set_country_flag = apache_stage_3
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
 }
 
 ALT_bop_category = {

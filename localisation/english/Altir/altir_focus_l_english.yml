@@ -1,6 +1,7 @@
 ﻿#Author: Comereal
 l_english:
 ALT_focus_tree: "Altir Focus Tree"
+#Political
 ALT_abolish_the_supreme_suzerain: "Abolish the Supreme Suzerain"
 ALT_abolish_the_supreme_suzerain_desc: "Our current political system is outdated. We must get rid of the Supreme Suzerain at once!"
 ALT_concentrate_power: "The Directional Assembly Meeting"
@@ -140,3 +141,10 @@ ALT_create_space_department: "Create a Space Department"
 ALT_create_space_department_desc: "Wait what? Why do we need a space department? Isn't this supposed to be an alliance..."
 ALT_outlaw_the_bfr: "Outlaw the BFR"
 ALT_outlaw_the_bfr_desc: "Democracy is a pest, one we should eradicate from our nation."
+#Economy
+ALT_build_apache: "Build APACHE"
+ALT_build_apache_desc: "APACHE, also known as the Altir Prime, Altiria Connector Hub Expansion will be the largest tranportation hub in the region, it is about time we have finished the project."
+ALT_build_apache_ctt: "Unlocks decisions to build APACHE sectors."
+ALT_to_stand_the_test_of_time_att: "APACHE: has been built"
+ALT_expand_tourism: "Expand Tourism"
+ALT_expand_tourism_desc: "The Altirian lands are beautiful, we should make sure the world knows about it."

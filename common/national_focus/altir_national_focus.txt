@@ -806,6 +806,14 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_develop_secret_projects
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_to_stand_the_test_of_time_att
+				has_country_flag = {
+					flag = apache_stage_3
+				}
+			}
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1928,29 +1936,34 @@ focus_tree = {
 	#
 	###################################
 	focus = {
-		id = ALT_eco_start
+		id = ALT_build_apache
 		icon = GFX_focus_generic_self_management
 		cost = 5
 		x = 12
 		y = 0
 		relative_position_id = ALT_concentrate_power
 		completion_reward = {
+			custom_effect_tooltip = ALT_build_apache_ctt
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	focus = {
-		id = ALT_eco_1
+		id = ALT_expand_tourism
 		icon = GFX_focus_generic_self_management
 		cost = 5
 		x = -2
 		y = 1
-		relative_position_id = ALT_eco_start
+		relative_position_id = ALT_build_apache
 		prerequisite = {
-			focus = ALT_eco_start
+			focus = ALT_build_apache
 		}
 		completion_reward = {
+			add_timed_idea = {
+				idea = ALT_tourism_influx
+				days = 365
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1971,7 +1984,7 @@ focus_tree = {
 		cost = 5
 		x = 5
 		y = 0
-		relative_position_id = ALT_eco_start
+		relative_position_id = ALT_build_apache
 		completion_reward = {
 		}
 		ai_will_do = {
