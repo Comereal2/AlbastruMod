@@ -1,0 +1,35 @@
+
+state={
+	id=806
+	name="STATE_806"
+
+	history={
+		owner = RIA
+		victory_points = {
+			9710 3 
+		}
+		add_core_of = NAV
+		buildings = {
+			infrastructure = 3 #was: 6
+			industrial_complex = 2
+
+		}
+		add_core_of = RIA
+
+		set_province_name = {
+			id = 9710
+			name = "Voktarin"
+		}
+		set_state_name = "Voktarin"
+
+	}
+
+	provinces={
+		743 9710 11697 
+	}
+	manpower=280723
+	buildings_max_level_factor=1.000
+	state_category=town
+
+	local_supplies=0.0 
+}
