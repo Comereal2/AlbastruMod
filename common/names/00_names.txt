@@ -61,8 +61,8 @@ default = {
 	offensive_operation_suffix = o_strat_offensive_default
 	defensive_operation_suffix = o_strat_defensive_default
 	naval_operation_suffix = o_strat_naval_default
-    }
 }
+
 
 ###############################################################
 # The Majors

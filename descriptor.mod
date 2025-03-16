@@ -5,4 +5,4 @@ tags={
 	"National Focuses"
 }
 name="AltirIRL"
-supported_version="1.16.0"
+supported_version="1.16.*"

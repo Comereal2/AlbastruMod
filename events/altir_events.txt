@@ -719,21 +719,21 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		#diplomatic_relation = {
-		#	country = RIA
-		#	relation = non_aggression_pact
-		#	active = no
-		#}
-		#add_opinion_modifier = {
-		#	target = RIA
-		#	modifier = protest_action
-		#}
-		#RIA = {
-		#	add_opinion_modifier = {
-		#		target = RIA
-		#		modifier = protest_action
-		#	}
-		#}
+		diplomatic_relation = {
+			country = RIA
+			relation = non_aggression_pact
+			active = no
+		}
+		add_opinion_modifier = {
+			target = RIA
+			modifier = protest_action
+		}
+		RIA = {
+			add_opinion_modifier = {
+				target = RIA
+				modifier = protest_action
+			}
+		}
 	}
 	option = {
 		name = altir.20.b
