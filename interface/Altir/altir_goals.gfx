@@ -52,4 +52,16 @@ spriteTypes = {
 		name = "GFX_goal_ALT_build_railways"
 		textureFile = "gfx/interface/goals/ALT_build_railroads.png"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_invite_north_helios"
+		textureFile = "gfx/interface/goals/ALT_invite_northern_helios.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_invite_orium"
+		textureFile = "gfx/interface/goals/ALT_invite_orium.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_expand_overseas"
+		textureFile = "gfx/interface/goals/ALT_world.png"
+	}
 }

@@ -1299,7 +1299,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_invite_northern_helios
-		icon = GFX_goal_ALT_the_alliance_finalized
+		icon = GFX_goal_ALT_invite_north_helios
 		x = -4
 		y = 1
 		relative_position_id = ALT_the_alliance_finalized
@@ -1322,7 +1322,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_expand_overseas
-		icon = GFX_goal_ALT_the_alliance_finalized
+		icon = GFX_goal_ALT_expand_overseas
 		x = -2
 		y = 1
 		relative_position_id = ALT_the_alliance_finalized
@@ -1377,7 +1377,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_invite_orium
-		icon = GFX_goal_ALT_the_alliance_finalized
+		icon = GFX_goal_ALT_invite_orium
 		x = -2
 		y = 1
 		relative_position_id = ALT_expand_overseas
