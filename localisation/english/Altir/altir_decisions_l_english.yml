@@ -7,6 +7,7 @@ ALT_bop_category: "Altirian Power Balance"
 #Decisions
 ALT_propose_integration_decision: "Propose Integration to [FROM.GetNameDefCap]"
 ALT_develop_state: "Develop State"
+ALT_expand_states: "Expand States"
 #Balance Of Power
 ALT_DEBUG_deactivate_BOP: "DEBUG - Deactivate Balance Of Power"
 ALT_build_science_labs: "Build Science Labs"

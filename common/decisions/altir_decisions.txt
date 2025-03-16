@@ -808,7 +808,7 @@ develop_altir_actions = {
 				free_building_slots = {
 					building = arms_factory
 					size > 0
-					include_locked = no
+					include_locked = yes
 				}
 			}
 		}
