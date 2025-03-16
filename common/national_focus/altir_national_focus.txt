@@ -4,6 +4,7 @@
 # ALT_follow_valtheronesia - uncomment event call
 # ALT_the_alliance_finalized and its sub-tree - add all ASAA tags to invite inside decision
 # ALT_demand_lost_lands - add the events for demanding land from RIA + add perma claims
+# ALT_build_railways - add the railways
 # Complete event altir.22
 focus_tree = {
 	id = ALT_focus_tree
@@ -1275,7 +1276,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_invite_south_helios
-		icon = GFX_goal_ALT_the_alliance_finalized
+		icon = GFX_goal_ALT_invite_south_helios
 		x = 0
 		y = 1
 		relative_position_id = ALT_the_alliance_finalized
@@ -1347,7 +1348,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_invite_sulia
-		icon = GFX_goal_ALT_the_alliance_finalized
+		icon = GFX_goal_ALT_invite_sulia
 		x = 0
 		y = 1
 		relative_position_id = ALT_expand_overseas
@@ -1405,7 +1406,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_invite_lomezia
-		icon = GFX_goal_ALT_the_alliance_finalized
+		icon = GFX_goal_ALT_invite_lomezia
 		x = 2
 		y = 1
 		relative_position_id = ALT_expand_overseas
@@ -1964,6 +1965,23 @@ focus_tree = {
 				idea = ALT_tourism_influx
 				days = 365
 			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_build_railways
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_build_apache
+		prerequisite = {
+			focus = ALT_build_apache
+		}
+		completion_reward = {
+			#Add railways to every part of the country from the capital
 		}
 		ai_will_do = {
 			factor = 1

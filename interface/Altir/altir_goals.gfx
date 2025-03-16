@@ -36,4 +36,16 @@ spriteTypes = {
 		name = "GFX_goal_ALT_expand_tourism"
 		texturefile = "gfx/interface/goals/ALT_expand_tourism.png"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_invite_lomezia"
+		texturefile = "gfx/interface/goals/ALT_invite_lomezia.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_invite_south_helios"
+		texturefile = "gfx/interface/goals/ALT_invite_south_helios.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_invite_sulia"
+		textureFile = "gfx/interface/goals/ALT_invite_sulia.dds"
+	}
 }
