@@ -230,6 +230,7 @@ asaa_actions = {
 			FROM = {
 				OR = {
 					#Add all Orium tags here
+					tag = KAI
 				}
 			}
 		}
