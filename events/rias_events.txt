@@ -1,5 +1,5 @@
 add_namespace = rias_event
-add_namespace = march_event
+add_namespace = rias_march_event
 add_namespace = rias_train_event
 add_namespace = rias_election_event
 
@@ -227,9 +227,9 @@ country_event = {
 	}
 }
 country_event = {
-	id = march_event.1
-	title = march_event.1.t
-	desc = march_event.1.d
+	id = rias_march_event.1
+	title = rias_march_event.1.t
+	desc = rias_march_event.1.d
 	picture = GFX_report_event_bul_partisans_plovdiv
 
 	trigger = { tag = RIA has_completed_focus = RIA_grand_coalition has_stability < 0.35 fascism > 0.4 NOT = { has_completed_focus = RIA_coalition_talks } }
@@ -238,7 +238,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = march_event.1.a
+		name = rias_march_event.1.a
 
 		complete_national_focus = RIA_march_on_riastok
 		add_stability = -0.25
@@ -246,24 +246,24 @@ country_event = {
 			limit = {
 				has_idea = democratic_paramilitary_idea
 			}
-			country_event = march_event.2
+			country_event = rias_march_event.2
 		}
 		else = {
-			country_event = march_event.3
+			country_event = rias_march_event.3
 		}
 	}
 	option = {
-		name = march_event.1.b
+		name = rias_march_event.1.b
 
 		complete_national_focus = RIA_march_on_riastok
 		add_stability = -0.25
-		country_event = march_event.3
+		country_event = rias_march_event.3
 	}
 }
 country_event = {
-	id = march_event.2
-	title = march_event.2.t
-	desc = march_event.2.d
+	id = rias_march_event.2
+	title = rias_march_event.2.t
+	desc = rias_march_event.2.d
 	picture = GFX_report_event_bul_partisans_plovdiv
 
 	is_triggered_only = yes
@@ -271,7 +271,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = march_event.2.a
+		name = rias_march_event.2.a
 
 		complete_national_focus = RIA_march_failure
 
@@ -287,9 +287,9 @@ country_event = {
 	}
 }
 country_event = {
-	id = march_event.3
-	title = march_event.3.t
-	desc = march_event.3.d
+	id = rias_march_event.3
+	title = rias_march_event.3.t
+	desc = rias_march_event.3.d
 	picture = GFX_report_event_bul_partisans_plovdiv
 
 	is_triggered_only = yes
@@ -297,7 +297,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = march_event.3.a
+		name = rias_march_event.3.a
 
 		complete_national_focus = RIA_march_success
 
@@ -313,6 +313,61 @@ country_event = {
 			elections_allowed = no
 		}
 	}
+}
+country_event = {
+	id = rias_march_event.4
+	title = rias_march_event.4.t
+	desc = rias_march_event.4.d
+	picture = GFX_report_event_bul_partisans_plovdiv
+
+	trigger = {
+		tag = RIA
+		has_completed_focus = RIA_march_success
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = rias_march_event.4.a
+
+		release = YEN
+	}
+}
+country_event = {
+	id = rias_march_event.5
+	title = rias_march_event.5.t
+	desc = rias_march_event.5.d
+	picture = GFX_report_event_bul_partisans_plovdiv
+
+	trigger = {
+		tag = RIA
+		has_completed_focus = RIA_retake_yentrok
+		YEN = { exists = no }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = rias_march_event.5.a
+
+		172 = {
+			add_core_of = RIA
+		}
+		792 = {
+			add_core_of = RIA
+		}
+		add_war_support = 0.05
+		add_political_power = 50
+	}
+
 }
 country_event = {
 	id = rias_train_event.1

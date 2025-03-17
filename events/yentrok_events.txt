@@ -1,0 +1,42 @@
+add_namespace = yentrok_event
+
+
+country_event = {
+	id = yentrok_event.1
+	title = yentrok_event.1.t
+	desc = yentrok_event.1.d
+	picture = GFX_report_event_bul_partisans_plovdiv
+
+	trigger = {
+		tag = YEN
+		has_war_with = RIA
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = yentrok_event.1.a
+
+		172 = {
+		    create_unit = {
+			    division = "Milita" 
+		    	division_template = "National Guard" 
+				count = 2
+		    	start_experience_factor = 0.5
+		    	owner = YEN
+		    	allow_spawning_on_enemy_provs = no
+	    	}
+	    }
+		792 = {
+		    create_unit = {
+			    division = "Milita" 
+			    division_template = "National Guard"
+				count = 1
+			    start_experience_factor = 0.5
+			    owner = YEN
+			    allow_spawning_on_enemy_provs = no
+		    }
+	    }
+	}
+
+}

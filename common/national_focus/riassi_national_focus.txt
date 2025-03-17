@@ -1912,7 +1912,10 @@ focus_tree = {
 			focus = RIA_violent_suppression
 		}
 		completion_reward = {
-			add_political_power = 150
+			declare_war_on = {
+				target = YEN
+				type = annex_everything
+			}
 		}
 		available = {
 			has_government = fascism
