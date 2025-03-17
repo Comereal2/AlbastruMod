@@ -762,10 +762,9 @@ country_event = {
 	option = {
 		name = altir.21.a
 		add_ideas = ALT_odezyan_trade
-		add_tech_bonus = {
-			bonus = -0.1
-			uses = 1
-			category = industry
+		add_power_balance_value = {
+			id = ALT_power_balance
+			value = 0.1
 		}
 		ODZ = {
 			add_ideas = ALT_altirian_research
