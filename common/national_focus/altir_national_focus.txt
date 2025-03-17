@@ -105,7 +105,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_follow_valtheronesia
-		icon = GFX_focus_AUS_danubian_socialist_communes
+		icon = GFX_goal_ALT_follow_val
 		x = 2
 		y = 1
 		relative_position_id = ALT_a_brand_new_government
@@ -260,7 +260,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_a_bright_red_future
-		icon = GFX_goal_support_communism
+		icon = GFX_goal_ALT_let_the_communists_lead
 		x = 3
 		y = 2
 		relative_position_id = ALT_a_brand_new_government

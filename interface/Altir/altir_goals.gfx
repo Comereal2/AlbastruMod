@@ -64,4 +64,12 @@ spriteTypes = {
 		name = "GFX_goal_ALT_expand_overseas"
 		textureFile = "gfx/interface/goals/ALT_world.png"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_follow_val"
+		textureFile = "gfx/interface/goals/ALT_follow_val.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_let_the_communists_lead"
+		textureFile = "gfx/interface/goals/ALT_let_the_communists_lead.png"
+	}
 }
