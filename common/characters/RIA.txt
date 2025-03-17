@@ -3,7 +3,7 @@ characters={
 		name=RIA_character_emekri_zoulatesh
 		portraits={
 			civilian={
-				large=GFX_portrait_RIA_character
+				large=GFX_portrait_RIA_character_emekri
 			} 
 		}
 		country_leader={

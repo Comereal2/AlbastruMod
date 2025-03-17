@@ -11,6 +11,9 @@ country_event = {
 		tag = YEN
 		has_war_with = RIA
 	}
+	ai_chance = {
+		factor = 100
+	}
 
 	fire_only_once = yes
 
@@ -18,25 +21,20 @@ country_event = {
 		name = yentrok_event.1.a
 
 		172 = {
-		    create_unit = {
-			    division = "Milita" 
-		    	division_template = "National Guard" 
+			create_unit = {
+				division = "name = \"Milita\" division_template = \"National Guard\" start_experience_factor = 0.5"
+				owner = YEN
 				count = 2
-		    	start_experience_factor = 0.5
-		    	owner = YEN
-		    	allow_spawning_on_enemy_provs = no
-	    	}
+				allow_spawning_on_enemy_provs = no
+			}
 	    }
 		792 = {
 		    create_unit = {
-			    division = "Milita" 
-			    division_template = "National Guard"
+				division = "name = \"Milita\" division_template = \"National Guard\" start_experience_factor = 0.5"
+				owner = YEN
 				count = 1
-			    start_experience_factor = 0.5
-			    owner = YEN
-			    allow_spawning_on_enemy_provs = no
-		    }
+				allow_spawning_on_enemy_provs = no
+			}
 	    }
 	}
-
 }

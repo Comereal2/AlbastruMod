@@ -33,6 +33,10 @@ country_event = {
 	mean_time_to_happen = { days = 5 }
 
 	fire_only_once = yes
+
+	ai_chance = {
+		factor = 100
+	}
 	
 	option = {
 		name = rias_event.2.a
@@ -168,6 +172,10 @@ country_event = {
     
 	mean_time_to_happen = { days = 2 }
 
+	ai_chance = {
+		factor = 100
+	}
+
 	fire_only_once = yes
 
 	option = {
@@ -236,6 +244,10 @@ country_event = {
 	mean_time_to_happen = { days = 3 }
 
 	fire_only_once = yes
+
+	ai_chance = {
+		factor = 100
+	}
 
 	option = {
 		name = rias_march_event.1.a
@@ -331,6 +343,10 @@ country_event = {
 		days = 2
 	}
 
+	ai_chance = {
+		factor = 100
+	}
+
 	option = {
 		name = rias_march_event.4.a
 
@@ -353,6 +369,10 @@ country_event = {
 
 	mean_time_to_happen = {
 		days = 1
+	}
+
+	ai_chance = {
+		factor = 100
 	}
 
 	option = {
@@ -379,6 +399,10 @@ country_event = {
 
 	mean_time_to_happen = {
 		days = 3
+	}
+
+	ai_chance = {
+		factor = 100
 	}
 
 	fire_only_once = yes

@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_YEN_character_deob"
+		texturefile = "gfx/leaders/YEN/deob.tga"
+	}
+}

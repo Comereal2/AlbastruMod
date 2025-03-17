@@ -1,0 +1,13 @@
+#Author:RamonTheGreat
+leader_traits = {
+	YEN_independence_fighter = {
+		random = no
+		army_core_attack_factor = 0.2
+		army_core_defence_factor = 0.05
+		stability_factor = -0.05
+		war_support_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

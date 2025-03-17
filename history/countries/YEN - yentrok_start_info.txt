@@ -19,6 +19,7 @@ set_technology = {
 	interwar_antiair = 1
 }
 
+recruit_character = YEN_deob_sislisa
 set_politics = {
 	ruling_party = democratic
 	last_election = "1935.7.21"
