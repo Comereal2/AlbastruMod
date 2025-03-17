@@ -1,0 +1,298 @@
+#Author: Lloyd
+focus_tree = {
+	id = KAI_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KAI
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 0
+		y = 1500
+	}
+	##POLITICAL BASE
+	focus = {
+		id = KAI_Pre_1
+		icon = GFX_focus_NORDIC_dem_form_alliance
+		cost = 10
+		x = 10
+		y = 0
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = KAI_Pre_2
+		icon = GFX_focus_NORDIC_dem_institution_1
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_1
+		}
+		x = 10
+		y = 1
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	focus = {
+		id = KAI_Pre_4
+		icon = GFX_focus_NORDIC_com_form_alliance
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_2
+		}
+	mutually_exclusive = {
+			focus = KAI_Pre_3
+	}
+		x = 13
+		y = 3
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = KAI_Pre_5
+		icon = GFX_focus_NOR_send_the_king_back_to_denmark
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_4
+		}
+	mutually_exclusive = {
+		FOCUS = KAI_Reject_Democracy_1
+	}
+		x = 13
+		y = 4
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}				
+	focus = {
+		id = KAI_Pre_3
+		icon = GFX_focus_generic_communist
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_2
+		}
+	mutually_exclusive = {
+			focus = KAI_Pre_4
+	}
+		x = 7
+		y = 3
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+	focus = {
+		id = KAI_Pre_6
+		icon = GFX_focus_BEL_the_grand_place
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_3
+		}
+	mutually_exclusive = {
+	}
+		x = 7
+		y = 4
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+##POLITICAL Socialist - non schizo
+	focus = {
+		id = KAI_Soc_1
+		icon = GFX_focus_GER_proletarian_dictatorship
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_5
+		}
+	mutually_exclusive = {
+	}
+		x = 8
+		y = 5
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}		
+##POLITICAL conservative
+	focus = {
+		id = KAI_con_1
+		icon = GFX_focus_LIT_new_kind_of_iron_wolf
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_5
+		}
+	mutually_exclusive = {
+	}
+		x = 13
+		y = 5
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}		
+##POLITICAL liberal
+	focus = {
+		id = KAI_lib_1
+		icon = GFX_focus_POL_complete_april_constitution
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_5
+		}
+	mutually_exclusive = {
+	}
+		x = 18
+		y = 5
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}		
+##POLITICAL Nationalist-conservative
+	focus = {
+		id = KAI_NCO_1
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_5
+		}
+	mutually_exclusive = {
+	}
+		x = 23
+		y = 5
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}		
+##POLITICAL Greens
+	focus = {
+		id = KAI_GRE_1
+		icon = GFX_focus_POL_support_global_falangism
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_5
+		}
+	mutually_exclusive = {
+	}
+		x = 28
+		y = 5
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}	
+##Extremism 
+	focus = {
+		id = KAI_Reject_Democracy_1
+		icon = GFX_focus_GER_anschluss
+		cost = 10
+	prerequisite = {
+			focus = KAI_Pre_4
+		}
+	mutually_exclusive = {
+	}
+		x = 35
+		y = 4
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}	
+##POLITICAL Monarchist-Regular 
+	focus = {
+		id = KAI_MON_1
+		icon = GFX_focus_eng_imperial_federation
+		cost = 10
+	prerequisite = {
+			focus = KAI_Reject_Democracy_1
+		}
+	mutually_exclusive = {
+	}
+		x = 36
+		y = 5
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}	
+
+##POLITICAL Monarchist-Femboy 
+	focus = {
+		id = KAI_FEM_1
+		icon = GFX_focus_CONGO_bakwanga_mine
+		cost = 10
+	prerequisite = {
+			focus = KAI_Reject_Democracy_1
+		}
+	mutually_exclusive = {
+	}
+		x = 41
+		y = 5
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}	
+
+##POLITICAL Fascism 
+	focus = {
+		id = KAI_FAS_1
+		icon = GFX_focus_generic_limited_social_mobilization
+		cost = 10
+	prerequisite = {
+			focus = KAI_Reject_Democracy_1
+		}
+	mutually_exclusive = {
+	}
+		x = 46
+		y = 5
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}	
+
+##POLITICAL Communism 
+	focus = {
+		id = KAI_COMS_1
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		cost = 10
+	prerequisite = {
+			focus = KAI_Reject_Democracy_1
+		}
+	mutually_exclusive = {
+	}
+		x = 31
+		y = 5
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}	
+}
