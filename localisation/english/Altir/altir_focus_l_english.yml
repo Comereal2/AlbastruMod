@@ -141,6 +141,8 @@ ALT_create_space_department: "Create a Space Department"
 ALT_create_space_department_desc: "Wait what? Why do we need a space department? Isn't this supposed to be an alliance..."
 ALT_outlaw_the_bfr: "Outlaw the BFR"
 ALT_outlaw_the_bfr_desc: "Democracy is a pest, one we should eradicate from our nation."
+ALT_invade_odezya: "Invade Odezya"
+ALT_invade_odezya_desc: ""
 #Economy
 ALT_build_apache: "Build APACHE"
 ALT_build_apache_desc: "APACHE, also known as the Altir Prime, Altiria Connector Hub Expansion will be the largest tranportation hub in the region, it is about time we have finished the project."

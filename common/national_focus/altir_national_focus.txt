@@ -1904,6 +1904,36 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = ALT_invade_odezya
+		icon = GFX_goal_ALT_invade_odezya
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = ALT_demand_annexation
+		prerequisite = {
+			focus = ALT_demand_annexation
+		}
+		available = {
+			NOT = {
+				country_exists = RIA
+			}
+		}
+		bypass = {
+			NOT = {
+				country_exists = ODZ
+			}
+		}
+		completion_reward = { 
+			create_wargoal = {
+				target = ODZ
+				type = annex_everything
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	#Hidden POLITICAL, SKIRTS
 	focus = {
 		id = ALT_a_time_for_the_cute
@@ -1943,6 +1973,12 @@ focus_tree = {
 		x = 12
 		y = 0
 		relative_position_id = ALT_concentrate_power
+		select_effect = {
+			set_variable = {
+				var = focus_taken
+				value = 1
+			}
+		}
 		completion_reward = {
 			custom_effect_tooltip = ALT_build_apache_ctt
 		}
@@ -2003,6 +2039,12 @@ focus_tree = {
 		x = 5
 		y = 0
 		relative_position_id = ALT_build_apache
+		select_effect = {
+			set_variable = {
+				var = focus_taken
+				value = 1
+			}
+		}
 		completion_reward = {
 		}
 		ai_will_do = {

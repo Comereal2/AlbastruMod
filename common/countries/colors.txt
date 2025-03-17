@@ -26,8 +26,8 @@ RIA = {
 	color_ui = rgb { 255 61 103 }
 }
 KAI = {
-	color = rgb { 242 79 212 }
-	color_ui = rgb { 242 79 212 }
+	color = rgb { 255 218 0 }
+	color_ui = rgb { 255 218 0 }
 }
 VAL = {
 	color = rgb { 0 255 0 }

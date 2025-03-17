@@ -72,4 +72,8 @@ spriteTypes = {
 		name = "GFX_goal_ALT_let_the_communists_lead"
 		textureFile = "gfx/interface/goals/ALT_let_the_communists_lead.png"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_invade_odezya"
+		textureFile = "gfx/interface/goals/ALT_invade_odezya.dds"
+	}
 }

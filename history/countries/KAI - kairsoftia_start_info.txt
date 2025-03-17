@@ -19,6 +19,7 @@ set_technology = {
 	motorised_infantry = 1
 }
 
+recruit_character = KAI_Lowen_Gower
 set_politics = {
 	ruling_party = skirts
 	last_election = "1936.1.1"
