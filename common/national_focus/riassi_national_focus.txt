@@ -937,6 +937,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = RIA_tourism_industry_idea
+			custom_effect_tooltip = RIA_expand_the_tourism_industry_ctt
 			random_owned_controlled_state = {
 				prioritize = { 31 }
 				if = {
@@ -2619,7 +2620,7 @@ focus_tree = {
 		id = RIA_hold_new_elections
 		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
 		cost = 10
-		x = 65
+		x = 70
 		y = 0
 
 		available = {
@@ -2664,6 +2665,63 @@ focus_tree = {
 			focus = RIA_hold_new_elections
 		}
 		completion_reward = { }
+	}
+	focus = {
+		id = RIA_expand_the_welfare_state
+		icon = GFX_focus_generic_welfare
+		cost = 10
+		relative_position_id = RIA_democratic_win
+		x = -6
+		y = 1
+
+		prerequisite = {
+			focus = RIA_democratic_win
+		}
+
+		available = {
+			has_completed_focus = RIA_finalize_economic_recovery
+		}
+
+		completion_reward = { 
+			add_ideas = RIA_welfare_state_idea
+		}
+	}
+	focus = {
+		id = RIA_the_greatest_welfare_state
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10
+		relative_position_id = RIA_expand_the_welfare_state
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_expand_the_welfare_state
+		}
+
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = RIA_welfare_state_idea
+				add_idea = RIA_welfare_state_idea_2
+			}
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = RIA_true_equality
+		icon = GFX_focus_SWE_form_rfsu 
+		cost = 10
+		relative_position_id = RIA_expand_the_welfare_state
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_expand_the_welfare_state
+		}
+
+		completion_reward = { 
+			add_ideas = RIA_equal_rights_idea
+			add_stability = -0.05
+		}
 	}
 	focus = {
 		id = RIA_reestablish_riassi_aid_for_all
@@ -2718,6 +2776,31 @@ focus_tree = {
 					modifier = aided_industry
 					}
 			}
+		}
+	}
+	focus = {
+		id = RIA_open_borders
+		icon = GFX_focus_SWE_refuge_from_war
+		cost = 10
+		relative_position_id = RIA_true_equality
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_true_equality
+		}
+		prerequisite = {
+			focus = RIA_expand_riassi_aid_for_all
+		}
+
+		available = {
+			NOT = {
+				has_civil_war = yes
+			}
+		}
+
+		completion_reward = { 
+			add_ideas = RIA_open_borders_idea
 		}
 	}
 	focus = {

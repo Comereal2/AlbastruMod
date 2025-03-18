@@ -699,5 +699,43 @@ ideas = {
 				army_core_defence_factor = 0.2
 			}
 		}
+		RIA_welfare_state_idea = {
+			picture = ARG_argentine_metropole
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				monthly_population = 0.1
+				research_speed_factor = 0.025
+				war_stability_factor = 0.1
+			}
+		}
+		RIA_welfare_state_idea_2 = {
+			picture = ARG_argentine_metropole
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				monthly_population = 0.20
+				research_speed_factor = 0.05
+				war_stability_factor = 0.25
+			}
+		}
+		RIA_equal_rights_idea = {
+			picture = POL_ideology_drift_defense
+
+			modifier = {
+				recruitable_population_factor = 0.3
+				war_support_factor = 0.05
+				monthly_population = -0.05
+			}
+		}
+		RIA_open_borders_idea = {
+			picture = ARG_social_welfare_funds_ns
+
+			modifier = {
+				monthly_population = 0.1
+				weekly_manpower = 1000
+				stability_factor = -0.1
+			}
+		}
 	}
 }
