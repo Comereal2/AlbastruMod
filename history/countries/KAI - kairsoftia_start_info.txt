@@ -20,9 +20,12 @@ set_technology = {
 }
 
 recruit_character = KAI_Lowen_Gower
+recruit_character = KAI_Lowen_Gower2
 recruit_character = KAI_Michael_Gibs
 recruit_character = KAI_Emily_Brett
 recruit_character = KAI_Lady_Mildred
+recruit_character = KAI_Hayden_Carter
+recruit_character = KAI_HM
 set_politics = {
 	ruling_party = skirts
 	last_election = "1936.1.1"
