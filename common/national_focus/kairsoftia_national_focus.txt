@@ -125,6 +125,18 @@ focus_tree = {
 		x = 8
 		y = 5
 		completion_reward = {
+		add_popularity = {
+    ideology = democratic
+    popularity = 0.5
+}	
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		promote_character = {
+    character = KAI_Lowen_Gower
+    ideology = Socialist
+}									
 		}
 		ai_will_do = {
 			factor = 1
@@ -143,6 +155,18 @@ focus_tree = {
 		x = 13
 		y = 5
 		completion_reward = {
+		add_popularity = {
+    ideology = democratic
+    popularity = 0.5
+}	
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		promote_character = {
+    character = KAI_Lady_Mildred
+    ideology = Conservatism
+}						
 		}
 		ai_will_do = {
 			factor = 1
@@ -161,6 +185,18 @@ focus_tree = {
 		x = 18
 		y = 5
 		completion_reward = {
+		add_popularity = {
+    ideology = democratic
+    popularity = 0.5
+}	
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		promote_character = {
+    character = KAI_Michael_Gibs
+    ideology = Liberalism
+}									
 		}
 		ai_will_do = {
 			factor = 1
@@ -179,6 +215,10 @@ focus_tree = {
 		x = 23
 		y = 5
 		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+			}						
 		}
 		ai_will_do = {
 			factor = 1
@@ -197,6 +237,18 @@ focus_tree = {
 		x = 28
 		y = 5
 		completion_reward = {
+		add_popularity = {
+    ideology = neutrality
+    popularity = 0.5
+}	
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+		promote_character = {
+    character = KAI_Emily_Brett
+    ideology = Centrism
+}			
 		}
 		ai_will_do = {
 			factor = 1
@@ -233,6 +285,10 @@ focus_tree = {
 		x = 36
 		y = 5
 		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality 
+				elections_allowed = no
+			}						
 		}
 		ai_will_do = {
 			factor = 1
@@ -252,6 +308,10 @@ focus_tree = {
 		x = 41
 		y = 5
 		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality 
+				elections_allowed = no
+			}			
 		}
 		ai_will_do = {
 			factor = 1
@@ -271,6 +331,10 @@ focus_tree = {
 		x = 46
 		y = 5
 		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}		
 		}
 		ai_will_do = {
 			factor = 1
@@ -290,6 +354,10 @@ focus_tree = {
 		x = 31
 		y = 5
 		completion_reward = {
+			set_politics = {
+				ruling_party = Communism 
+				elections_allowed = no
+			}			
 		}
 		ai_will_do = {
 			factor = 1
