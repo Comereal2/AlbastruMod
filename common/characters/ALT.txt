@@ -34,6 +34,53 @@ characters = {
 			id = -1
 		}
 	}
+	ALT_gregorij_zulkov = {
+		name = "Gregorij Zulkov"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ALT_gregorij_zulkov"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = {
+				DEN_kommunist
+			}
+			id = -1
+		}
+	}
+	ALT_albara_mert = {
+		name = "Albara Mert"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ALT_albara_mert"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {
+				first_lady
+				great_war_hero
+			}
+			id = -1
+		}
+	}
+	ALT_lead_scientist = {
+		name = "Lead Scientist"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_ALT_lead_scientist"
+			}
+		}
+		country_leader = {
+			ideology = cuties
+			traits = {
+				ALT_technocrat
+				ALT_cutie_patootie
+			}
+			id = -1
+		}
+	}
 	ALT_anto_gabar = {
 		name = "Anto Gabar"
 		portraits = {
