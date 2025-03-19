@@ -36,6 +36,30 @@ characters={
 			traits = { conservative_grandee }
 		}
 	}
+	RIA_melok_huercka={
+		name=RIA_character_melok_huercka
+		portraits = {
+			civilian={
+				large=GFX_portrait_RIA_character_melok_large
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = { liberal_politician }
+		}
+	}
+	RIA_quistor_zeltrikash_iii={
+		name=RIA_character_quistor_zeltrikash
+		portraits = {
+			civilian={
+				large=GFX_portrait_RIA_character_quistor_large
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { man_of_the_nation }
+		}
+	}
 	#advisors
 	RIA_stjen_alxel={
 		name=RIA_character_stjen_alxel
