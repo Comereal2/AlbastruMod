@@ -206,6 +206,15 @@ RIA_welfare_state_idea_2_desc: "The riassi welfare state is considered one of th
 RIA_equal_rights_idea: "Equal Rights"
 RIA_equal_rights_idea_desc: "In Rias, men and women have completely equal rights, not only on paper."
 
+RIA_open_borders_idea: "Open Borders"
+RIA_open_borders_idea_desc: "We have decided to completely open our borders, allowing anyone seeking a better life to come to Rias."
+
+RIA_private_education_idea: "Private Education"
+RIA_private_education_idea_desc: "The liberals have privatised the nation's education system."
+
+RIA_economic_deregulation_idea: "Economic Deregulation"
+RIA_economic_deregulation_idea_desc: "Following the change in leadership, the nation's economy has become more deregulated than it has ever been during the last 100 years."
+
 rias_event.1.t: "The Second Term of The Democratic Party"
 rias_event.1.d: "The Democratic Party and it's coalition partners, the Liberal Future and the Socialist Solidarty, have won reelection with an even higher margin than last election. President Emekri Zoulatesh now has the support to pass almost anything, and the opposition has practically no say in lawmaking. The Riassi Economy is doing great and has no sign of slowing down, the lives of the people are improving and generally, the nation bubbles of optimism and hope."
 rias_event.1.a: "Kikokor Velstran!"
