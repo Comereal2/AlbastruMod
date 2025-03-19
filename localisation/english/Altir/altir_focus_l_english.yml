@@ -160,6 +160,8 @@ ALT_propose_complete_integration_desc: "These nations fly our flags, they sing o
 ALT_propose_complete_integration_ctt: "Unlocks decisions to propose complete integration to puppeted countries."
 ALT_increase_governing_capacity: "Increase Governing Capacity"
 ALT_increase_governing_capacity_desc: "The further we expand, the harder it becomes to control our land. We must expend some of our resources to ensure stability across the empire."
+ALT_remember_the_past: "Remember the Past"
+ALT_remember_the_past_desc: "The Helios Empire, once defeated, shall be reinstatiated once more by our nation. All shall hear about this great endeavor and all shall join us, under one banner."
 #Economy
 ALT_build_apache: "Build APACHE"
 ALT_build_apache_desc: "APACHE, also known as the Altir Prime, Altiria Connector Hub Expansion will be the largest tranportation hub in the region, it is about time we have finished the project."

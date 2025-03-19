@@ -100,4 +100,20 @@ spriteTypes = {
 		name = "GFX_goal_ALT_propose_changes_to_governments"
 		textureFile = "gfx/interface/goals/ALT_propose_changes_to_governments.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_revise_foreign_policy"
+		textureFile = "gfx/interface/goals/ALT_revise_foreign_policy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_altir_stands_alone"
+		textureFile = "gfx/interface/goals/ALT_altir_stands_alone.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_target_val"
+		textureFile = "gfx/interface/goals/ALT_target_val.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_remember_the_past"
+		textureFile = "gfx/interface/goals/ALT_remember_the_past.dds"
+	}
 }

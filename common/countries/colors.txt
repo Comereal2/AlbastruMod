@@ -33,6 +33,14 @@ VAL = {
 	color = rgb { 0 255 0 }
 	color_ui = rgb { 0 255 0 }
 }
+CYN = {
+	color = rgb { 79 10 83 }
+	color_ui = rgb { 79 10 83 }
+}
+ISL = {
+	color = rgb { 125 125 125 }
+	color_ui = rgb { 125 125 125 }
+}
 GER = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }
