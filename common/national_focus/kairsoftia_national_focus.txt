@@ -134,7 +134,7 @@ focus_tree = {
 				elections_allowed = yes
 			}
 		promote_character = {
-    character = KAI_Lowen_Gower
+    character = KAI_Lowen_Gower2
     ideology = Socialist
 }									
 		}
@@ -215,10 +215,18 @@ focus_tree = {
 		x = 23
 		y = 5
 		completion_reward = {
+		add_popularity = {
+    ideology = fascism
+    popularity = 0.5
+}	
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = yes
-			}						
+			}
+		promote_character = {
+    character = KAI_Hayden_Carter
+    ideology = Falangism
+}							
 		}
 		ai_will_do = {
 			factor = 1
@@ -263,6 +271,7 @@ focus_tree = {
 			focus = KAI_Pre_4
 		}
 	mutually_exclusive = {
+	focus = KAI_Pre_5
 	}
 		x = 35
 		y = 4
@@ -285,10 +294,18 @@ focus_tree = {
 		x = 36
 		y = 5
 		completion_reward = {
+		add_popularity = {
+    ideology = neutrality
+    popularity = 0.5
+}	
 			set_politics = {
-				ruling_party = neutrality 
+				ruling_party = neutrality
 				elections_allowed = no
-			}						
+			}
+		promote_character = {
+    character = KAI_KJA
+    ideology = despotism
+}			
 		}
 		ai_will_do = {
 			factor = 1
