@@ -5,6 +5,7 @@
 # ALT_the_alliance_finalized and its sub-tree - add all ASAA tags to invite inside decision
 # ALT_demand_lost_lands - add the events for demanding land from RIA + add perma claims
 # ALT_build_railways - add the railways
+# ALT_finish_apache_construction - give buildings in Altiria
 # Complete event altir.22
 focus_tree = {
 	id = ALT_focus_tree
@@ -333,6 +334,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -848,6 +850,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
 			add_ideas = disarmed_nation
@@ -896,6 +899,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -1071,6 +1075,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
 			add_ideas = ALT_space_department
@@ -1883,7 +1888,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_promote_fascism
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_promote_fascism
 		x = -1
 		y = 1
 		relative_position_id = ALT_pressure_odezya
@@ -1929,7 +1934,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_propose_government_change
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_propose_changes_to_governments
 		cost = 10
 		x = 0
 		y = 1
@@ -1949,7 +1954,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_integrate_friendly_governments
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_integrate_friendly_governments
 		cost = 10
 		x = 0
 		y = 1
@@ -1959,6 +1964,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward = { 
 			custom_effect_tooltip = ALT_integrate_friendly_governments_ctt
@@ -1969,7 +1975,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_propose_complete_integration
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_propose_complete_integration
 		cost = 10
 		x = 0
 		y = 1
@@ -2059,6 +2065,10 @@ focus_tree = {
 				country_exists = ODZ
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
 		completion_reward = { 
 			create_wargoal = {
 				target = ODZ
@@ -2114,6 +2124,9 @@ focus_tree = {
 				value = 1
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		completion_reward = {
 			custom_effect_tooltip = ALT_build_apache_ctt
 		}
@@ -2130,6 +2143,9 @@ focus_tree = {
 		relative_position_id = ALT_build_apache
 		prerequisite = {
 			focus = ALT_build_apache
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -2151,8 +2167,70 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_build_apache
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		completion_reward = {
 			#Add railways to every part of the country from the capital
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_finish_apache_construction
+		icon = GFX_goal_ALT_finish_apache_construction
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = ALT_build_apache
+		prerequisite = {
+			focus = ALT_build_apache
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_finish_apache_construction_att
+				has_country_flag = apache_stage_3
+			}
+		}
+		completion_reward = { 
+			#Add dockyard, max infrastructure and two civs to Altiria
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_expand_altirian_infrastructure
+		icon = GFX_goal_ALT_expand_altirian_infrastructure
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = ALT_build_railways
+		prerequisite = {
+			focus = ALT_build_railways
+		}
+		prerequisite = {
+			focus = ALT_finish_apache_construction
+		}
+		completion_reward = { 
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1

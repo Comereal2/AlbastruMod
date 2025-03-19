@@ -76,4 +76,28 @@ spriteTypes = {
 		name = "GFX_goal_ALT_invade_odezya_shine"
 		textureFile = "gfx/interface/goals/ALT_invade_odezya.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_promote_fascism_shine"
+		textureFile = "gfx/interface/goals/ALT_promote_fascism.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_finish_apache_construction_shine"
+		textureFile = "gfx/interface/goals/ALT_finish_apache_construction.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_expand_altirian_infrastructure"
+		textureFile = "gfx/interface/goals/ALT_expand_infrastructure.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_propose_complete_integration_shine"
+		textureFile = "gfx/interface/goals/ALT_propose_complete_integration.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_integrate_friendly_governments_shine"
+		textureFile = "gfx/interface/goals/ALT_integrate_friendly_governments.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_propose_changes_to_governments_shine"
+		textureFile = "gfx/interface/goals/ALT_propose_changes_to_governments.dds"
+	}
 }
