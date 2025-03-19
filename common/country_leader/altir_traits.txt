@@ -9,4 +9,29 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	ALT_technocrat = {
+		random = no
+		research_speed_factor = 0.25
+		production_speed_buildings_factor = -0.3
+		local_resources_factor = -0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ALT_cutie_patootie = {
+		random = no
+		skirts_drift = 0.1
+		stability_weekly = 0.01
+		opinion_gain_monthly_factor = 0.5
+		hidden_modifier = {
+			democratic_acceptance = 50
+			communism_acceptance = 50
+			fascism_acceptance = 50
+			neutrality_acceptance = 50
+			skirts_acceptance = 100
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

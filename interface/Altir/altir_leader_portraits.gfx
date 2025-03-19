@@ -4,4 +4,16 @@ spriteTypes = {
 		name = "GFX_portrait_supreme_suzerain"
 		texturefile = "gfx/leaders/ALT/SupremeSuzerain.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_ALT_albara_mert"
+		textureFile = "gfx/leaders/ALT/AlbaraMert.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALT_gregorij_zulkov"
+		textureFile = "gfx/leaders/ALT/GregorijZulkov.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALT_lead_scientist"
+		textureFile = "gfx/leaders/ALT/LeadScientist.png"
+	}
 }
