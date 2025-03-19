@@ -148,7 +148,7 @@ country_event = {
 			long_name = RIA_rias_unite_long
 			name = RIA_rias_unite
 		}
-		retire_country_leader = yes
+		promote_character = RIA_yster_zonkaram
 
 		add_popularity = {
 			ideology = fascism
@@ -492,7 +492,7 @@ country_event = {
 			long_name = RIA_rias_unite_long
 			name = RIA_rias_unite
 		}
-		retire_country_leader = yes
+		promote_character = RIA_yster_zonkaram
 
 		complete_national_focus = RIA_conservative_win
 

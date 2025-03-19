@@ -1,7 +1,15 @@
 spriteTypes = {
 
 	spriteType = {
-		name = "GFX_portrait_RIA_character_emekri"
+		name = "GFX_portrait_RIA_character_emekri_large"
 		texturefile = "gfx/leaders/RIA/emekri.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_RIA_character_dolaf_large"
+		texturefile = "gfx/leaders/RIA/dolaf.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_RIA_character_yster_large"
+		texturefile = "gfx/leaders/RIA/yster.tga"
 	}
 }
