@@ -1056,3 +1056,111 @@ ALT_bop_category = {
 		}
 	}
 }
+
+ALT_spread_fascism_category = {
+	ALT_spread_fascism = {
+		icon = GFX_decision_category_generic_political
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				NOT = {
+					OR = {
+						has_government = fascism
+						is_subject = yes
+					}
+				}
+			}
+		}
+		on_map_mode = map_only
+		visible = {
+			has_completed_focus = ALT_promote_fascism
+		}
+		priority = 91
+		cost = 50
+		days_re_enable = 60
+		complete_effect = {
+			FROM = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+				add_timed_idea = {
+					idea = ALT_fascist_supporters
+					days = 60
+				}
+			}
+		}
+	}
+	ALT_propose_government_change = {
+		icon = GFX_decision_category_generic_political
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				NOT = {
+					OR = {
+						has_country_flag = ALT_was_influenced
+						is_subject = yes
+					}
+				}
+			}
+		}
+		on_map_mode = map_only
+		visible = {
+			has_completed_focus = ALT_promote_fascism
+		}
+		available = {
+			has_completed_focus = ALT_propose_government_change
+			FROM = {
+				fascism > 0.3
+			}
+		}
+		priority = 91
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				country_event = altir.24
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+		}
+	}
+	ALT_propose_integration = {
+		icon = GFX_decision_category_generic_political
+		target_array = neighbors_owned
+		target_trigger = {
+			FROM = {
+				is_subject = no
+			}
+		}
+		on_map_mode = map_only
+		visible = {
+			has_completed_focus = ALT_promote_fascism
+		}
+		available = {
+			has_completed_focus = ALT_integrate_friendly_governments
+			FROM = {
+				has_government = fascism
+				is_subject = no
+				custom_trigger_tooltip = {
+					tooltip = ALT_propose_integration_tt
+					has_country_flag = ALT_was_influenced
+				}
+			}
+		}
+		priority = 91
+		cost = 150
+		fire_only_once = yes
+		complete_effect = {
+			ROOT = {
+				puppet = {
+					target = FROM
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+		}
+	}
+}

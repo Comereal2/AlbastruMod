@@ -1854,6 +1854,60 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = ALT_promote_fascism
+		icon = GFX_focus_generic_self_management
+		x = -1
+		y = 1
+		relative_position_id = ALT_pressure_odezya
+		cost = 10
+		prerequisite = {
+			focus = ALT_pressure_odezya
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_promote_fascism_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_propose_government_change
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = ALT_promote_fascism
+		prerequisite = {
+			focus = ALT_promote_fascism
+		}
+		completion_reward = { 
+			custom_effect_tooltip = ALT_propose_government_change_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_integrate_friendly_governments
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = ALT_propose_government_change
+		prerequisite = {
+			focus = ALT_propose_government_change
+		}
+		completion_reward = { 
+			custom_effect_tooltip = ALT_integrate_friendly_governments_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = ALT_isolate_riassi
 		icon = GFX_goal_generic_military_sphere
 		x = 1
