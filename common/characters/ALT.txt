@@ -28,8 +28,6 @@ characters = {
 			ideology = fascism_ideology
 			traits = {
 				headstrong
-				humble
-				popular_figurehead3
 			}
 			id = -1
 		}
@@ -93,7 +91,10 @@ characters = {
 			slot = political_advisor
 			idea_token = ALT_anto_gabar
 			available = {
-				has_completed_focus = ALT_appoint_advisors
+				OR = {
+					has_completed_focus = ALT_appoint_advisors
+					has_completed_focus = ALT_increase_governing_capacity
+				}
 			}
 			traits = {
 				tenacious_negotiator
