@@ -855,7 +855,7 @@ country_event = {
 			name = ALT_das
 			long_name = ALT_das_long
 		}
-		set_country_flag = ALT_was_influenced
+		hidden_effect = { set_country_flag = ALT_was_influenced }
 		ai_chance = {
 			base = 50
 		}
@@ -886,7 +886,7 @@ country_event = {
 				name = ALT_das
 				long_name = ALT_das_long
 			}
-			set_country_flag = ALT_was_influenced
+			hidden_effect = { set_country_flag = ALT_was_influenced }
 			}
 		}
 		else = {
@@ -900,7 +900,7 @@ country_event = {
 				name = ALT_das
 				long_name = ALT_das_long
 			}
-			set_country_flag = ALT_was_influenced
+			hidden_effect = { set_country_flag = ALT_was_influenced }
 		}
 		}
 		ai_chance = {

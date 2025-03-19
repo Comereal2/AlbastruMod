@@ -1847,10 +1847,38 @@ focus_tree = {
 		completion_reward = {
 			ODZ = {
 				country_event = altir.14
+				hidden_effect = {
+					set_country_flag = ALT_was_influenced
+				}
 			}
 		}
 		ai_will_do = {
 			factor = 100
+		}
+	}
+	focus = {
+		id = ALT_increase_governing_capacity
+		icon = GFX_focus_generic_self_management
+		x = 1
+		y = 1
+		relative_position_id = ALT_pressure_odezya
+		cost = 10
+		prerequisite = {
+			focus = ALT_pressure_odezya
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = ALT_strained_burocracy
+				days = 35
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ALT_anto_gabar
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	focus = {
@@ -1874,6 +1902,32 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = ALT_target_valtheronesia
+		icon = GFX_focus_generic_self_management
+		x = 2
+		y = 1
+		relative_position_id = ALT_promote_fascism
+		prerequisite = {
+			focus = ALT_promote_fascism
+		}
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			VAL = {
+				add_ideas = {
+					ALT_fascist_supporters
+				}
+				country_event = altir.9
+				custom_effect_tooltip = ALT_target_valtheronesia_ctt
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = ALT_propose_government_change
 		icon = GFX_focus_generic_self_management
 		cost = 10
@@ -1882,6 +1936,9 @@ focus_tree = {
 		relative_position_id = ALT_promote_fascism
 		prerequisite = {
 			focus = ALT_promote_fascism
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = { 
 			custom_effect_tooltip = ALT_propose_government_change_ctt
@@ -1900,8 +1957,32 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_propose_government_change
 		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
 		completion_reward = { 
 			custom_effect_tooltip = ALT_integrate_friendly_governments_ctt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_propose_complete_integration
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = ALT_integrate_friendly_governments
+		prerequisite = {
+			focus = ALT_integrate_friendly_governments
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			custom_effect_tooltip = ALT_propose_complete_integration_ctt
 		}
 		ai_will_do = {
 			factor = 1
