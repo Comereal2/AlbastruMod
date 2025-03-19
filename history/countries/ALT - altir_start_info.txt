@@ -73,6 +73,9 @@ set_power_balance = {
 
 recruit_character = ALT_supreme_suzerain
 recruit_character = ALT_f_supreme_suzerain
+recruit_character = ALT_gregorij_zulkov
+recruit_character = ALT_albara_mert
+recruit_character = ALT_lead_scientist
 recruit_character = ALT_anto_gabar
 recruit_character = ALT_laika
 add_ideas = {
