@@ -842,6 +842,73 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = altir.24
+	title = altir.24.t
+	desc = altir.24.d
+	is_triggered_only = yes
+	option = {
+		name = altir.24.a
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+			name = ALT_das
+			long_name = ALT_das_long
+		}
+		hidden_effect = { set_country_flag = ALT_was_influenced }
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {
+		name = altir.24.b
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.3
+		}
+		if = {
+			limit = { has_idea = ALT_fascist_supporters }
+			remove_ideas = ALT_fascist_supporters
+		}
+		if = {
+			limit = {
+				FROM = {
+					fascism > 0.5
+				}
+			}
+			start_civil_war = {
+			ideology = fascism
+			size = 0.5
+			keep_all_characters = yes
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				name = ALT_das
+				long_name = ALT_das_long
+			}
+			hidden_effect = { set_country_flag = ALT_was_influenced }
+			}
+		}
+		else = {
+			start_civil_war = {
+			ideology = fascism
+			size = from.party_popularity@fascism
+			keep_all_characters = yes
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				name = ALT_das
+				long_name = ALT_das_long
+			}
+			hidden_effect = { set_country_flag = ALT_was_influenced }
+		}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
 add_namespace = altirnews
 #The Skirt Takeover
 news_event = {

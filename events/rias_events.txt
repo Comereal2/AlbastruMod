@@ -511,7 +511,7 @@ country_event = {
 			long_name = RIA_liberal_future_long
 			name = RIA_liberal_future
 		}
-		retire_country_leader = yes
+		promote_character = RIA_melok_huercka
 
 		complete_national_focus = RIA_liberal_win
 
@@ -573,7 +573,7 @@ country_event = {
 			long_name = RIA_liberal_future_long
 			name = RIA_liberal_future
 		}
-		retire_country_leader = yes
+		promote_character = RIA_melok_huercka
 
 		complete_national_focus = RIA_liberal_win
 

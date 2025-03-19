@@ -573,6 +573,15 @@ ideas = {
 				production_speed_arms_factory_factor = 0.05
 			}
 		}
+		ALT_the_helios_empire_of_the_present = {
+			picture = ALT_ghost_of_the_helios_empire
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				experience_gain_army_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
 		ALT_technocratic_nation = {
 			picture = ALT_technocratic_nation
 			removal_cost = -1
