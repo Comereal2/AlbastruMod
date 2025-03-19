@@ -1,0 +1,14 @@
+characters={
+	YEN_deob_sislisa={
+		name=YEN_character_deob_sislisa
+		portraits={
+			civilian={
+				large=GFX_portrait_YEN_character_deob
+			} 
+		}
+		country_leader={
+			ideology=socialism
+			traits={ YEN_independence_fighter }
+		}
+	}
+}

@@ -34,6 +34,21 @@ RIA_paramilitary_cat = {
 			has_completed_focus = RIA_increasing_political_violence
 		}
 
+		ai_will_do = {
+			base = 0
+
+			modifier = {
+				tag = RIA
+				has_stability < 0.35 
+				add = 2
+			}
+			modifier = {
+				tag = RIA
+				fascism > 0.4
+				add = 2
+			}
+		}
+
 		cost = 75
 		fire_only_once = yes
 		complete_effect = {

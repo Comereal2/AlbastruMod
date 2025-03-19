@@ -1,14 +1,46 @@
 characters={
+	#leaders
 	RIA_emekri_zoulatesh={
 		name=RIA_character_emekri_zoulatesh
 		portraits={
 			civilian={
-				large=GFX_portrait_RIA_character
+				large=GFX_portrait_RIA_character_emekri_large
 			} 
 		}
 		country_leader={
 			ideology=socialism
 			traits={ railroad_enthusiast the_gentleman_president champion_of_peace_5 }
+		}
+	}
+	RIA_dolaf_hertil={
+		name=RIA_character_dolaf_hertil
+		portraits = {
+			civilian={
+				large=GFX_portrait_RIA_character_dolaf_large
+			}
+		}
+		country_leader={
+			ideology=gen_nazism
+			traits={ dictator stalin_heart_of_steel }
+		}
+	}
+	RIA_yster_zonkaram={
+		name=RIA_character_yster_zonkaram
+		portraits = {
+			civilian={
+				large=GFX_portrait_RIA_character_yster_large
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = { conservative_grandee }
+		}
+	}
+	#advisors
+	RIA_stjen_alxel={
+		name=RIA_character_stjen_alxel
+		portraits = {
+			
 		}
 	}
 }
