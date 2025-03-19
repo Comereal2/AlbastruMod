@@ -13,34 +13,19 @@ characters = {
 			}
 		}
 	}
-}
-characters = {
-	KAI_Lowen_Gower = {
+	KAI_Lowen_Gower2 = {
 		name = "Lowen Gower"
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_LowenG"
+				large = "GFX_portrait_LowenG2"
 			}
 		}
 		country_leader = {
-			ideology = femboys
+			ideology = Socialism
 			traits = {
 			}
 		}
 	}
-	KAI_Lowen_Gower = {
-		name = "Lowen Gower"
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_LowenG"
-			}
-		}
-		country_leader = {
-			ideology = Socialist
-			traits = {
-			}
-		}
-	}	
 	KAI_Lady_Mildred = {
 		name = "Lady Mildred"
 		portraits = {
@@ -79,5 +64,31 @@ characters = {
 			traits = {
 			}
 		}
-	}				
+	}			
+	KAI_Hayden_Carter = {
+		name = "Hayden Carter"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_HaydenCarter"
+			}
+		}
+		country_leader = {
+			ideology = Falangism
+			traits = {
+			}
+		}
+	}
+	KAI_KJA = {
+		name = "King Jan Ackbar"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_HM"
+			}
+		}
+		country_leader = {
+			ideology = Despotism
+			traits = {
+			}
+		}
+	}						
 }
