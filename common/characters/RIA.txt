@@ -45,11 +45,11 @@ characters={
 		}
 		country_leader = {
 			ideology = liberalism
-			traits = { liberal_politician }
+			traits = { economic_reformer }
 		}
 	}
 	RIA_quistor_zeltrikash_iii={
-		name=RIA_character_quistor_zeltrikash
+		name=RIA_character_quistor_zeltrikash_iii
 		portraits = {
 			civilian={
 				large=GFX_portrait_RIA_character_quistor_large
