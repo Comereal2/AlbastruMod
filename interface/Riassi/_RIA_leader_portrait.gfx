@@ -12,4 +12,12 @@ spriteTypes = {
 		name = "GFX_portrait_RIA_character_yster_large"
 		texturefile = "gfx/leaders/RIA/yster.tga"
 	}
+	spriteType = {
+		name = "GFX_portrait_RIA_character_melok_large"
+		texturefile = "gfx/leaders/RIA/melok.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_RIA_character_quistor_large"
+		texturefile = "gfx/leaders/RIA/quistor.tga"
+	}
 }

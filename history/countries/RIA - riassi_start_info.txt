@@ -19,6 +19,9 @@ set_technology = {
 recruit_character = RIA_emekri_zoulatesh
 recruit_character = RIA_dolaf_hertil
 recruit_character = RIA_yster_zonkaram
+recruit_character = RIA_melok_huercka
+recruit_character = RIA_quistor_zeltrikash_iii
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1935.7.21"

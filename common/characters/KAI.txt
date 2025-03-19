@@ -28,4 +28,56 @@ characters = {
 			}
 		}
 	}
+	KAI_Lowen_Gower = {
+		name = "Lowen Gower"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_LowenG"
+			}
+		}
+		country_leader = {
+			ideology = Socialist
+			traits = {
+			}
+		}
+	}	
+	KAI_Lady_Mildred = {
+		name = "Lady Mildred"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_LadyMildred"
+			}
+		}
+		country_leader = {
+			ideology = Conservatism
+			traits = {
+			}
+		}
+	}
+	KAI_Michael_Gibs = {
+		name = "Michael Gibs"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_MichaelGibs"
+			}
+		}
+		country_leader = {
+			ideology = Liberalism
+			traits = {
+			}
+		}
+	}
+	KAI_Emily_Brett = {
+		name = "Emily Brett"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_EmilyBrett"
+			}
+		}
+		country_leader = {
+			ideology = Centrism
+			traits = {
+			}
+		}
+	}				
 }

@@ -4,4 +4,16 @@ spriteTypes = {
 		name = "GFX_portrait_LowenG"
 		texturefile = "gfx/leaders/KAI/LowenG.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_LadyMildred"
+		texturefile = "gfx/leaders/KAI/LM.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_EmilyBrett"
+		texturefile = "gfx/leaders/KAI/EB.dds"
+	}		
+	spriteType = {
+		name = "GFX_portrait_MichaelGibs"
+		texturefile = "gfx/leaders/KAI/MG.dds"
+	}	
 }
