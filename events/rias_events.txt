@@ -1,8 +1,9 @@
 add_namespace = rias_event
-add_namespace = march_event
+add_namespace = rias_march_event
 add_namespace = rias_train_event
 add_namespace = rias_election_event
 
+#must add ai_chance to event options
 country_event = {
 	id = rias_event.1
 	title = rias_event.1.t
@@ -16,8 +17,12 @@ country_event = {
 	option = {
 		name = rias_event.1.a
 		
-			add_stability = 0.05
-		    add_political_power = 15
+		add_stability = 0.05
+		add_political_power = 15
+
+		ai_chance = {
+			factor = 100
+		}
 		
 		
 	}
@@ -33,7 +38,7 @@ country_event = {
 	mean_time_to_happen = { days = 5 }
 
 	fire_only_once = yes
-	
+
 	option = {
 		name = rias_event.2.a
 
@@ -51,6 +56,10 @@ country_event = {
 		add_ideas = RIA_political_deadlock_idea_1
 		
 		complete_national_focus = RIA_stock_market_crash
+
+		ai_chance = {
+			factor = 100
+		}
 	}
 }	
 country_event = {
@@ -86,6 +95,10 @@ country_event = {
 			popularity = 0.05
 		}
 		complete_national_focus = RIA_stalemate
+
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 country_event = {
@@ -119,6 +132,9 @@ country_event = {
 				add_idea = RIA_grand_coalition_idea
 			}
 		}
+		ai_chance = {
+			factor = 80
+		}
 
 	}
 
@@ -132,7 +148,7 @@ country_event = {
 			long_name = RIA_rias_unite_long
 			name = RIA_rias_unite
 		}
-		retire_country_leader = yes
+		promote_character = RIA_yster_zonkaram
 
 		add_popularity = {
 			ideology = fascism
@@ -156,6 +172,10 @@ country_event = {
 			}
 		}
 		remove_ideas = RIA_no_corruption_idea
+
+		ai_chance = {
+			factor = 20
+		}
 	}
 }
 country_event = {
@@ -179,9 +199,17 @@ country_event = {
 			popularity = 0.15
 		}
 		add_ideas = RIA_monarchist_movement_idea
+
+		ai_chance = {
+			factor = 40
+		}
 	}
 	option = {
 		name = rias_event.5.b
+
+		ai_chance = {
+			factor = 60
+		}
 
 	}
 }
@@ -212,6 +240,10 @@ country_event = {
 			add_idea = RIA_experienced_democracy_idea
 		}
 		set_cosmetic_tag = COSMETICTAG_RIA_democratic
+
+		ai_chance = {
+			factor = 60
+		}
 	}
 	option = {
 		name = rias_event.6.b
@@ -224,12 +256,16 @@ country_event = {
 		remove_ideas = RIA_treading_the_line_idea_5
 		remove_ideas = RIA_monarchist_movement_idea_3
 		remove_ideas = RIA_young_democracy_idea
+
+		ai_chance = {
+			factor = 40
+		}
 	}
 }
 country_event = {
-	id = march_event.1
-	title = march_event.1.t
-	desc = march_event.1.d
+	id = rias_march_event.1
+	title = rias_march_event.1.t
+	desc = rias_march_event.1.d
 	picture = GFX_report_event_bul_partisans_plovdiv
 
 	trigger = { tag = RIA has_completed_focus = RIA_grand_coalition has_stability < 0.35 fascism > 0.4 NOT = { has_completed_focus = RIA_coalition_talks } }
@@ -238,7 +274,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = march_event.1.a
+		name = rias_march_event.1.a
 
 		complete_national_focus = RIA_march_on_riastok
 		add_stability = -0.25
@@ -246,24 +282,32 @@ country_event = {
 			limit = {
 				has_idea = democratic_paramilitary_idea
 			}
-			country_event = march_event.2
+			country_event = rias_march_event.2
 		}
 		else = {
-			country_event = march_event.3
+			country_event = rias_march_event.3
+		}
+
+		ai_chance = {
+			factor = 80
 		}
 	}
 	option = {
-		name = march_event.1.b
+		name = rias_march_event.1.b
 
 		complete_national_focus = RIA_march_on_riastok
 		add_stability = -0.25
-		country_event = march_event.3
+		country_event = rias_march_event.3
+
+		ai_chance = {
+			factor = 20
+		}
 	}
 }
 country_event = {
-	id = march_event.2
-	title = march_event.2.t
-	desc = march_event.2.d
+	id = rias_march_event.2
+	title = rias_march_event.2.t
+	desc = rias_march_event.2.d
 	picture = GFX_report_event_bul_partisans_plovdiv
 
 	is_triggered_only = yes
@@ -271,7 +315,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = march_event.2.a
+		name = rias_march_event.2.a
 
 		complete_national_focus = RIA_march_failure
 
@@ -284,12 +328,16 @@ country_event = {
 			ideology = socialism
 			trait = great_survivor
 	   }
+
+	   ai_chance = {
+		factor = 100
+	   }
 	}
 }
 country_event = {
-	id = march_event.3
-	title = march_event.3.t
-	desc = march_event.3.d
+	id = rias_march_event.3
+	title = rias_march_event.3.t
+	desc = rias_march_event.3.d
 	picture = GFX_report_event_bul_partisans_plovdiv
 
 	is_triggered_only = yes
@@ -297,7 +345,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-		name = march_event.3.a
+		name = rias_march_event.3.a
 
 		complete_national_focus = RIA_march_success
 
@@ -312,7 +360,77 @@ country_event = {
 			ruling_party = fascism
 			elections_allowed = no
 		}
+
+		ai_chance = {
+			factor = 100
+		}
 	}
+}
+country_event = {
+	id = rias_march_event.4
+	title = rias_march_event.4.t
+	desc = rias_march_event.4.d
+	picture = GFX_report_event_bul_partisans_plovdiv
+
+	trigger = {
+		tag = RIA
+		has_completed_focus = RIA_march_success
+	}
+	
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.1
+		}
+	}
+
+	option = {
+		name = rias_march_event.4.a
+
+		release = YEN
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = rias_march_event.5
+	title = rias_march_event.5.t
+	desc = rias_march_event.5.d
+	picture = GFX_report_event_bul_partisans_plovdiv
+
+	trigger = {
+		tag = RIA
+		has_completed_focus = RIA_retake_yentrok
+		YEN = { exists = no }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = rias_march_event.5.a
+
+		172 = {
+			add_core_of = RIA
+		}
+		792 = {
+			add_core_of = RIA
+		}
+		add_war_support = 0.05
+		add_political_power = 50
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
 }
 country_event = {
 	id = rias_train_event.1
@@ -335,6 +453,10 @@ country_event = {
 		add_stability = 0.05
 		add_ideas = RIA_high_speed_railways_idea
 
+		ai_chance = {
+			factor = 100
+		}
+
 	}
 }
 country_event = {
@@ -354,6 +476,10 @@ country_event = {
 		add_political_power = 150
 
 		complete_national_focus = RIA_democratic_win
+
+		ai_chance = {
+			factor = 70
+		}
 	}
 	option = {
 		name = rias_election_event.1.b
@@ -366,9 +492,13 @@ country_event = {
 			long_name = RIA_rias_unite_long
 			name = RIA_rias_unite
 		}
-		retire_country_leader = yes
+		promote_character = RIA_yster_zonkaram
 
 		complete_national_focus = RIA_conservative_win
+
+		ai_chance = {
+			factor = 10
+		}
 	}
 	option = {
 		name = rias_election_event.1.c
@@ -384,6 +514,10 @@ country_event = {
 		retire_country_leader = yes
 
 		complete_national_focus = RIA_liberal_win
+
+		ai_chance = {
+			factor = 20
+		}
 	}
 }
 country_event = {
@@ -403,6 +537,10 @@ country_event = {
 		add_political_power = 150
 
 		complete_national_focus = RIA_conservative_win
+
+		ai_chance = {
+			factor = 50
+		}
 	}
 	option = {
 		name = rias_election_event.2.b
@@ -419,6 +557,10 @@ country_event = {
 		promote_character = RIA_emekri_zoulatesh
 
 		complete_national_focus = RIA_democratic_win
+
+		ai_chance = {
+			factor = 30
+		}
 	}
 	option = {
 		name = rias_election_event.2.c
@@ -434,5 +576,9 @@ country_event = {
 		retire_country_leader = yes
 
 		complete_national_focus = RIA_liberal_win
+
+		ai_chance = {
+			factor = 20
+		}
 	}
 }

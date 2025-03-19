@@ -77,6 +77,7 @@
 
  RIA_expand_the_tourism_industry:0 "Expand the Tourism Industry"
  RIA_expand_the_tourism_industry_desc:0 "NOT DONE"
+ RIA_expand_the_tourism_industry_ctt:0 "§RWe will lose our tourism industry as soon as we enter a state of war!§!"
 
  RIA_modernize_the_roads:0 "Modernize the Roads"
  RIA_modernize_the_roads_desc:0 "NOT DONE"
@@ -257,6 +258,18 @@
 
  RIA_democratic_win:0 "Democratic Win"
  RIA_democratic_win_desc:0 "Emekri and the Democrats have won the recent election! Let's see what they get up to over the next four years."
+
+ RIA_expand_the_welfare_state:0 "Expand the Welfare State"
+ RIA_expand_the_welfare_state_desc:0 "NOT DONE"
+
+ RIA_the_greatest_welfare_state:0 "The Greatest Welfare State"
+ RIA_the_greatest_welfare_state_desc:0 "NOT DONE"
+
+ RIA_true_equality:0 "True Equality"
+ RIA_true_equality_desc:0 "NOT DONE"
+
+ RIA_open_borders:0 "Open the Borders"
+ RIA_open_borders_desc:0 "We are priviledged to have such good lives here in Rias. However, there are a lot of people all around Albastru who do not have that priviledge. Despite the help we give them, some of them still suffer. Let's allow them to come here, after all, everyone deserves to have a good life."
 
  RIA_reestablish_riassi_aid_for_all:0 "Reestablish Riassi Aid for All"
  RIA_reestablish_riassi_aid_for_all_desc:0 "Now that the economic crisis is over, we can reestablish the Riassi Aid for All and once again start walking down the path of making the world a better place"

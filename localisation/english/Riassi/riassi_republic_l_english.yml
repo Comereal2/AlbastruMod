@@ -79,7 +79,7 @@ RIA_economic_growth_prioritized_idea: "Economic Growth Prioritized"
 RIA_economic_growth_prioritized_idea_desc: "We have decided to prioritize economic growth before military expansion."
 
 RIA_tourism_industry_idea: "Tourism Industry"
-RIA_tourism_industry_idea_desc: "The influx of tourists to Rias is growing by the day, and with more tourists come more possibilities for economic and technological improvement."
+RIA_tourism_industry_idea_desc: "The influx of tourists to Rias is growing by the day, and with more tourists come more possibilities for economic and technological improvement. However, if we ever encounter ourselves in a state of war, we can consider this tourism gone."
 RIA_infrastructure_investments_idea: "Infrastructure Investments"
 RIA_infrastructure_investments_idea_desc: "We are currently investing heavily in the infrastructure of the nation."
 
@@ -197,6 +197,15 @@ RIA_fort_idea_desc: "We have studied the art of building fortifications faster a
 RIA_defensive_spirit_idea: "Defensive Spirit"
 RIA_defensive_spirit_idea_desc: "The Riassi people have been inspired to defend their nation as good as possible."
 
+RIA_welfare_state_idea: "Riassi Welfare State"
+RIA_welfare_state_idea_desc: "The riassi welfare state is considered one of the best in the world, with extensive safety nets to protect anyone that fares badly in Rias."
+
+RIA_welfare_state_idea_2: "Riassi Welfare State"
+RIA_welfare_state_idea_2_desc: "The riassi welfare state is considered one of the best in the world, with extensive safety nets to protect anyone that fares badly in Rias."
+
+RIA_equal_rights_idea: "Equal Rights"
+RIA_equal_rights_idea_desc: "In Rias, men and women have completely equal rights, not only on paper."
+
 rias_event.1.t: "The Second Term of The Democratic Party"
 rias_event.1.d: "The Democratic Party and it's coalition partners, the Liberal Future and the Socialist Solidarty, have won reelection with an even higher margin than last election. President Emekri Zoulatesh now has the support to pass almost anything, and the opposition has practically no say in lawmaking. The Riassi Economy is doing great and has no sign of slowing down, the lives of the people are improving and generally, the nation bubbles of optimism and hope."
 rias_event.1.a: "Kikokor Velstran!"
@@ -224,18 +233,22 @@ rias_event.6.d: "The monarchists have gotten the government to accept a referend
 rias_event.6.a: "A figurehead King is sufficient"
 rias_event.6.b: "All Power to the King!"
 
-march_event.1.t: "March on Riastok Part 1"
-march_event.1.d: "Today, the Patriotic Front under the leadership of the fanatic Dolaf Hertil decided that they had enough of the democratic system and decided to coup the government. They assembled a large army of far-right extremists and have started marching towards Riastok. More and more fascists are joining them as they continue on their path, so the government has to make a difficult decision: Strike them now, even if we aren't prepared for combat, or set up defences around Riastok, giving us time to prepare for the coming battle."
-march_event.1.a: "Prepare a defence in Riastok"
-march_event.1.b: "Strike now while they are weak"
+rias_march_event.1.t: "March on Riastok Part 1"
+rias_march_event.1.d: "Today, the Patriotic Front under the leadership of the fanatic Dolaf Hertil decided that they had enough of the democratic system and decided to coup the government. They assembled a large army of far-right extremists and have started marching towards Riastok. More and more fascists are joining them as they continue on their path, so the government has to make a difficult decision: Strike them now, even if we aren't prepared for combat, or set up defences around Riastok, giving us time to prepare for the coming battle."
+rias_march_event.1.a: "Prepare a defence in Riastok"
+rias_march_event.1.b: "Strike now while they are weak"
 
-march_event.2.t: "March on Riastok Part 2"
-march_event.2.d: "Thanks to the help of the Democratic Paramilitary Organization that was established a little while ago, the government was able to mount a successful defence of Riastok, preventing the fascist scums from taking power. Soon after, the fascist army started surrendering, and many were captured. However, Dolaf Hertil and a large portion of the party leadership were not found. All of Rias is still in shock from the events that occurred, but the democracy survived and Emekri is already drafting propositions on how to deal with everything. A part of that includes disbanding the newely formed Grand Coalition, as the fascists won't be a threat from now on."
-march_event.2.a: "Long Live Democracy! Long Live the Riassi Republic!"
+rias_march_event.2.t: "March on Riastok Part 2"
+rias_march_event.2.d: "Thanks to the help of the Democratic Paramilitary Organization that was established a little while ago, the government was able to mount a successful defence of Riastok, preventing the fascist scums from taking power. Soon after, the fascist army started surrendering, and many were captured. However, Dolaf Hertil and a large portion of the party leadership were not found. All of Rias is still in shock from the events that occurred, but the democracy survived and Emekri is already drafting propositions on how to deal with everything. A part of that includes disbanding the newely formed Grand Coalition, as the fascists won't be a threat from now on."
+rias_march_event.2.a: "Long Live Democracy! Long Live the Riassi Republic!"
 
-march_event.3.t: "March on Riastok Part 2"
-march_event.3.d: "Every effort to counter the Patriotic Front failed and they managed to enter the captial. Now they have captured most of the old government, including president Emekri, and are in the process of establishing a dictatorship under Dolaf Hertil. All is not perfect for the fascists though. The region of Yentrok, know for their separatism, decided to declare independence from Rias the moment Riastok fell and all across Rias democrats are revolting. They will have to be taken care of, but first priority is securing the nation."
-march_event.3.a: "All hail Dolaf Hertil!"
+rias_march_event.3.t: "March on Riastok Part 2"
+rias_march_event.3.d: "Every effort to counter the Patriotic Front failed and they managed to enter the captial. Now they have captured most of the old government, including president Emekri, and are in the process of establishing a dictatorship under Dolaf Hertil. All is not perfect for the fascists though. The region of Yentrok, know for their separatism, decided to declare independence from Rias the moment Riastok fell and all across Rias democrats are revolting. They will have to be taken care of, but first priority is securing the nation."
+rias_march_event.3.a: "All hail Dolaf Hertil!"
+
+rias_march_event.4.t: "Yentrok Declares Independence!"
+rias_march_event.4.d: "After the hostile takeover of the nation's government, Yentrok, a separatist region in the north of the nation, and their ''democratic'' leadership has decided to declare independence. This is something completely unacceptable and they have no right to do it, but we need to secure our hold on the rest of the nation before we can deal with them."
+rias_march_event.4.a: "How dare they!"
 
 rias_train_event.1.t: "Inaguration of the High-Speed Railway"
 rias_train_event.1.d: "Today is a great day for Rias. The long awaited opening of the nationwide High-Speed railways is here. Everyone is tuned in to the live broadcast from the Riastok Central Station, where the CEO of the Riassi State Railways is talking about the positive impact this project will have. Behind him stands one of the brand new X1000 high-speed trains which capable of reaching speeds of 350 kph and is the new flagship train of the Railway. It's a big reminder of the golden railway age that is about to begin. In fact, many around the nation are already calling the new railways a wonder of the world, due to their sheer size and beauty! "
