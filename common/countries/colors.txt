@@ -41,6 +41,22 @@ ISL = {
 	color = rgb { 125 125 125 }
 	color_ui = rgb { 125 125 125 }
 }
+CRY = {
+	color = rgb { 89 89 94 }
+	color_ui = rgb { 89 89 94 }
+}
+NOR = {
+	color = rgb { 178 141 51 }
+	color_ui = rgb { 178 141 51 }
+}
+PRU = {
+	color = rgb { 101 0 56 }
+	color_ui = rgb { 101 0 56 }
+}
+CAM = {
+	color = rgb { 251 201 0 }
+	color_ui = rgb { 251 201 0 }
+}
 GER = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }
@@ -125,10 +141,6 @@ GRE = {
 ALB = {
 	color = rgb { 149 45 102 }
 	color_ui = rgb { 194 59 133 }
-}
-NOR = {
-	color = rgb { 111 71 71 }
-	color_ui = rgb { 144 92 92 }
 }
 DEN = {
 	color = rgb { 153 116 93 }
@@ -257,10 +269,6 @@ PER = {
 PHI = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
-}
-PRU = {
-	color = rgb { 196 189 204 }
-	color_ui = rgb { 255 246 255 }
 }
 SAF = {
 	color = rgb { 195 107 160 }
@@ -442,11 +450,6 @@ INS = {
 VIN = {
 	color = rgb { 230  223  50 }
 	color_ui = rgb { 230  223  50 }
-}
-
-CAM = {
-	color = rgb { 100  71  150 }
-	color_ui = rgb { 100  71  150 }
 }
 
 MAL = {
