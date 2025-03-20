@@ -116,4 +116,12 @@ spriteTypes = {
 		name = "GFX_goal_ALT_remember_the_past_shine"
 		textureFile = "gfx/interface/goals/ALT_remember_the_past.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_increase_gov_cap_shine"
+		textureFile = "gfx/interface/goals/ALT_increase_gov_cap.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_promote_public_transport_shine"
+		textureFile = "gfx/interface/goals/ALT_promote_public_transport.dds"
+	}
 }
