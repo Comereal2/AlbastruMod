@@ -1,3 +1,4 @@
+#Author: Ramon
 focus_tree = {
 	id = riassi_focus
 	country = { 
