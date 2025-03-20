@@ -280,5 +280,29 @@
  RIA_liberal_win:0 "Liberal Win"
  RIA_liberal_win_desc:0 "The Liberal Future have unexpectedly won the election, presenting a unique chance for them to liberalize Rias in a way that has never been seen before."
 
+ RIA_expand_personal_liberties:0 "Expand Personal Liberties"
+ RIA_expand_personal_liberties_desc:0 "NOT DONE"
+ 
+ RIA_cozy_up_with_big_business:0 "Cozy up with Big Business"
+ RIA_cozy_up_with_big_business_desc:0 "NOT DONE"
+
+ RIA_privatise_education:0 "Privatise Education"
+ RIA_privatise_education_desc:0 "NOT DONE"
+
+ RIA_deregulate_the_economy:0 "Deregulate the Economy"
+ RIA_deregulate_the_economy_desc:0 "NOT DONE"
+
+ RIA_privatise_industries:0 "Privatise Industries"
+ RIA_privatise_industries_desc:0 "NOT DONE"
+
  RIA_conservative_win:0 "Conservative Win"
  RIA_conservative_win_desc:0 "The Rias Unite have won the election. Now they have the mandate to return old traditions to Rias and undoing many communist policies."
+
+ RIA_promote_religion:0 "Promote Religion"
+ RIA_promote_religion_desc:0 "NOT DONE"
+
+ RIA_fund_the_churches:0 "Fund the Churches"
+ RIA_fund_the_churches_desc:0 "NOT DONE"
+
+ RIA_shrink_the_government:0 "Shrink the Government"
+ RIA_shrink_the_government_desc:0 "NOT DONE"

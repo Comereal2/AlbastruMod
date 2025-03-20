@@ -737,5 +737,27 @@ ideas = {
 				stability_factor = -0.1
 			}
 		}
+		RIA_economic_deregulation_idea = {
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_hyper_inflation3
+			modifier = {
+				war_support_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				consumer_goods_factor = 0.1
+				stability_factor = -0.1
+			}
+		}
+		RIA_private_education_idea = {
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.1
+				consumer_goods_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
 	}
 }
