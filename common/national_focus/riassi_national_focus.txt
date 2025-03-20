@@ -1251,17 +1251,59 @@ focus_tree = {
 	}
 	#final parts economic tree
 	focus = {
-		id = RIA_expand_university_of_riastok
-		icon = GFX_focus_research
+		id = RIA_rejuvenate_riastok
+		icon = GFX_focus_SWE_urbanization
 		cost = 10
 		relative_position_id = RIA_improve_production_methods
-		x = 1
+		x = 2
 		y = 1
-		
+
 		prerequisite = {
 			focus = RIA_improve_production_methods
 			focus = RIA_modernize_the_roads
 		}
+		completion_reward = { 
+			31 = {
+				if = { 
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+				}	
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}		
+		}
+	}
+	focus = {
+		id = RIA_expand_university_of_riastok
+		icon = GFX_focus_research
+		cost = 10
+		relative_position_id = RIA_rejuvenate_riastok
+		x = 0
+		y = 1
+		
+		prerequisite = {
+			focus = RIA_rejuvenate_riastok
+		}
+
 		available = {
 			num_of_civilian_factories > 30
 		}
@@ -2962,7 +3004,7 @@ focus_tree = {
 
 		completion_reward = { 
 			add_stability = 0.05
-
+			#rework
 		}
 	}
 	focus = {
@@ -2981,17 +3023,34 @@ focus_tree = {
 		}
 
 		completion_reward = { 
-			#mios?
+			if = {
+				limit = {
+				    has_idea = RIA_no_corruption_idea
+				}
+				remove_ideas = RIA_no_corruption_idea
+			}
+			#rework
 		}
 	}
 	focus = {
 		id = RIA_shrink_the_government
-		icon = GFX_portrait_YEN_character_deo
-		cost = 10
+		icon = GFX_focus_generic_self_management
+		cost = 5
 		relative_position_id = RIA_cozy_up_with_big_business
 		x = -1
 		y = 1
-		completion_reward = { }
+
+		prerequisite = {
+			focus = RIA_cozy_up_with_big_business
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.05
+			add_war_support = 0.1
+			#rework
+
+		}
 	}
 	focus = {
 		id = RIA_privatise_education

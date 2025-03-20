@@ -76,11 +76,14 @@
  RIA_prioritize_economic_growth_desc:0 "NOT DONE"
 
  RIA_expand_the_tourism_industry:0 "Expand the Tourism Industry"
- RIA_expand_the_tourism_industry_desc:0 "NOT DONE"
+ RIA_expand_the_tourism_industry_desc:0 "With the new economic situation ushering in opportunities for growth, it's about time that we use our beautiful nature for something productive. Let's invest heavily into the tourism industry!"
  RIA_expand_the_tourism_industry_ctt:0 "§RWe will lose our tourism industry as soon as we enter a state of war!§!"
 
  RIA_modernize_the_roads:0 "Modernize the Roads"
  RIA_modernize_the_roads_desc:0 "NOT DONE"
+
+ RIA_rejuvenate_riastok:0 "Rejuvenate Riastok"
+ RIA_rejuvenate_riastok_desc:0 "Riastok is a run down and broken city. But if we want to show that Rias is a big player on the international stage, we need to give the city a face lift."
 
  RIA_expand_university_of_riastok:0 "Expand the University of Riastok"
  RIA_expand_university_of_riastok_desc:0 "The Riassi economy has grown a lot during the last years, but our educational facilities have not expanded to meet that growth. By investing in the University of Riastok, we can change make sure our schools have the capacity to support a larger economy."
