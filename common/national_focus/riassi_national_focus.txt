@@ -2650,7 +2650,7 @@ focus_tree = {
 		icon = GFX_focus_generic_red_flags
 		cost = 0
         relative_position_id = RIA_hold_new_elections
-		x = -5
+		x = -6
 		y = 1
 
 		available = {
@@ -2947,13 +2947,170 @@ focus_tree = {
 		}
 		completion_reward = { }
 	}
+	focus = {
+		id = RIA_expand_personal_liberties
+		icon = GFX_focus_AFG_promote_the_counter_elite
+		relative_position_id = RIA_liberal_win
+		cost = 5
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_liberal_win
+		}
+
+		completion_reward = { 
+			add_stability = 0.05
+
+		}
+	}
+	focus = {
+		id = RIA_cozy_up_with_big_business
+		icon = GFX_focus_generic_industrialists
+		cost = 5
+		relative_position_id = RIA_expand_personal_liberties
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_deregulate_the_economy
+		}
+		prerequisite = {
+			focus = RIA_expand_personal_liberties
+		}
+
+		completion_reward = { 
+			#mios?
+		}
+	}
+	focus = {
+		id = RIA_shrink_the_government
+		icon = GFX_portrait_YEN_character_deo
+		cost = 10
+		relative_position_id = RIA_cozy_up_with_big_business
+		x = -1
+		y = 1
+		completion_reward = { }
+	}
+	focus = {
+		id = RIA_privatise_education
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		relative_position_id = RIA_cozy_up_with_big_business
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_cozy_up_with_big_business
+		}
+		prerequisite = {
+			focus = RIA_privatise_industries
+		}
+
+		completion_reward = { 
+			add_ideas = RIA_private_education_idea
+		}
+	}
+	focus = {
+		id = RIA_deregulate_the_economy
+		icon = GFX_focus_ETH_adopt_the_lira
+		cost = 10
+		relative_position_id = RIA_liberal_win
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = RIA_liberal_win
+			focus = RIA_conservative_win
+		}
+
+		completion_reward = {
+			add_ideas = RIA_economic_deregulation_idea
+		}
+	}
+	focus = {
+		id = RIA_privatise_industries
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		relative_position_id = RIA_deregulate_the_economy
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_deregulate_the_economy
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
 	#conservative win
 	focus = {
 		id = RIA_conservative_win
 		icon = GFX_focus_generic_blue_flags
 		cost = 0
         relative_position_id = RIA_hold_new_elections
-		x = 5
+		x = 6
 		y = 1
 
 		available = {
@@ -2966,6 +3123,36 @@ focus_tree = {
 
 		prerequisite = {
 			focus = RIA_hold_new_elections
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = RIA_promote_religion
+		icon = GFX_focus_generic_pope
+		cost = 10
+		relative_position_id = RIA_conservative_win
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_conservative_win
+		}
+
+		completion_reward = { }
+	}
+	focus = {
+		id = RIA_fund_the_churches
+		icon = GFX_focus_por_concordat
+		cost = 10
+		relative_position_id = RIA_promote_religion
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_promote_religion
+		}
+		prerequisite = {
+			focus = RIA_deregulate_the_economy
 		}
 		completion_reward = { }
 	}
