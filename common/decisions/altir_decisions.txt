@@ -1,5 +1,31 @@
 #Author: Comereal
 asaa_actions = {
+	ALT_asaa_debug_decision_enable = {
+		priority = 0
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_country_flag = asaa_debug_enabled
+			}
+		}
+		complete_effect = {
+			set_country_flag = asaa_debug_enabled
+		}
+		cost = 0
+	}
+	ALT_asaa_debug_decision_disable = {
+		priority = 0
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			has_country_flag = asaa_debug_enabled
+		}
+		complete_effect = {
+			clr_country_flag = asaa_debug_enabled
+		}
+		cost = 0
+	}
 	ALT_propose_integration_decision = {
 		priority = 80
 		icon = GFX_decision_hol_exchange_intelligence_data
@@ -17,9 +43,12 @@ asaa_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			FROM = {
-				is_government_in_exile = no
-				is_in_faction_with = ROOT
+			OR = {
+				FROM = {
+					is_government_in_exile = no
+					is_in_faction_with = ROOT
+				}
+				has_country_flag = asaa_debug_enabled
 			}
 		}
 		available = {
@@ -102,7 +131,10 @@ asaa_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_invite_south_helios
+			OR = {
+				has_completed_focus = ALT_invite_south_helios
+				has_country_flag = asaa_debug_enabled
+			}
 		}
 		cancel_trigger = {
 			FROM = {
@@ -147,7 +179,10 @@ asaa_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_invite_northern_helios
+			OR = {
+				has_completed_focus = ALT_invite_northern_helios
+				has_country_flag = asaa_debug_enabled
+			}
 		}
 		cancel_trigger = {
 			FROM = {
@@ -195,7 +230,10 @@ asaa_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_invite_lomezia
+			OR = {
+				has_completed_focus = ALT_invite_lomezia
+				has_country_flag = asaa_debug_enabled
+			}
 		}
 		cancel_trigger = {
 			FROM = {
@@ -241,7 +279,10 @@ asaa_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_invite_orium
+			OR = {
+				has_completed_focus = ALT_invite_orium
+				has_country_flag = asaa_debug_enabled
+			}
 		}
 		cancel_trigger = {
 			FROM = {
@@ -286,7 +327,10 @@ asaa_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_invite_sulia
+			OR = {
+				has_completed_focus = ALT_invite_sulia
+				has_country_flag = asaa_debug_enabled
+			}
 		}
 		cancel_trigger = {
 			FROM = {
@@ -323,7 +367,10 @@ asaa_actions = {
 			tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_add_extra_departments
+			OR = {
+				has_completed_focus = ALT_add_extra_departments
+				has_country_flag = asaa_debug_enabled
+			}
 		}
 		remove_effect = {
 			hidden_effect = {
@@ -344,7 +391,10 @@ asaa_actions = {
 			tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_add_extra_departments
+			OR = {
+				has_completed_focus = ALT_add_extra_departments
+				has_country_flag = asaa_debug_enabled
+			}
 		}
 		remove_effect = {
 			hidden_effect = {
@@ -365,7 +415,10 @@ asaa_actions = {
 			tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_add_extra_departments
+			OR = {
+				has_completed_focus = ALT_add_extra_departments
+				has_country_flag = asaa_debug_enabled
+			}
 		}
 		remove_effect = {
 			hidden_effect = {
@@ -379,6 +432,31 @@ asaa_actions = {
 }
 
 develop_altir_actions = {
+	ALT_develop_altir_debug_decision_enable = {
+		priority = 0
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_country_flag = develop_altir_debug_enabled
+			}
+		}
+		complete_effect = {
+			set_country_flag = develop_altir_debug_enabled
+		}
+		cost = 0
+	}
+	ALT_develop_altir_debug_decision_disable = {
+		priority = 0
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			has_country_flag = develop_altir_debug_enabled
+		}
+		complete_effect = {
+			clr_country_flag = develop_altir_debug_enabled
+		}
+	}
 	ALT_develop_state = {
 		priority = 80
 		icon = GFX_decision_category_eng_concessions_to_the_trade_unions
@@ -402,7 +480,10 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_develop_altir
+			OR = {
+				has_completed_focus = ALT_develop_altir
+				has_country_flag = develop_altir_debug_enabled
+			}
 		}
 		available = {
 			FROM = {
@@ -471,8 +552,13 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_develop_altir
-			has_completed_focus = ALT_dig_up_more_resources
+			OR = {
+				AND = {
+					has_completed_focus = ALT_develop_altir
+					has_completed_focus = ALT_dig_up_more_resources
+				}
+				has_country_flag = develop_altir_debug_enabled
+			}
 		}
 		available = {
 			FROM = {
@@ -530,8 +616,13 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_develop_altir
-			has_completed_focus = ALT_dig_up_more_resources
+			OR = {
+				AND = {
+					has_completed_focus = ALT_develop_altir
+					has_completed_focus = ALT_dig_up_more_resources
+				}
+				has_country_flag = develop_altir_debug_enabled
+			}
 		}
 		available = {
 			FROM = {
@@ -589,8 +680,13 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_develop_altir
-			has_completed_focus = ALT_dig_up_more_resources
+			OR = {
+				AND = {
+					has_completed_focus = ALT_develop_altir
+					has_completed_focus = ALT_dig_up_more_resources
+				}
+				has_country_flag = develop_altir_debug_enabled
+			}
 		}
 		available = {
 			FROM = {
@@ -648,8 +744,13 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_develop_altir
-			has_completed_focus = ALT_dig_up_more_resources
+			OR = {
+				AND = {
+					has_completed_focus = ALT_develop_altir
+					has_completed_focus = ALT_dig_up_more_resources
+				}
+				has_country_flag = develop_altir_debug_enabled
+			}
 		}
 		available = {
 			FROM = {
@@ -707,8 +808,13 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_develop_altir
-			has_completed_focus = ALT_dig_up_more_resources
+			OR = {
+				AND = {
+					has_completed_focus = ALT_develop_altir
+					has_completed_focus = ALT_dig_up_more_resources
+				}
+				has_country_flag = develop_altir_debug_enabled
+			}
 		}
 		available = {
 			FROM = {
@@ -766,8 +872,13 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_develop_altir
-			has_completed_focus = ALT_dig_up_more_resources
+			OR = {
+				AND = {
+					has_completed_focus = ALT_develop_altir
+					has_completed_focus = ALT_dig_up_more_resources
+				}
+				has_country_flag = develop_altir_debug_enabled
+			}
 		}
 		available = {
 			FROM = {
@@ -824,7 +935,10 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_to_stand_the_test_of_time
+			OR = {
+				has_completed_focus = ALT_to_stand_the_test_of_time
+				has_country_flag = develop_altir_debug_enabled
+			}
 		}
 		available = {
 			FROM = {
@@ -861,9 +975,14 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_build_apache
-			NOT = {
-				has_country_flag = apache_stage_1
+			OR = {
+				AND = {
+					has_completed_focus = ALT_build_apache
+					NOT = {
+						has_country_flag = apache_stage_1
+					}
+				}
+				has_country_flag = develop_altir_debug_enabled
 			}
 		}
 		remove_effect = {
@@ -886,9 +1005,14 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_build_apache
-			NOT = {
-				has_country_flag = apache_stage_2
+			OR = {
+				AND = {
+					has_completed_focus = ALT_build_apache
+					NOT = {
+						has_country_flag = apache_stage_2
+					}
+				}
+				has_country_flag = develop_altir_debug_enabled
 			}
 		}
 		available = {
@@ -917,9 +1041,14 @@ develop_altir_actions = {
 			original_tag = ALT
 		}
 		visible = {
-			has_completed_focus = ALT_build_apache
-			NOT = {
-				has_country_flag = apache_stage_3
+			OR = {
+				AND = {
+					has_completed_focus = ALT_build_apache
+					NOT = {
+						has_country_flag = apache_stage_3
+					}
+				}
+				has_country_flag = develop_altir_debug_enabled
 			}
 		}
 		available = {
@@ -1058,6 +1187,32 @@ ALT_bop_category = {
 }
 
 ALT_spread_fascism_category = {
+	ALT_spread_fascism_debug_decision_enable = {
+		priority = 0
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_country_flag = spread_fascism_debug_enabled
+			}
+		}
+		complete_effect = {
+			set_country_flag = spread_fascism_debug_enabled
+		}
+		cost = 0
+	}
+	ALT_spread_fascism_debug_decision_disable = {
+		priority = 0
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			has_country_flag = spread_fascism_debug_enabled
+		}
+		complete_effect = {
+			clr_country_flag = spread_fascism_debug_enabled
+		}
+		cost = 0
+	}
 	ALT_spread_fascism = {
 		icon = GFX_decision_category_generic_political
 		target_array = global.countries
@@ -1081,7 +1236,10 @@ ALT_spread_fascism_category = {
 		}
 		on_map_mode = map_only
 		visible = {
-			has_completed_focus = ALT_promote_fascism
+			OR = {
+				has_completed_focus = ALT_promote_fascism
+				has_country_flag = spread_fascism_debug_enabled
+			}
 		}
 		priority = 91
 		cost = 50
@@ -1124,6 +1282,7 @@ ALT_spread_fascism_category = {
 		visible = {
 			OR = {
 				has_completed_focus = ALT_promote_fascism
+				has_country_flag = spread_fascism_debug_enabled
 			}
 		}
 		available = {
@@ -1165,6 +1324,7 @@ ALT_spread_fascism_category = {
 		visible = {
 			OR = {
 				has_completed_focus = ALT_promote_fascism
+				has_country_flag = spread_fascism_debug_enabled
 			}
 		}
 		available = {
@@ -1204,6 +1364,7 @@ ALT_spread_fascism_category = {
 		visible = {
 			OR = {
 				has_completed_focus = ALT_promote_fascism
+				has_country_flag = spread_fascism_debug_enabled
 			}
 		}
 		available = {
@@ -1224,5 +1385,33 @@ ALT_spread_fascism_category = {
 				}
 			}
 		}
+	}
+}
+ALT_foreign_investments_category = {
+	ALT_foreign_investments_debug_decision_enable = {
+		priority = 0
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_country_flag = foreign_investments_debug_enabled
+			}
+		}
+		complete_effect = {
+			set_country_flag = foreign_investments_debug_enabled
+		}
+		cost = 0
+	}
+	ALT_foreign_investments_debug_decision_disable = {
+		priority = 0
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			has_country_flag = foreign_investments_debug_enabled
+		}
+		complete_effect = {
+			clr_country_flag = foreign_investments_debug_enabled
+		}
+		cost = 0
 	}
 }
