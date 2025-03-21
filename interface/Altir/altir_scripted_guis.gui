@@ -1,0 +1,47 @@
+#Author: Comereal
+guiTypes = {
+	containerWindowType = {
+		name = "ALT_investment_gui"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 500 }
+
+		instantTextBoxType = {
+			name = "investment_gui_introduction"
+			position = {
+				x = -220
+				y = -240
+			}
+			font = "hoi_30header"
+			text = "ALT_investment_gui_introduction"
+			format = center
+			orientation = center
+			maxWidth = 440
+			maxHeight = 30
+			pdx_tooltip = "ALT_investment_gui_introduction_tt"
+		}
+
+		
+
+		containerWindowType = {
+			name = "investment_gui_invested_countries_container"
+			position = {
+				x = 0
+				y = 0
+			}
+			size = {
+				width = 90%
+				height = 400
+			}
+			iconType = {
+				name = "investment_gui_helios_map"
+				position = {
+					x = 0
+					y = 0
+				}
+				spriteType = "GFX_helios_map"
+				orientation = center
+				pdx_tooltip = "ALT_investment_gui_helios_map_tt"
+			}
+		}
+	}
+}

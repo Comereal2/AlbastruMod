@@ -42,4 +42,5 @@ ALT_foreign_investments_category = {
 		original_tag = ALT
 	}
 	visible_when_empty = no
+	scripted_gui = ALT_investment_gui
 }

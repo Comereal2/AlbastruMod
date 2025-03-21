@@ -83,6 +83,9 @@ ideas = {
 			modifier = {
 				research_speed_factor = 0.15
 			}
+			visible = {
+				original_tag = ARB
+			}
 		}
 	}
 }
