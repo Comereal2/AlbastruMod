@@ -1312,6 +1312,119 @@ focus_tree = {
 			add_research_slot = 1
 		}
 	}
+	focus = {
+		id = RIA_invest_in_the_countryside
+		icon = GFX_focus_generic_land_reclamation
+		cost = 10
+		relative_position_id = RIA_improve_production_methods
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_improve_production_methods
+			focus = RIA_modernize_the_roads
+		}
+
+		completion_reward = { 
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1		
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1		
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1		
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_modernize_farming_equipment
+		icon = GFX_focus_generic_farmland
+		cost = 10
+		relative_position_id = RIA_invest_in_the_countryside
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_invest_in_the_countryside
+		}
+
+		available = {
+			has_tech = advanced_machine_tools
+		}
+		completion_reward = { 
+			add_ideas = RIA_modern_farming_equipment_idea
+		}
+	}
 	#political crisis
 	focus = {
 		id = announce_RIA_snap_elections

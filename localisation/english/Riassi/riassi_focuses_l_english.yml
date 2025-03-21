@@ -88,6 +88,12 @@
  RIA_expand_university_of_riastok:0 "Expand the University of Riastok"
  RIA_expand_university_of_riastok_desc:0 "The Riassi economy has grown a lot during the last years, but our educational facilities have not expanded to meet that growth. By investing in the University of Riastok, we can change make sure our schools have the capacity to support a larger economy."
 
+ RIA_invest_in_the_countryside:0 "Invest in the Countryside"
+ RIA_invest_in_the_countryside_desc:0 "NOT DONE"
+
+ RIA_modernize_farming_equipment:0 "Modernize Farming Equipment"
+ RIA_modernize_farming_equipment_desc:0 "NOT DONE"
+
  announce_RIA_snap_elections:0 "Announce Snap Elections"
  announce_RIA_snap_elections_desc:0 "With the political deadlock after the stock market crash sinking the government, president Emekri has announced Snap Elections."
 

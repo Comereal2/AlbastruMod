@@ -86,6 +86,9 @@ RIA_infrastructure_investments_idea_desc: "We are currently investing heavily in
 RIA_improved_production_methods_idea: "Improved Production Methods"
 RIA_improved_production_methods_idea_desc: "We have invested in new and improved production methods, making our production more efficient."
 
+RIA_modern_farming_equipment_idea: "Modern Farming Equipment"
+RIA_modern_farming_equipment_idea_desc: "The economic situation has allowed us to invest in new farming equipment for our farmers."
+
 RIA_political_deadlock_idea_1: "Political Deadlock"
 RIA_political_deadlock_idea_1_desc: "Following the stock market crash, the governing coalition between the DP, SS and LF is at odds. With different opinions on how to solve the crisis, little progress is actually being made."
 
@@ -264,7 +267,7 @@ rias_train_event.1.d: "Today is a great day for Rias. The long awaited opening o
 rias_train_event.1.a: "Choo Choo!"
 
 rias_election_event.1.t: "New Elections"
-rias_election_event.1.d: "New General Elections are here, and it's time to decide who will rule Rias for the next four years. Emekri and his Democrats have managed to pull the nation of the multiple crisises and they are widely expected to win, but there is always the for the conservative Rias Unite or for the liberals to unexpectedly achieve a victory."
+rias_election_event.1.d: "New General Elections are here, and it's time to decide who will rule Rias for the next four years. Emekri and his Democrats have managed to pull the nation out of the multiple crisises and they are widely expected to win, but there is always a chance the for the conservative Rias Unite or for the liberals to unexpectedly achieve a victory."
 rias_election_event.1.a: "4 more years with Emekri!"
 rias_election_event.1.b: "The conservative Rias Unite wins!"
 rias_election_event.1.c: "The Liberals secure a suprise victory!"

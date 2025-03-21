@@ -332,6 +332,16 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
+		RIA_modern_farming_equipment_idea = {
+			picture = SOV_second_five_year_plan
+
+			modifier = {
+				conscription_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				
+			}
+		}
 		RIA_political_deadlock_idea_1 = {
 			picture = generic_disjointed_gov
 
