@@ -215,8 +215,23 @@ RIA_open_borders_idea_desc: "We have decided to completely open our borders, all
 RIA_private_education_idea: "Private Education"
 RIA_private_education_idea_desc: "The liberals have privatised the nation's education system."
 
+RIA_small_government_idea: "Small Government"
+RIA_small_government_idea_desc: "The Government has been reduced in size, allowing businesses to work more freely."
+
 RIA_economic_deregulation_idea: "Economic Deregulation"
 RIA_economic_deregulation_idea_desc: "Following the change in leadership, the nation's economy has become more deregulated than it has ever been during the last 100 years."
+
+RIA_promoted_religion_idea: "Promoted Religion"
+RIA_promoted_religion_idea_desc: "We have promoted religion in our country."
+
+RIA_promoted_religion_idea_2: "Promoted Religion"
+RIA_promoted_religion_idea_2_desc: "We have promoted religion in our country."
+
+RIA_promoted_religion_idea_3: "Promoted Religion"
+RIA_promoted_religion_idea_3_desc: "We have promoted religion in our country."
+
+RIA_thightened_border_controls_idea: "Thighened Border Controls"
+RIA_thightened_border_controls_idea_desc: "We have thightened our borders to ensure people with bad intents stay of of the nation."
 
 rias_event.1.t: "The Second Term of The Democratic Party"
 rias_event.1.d: "The Democratic Party and it's coalition partners, the Liberal Future and the Socialist Solidarty, have won reelection with an even higher margin than last election. President Emekri Zoulatesh now has the support to pass almost anything, and the opposition has practically no say in lawmaking. The Riassi Economy is doing great and has no sign of slowing down, the lives of the people are improving and generally, the nation bubbles of optimism and hope."
