@@ -1,0 +1,10 @@
+#Author: Comereal
+ALT_investment_repayment = {
+	icon = ALT_investment_repayment
+	enable = {
+		original_tag = ALT
+		has_completed_focus = ALT_finish_helios_investments
+	}
+	consumer_goods_factor = ALT_investment_repayment_consumer_goods_factor
+	production_speed_buildings_factor = ALT_investment_repayment_building_construction_speed_factor
+}

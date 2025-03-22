@@ -197,6 +197,7 @@ ALT_place_statues_across_tarvozzia_desc: "Our nation has been a historical ally 
 ALT_finish_helios_investments: "Finish Helios Investments"
 ALT_finish_helios_investments_desc: ""
 ALT_finish_helios_investments_lockout_ctt: "§RWARNING! THIS WILL LOCK YOU OUT OF ALL FUTURE HELIOS INVESTMENTS!§!"
+ALT_finish_helios_investments_modifier_ctt: "When completed grants bonuses based on the amount of investments given."
 #Production bonuses, idk where to put these
 ALT_less_cars: "Less Cars"
 ALT_more_trains: "More Trains"

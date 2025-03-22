@@ -2475,9 +2475,28 @@ focus_tree = {
 		cancelable = no
 		completion_reward = { 
 			custom_effect_tooltip = ALT_finish_helios_investments_lockout_ctt
+			if = {
+				limit = {
+					check_variable = {
+						var = ALT_investment_repayment_consumer_goods_factor
+						value = 0
+					}
+				}
+				custom_effect_tooltip = ALT_finish_helios_investments_modifier_ctt
+				hidden_effect = {
+					add_dynamic_modifier = {
+						modifier = ALT_investment_repayment
+					}
+				}
+			}
+			else = {
+				add_dynamic_modifier = {
+					modifier = ALT_investment_repayment
+				}
+			}
 		}
 		ai_will_do = {
-			
+			factor = 1
 		}
 	}
 	###########################

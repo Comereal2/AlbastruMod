@@ -1,0 +1,7 @@
+#Author: Comereal
+opinion_modifiers = {
+	ALT_recieved_investment = {
+		value = 30
+		decay = 1
+	}
+}
