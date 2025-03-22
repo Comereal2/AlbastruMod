@@ -639,5 +639,15 @@ ideas = {
 				consumer_goods_factor = -0.1
 			}
 		}
+		ALT_green_technocratic_nation = {
+			picture = ALT_technocratic_nation
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.2
+				equipment_conversion_speed = 0.2
+				army_speed_factor = 0.002
+			}
+		}
 	}
 }

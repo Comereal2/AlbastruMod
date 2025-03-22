@@ -1,3 +1,4 @@
+#Author: Ramon
 focus_tree = {
 	id = riassi_focus
 	country = { 
@@ -111,7 +112,7 @@ focus_tree = {
 	focus = {
 		id = RIA_the_ss_plan
 		icon = GFX_goal_generic_construct_civilian
-		cost = 1
+		cost = 2
 		relative_position_id = RIA_stock_market_crash
 		x = -1
 		y = 1
@@ -246,7 +247,7 @@ focus_tree = {
 	focus = {
 		id = RIA_the_lf_plan
 		icon = GFX_goal_generic_defence
-		cost = 1
+		cost = 2
 		relative_position_id = RIA_stock_market_crash
 		x = 1
 		y = 1
@@ -321,7 +322,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.05
 			add_political_power = -25
 			add_timed_idea = { idea = RIA_farmers_supported_idea days = 365 }
 		}
@@ -1250,23 +1251,178 @@ focus_tree = {
 	}
 	#final parts economic tree
 	focus = {
-		id = RIA_expand_university_of_riastok
-		icon = GFX_focus_research
+		id = RIA_rejuvenate_riastok
+		icon = GFX_focus_SWE_urbanization
 		cost = 10
 		relative_position_id = RIA_improve_production_methods
-		x = 1
+		x = 2
 		y = 1
-		
+
 		prerequisite = {
 			focus = RIA_improve_production_methods
 			focus = RIA_modernize_the_roads
 		}
+		completion_reward = { 
+			31 = {
+				if = { 
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+				}	
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}		
+		}
+	}
+	focus = {
+		id = RIA_expand_university_of_riastok
+		icon = GFX_focus_research
+		cost = 10
+		relative_position_id = RIA_rejuvenate_riastok
+		x = 0
+		y = 1
+		
+		prerequisite = {
+			focus = RIA_rejuvenate_riastok
+		}
+
 		available = {
 			num_of_civilian_factories > 30
 		}
 		
 		completion_reward = { 
 			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = RIA_invest_in_the_countryside
+		icon = GFX_focus_generic_land_reclamation
+		cost = 10
+		relative_position_id = RIA_improve_production_methods
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_improve_production_methods
+			focus = RIA_modernize_the_roads
+		}
+
+		completion_reward = { 
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1		
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1		
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1		
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = RIA_modernize_farming_equipment
+		icon = GFX_focus_generic_farmland
+		cost = 10
+		relative_position_id = RIA_invest_in_the_countryside
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_invest_in_the_countryside
+		}
+
+		available = {
+			has_tech = advanced_machine_tools
+		}
+		completion_reward = { 
+			add_ideas = RIA_modern_farming_equipment_idea
 		}
 	}
 	#political crisis
@@ -1522,7 +1678,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-            add_stability = 0.05
 			remove_ideas = RIA_grand_coalition_idea_5
 			remove_ideas = RIA_political_violence_idea
 		}
@@ -1811,7 +1966,7 @@ focus_tree = {
 				add_stability = 0.25
 			}
 			else = {
-				add_stability = 0.1
+				add_stability = 0.05
 			}
 			add_popularity = {
 				ideology = democratic
@@ -2650,7 +2805,7 @@ focus_tree = {
 		icon = GFX_focus_generic_red_flags
 		cost = 0
         relative_position_id = RIA_hold_new_elections
-		x = -6
+		x = -7
 		y = 1
 
 		available = {
@@ -2669,7 +2824,7 @@ focus_tree = {
 	focus = {
 		id = RIA_expand_the_welfare_state
 		icon = GFX_focus_generic_welfare
-		cost = 10
+		cost = 5
 		relative_position_id = RIA_democratic_win
 		x = -6
 		y = 1
@@ -2709,7 +2864,7 @@ focus_tree = {
 	focus = {
 		id = RIA_true_equality
 		icon = GFX_focus_SWE_form_rfsu 
-		cost = 10
+		cost = 5
 		relative_position_id = RIA_expand_the_welfare_state
 		x = 1
 		y = 1
@@ -2948,6 +3103,33 @@ focus_tree = {
 		completion_reward = { }
 	}
 	focus = {
+		id = RIA_increase_yentroki_autonomy
+		icon = GFX_goal_generic_improve_relations
+		cost = 5
+		relative_position_id = RIA_liberal_win
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_democratic_win
+			focus = RIA_liberal_win
+		}
+
+		available = {
+			controls_state = 172
+			controls_state = 792
+		}
+		completion_reward = { 
+			release_autonomy = {
+				target = YEN
+				autonomy_state = autonomy_integrated_puppet
+				freedom_level = 0.5
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	focus = {
 		id = RIA_expand_personal_liberties
 		icon = GFX_focus_AFG_promote_the_counter_elite
 		relative_position_id = RIA_liberal_win
@@ -2960,8 +3142,8 @@ focus_tree = {
 		}
 
 		completion_reward = { 
-			add_stability = 0.05
-
+			add_stability = 0.1
+			#rework
 		}
 	}
 	focus = {
@@ -2980,17 +3162,34 @@ focus_tree = {
 		}
 
 		completion_reward = { 
-			#mios?
+			if = {
+				limit = {
+				    has_idea = RIA_no_corruption_idea
+				}
+				remove_ideas = RIA_no_corruption_idea
+			}
+			#rework
 		}
 	}
 	focus = {
 		id = RIA_shrink_the_government
-		icon = GFX_portrait_YEN_character_deo
+		icon = GFX_focus_generic_self_management
 		cost = 10
 		relative_position_id = RIA_cozy_up_with_big_business
 		x = -1
 		y = 1
-		completion_reward = { }
+
+		prerequisite = {
+			focus = RIA_cozy_up_with_big_business
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+			add_ideas = RIA_small_government_idea
+			
+
+		}
 	}
 	focus = {
 		id = RIA_privatise_education
@@ -3138,7 +3337,29 @@ focus_tree = {
 			focus = RIA_conservative_win
 		}
 
-		completion_reward = { }
+		completion_reward = { 
+			add_ideas = RIA_promoted_religion_idea
+			if = {
+				limit = { has_idea = RIA_legalized_drugs_idea }
+				remove_ideas = RIA_legalized_drugs_idea
+			}
+		}
+	}
+	focus = {
+		id = RIA_thighten_border_controls
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		relative_position_id = RIA_promote_religion
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_promote_religion
+		}
+
+		completion_reward = { 
+			add_ideas = RIA_thightened_border_controls_idea
+		}
 	}
 	focus = {
 		id = RIA_fund_the_churches
@@ -3154,6 +3375,48 @@ focus_tree = {
 		prerequisite = {
 			focus = RIA_deregulate_the_economy
 		}
-		completion_reward = { }
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = RIA_promoted_religion_idea
+				add_idea = RIA_promoted_religion_idea_2
+			}
+		}
+	}
+	focus = {
+		id = RIA_state_churches
+		icon = GFX_focus_SOV_rebuild_the_savior_cathedral
+		cost = 10
+		relative_position_id = RIA_thighten_border_controls
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = RIA_thighten_border_controls
+		}
+		prerequisite = {
+			focus = RIA_fund_the_churches
+		}
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = RIA_promoted_religion_idea_2
+				add_idea = RIA_promoted_religion_idea_3
+			}
+		}
+	}
+	focus = {
+		id = RIA_crackdown_on_yentroki_independence
+		icon = GFX_portrait_YEN_character_deo
+		cost = 10
+		relative_position_id = RIA_conservative_win
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_conservative_win
+		}
+
+		completion_reward = { 
+			#add crackdown
+		}
 	}
 }

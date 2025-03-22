@@ -1,10 +1,19 @@
 ﻿#Author: Comereal
 l_english:
-#Decision Categories
+#Decision Categories + Debug
 asaa_actions: "ASAA Actions"
+ALT_asaa_debug_decision_enable: "ASAA DEBUG ENABLE"
+ALT_asaa_debug_decision_disable: "ASAA DEBUG DISABLE"
 develop_altir_actions: "Develop Altir"
+ALT_develop_altir_debug_decision_enable: "DEVELOP ALTIR DEBUG ENABLE"
+ALT_develop_altir_debug_decision_disable: "DEVELOP ALTIR DEBUG DISABLE"
 ALT_bop_category: "Altirian Power Balance"
 ALT_spread_fascism_category: "Spread Fascism"
+ALT_spread_fascism_debug_decision_enable: "SPREAD FASCISM DEBUG ENABLE"
+ALT_spread_fascism_debug_decision_disable: "SPREAD FASCISM DEBUG DISABLE"
+ALT_foreign_investments_category: "Foreign Investments"
+ALT_foreign_investments_debug_decision_enable: "FOREIGN INVESTMENTS DEBUG ENABLE"
+ALT_foreign_investments_debug_decision_disable: "FOREIGN INVESTMENTS DEBUG DISABLE"
 #Balance Of Power
 ALT_DEBUG_deactivate_BOP: "DEBUG - Deactivate Balance Of Power"
 ALT_build_science_labs: "Build Science Labs"

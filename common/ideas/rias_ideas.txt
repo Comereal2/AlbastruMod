@@ -332,6 +332,16 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
+		RIA_modern_farming_equipment_idea = {
+			picture = SOV_second_five_year_plan
+
+			modifier = {
+				conscription_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				
+			}
+		}
 		RIA_political_deadlock_idea_1 = {
 			picture = generic_disjointed_gov
 
@@ -746,7 +756,7 @@ ideas = {
 				war_support_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.1
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = -0.1
 				stability_factor = -0.1
 			}
 		}
@@ -757,6 +767,60 @@ ideas = {
 				research_speed_factor = 0.1
 				consumer_goods_factor = -0.1
 				stability_factor = -0.05
+			}
+		}
+		RIA_small_government_idea = {
+			picture = unkown
+
+			modifier = {
+				consumer_goods_factor = -0.2
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		RIA_promoted_religion_idea = {
+			picture = MEX_church_power_4
+
+			modifier = {
+				stability_factor = 0.025
+				war_stability_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		RIA_promoted_religion_idea_2 = {
+			picture = MEX_church_power_4
+
+			modifier = {
+				stability_factor = 0.025
+				war_stability_factor = 0.1
+				war_support_factor = 0.05
+				army_core_defence_factor = 0.1
+				army_attack_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		RIA_promoted_religion_idea_3 = {
+			picture = MEX_church_power_5
+
+			modifier = {
+				stability_factor = 0.05
+				war_stability_factor = 0.1
+				war_support_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_attack_factor = 0.1
+				army_org_factor = 0.05
+				consumer_goods_factor = 0.15
+			}
+		}
+		RIA_thightened_border_controls_idea = {
+			picture = generic_prisoner
+
+			modifier = {
+				monthly_population = -0.1
+				production_speed_buildings_factor = -0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+
 			}
 		}
 	}

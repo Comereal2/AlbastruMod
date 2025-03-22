@@ -6,6 +6,8 @@
 # ALT_demand_lost_lands - add the events for demanding land from RIA + add perma claims
 # ALT_build_railways - add the railways
 # ALT_finish_apache_construction - give buildings in Altiria
+# Create the ALT_look_for_foreign_investments minigame
+# The entire Foreign Investments sub tree NEEDS ITS CONTENT ADDED
 # Complete event altir.22
 focus_tree = {
 	id = ALT_focus_tree
@@ -1490,6 +1492,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_the_alliance_finalized
 		}
+		prerequisite = {
+			focus = ALT_find_another_use
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1520,6 +1525,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ALT_the_alliance_finalized
+		}
+		prerequisite = {
+			focus = ALT_find_another_use
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1552,6 +1560,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_the_alliance_finalized
 		}
+		prerequisite = {
+			focus = ALT_find_another_use
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1582,6 +1593,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ALT_the_alliance_finalized
+		}
+		prerequisite = {
+			focus = ALT_find_another_use
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1863,7 +1877,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_increase_governing_capacity
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_increase_gov_cap
 		x = 1
 		y = 1
 		relative_position_id = ALT_pressure_odezya
@@ -2203,6 +2217,42 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = ALT_promote_public_transport
+		icon = GFX_goal_ALT_promote_public_transport
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ALT_build_railways
+		prerequisite = {
+			focus = ALT_build_railways
+		}
+		completion_reward = { 
+			add_equipment_bonus = {
+				name = ALT_less_cars
+				bonus = {
+					armored_car_equipment = {
+						build_cost_ic = 0.2
+					}
+				}
+			}
+			add_equipment_bonus = {
+				name = ALT_more_trains
+				bonus = {
+					train_equipment = {
+						build_cost_ic = -0.2
+					}
+				}
+			}
+			swap_ideas = {
+				remove_idea = ALT_technocratic_nation
+				add_idea = ALT_green_technocratic_nation
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = ALT_finish_apache_construction
 		icon = GFX_goal_ALT_finish_apache_construction
 		cost = 5
@@ -2263,6 +2313,175 @@ focus_tree = {
 	}
 	###########################
 	#
+	#   #   ##   #   #   #
+	#   #   # #  #   #   #
+	#   #   #  # #   #   #
+	#   #   #   ##    # #
+	#   #   #    #     #
+	#
+	###########################
+	focus = {
+		id = ALT_look_for_foreign_investments
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 6
+		y = 0
+		relative_position_id = ALT_build_apache
+		select_effect = {
+			set_variable = {
+				var = focus_taken
+				value = 1
+			}
+		}
+		completion_reward = { 
+			custom_effect_tooltip = ALT_look_for_foreign_investments_ctt
+			#Base minigame stuff - typical investments across the globe, special ones from other focuses give more bonuses.
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_propose_capital_renovation
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = ALT_look_for_foreign_investments
+		prerequisite = {
+			focus = ALT_look_for_foreign_investments
+		}
+		completion_reward = { 
+			#Add Bluu event here
+			#Add bonus minigame stuff here
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_build_new_kip_bases
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_look_for_foreign_investments
+		prerequisite = {
+			focus = ALT_look_for_foreign_investments
+		}
+		completion_reward = { 
+			#Add Kastaryn event here
+			#Add bonus minigame stuff here
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_make_railroads_in_rias
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = ALT_look_for_foreign_investments
+		prerequisite = {
+			focus = ALT_look_for_foreign_investments
+		}
+		completion_reward = { 
+			#Add Rias event here
+			#Add bonus minigame stuff here
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_connect_our_networks
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_make_railroads_in_rias
+		prerequisite = {
+			focus = ALT_make_railroads_in_rias
+		}
+		available = {
+			#Has done the Rias decisions in the minigame
+		}
+		completion_reward = { 
+			#Add railways between Riassi and Altir
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_colaborate_with_odezya
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_build_new_kip_bases
+		prerequisite = {
+			focus = ALT_build_new_kip_bases
+		}
+		available = {
+			#Has done the KIP decisions in the minigame
+		}
+		completion_reward = { 
+			#Give Odezya event to build bases in their territory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_place_statues_across_tarvozzia
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_propose_capital_renovation
+		prerequisite = {
+			focus = ALT_propose_capital_renovation
+		}
+		available = {
+			#Has invested into Tarvozzia at least once
+		}
+		completion_reward = { 
+			#Give Tarvozzia event to build Supreme Suzerain statues
+			#Add timed wait before adding statue national spirit to both nations
+			#Add possible Tarvozzia coup stuff
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_finish_helios_investments
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = ALT_colaborate_with_odezya
+		prerequisite = {
+			focus = ALT_place_statues_across_tarvozzia
+			focus = ALT_colaborate_with_odezya
+			focus = ALT_connect_our_networks
+		}
+		available = {
+			#Has completed at least 10 investments of any type in helios
+		}
+		cancelable = no
+		completion_reward = { 
+			custom_effect_tooltip = ALT_finish_helios_investments_lockout_ctt
+		}
+		ai_will_do = {
+			
+		}
+	}
+	###########################
+	#
 	#   #   #   #   #
 	#   ## ##   #   #
 	#   # # #   #   #
@@ -2276,7 +2495,7 @@ focus_tree = {
 		cost = 5
 		x = 5
 		y = 0
-		relative_position_id = ALT_build_apache
+		relative_position_id = ALT_look_for_foreign_investments
 		select_effect = {
 			set_variable = {
 				var = focus_taken

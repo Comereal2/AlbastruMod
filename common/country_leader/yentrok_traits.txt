@@ -1,4 +1,4 @@
-
+#Author: Ramon
 leader_traits = {
 	YEN_independence_fighter = {
 		random = no
