@@ -1,0 +1,70 @@
+#Author: Comereal
+capital = 23
+oob = "kastaryn_units"
+set_research_slots = 3
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	basic_train = 1
+	motorised_infantry = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_party_name = {
+	ideology = neutrality
+	long_name = KAS_neutrality_p_long
+	name = KAS_neutrality_p
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = KAS_fascism_p_long
+	name = KAS_fascism_p
+}
+
+set_party_name = {
+	ideology = democratic
+	long_name = KAS_democratic_p_long
+	name = KAS_democratic_p
+}
+
+set_party_name = {
+	ideology = communism
+	long_name = KAS_communism_p_long
+	name = KAS_communism_p
+}
+
+set_party_name = {
+	ideology = skirts
+	long_name = ALT_skirts_p_long
+	name = ALT_skirts_p
+}
+
+recruit_character = KAS_chauncey_haverlot
+recruit_character = KAS_cecil_morgan
+recruit_character = KAS_sullivan_acton
+recruit_character = KAS_carl_loughty
+
+set_popularities = {
+	democratic = 60
+	fascism = 20
+	communism = 15
+	neutrality = 5
+}
