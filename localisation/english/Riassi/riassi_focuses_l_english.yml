@@ -76,14 +76,23 @@
  RIA_prioritize_economic_growth_desc:0 "NOT DONE"
 
  RIA_expand_the_tourism_industry:0 "Expand the Tourism Industry"
- RIA_expand_the_tourism_industry_desc:0 "NOT DONE"
+ RIA_expand_the_tourism_industry_desc:0 "With the new economic situation ushering in opportunities for growth, it's about time that we use our beautiful nature for something productive. Let's invest heavily into the tourism industry!"
  RIA_expand_the_tourism_industry_ctt:0 "§RWe will lose our tourism industry as soon as we enter a state of war!§!"
 
  RIA_modernize_the_roads:0 "Modernize the Roads"
  RIA_modernize_the_roads_desc:0 "NOT DONE"
 
+ RIA_rejuvenate_riastok:0 "Rejuvenate Riastok"
+ RIA_rejuvenate_riastok_desc:0 "Riastok is a run down and broken city. But if we want to show that Rias is a big player on the international stage, we need to give the city a face lift."
+
  RIA_expand_university_of_riastok:0 "Expand the University of Riastok"
  RIA_expand_university_of_riastok_desc:0 "The Riassi economy has grown a lot during the last years, but our educational facilities have not expanded to meet that growth. By investing in the University of Riastok, we can change make sure our schools have the capacity to support a larger economy."
+
+ RIA_invest_in_the_countryside:0 "Invest in the Countryside"
+ RIA_invest_in_the_countryside_desc:0 "NOT DONE"
+
+ RIA_modernize_farming_equipment:0 "Modernize Farming Equipment"
+ RIA_modernize_farming_equipment_desc:0 "NOT DONE"
 
  announce_RIA_snap_elections:0 "Announce Snap Elections"
  announce_RIA_snap_elections_desc:0 "With the political deadlock after the stock market crash sinking the government, president Emekri has announced Snap Elections."
@@ -280,11 +289,17 @@
  RIA_liberal_win:0 "Liberal Win"
  RIA_liberal_win_desc:0 "The Liberal Future have unexpectedly won the election, presenting a unique chance for them to liberalize Rias in a way that has never been seen before."
 
+ RIA_increase_yentroki_autonomy:0 "Increase Yentroki Autonomy"
+ RIA_increase_yentroki_autonomy_desc:0 "The people of Yentrok have always wanted more autonomy. To make sure that things run as smoothly as possible, let's give them what they want."
+
  RIA_expand_personal_liberties:0 "Expand Personal Liberties"
  RIA_expand_personal_liberties_desc:0 "NOT DONE"
  
  RIA_cozy_up_with_big_business:0 "Cozy up with Big Business"
  RIA_cozy_up_with_big_business_desc:0 "NOT DONE"
+
+ RIA_shrink_the_government:0 "Shrink the Government"
+ RIA_shrink_the_government_desc:0 "NOT DONE"
 
  RIA_privatise_education:0 "Privatise Education"
  RIA_privatise_education_desc:0 "NOT DONE"
@@ -301,8 +316,11 @@
  RIA_promote_religion:0 "Promote Religion"
  RIA_promote_religion_desc:0 "NOT DONE"
 
+ RIA_thighten_border_controls:0 "Thighten Border Controls"
+ RIA_thighten_border_controls_desc:0 "NOT DONE"
+
  RIA_fund_the_churches:0 "Fund the Churches"
  RIA_fund_the_churches_desc:0 "NOT DONE"
 
- RIA_shrink_the_government:0 "Shrink the Government"
- RIA_shrink_the_government_desc:0 "NOT DONE"
+ RIA_state_churches:0 "State Churches"
+ RIA_state_churches_desc:0 "NOT DONE"
