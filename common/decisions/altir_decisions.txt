@@ -1450,7 +1450,7 @@ ALT_foreign_investments_category = {
 		}
 		cost = 75
 		modifier = {
-			civilian_factory_use = 2
+			civilian_factory_use = 3
 		}
 		days_remove = 90
 		days_re_enable = 30

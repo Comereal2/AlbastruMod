@@ -65,6 +65,10 @@ KAS = {
 	color = rgb { 25 79 19 }
 	color_ui = rgb { 25 79 19 }
 }
+WOD = {
+	color = rgb { 109 252 255 }
+	color_ui = rgb { 109 252 255 }
+}
 GER = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }
