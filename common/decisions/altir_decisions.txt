@@ -1471,6 +1471,20 @@ ALT_foreign_investments_category = {
 					target = ROOT
 					modifier = ALT_recieved_investment
 				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = no
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
 			}
 			custom_effect_tooltip = ALT_generic_helios_investment_ctt
 			custom_effect_tooltip = ALT_generic_helios_investment_consumer_goods_mod
