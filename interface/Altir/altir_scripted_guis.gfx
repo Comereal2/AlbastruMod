@@ -1,0 +1,7 @@
+#Author: Comereal
+SpriteTypes = {
+	spriteType = {
+		name = "GFX_helios_map"
+		textureFile = "gfx/interface/gui/ALT/helios_map.png"
+	}
+}

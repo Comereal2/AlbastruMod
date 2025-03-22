@@ -1,0 +1,59 @@
+#Author: Comereal
+characters = {
+	KAS_chauncey_haverlot = {
+		name = "Chauncey Haverlot"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	KAS_cecil_morgan = {
+		name = "Cecil Morgan"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	KAS_sullivan_acton = {
+		name = "Sullivan Acton"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = {
+			}
+			id = -1
+		}
+	}
+	KAS_carl_loughty = {
+		name = "Carl Loughty"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_cameron_montag"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			traits = {
+			}
+			id = -1
+		}
+	}
+}

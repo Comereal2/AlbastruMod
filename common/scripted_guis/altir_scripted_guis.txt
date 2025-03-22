@@ -1,0 +1,7 @@
+#Author: Comereal
+scripted_gui = {
+	ALT_investment_gui = {
+		window_name = "ALT_investment_gui"
+		context_type = decision_category
+	}
+}
