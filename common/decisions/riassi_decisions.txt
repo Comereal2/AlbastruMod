@@ -32,8 +32,10 @@ RIA_paramilitary_cat = {
 
 		visible = {
 			has_completed_focus = RIA_increasing_political_violence
+			has_idea = RIA_political_violence_idea
+			has_government = democratic
 		}
-
+		
 		ai_will_do = {
 			base = 0
 
