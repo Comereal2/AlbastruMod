@@ -50,7 +50,7 @@ focus_tree = {
 				}
 					add_opinion_modifier = {
 					target = RIA
-					modifier = aided_industry
+					modifier = RIA_riassi_aid_for_all_opinion
 					}
 			}
 		}
@@ -2779,7 +2779,6 @@ focus_tree = {
 		y = 0
 
 		available = {
-			date > 1939.7.21
 			has_government = democratic
 				OR = { 
 					has_completed_focus = RIA_the_republic_survives
@@ -2928,7 +2927,7 @@ focus_tree = {
 				}
 					add_opinion_modifier = {
 					target = RIA
-					modifier = aided_industry
+					modifier = RIA_riassi_aid_for_all_opinion
 					}
 			}
 		}
@@ -3405,7 +3404,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RIA_crackdown_on_yentroki_independence
-		icon = GFX_portrait_YEN_character_deo
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		cost = 10
 		relative_position_id = RIA_conservative_win
 		x = 2
@@ -3417,6 +3416,30 @@ focus_tree = {
 
 		completion_reward = { 
 			#add crackdown
+		}
+	}
+	focus = {
+		id = RIA_anti_communist_diplomacy
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		relative_position_id = RIA_crackdown_on_yentroki_independence
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = RIA_crackdown_on_yentroki_independence
+		}
+
+		completion_reward = { 
+			every_other_country = {
+				limit = {
+					has_government = communism
+				}
+					add_opinion_modifier = {
+					target = RIA
+					modifier = RIA_anti_communist_diplomacy_opinion
+					}
+			}
 		}
 	}
 }
