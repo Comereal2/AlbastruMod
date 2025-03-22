@@ -1,6 +1,6 @@
 #Author: Comereal
-capital = 15
-oob = "cryingRiver_units"
+capital = 23
+oob = "kastaryn_units"
 set_research_slots = 3
 # Starting tech
 set_technology = {
@@ -21,7 +21,7 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = democratic
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -29,26 +29,26 @@ set_politics = {
 
 set_party_name = {
 	ideology = neutrality
-	long_name = CRY_neutrality_p_long
-	name = CRY_neutrality_p
+	long_name = KAS_neutrality_p_long
+	name = KAS_neutrality_p
 }
 
 set_party_name = {
 	ideology = fascism
-	long_name = CRY_fascism_p_long
-	name = CRY_fascism_p
+	long_name = KAS_fascism_p_long
+	name = KAS_fascism_p
 }
 
 set_party_name = {
 	ideology = democratic
-	long_name = CRY_democratic_p_long
-	name = CRY_democratic_p
+	long_name = KAS_democratic_p_long
+	name = KAS_democratic_p
 }
 
 set_party_name = {
 	ideology = communism
-	long_name = CRY_communism_p_long
-	name = CRY_communism_p
+	long_name = KAS_communism_p_long
+	name = KAS_communism_p
 }
 
 set_party_name = {
@@ -57,12 +57,14 @@ set_party_name = {
 	name = ALT_skirts_p
 }
 
-set_popularities = {
-	democratic = 15
-	fascism = 15
-	communism = 19
-	neutrality = 51
-}
+recruit_character = KAS_chauncey_haverlot
+recruit_character = KAS_cecil_morgan
+recruit_character = KAS_sullivan_acton
+recruit_character = KAS_carl_loughty
 
-add_ideas = {
+set_popularities = {
+	democratic = 60
+	fascism = 20
+	communism = 15
+	neutrality = 5
 }

@@ -1,6 +1,6 @@
 #Author: Comereal
 asaa_actions = {
-	icon = GFX_decision_category_generic_political_actions
+	icon = GFX_decision_category_ALT_asaa_actions
 	priority = 10
 	allowed = {
 		original_tag = ALT
@@ -9,7 +9,7 @@ asaa_actions = {
 }
 
 develop_altir_actions = {
-	icon = GFX_decision_category_generic_prospect_for_resources
+	icon = GFX_decision_category_ALT_develop_altir
 	priority = 10
 	allowed = {
 		original_tag = ALT
@@ -18,7 +18,7 @@ develop_altir_actions = {
 }
 
 ALT_bop_category = {
-	icon = GFX_decision_category_generic_political_actions
+	icon = GFX_decision_category_ALT_bop
 	priority = 10
 	allowed = {
 		original_tag = ALT
@@ -27,10 +27,20 @@ ALT_bop_category = {
 }
 
 ALT_spread_fascism_category = {
-	icon = GFX_decision_category_generic_political_actions
+	icon = GFX_decision_category_ALT_spread_fascism
 	priority = 10
 	allowed = {
 		original_tag = ALT
 	}
 	visible_when_empty = no
+}
+
+ALT_foreign_investments_category = {
+	icon = GFX_decision_category_ALT_foreign_investments
+	priority = 10
+	allowed = {
+		original_tag = ALT
+	}
+	visible_when_empty = no
+	scripted_gui = ALT_investment_gui
 }

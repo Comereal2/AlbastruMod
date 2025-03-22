@@ -2,10 +2,7 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			if = {
-				limit = {
-					tag = ALT
-				}
+			ALT = {
 				set_variable = {
 					var = focus_taken
 					value = 0
