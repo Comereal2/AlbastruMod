@@ -1,0 +1,46 @@
+ideas = {
+	country = {
+		losers_of_the_wooodian_spanish_war = {
+			picture = usa_great_depression_3
+			allowed = {
+				tag = WOD
+			}
+			available = {
+			}
+			cancel = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 1
+				consumer_goods_factor = 0.2
+				conscription_factor = -0.3
+				join_faction_tension = 0.5
+				local_resources_factor = -0.3
+			}
+		}
+		get_revenge_for_the_people_of_woood = {
+			picture = usa_great_depression_3
+			allowed = {
+				tag = WOD
+			}
+			available = {
+			}
+			cancel = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = -1
+				consumer_goods_factor = -0.1
+				conscription_factor = 0.2
+				join_faction_tension = -0.2
+				local_resources_factor = 0.5
+			}
+		}
+	}
+}

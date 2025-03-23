@@ -1,0 +1,118 @@
+﻿###########################
+# Chinese Events
+###########################
+add_namespace = woood
+country_event = {
+	id = woood.1
+	title = "address the army"
+	desc = "woood.1.d"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		# rebuild the army !
+		name = "rebuild the army"
+		ai_chance = {
+			factor = 90
+		}
+		army_experience = 100
+	}
+	option = {
+		# rebuild the army and somewhat obey the treaty
+		name = "rebuild the army but somewhat obey the treaty"
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 30
+		army_experience = 50
+	}
+}
+
+country_event = {
+	id = woood.2
+	title = "civil war"
+	desc = "woood.2.d"
+	picture = GFX_address_the_army
+	is_triggered_only = yes
+	option = {
+		# we will never fall !
+		name = "we will never fall"
+		ai_chance = {
+			factor = 100
+		}
+		load_oob = woood_civilwar
+	}
+}
+
+country_event = {
+	id = woood.3
+	title = "address the navy"
+	desc = "woood.3.d"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		# rebuild the navy !
+		name = "rebuild the navy"
+		ai_chance = {
+			factor = 90
+		}
+		navy_experience = 100
+	}
+	option = {
+		# rebuild the navy and somewhat obey the treaty
+		name = "rebuild the navy but somewhat obey the treaty"
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 30
+		navy_experience = 50
+	}
+}
+
+country_event = {
+	id = woood.4
+	title = "address the airforce"
+	desc = "woood.4.d"
+	picture = GFX_report_event_chinese_soldiers_fighting
+	is_triggered_only = yes
+	option = {
+		# rebuild the airforce !
+		name = "rebuild the airforce"
+		ai_chance = {
+			factor = 90
+		}
+		air_experience = 100
+	}
+	option = {
+		# rebuild the airforce and somewhat obey the treaty
+		name = "rebuild the airforce but somewhat obey the treaty"
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 30
+		air_experience = 50
+	}
+}
+
+country_event = {
+	id = woood.5
+	title = "woood invites us to our faction"
+	desc = "woood.5.d"
+	is_triggered_only = yes
+	option = {
+		# lets join the together we will rise !
+		name = "lets join the together we will rise"
+		ai_chance = {
+			factor = 40
+		}
+		WOD = {
+			add_to_faction = ITA
+		}
+	}
+	option = {
+		# no we will not join their faction
+		name = "no we will not join their faction"
+		ai_chance = {
+			factor = 60
+		}
+	}
+}

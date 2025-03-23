@@ -121,7 +121,9 @@ asaa_actions = {
 					#Add all southern Helios tags here
 					tag = RIA
 					tag = ODZ
+					tag = YEN
 				}
+				exists = yes
 			}
 		}
 		cost = 50
@@ -169,7 +171,11 @@ asaa_actions = {
 			FROM = {
 				OR = {
 					#Add all northern Helios tags here
+					tag = BLU
+					tag = KAS
+					tag = CAM
 				}
+				exists = yes
 			}
 		}
 		cost = 50
@@ -220,7 +226,10 @@ asaa_actions = {
 					tag = GEM
 					tag = HEX
 					tag = ARB
+					tag = CRY
+					tag = PRU
 				}
+				exists = yes
 			}
 		}
 		cost = 50
@@ -269,7 +278,10 @@ asaa_actions = {
 				OR = {
 					#Add all Orium tags here
 					tag = KAI
+					tag = NOR
+					tag = CYN
 				}
+				exists = yes
 			}
 		}
 		cost = 50
@@ -317,7 +329,10 @@ asaa_actions = {
 			FROM = {
 				OR = {
 					#Add all Sulian tags here
+					tag = ISL
+					tag = VAL
 				}
+				exists = yes
 			}
 		}
 		cost = 50
@@ -1220,15 +1235,13 @@ ALT_spread_fascism_category = {
 		target_trigger = {
 			FROM = {
 				NOT = {
-					OR = {
-						has_government = fascism
-						is_subject = yes
-					}
+					has_government = fascism
+					is_subject = yes
 				}
 				OR = {
 					is_neighbor_of = ALT
-					if = {
-						limit = { ROOT = { has_completed_focus = ALT_target_valtheronesia } }
+					AND = {
+						ROOT = { has_completed_focus = ALT_target_valtheronesia }
 						tag = VAL
 					}
 				}
@@ -1271,8 +1284,8 @@ ALT_spread_fascism_category = {
 				}
 				OR = {
 					is_neighbor_of = ALT
-					if = {
-						limit = { ROOT = { has_completed_focus = ALT_target_valtheronesia } }
+					AND = {
+						ROOT = { has_completed_focus = ALT_target_valtheronesia }
 						tag = VAL
 					}
 				}
@@ -1313,8 +1326,8 @@ ALT_spread_fascism_category = {
 				is_subject = no
 				OR = {
 					is_neighbor_of = ALT
-					if = {
-						limit = { ROOT = { has_completed_focus = ALT_target_valtheronesia } }
+					AND = {
+						ROOT = { has_completed_focus = ALT_target_valtheronesia }
 						tag = VAL
 					}
 				}
@@ -1413,5 +1426,265 @@ ALT_foreign_investments_category = {
 			clr_country_flag = foreign_investments_debug_enabled
 		}
 		cost = 0
+	}
+	ALT_generic_helios_investment = {
+		priority = 80
+		icon = GFX_decision_ALT_investment
+		targets = {RIA ODZ BLU CAM KAS} #All Helios Tags
+		target_trigger = {
+			FROM = {
+				exists = yes
+				NOT = {
+					has_war_with = ALT
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = foreign_investments_debug_enabled
+				has_completed_focus = ALT_look_for_foreign_investments
+			}
+			NOT = {
+				has_completed_focus = ALT_finish_helios_investments
+			}
+		}
+		cost = 75
+		modifier = {
+			civilian_factory_use = 3
+		}
+		days_remove = 90
+		days_re_enable = 30
+		cancel_trigger = {
+			has_war_with = FROM
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_consumer_goods_factor
+				value = -0.02
+			}
+			add_to_variable = {
+				var = ALT_investment_repayment_building_construction_speed_factor
+				value = 0.02
+			}
+			FROM = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ALT_recieved_investment
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = no
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_generic_helios_investment_consumer_goods_mod
+			custom_effect_tooltip = ALT_generic_helios_investment_building_speed_mod
+		}
+	}
+	ALT_kip_investment = {
+		priority = 100
+		icon = GFX_decision_ALT_investment
+		visible = {
+			OR = {
+				has_country_flag = foreign_investments_debug_enabled
+				has_completed_focus = ALT_look_for_foreign_investments
+			}
+		}
+		available = {
+			has_completed_focus = ALT_build_new_kip_bases
+		}
+		cost = 150
+		modifier = {
+			civilian_factory_use = 5
+		}
+		days_remove = 150
+		fire_only_once = yes
+		cancel_trigger = {
+			has_war_with = KAS
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_consumer_goods_factor
+				value = -0.1
+			}
+			add_to_variable = {
+				var = ALT_investment_repayment_building_construction_speed_factor
+				value = 0.1
+			}
+			KAS = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ALT_recieved_investment
+				}
+				add_ideas = ALT_kip_expanded
+			}
+			random_country = {
+				limit = {
+					any_owned_state = {
+						is_coastal = yes
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = no
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = no
+						}
+						is_coastal = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					any_owned_state = {
+						is_coastal = yes
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = no
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = no
+						}
+						is_coastal = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_kip_helios_investment_consumer_goods_mod
+			custom_effect_tooltip = ALT_kip_helios_investment_building_speed_mod
+		}
+	}
+	ALT_bluu_capital_investment = {
+		priority = 100
+		icon = GFX_decision_ALT_investment
+		visible = {
+			OR = {
+				has_country_flag = foreign_investments_debug_enabled
+				has_completed_focus = ALT_look_for_foreign_investments
+			}
+		}
+		available = {
+			has_completed_focus = ALT_propose_capital_renovation
+		}
+		cost = 150
+		modifier = {
+			civilian_factory_use = 5
+		}
+		days_remove = 150
+		fire_only_once = yes
+		cancel_trigger = {
+			has_war_with = BLU
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_consumer_goods_factor
+				value = -0.1
+			}
+			add_to_variable = {
+				var = ALT_investment_repayment_building_construction_speed_factor
+				value = 0.1
+			}
+			BLU = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ALT_recieved_investment
+				}
+			}
+			21 = { #Bluu capital
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_victory_points = {
+					province = 11834 #Bluu capital province
+					value = 5
+				}
+			}
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_kip_helios_investment_consumer_goods_mod
+			custom_effect_tooltip = ALT_kip_helios_investment_building_speed_mod
+		}
+	}
+	ALT_rias_railroad_investment = {
+		priority = 100
+		icon = GFX_decision_ALT_investment
+		visible = {
+			OR = {
+				has_country_flag = foreign_investments_debug_enabled
+				has_completed_focus = ALT_look_for_foreign_investments
+			}
+		}
+		available = {
+			has_completed_focus = ALT_make_railroads_in_rias
+		}
+		cost = 150
+		modifier = {
+			civilian_factory_use = 5
+		}
+		days_remove = 150
+		fire_only_once = yes
+		cancel_trigger = {
+			has_war_with = RIA
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_consumer_goods_factor
+				value = -0.1
+			}
+			add_to_variable = {
+				var = ALT_investment_repayment_building_construction_speed_factor
+				value = 0.1
+			}
+			RIA = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ALT_recieved_investment
+				}
+			}
+			#Add railroads between riassi states here
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_kip_helios_investment_consumer_goods_mod
+			custom_effect_tooltip = ALT_kip_helios_investment_building_speed_mod
+		}
 	}
 }
