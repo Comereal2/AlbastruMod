@@ -1499,6 +1499,9 @@ ALT_foreign_investments_category = {
 				has_country_flag = foreign_investments_debug_enabled
 				has_completed_focus = ALT_look_for_foreign_investments
 			}
+			NOT = {
+				has_completed_focus = ALT_finish_helios_investments
+			}
 		}
 		available = {
 			has_completed_focus = ALT_build_new_kip_bases
@@ -1595,6 +1598,9 @@ ALT_foreign_investments_category = {
 				has_country_flag = foreign_investments_debug_enabled
 				has_completed_focus = ALT_look_for_foreign_investments
 			}
+			NOT = {
+				has_completed_focus = ALT_finish_helios_investments
+			}
 		}
 		available = {
 			has_completed_focus = ALT_propose_capital_renovation
@@ -1653,6 +1659,9 @@ ALT_foreign_investments_category = {
 				has_country_flag = foreign_investments_debug_enabled
 				has_completed_focus = ALT_look_for_foreign_investments
 			}
+			NOT = {
+				has_completed_focus = ALT_finish_helios_investments
+			}
 		}
 		available = {
 			has_completed_focus = ALT_make_railroads_in_rias
@@ -1682,6 +1691,159 @@ ALT_foreign_investments_category = {
 				}
 			}
 			#Add railroads between riassi states here
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_kip_helios_investment_consumer_goods_mod
+			custom_effect_tooltip = ALT_kip_helios_investment_building_speed_mod
+		}
+	}
+	ALT_tarvozzia_statues_investment = {
+		priority = 100
+		icon = GFX_decision_ALT_investment
+		visible = {
+			OR = {
+				has_country_flag = foreign_investments_debug_enabled
+				has_completed_focus = ALT_look_for_foreign_investments
+			}
+			NOT = {
+				has_completed_focus = ALT_finish_helios_investments
+			}
+		}
+		available = {
+			has_completed_focus = ALT_place_statues_across_tarvozzia
+		}
+		cost = 150
+		modifier = {
+			civilian_factory_use = 5
+		}
+		days_remove = 150
+		fire_only_once = yes
+		cancel_trigger = {
+			has_war_with = BLU
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_consumer_goods_factor
+				value = -0.1
+			}
+			add_to_variable = {
+				var = ALT_investment_repayment_building_construction_speed_factor
+				value = 0.1
+			}
+			BLU = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ALT_recieved_investment
+				}
+				add_stability = 0.1
+				add_popularity = {
+					ideology = var:highest_party_ideology
+					popularity = 0.1
+				}
+			}
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_kip_helios_investment_consumer_goods_mod
+			custom_effect_tooltip = ALT_kip_helios_investment_building_speed_mod
+		}
+	}
+	ALT_odezya_kip_investment = {
+		priority = 100
+		icon = GFX_decision_ALT_investment
+		visible = {
+			OR = {
+				has_country_flag = foreign_investments_debug_enabled
+				has_completed_focus = ALT_look_for_foreign_investments
+			}
+			NOT = {
+				has_completed_focus = ALT_finish_helios_investments
+			}
+		}
+		available = {
+			has_completed_focus = ALT_colaborate_with_odezya
+		}
+		cost = 150
+		modifier = {
+			civilian_factory_use = 5
+		}
+		days_remove = 150
+		fire_only_once = yes
+		cancel_trigger = {
+			has_war_with = ODZ
+			has_war_with = KAS
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_consumer_goods_factor
+				value = -0.1
+			}
+			add_to_variable = {
+				var = ALT_investment_repayment_building_construction_speed_factor
+				value = 0.1
+			}
+			ODZ = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ALT_recieved_investment
+				}
+				add_timed_idea = {
+					idea = ALT_tourism_influx
+					days = 60
+				}
+			}
+			KAS = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ALT_recieved_investment
+				}
+				swap_ideas = {
+					remove_idea = ALT_kip_expanded
+					add_idea = ALT_kip_expanded1
+				}
+			}
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_kip_helios_investment_consumer_goods_mod
+			custom_effect_tooltip = ALT_kip_helios_investment_building_speed_mod
+		}
+	}
+	ALT_rias_railroad_connect_investment = {
+		priority = 100
+		icon = GFX_decision_ALT_investment
+		visible = {
+			OR = {
+				has_country_flag = foreign_investments_debug_enabled
+				has_completed_focus = ALT_look_for_foreign_investments
+			}
+			NOT = {
+				has_completed_focus = ALT_finish_helios_investments
+			}
+		}
+		available = {
+			has_completed_focus = ALT_connect_our_networks
+		}
+		cost = 150
+		modifier = {
+			civilian_factory_use = 5
+		}
+		days_remove = 150
+		fire_only_once = yes
+		cancel_trigger = {
+			has_war_with = RIA
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_consumer_goods_factor
+				value = -0.1
+			}
+			add_to_variable = {
+				var = ALT_investment_repayment_building_construction_speed_factor
+				value = 0.1
+			}
+			RIA = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ALT_recieved_investment
+				}
+			}
+			#Add railroads between riassi and altir states here
 			custom_effect_tooltip = ALT_generic_helios_investment_ctt
 			custom_effect_tooltip = ALT_kip_helios_investment_consumer_goods_mod
 			custom_effect_tooltip = ALT_kip_helios_investment_building_speed_mod
