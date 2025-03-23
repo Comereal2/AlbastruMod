@@ -1,6 +1,6 @@
 #Author: Comereal
-capital = 18
-oob = "islandMammoth_units"
+capital = 14
+oob = "reservel_units"
 set_research_slots = 3
 # Starting tech
 set_technology = {
@@ -24,31 +24,31 @@ set_politics = {
 	ruling_party = democratic
 	last_election = "1936.1.1"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_party_name = {
 	ideology = neutrality
-	long_name = ISL_neutrality_p_long
-	name = ISL_neutrality_p
+	long_name = RES_neutrality_p_long
+	name = RES_neutrality_p
 }
 
 set_party_name = {
 	ideology = fascism
-	long_name = ISL_fascism_p_long
-	name = ISL_fascism_p
+	long_name = RES_fascism_p_long
+	name = RES_fascism_p
 }
 
 set_party_name = {
 	ideology = democratic
-	long_name = ISL_democratic_p_long
-	name = ISL_democratic_p
+	long_name = RES_democratic_p_long
+	name = RES_democratic_p
 }
 
 set_party_name = {
 	ideology = communism
-	long_name = ISL_communism_p_long
-	name = ISL_communism_p
+	long_name = RES_communism_p_long
+	name = RES_communism_p
 }
 
 set_party_name = {
@@ -58,11 +58,8 @@ set_party_name = {
 }
 
 set_popularities = {
-	democratic = 70
-	fascism = 0
-	communism = 15
-	neutrality = 15
-}
-
-add_ideas = {
+	democratic = 73
+	fascism = 17
+	communism = 7
+	neutrality = 3
 }

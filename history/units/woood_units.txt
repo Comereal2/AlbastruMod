@@ -421,7 +421,7 @@ instant_effect = {
 		efficiency = 50
 	}
  }
- units = {
+units = {
 
 	##### NAVAL UNITS #####
 	fleet = {
@@ -483,7 +483,7 @@ instant_effect = {
 			ship = { name = "Lrcghs" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = WOD version_name = "Wood hamare" } } }
 			ship = { name = "Jaruhar" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = WOD version_name = "Wood hamare" } } }
 			ship = { name = "Leovdpeard" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = WOD version_name = "Wood hamare" } } }
-			ship = { name = "Lucgrhs" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = WOD version_name = "Wood hamare" } } }
+			ship = { name = "Lucgrhsa" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = WOD version_name = "Wood hamare" } } }
 			ship = { name = "Jagujar" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = WOD version_name = "Wood hamare" } } }
 			ship = { name = "Lropfhgard" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = WOD version_name = "Wood hamare" } } }
 			ship = { name = "Lrcefhs" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = WOD version_name = "Wood hamare" } } }
@@ -491,9 +491,9 @@ instant_effect = {
 			ship = { name = "Leodspeard" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = WOD version_name = "Wood hamare" } } }
 			ship = { name = "Lucdrhs" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = WOD version_name = "Wood hamare" } } }
 		}
-      } 
-    }  
-			
+	} 
+}
+	
 
 
 ### Air oob
@@ -505,62 +505,25 @@ air_wings = {
 			amount = 100
 			version_name = "Lp 30"
 		}
-		name = "Jagdgeschwader 232"
-	}
-	167 = { 	
 		small_plane_airframe_1 =  {		# He 51
 			owner = "WOD" 
 			amount = 100
 			version_name = "Lp 30"
 		}
-		name = "Jagdgeschwader 232"
-	}
-	167 = { 	
 		small_plane_airframe_1 =  {		# He 51
 			owner = "WOD" 
 			amount = 100
 			version_name = "Lp 30"
 		}
-		name = "Jagdgeschwader 232"
-	}
-	167 = { 	
 		small_plane_airframe_1 =  {		# He 51
 			owner = "WOD" 
 			amount = 100
 			version_name = "Lp 30"
 		}
-		name = "Jagdgeschwader 232"
-	}
-	167 = { 	
 		small_plane_airframe_1 =  {		# He 51
 			owner = "WOD" 
 			amount = 100
 			version_name = "Lp 30"
 		}
-		name = "Jagdgeschwader 232"
-	}
-	165 = { 	
-		small_plane_cas_airframe_1 =  {		# He 51
-			owner = "WOD" 
-			amount = 100
-			version_name = "Wo 30"
-		}
-		name = "Jagdgeschwader 232"
-	}
-	165 = { 	
-		small_plane_cas_airframe_1 =  {		# He 51
-			owner = "WOD" 
-			amount = 100
-			version_name = "Wo 30"
-		}
-		name = "Jagdgeschwader 232"
-	}
-	165 = { 	
-		small_plane_cas_airframe_1 =  {		# He 51
-			owner = "WOD" 
-			amount = 100
-			version_name = "Wo 30"
-		}
-		name = "Jagdgeschwader 232"
 	}
 }

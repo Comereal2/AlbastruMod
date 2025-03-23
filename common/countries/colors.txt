@@ -38,8 +38,8 @@ CYN = {
 	color_ui = rgb { 79 10 83 }
 }
 ISL = {
-	color = rgb { 125 125 125 }
-	color_ui = rgb { 125 125 125 }
+	color = rgb { 228 155 15 }
+	color_ui = rgb { 228 155 15 }
 }
 CRY = {
 	color = rgb { 89 89 94 }
@@ -68,6 +68,10 @@ KAS = {
 WOD = {
 	color = rgb { 109 252 255 }
 	color_ui = rgb { 109 252 255 }
+}
+RES = {
+	color = rgb { 66 122 101 }
+	color_ui = rgb { 66 122 101 }
 }
 GER = {
 	color = HSV { 0.1 0.15 0.4 }
