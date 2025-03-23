@@ -53,10 +53,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		select_effect = {
-			set_variable = {
-				var = focus_taken
-				value = 1
-			}
+			set_country_flag = focus_taken
 		}
 		completion_reward = {
 			add_popularity = {
@@ -403,10 +400,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		select_effect = {
-			set_variable = {
-				var = focus_taken
-				value = 1
-			}
+			set_country_flag = focus_taken
 		}
 		completion_reward = {
 			add_popularity = {
@@ -2158,10 +2152,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = ALT_concentrate_power
 		select_effect = {
-			set_variable = {
-				var = focus_taken
-				value = 1
-			}
+			set_country_flag = focus_taken
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -2328,10 +2319,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = ALT_build_apache
 		select_effect = {
-			set_variable = {
-				var = focus_taken
-				value = 1
-			}
+			set_country_flag = focus_taken
 		}
 		completion_reward = { 
 			custom_effect_tooltip = ALT_look_for_foreign_investments_ctt
@@ -2516,10 +2504,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = ALT_look_for_foreign_investments
 		select_effect = {
-			set_variable = {
-				var = focus_taken
-				value = 1
-			}
+			set_country_flag = focus_taken
 		}
 		completion_reward = {
 		}

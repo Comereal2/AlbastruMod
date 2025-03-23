@@ -1,17 +1,1 @@
 #Author: Comereal
-on_actions = {
-	on_startup = {
-		effect = {
-			ALT = {
-				set_variable = {
-					var = focus_taken
-					value = 0
-				}
-				set_variable = {
-					var = asaa_complexity
-					value = 4
-				}
-			}
-		}
-	}
-}
