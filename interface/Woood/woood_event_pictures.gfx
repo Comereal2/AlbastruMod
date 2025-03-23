@@ -1,0 +1,9 @@
+spriteTypes = {
+	spriteType = { 
+		name = "GFX_address_the_army"
+		texturefile = "gfx/event_pictures/Woood/adress_the_army.dds"
+	}
+}
+
+
+

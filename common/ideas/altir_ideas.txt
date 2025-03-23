@@ -649,5 +649,13 @@ ideas = {
 				army_speed_factor = 0.002
 			}
 		}
+		ALT_kip_expanded = {
+			picture = ALT_kip_expanded
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.1
+				trade_opinion_factor = 0.2
+			}
+		}
 	}
 }

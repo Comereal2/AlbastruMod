@@ -58,10 +58,10 @@ set_party_name = {
 }
 
 set_popularities = {
-	democratic = 73
+	democratic = 70
 	fascism = 0
-	communism = 10
-	neutrality = 17
+	communism = 15
+	neutrality = 15
 }
 
 add_ideas = {
