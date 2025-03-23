@@ -132,4 +132,8 @@ spriteTypes = {
 		name = "GFX_idea_ALT_apache_complete"
 		textureFile = "gfx/interface/ideas/ALT_apache_complete.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ALT_investment_repayment"
+		textureFile = "gfx/interface/ideas/ALT_investment_repayment.dds"
+	}
 }

@@ -1,0 +1,18 @@
+spriteTypes = {	
+		SpriteType = {
+		name = "focus_WOD_ensue_a_civil_war_shine"
+		texturefile = "gfx/interface/goals/focus_WOD_ensue_a_civil_war.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_WOD_closer_ties_with_germany_shine"
+		texturefile = "gfx/interface/goals/focus_WOD_closer_ties_with_germany.dds"
+	}
+     SpriteType = {
+		name = "GFX_focus_WOD_is_the_greatest_country_shine"
+		texturefile = "gfx/interface/goals/focus_WOD_is_the_greatest_country.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_WOD_the_right_to_self_determination_shine"
+		texturefile = "gfx/interface/goals/focus_WOD_the_right_to_self_determination.dds"			
+	}
+}
