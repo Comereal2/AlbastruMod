@@ -40,8 +40,22 @@ guiTypes = {
 				}
 				spriteType = "GFX_helios_map"
 				orientation = center
-				pdx_tooltip = "ALT_investment_gui_helios_map_tt"
 			}
+		}
+
+		instantTextBoxType = {
+			name = "investment_gui_investment_return"
+			position = {
+				x = -220
+				y = 120
+			}
+			font = "hoi_30header"
+			text = "ALT_investment_gui_investment_return"
+			format = center
+			orientation = center
+			maxWidth = 440
+			maxHeight = 90
+			pdx_tooltip = "ALT_investment_gui_investment_return_tt"
 		}
 	}
 }

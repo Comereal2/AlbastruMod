@@ -2,4 +2,5 @@
 l_english:
 ALT_investment_gui_introduction: "Foreign Investments"
 ALT_investment_gui_introduction_tt: "Hover Tooltip"
-ALT_investment_gui_helios_map_tt: "Map Hover Tooltip"
+ALT_investment_gui_investment_return: "Current Investment Amount: \nConsumer Goods: [?ALT_investment_repayment_consumer_goods_factor|1Y%] \nConstruction Speed: §G+§![?ALT_investment_repayment_building_construction_speed_factor|2+%]"
+ALT_investment_gui_investment_return_tt: "These effects can be improved using the decisions below."

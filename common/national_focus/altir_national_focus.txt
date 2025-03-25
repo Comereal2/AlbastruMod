@@ -2148,7 +2148,7 @@ focus_tree = {
 		id = ALT_build_apache
 		icon = GFX_goal_ALT_build_apache
 		cost = 5
-		x = 12
+		x = 11
 		y = 0
 		relative_position_id = ALT_concentrate_power
 		select_effect = {
@@ -2495,7 +2495,7 @@ focus_tree = {
 	#   #   #   #   #
 	#   #   #   #   #####
 	#
-	############################
+	###########################
 	focus = {
 		id = ALT_mil_start
 		icon = GFX_focus_generic_self_management
@@ -2507,6 +2507,29 @@ focus_tree = {
 			set_country_flag = focus_taken
 		}
 		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###########################
+	#
+	#   #   #    ###    #   #
+	#   ##  #   #   #   #   #
+	#   # # #   #####   #   #
+	#   #  ##   #   #    # #
+	#   #   #   #   #     #
+	#
+	###########################
+	focus = {
+		id = ALT_navy_start
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 5
+		y = 0
+		relative_position_id = ALT_mil_start
+		completion_reward = { 
+
 		}
 		ai_will_do = {
 			factor = 1

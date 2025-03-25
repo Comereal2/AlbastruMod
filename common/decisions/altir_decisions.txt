@@ -1427,6 +1427,79 @@ ALT_foreign_investments_category = {
 		}
 		cost = 0
 	}
+	ALT_foreign_investments_debug_add_consumer_goods = {
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			has_country_flag = foreign_investments_debug_enabled
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_consumer_goods_factor
+				value = -0.02
+			}
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_generic_helios_investment_consumer_goods_mod
+		}
+		cost = 0
+	}
+	ALT_foreign_investments_debug_add_construction_speed = {
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			has_country_flag = foreign_investments_debug_enabled
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_building_construction_speed_factor
+				value = 0.02
+			}
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_generic_helios_investment_building_speed_mod
+		}
+		cost = 0
+	}
+	ALT_foreign_investments_debug_add_both = {
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			has_country_flag = foreign_investments_debug_enabled
+		}
+		cost = 0
+		complete_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_building_construction_speed_factor
+				value = 0.02
+			}
+			add_to_variable = {
+				var = ALT_investment_repayment_consumer_goods_factor
+				value = -0.02
+			}
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_generic_helios_investment_consumer_goods_mod
+			custom_effect_tooltip = ALT_generic_helios_investment_building_speed_mod
+		}
+	}
+	ALT_foreign_investments_debug_add_both_a_lot = {
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			has_country_flag = foreign_investments_debug_enabled
+		}
+		cost = 0
+		complete_effect = {
+			add_to_variable = {
+				var = ALT_investment_repayment_building_construction_speed_factor
+				value = 2
+			}
+			add_to_variable = {
+				var = ALT_investment_repayment_consumer_goods_factor
+				value = -2
+			}
+			custom_effect_tooltip = ALT_generic_helios_investment_ctt
+			custom_effect_tooltip = ALT_investment_tons_debug_ctt
+		}
+	}
 	ALT_generic_helios_investment = {
 		priority = 80
 		icon = GFX_decision_ALT_investment
