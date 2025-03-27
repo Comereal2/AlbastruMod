@@ -1,5 +1,5 @@
+#Author: Ramon
 add_namespace = yentrok_event
-
 
 country_event = {
 	id = yentrok_event.1
