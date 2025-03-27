@@ -6,8 +6,9 @@
 # ALT_demand_lost_lands - add the events for demanding land from RIA + add perma claims
 # ALT_build_railways - add the railways
 # ALT_finish_apache_construction - give buildings in Altiria
-# Create the ALT_look_for_foreign_investments minigame
-# The entire Foreign Investments sub tree NEEDS ITS CONTENT ADDED
+# ALT_threaten_enqiutia - add the stuff once(and if) enqiutia gets added
+# ALT_reclaim_the_helios_empire - add available block and completion effect
+# ALT_send_out_diplomats - add completion effect
 # Complete event altir.22
 focus_tree = {
 	id = ALT_focus_tree
@@ -484,6 +485,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ALT_revise_foreign_policy
+		cost = 5
 		prerequisite = {
 			focus = ALT_revise_foreign_policy
 		}
@@ -2087,6 +2089,63 @@ focus_tree = {
 			factor = 1
 		}
 	}
+	focus = {
+		id = ALT_threaten_enqiutia
+		icon = GFX_focus_generic_self_management
+		x = -1
+		y = 1
+		relative_position_id = ALT_demand_annexation
+		cost = 5
+		prerequisite = {
+			focus = ALT_demand_annexation
+		}
+		bypass = {
+			NOT = {
+				#Country Exists Enqiutia
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
+		}
+		completion_reward = {
+			#Give Enqiutia demand territory event
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_reclaim_the_helios_empire
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ALT_threaten_enqiutia
+		prerequisite = {
+			focus = ALT_threaten_enqiutia
+		}
+		prerequisite = {
+			focus = ALT_invade_odezya
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_STABILITY
+		}
+		available = {
+			#Controls Riassi, Odezya and parts of Enqiutia
+		}
+		completion_reward = { 
+			set_cosmetic_tag = HELIOS_EMPIRE_ALT
+			add_stability = 0.05
+			add_war_support = 0.05
+			#Gain cores on Helios Empire Territory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	#Hidden POLITICAL, SKIRTS
 	focus = {
 		id = ALT_a_time_for_the_cute
@@ -2315,7 +2374,7 @@ focus_tree = {
 		id = ALT_look_for_foreign_investments
 		icon = GFX_focus_generic_self_management
 		cost = 5
-		x = 6
+		x = 8
 		y = 0
 		relative_position_id = ALT_build_apache
 		select_effect = {
@@ -2323,7 +2382,6 @@ focus_tree = {
 		}
 		completion_reward = { 
 			custom_effect_tooltip = ALT_look_for_foreign_investments_ctt
-			#Base minigame stuff - typical investments across the globe, special ones from other focuses give more bonuses.
 		}
 		ai_will_do = {
 			factor = 1
@@ -2339,9 +2397,16 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_look_for_foreign_investments
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_propose_capital_renovation_tt
+				BLU = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+		}
 		completion_reward = { 
-			#Add Bluu event here
-			#Add bonus minigame stuff here
+			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
 			factor = 1
@@ -2357,9 +2422,16 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_look_for_foreign_investments
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_build_new_kip_bases_tt
+				KAS = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+		}
 		completion_reward = { 
-			#Add Kastaryn event here
-			#Add bonus minigame stuff here
+			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
 			factor = 1
@@ -2375,9 +2447,16 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_look_for_foreign_investments
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALT_make_railroads_in_rias_tt
+				RIA = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+		}
 		completion_reward = { 
-			#Add Rias event here
-			#Add bonus minigame stuff here
+			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
 			factor = 1
@@ -2394,10 +2473,15 @@ focus_tree = {
 			focus = ALT_make_railroads_in_rias
 		}
 		available = {
-			#Has done the Rias decisions in the minigame
+			custom_trigger_tooltip = {
+				tooltip = ALT_connect_our_networks_tt
+				RIA = {
+					has_country_flag = ALT_expanded_railroads
+				}
+			}
 		}
 		completion_reward = { 
-			#Add railways between Riassi and Altir
+			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
 			factor = 1
@@ -2414,10 +2498,21 @@ focus_tree = {
 			focus = ALT_build_new_kip_bases
 		}
 		available = {
-			#Has done the KIP decisions in the minigame
+			custom_trigger_tooltip = {
+				tooltip = ALT_expanded_kip_tt
+				KAS = {
+					has_idea = ALT_kip_expanded
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALT_colaborate_with_odezya_tt
+				ODZ = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
 		}
 		completion_reward = { 
-			#Give Odezya event to build bases in their territory
+			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
 			factor = 1
@@ -2437,9 +2532,7 @@ focus_tree = {
 			#Has invested into Tarvozzia at least once
 		}
 		completion_reward = { 
-			#Give Tarvozzia event to build Supreme Suzerain statues
-			#Add timed wait before adding statue national spirit to both nations
-			#Add possible Tarvozzia coup stuff
+			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
 			factor = 1
@@ -2528,6 +2621,386 @@ focus_tree = {
 		x = 5
 		y = 0
 		relative_position_id = ALT_mil_start
+		select_effect = {
+			set_country_flag = focus_taken
+		}
+		completion_reward = { 
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	###########################
+	#
+	#    ####   ####    #   #
+	#   #       #   #   #   #
+	#    ###    ####     # #
+	#       #   #         #
+	#   ####    #         #
+	#
+	###########################
+	focus = {
+		id = ALT_increase_global_influence
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 4
+		y = 3
+		relative_position_id = ALT_build_apache
+		select_effect = {
+			set_country_flag = focus_taken
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = yes
+			}
+			create_operative_leader = {
+				bypass_recruitment = yes
+				name = "Alavar Taletti"
+				GFX = "GFX_operative_portrait_POL_witold_pilecki"
+				traits = {
+					operative_seducer operative_linguist operative_well_groomed
+				}
+				nationalities = { ALT ODZ }
+				gender = male
+			}
+			upgrade_intelligence_agency = upgrade_diplo_training
+			add_ideas = ALT_intelligence_agency
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_send_out_diplomats
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = ALT_increase_global_influence
+		prerequisite = {
+			focus = ALT_increase_global_influence
+		}
+		completion_reward = {
+			#Add relations with nations, extra for the ones you invested into
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_create_international_tv_channel
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = -2
+		y = 2
+		relative_position_id = ALT_increase_global_influence
+		prerequisite = {
+			focus = ALT_increase_global_influence
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = ALT_information_network1n
+						has_idea = ALT_information_network1f
+						has_idea = ALT_information_network1c
+						has_idea = ALT_information_network1d
+						has_idea = ALT_information_network1s
+					}
+				}
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					swap_ideas = {
+						remove_idea = ALT_information_network1n
+						add_idea = ALT_information_network2n
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = fascism
+					}
+					swap_ideas = {
+						remove_idea = ALT_information_network1f
+						add_idea = ALT_information_network2f
+					}
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					swap_ideas = {
+						remove_idea = ALT_information_network1c
+						add_idea = ALT_information_network2c
+					}
+				}
+				else_if = {
+					limit = { 
+						has_government = democratic
+					}
+					swap_ideas = {
+						remove_idea = ALT_information_network1d
+						add_idea = ALT_information_network2d
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = ALT_information_network1s
+						add_idea = ALT_information_network2s
+					}
+				}
+			}
+			else = {
+				add_ideas = ALT_information_network
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_expand_cryptology_departments
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ALT_increase_global_influence
+		prerequisite = {
+			focus = ALT_increase_global_influence
+		}
+		completion_reward = { 
+			upgrade_intelligence_agency = upgrade_form_department
+			upgrade_intelligence_agency = upgrade_decryption_boost
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_create_the_spahs
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ALT_increase_global_influence
+		prerequisite = {
+			focus = ALT_increase_global_influence
+		}
+		completion_reward = { 
+			if = {
+				limit = {
+					has_completed_focus = ALT_develop_radio_jammers
+				}
+				swap_ideas = {
+					remove_idea = ALT_intelligence_agency2
+					add_idea = ALT_intelligence_agency3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ALT_intelligence_agency
+					add_idea = ALT_intelligence_agency1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_expand_spy_training
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = ALT_increase_global_influence
+		prerequisite = {
+			focus = ALT_increase_global_influence
+		}
+		completion_reward = {
+			upgrade_intelligence_agency = upgrade_commando_training
+			upgrade_intelligence_agency = upgrade_training_centers
+			create_operative_leader = {
+				bypass_recruitment = yes
+				name = "Linka Falowna"
+				gfx = ""
+				traits = {
+					operative_commando operative_demolition_expert
+				}
+				nationalities = {
+					ALT
+				}
+				gender = female
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_develop_radio_jammers
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ALT_expand_cryptology_departments
+		prerequisite = {
+			focus = ALT_expand_cryptology_departments
+			focus = ALT_create_the_spahs
+		}
+		completion_reward = { 
+			if = {
+				limit = {
+					has_completed_focus = ALT_create_the_spahs
+				}
+				swap_ideas = {
+					remove_idea = ALT_intelligence_agency1
+					add_idea = ALT_intelligence_agency3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ALT_intelligence_agency
+					add_idea = ALT_intelligence_agency2
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_control_global_information_spread
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 2
+		y = 2
+		relative_position_id = ALT_increase_global_influence
+		prerequisite = {
+			focus = ALT_increase_global_influence
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = ALT_information_network
+				}
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					swap_ideas = {
+						remove_idea = ALT_information_network
+						add_idea = ALT_information_network2n
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = fascism
+					}
+					swap_ideas = {
+						remove_idea = ALT_information_network
+						add_idea = ALT_information_network2f
+					}
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					swap_ideas = {
+						remove_idea = ALT_information_network
+						add_idea = ALT_information_network2c
+					}
+				}
+				else_if = {
+					limit = { 
+						has_government = democratic
+					}
+					swap_ideas = {
+						remove_idea = ALT_information_network
+						add_idea = ALT_information_network2d
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = ALT_information_network
+						add_idea = ALT_information_network2s
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_information_network1n
+				}
+				else_if = {
+					limit = {
+						has_government = fascism
+					}
+					add_ideas = ALT_information_network1f
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					add_ideas = ALT_information_network1c
+				}
+				else_if = {
+					limit = { 
+						has_government = democratic
+					}
+					add_ideas = ALT_information_network1d
+				}
+				else = {
+					add_ideas = ALT_information_network1s
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_spread_proaltirian_propaganda
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ALT_create_international_tv_channel
+		prerequisite = {
+			focus = ALT_create_international_tv_channel
+		}
+		prerequisite = {
+			focus = ALT_develop_radio_jammers
+			focus = ALT_control_global_information_spread
+		}
+		completion_reward = { 
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_stop_anti_altir_movements
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ALT_control_global_information_spread
+		prerequisite = {
+			focus = ALT_control_global_information_spread
+		}
+		prerequisite = {
+			focus = ALT_develop_radio_jammers
+			focus = ALT_create_international_tv_channel
+		}
 		completion_reward = { 
 
 		}

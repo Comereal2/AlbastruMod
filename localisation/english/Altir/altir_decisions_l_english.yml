@@ -19,6 +19,7 @@ ALT_foreign_investments_debug_add_construction_speed: "DEBUG Add Construction Sp
 ALT_foreign_investments_debug_add_both: "DEBUG Add Consumer Goods and Construction Speed"
 ALT_foreign_investments_debug_add_both_a_lot: "DEBUG Add Consumer Goods and Construction Speed++"
 ALT_investment_tons_debug_ctt: "Consumer Goods Factories Factor: §Y-200.0%§! \nConstruction Speed: §G+200.00%§!\n"
+ALT_foreign_investments_debug_add_invested_flag_to_all: "Add Invested Flag to All"
 #Balance Of Power
 ALT_DEBUG_deactivate_BOP: "DEBUG - Deactivate Balance Of Power"
 ALT_build_science_labs: "Build Science Labs"

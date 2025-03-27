@@ -1,31 +1,22 @@
 #Author: Comereal
 ideas = {
 	country = {
-		ALT_unquestionable_authority = {
+		ALT_unquestionable_authorityn = {
 			picture = ALT_unquestionable_authority
 			allowed = {
 				AND = {
 					tag = ALT
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}
+					has_government = neutrality
 				}
 			}
 			available = {
 				has_stability > 0.5
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
+				has_government = neutrality
 			}
 			cancel = {
-				AND = {
+				OR = {
 					NOT = {
-						OR = {
-							has_government = fascism
-							has_government = neutrality
-						}
+						has_government = neutrality
 					}
 					has_stability < 0.5
 				}
@@ -35,13 +26,18 @@ ideas = {
 					limit = {
 						AND = {
 							OR = {
-								has_government = fascism
 								has_government = neutrality
 							}
 							has_stability < 0.5
 						}
 					}
-					add_ideas = ALT_wavering_loyalty
+					add_ideas = ALT_wavering_loyaltyn
+				}
+				else_if = {
+					limit = {
+						has_government = fascism
+					}
+					add_ideas = ALT_unquestionable_authorityf
 				}
 			}
 			removal_cost = -1
@@ -53,62 +49,49 @@ ideas = {
 				neutrality_drift = 0.03
 			}
 		}
-		ALT_wavering_loyalty = {
+		ALT_wavering_loyaltyn = {
 			picture = ALT_wavering_loyalty
 			allowed = {
 				AND = {
 					tag = ALT
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}
+					has_government = neutrality
 				}
 			}
 			available = {
 				has_stability < 0.5
 				has_war = no
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
+				has_government = neutrality
 			}
 			cancel = {
-				AND = {
+				OR = {
 					has_stability > 0.5
 					has_war = yes
 					NOT = {
-						OR = {
-							has_government = fascism
-							has_government = neutrality
-						}
+						has_government = neutrality
 					}
 				}
 			}
 			on_remove = {
 				if = {
 					limit = {
-						AND = {
-							OR = {
-								has_government = fascism
-								has_government = neutrality
-							}
-							has_stability > 0.5
-						}
+						has_government = neutrality
+						has_stability > 0.5
 					}
-					add_ideas = ALT_wavering_loyalty
+					add_ideas = ALT_unquestionable_authorityn
 				}
 				else_if = {
 					limit = {
-						AND = {
-							OR = {
-								has_government = fascism
-								has_government = neutrality
-							}
+							has_government = neutrality
 							has_stability < 0.5
 							has_war = yes
-						}
 					}
-					add_ideas = ALT_suspended_belief
+					add_ideas = ALT_suspended_beliefn
+				}
+				else_if = {
+					limit = {
+						has_government = fascism
+					}
+					add_ideas = ALT_wavering_loyaltyf
 				}
 			}
 			removal_cost = -1
@@ -118,34 +101,25 @@ ideas = {
 				neutrality_drift = -0.03
 			}
 		}
-		ALT_suspended_belief = {
+		ALT_suspended_beliefn = {
 			picture = ALT_suspended_belief
 			allowed = {
 				AND = {
 					tag = ALT
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}
+					has_government = neutrality
 				}
 			}
 			available = {
 				has_stability < 0.5
 				has_war = yes
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
+				has_government = neutrality
 			}
 			cancel = {
-				AND = {
+				OR = {
 					has_stability > 0.5
 					has_war = no
 					NOT = {
-						OR = {
-							has_government = fascism
-							has_government = neutrality
-						}
+						has_government = neutrality
 					}
 				}
 			}
@@ -153,23 +127,174 @@ ideas = {
 				if = {
 					limit = {
 						OR = {
-							has_government = fascism
 							has_government = neutrality
 						}
 						has_stability < 0.5
 						has_war = no
 					}
-					add_ideas = ALT_wavering_loyalty
+					add_ideas = ALT_wavering_loyaltyn
 				}
 				else_if = {
 					limit = {
 						OR = {
-							has_government = fascism
 							has_government = neutrality
 						}
 						has_stability > 0.5
 					}
-					add_ideas = ALT_unquestionable_authority
+					add_ideas = ALT_unquestionable_authorityn
+				}
+				else_if = {
+					limit = {
+						has_government = fascism
+					}
+					add_ideas = ALT_suspended_belieff
+				}
+			}
+			removal_cost = -1
+		}
+		ALT_unquestionable_authorityf = {
+			picture = ALT_unquestionable_authority
+			allowed = {
+				AND = {
+					tag = ALT
+					has_government = fascism
+				}
+			}
+			available = {
+				has_stability > 0.5
+				has_government = fascism
+			}
+			cancel = {
+				OR = {
+					NOT = {
+						has_government = fascism
+					}
+					has_stability < 0.5
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						AND = {
+							OR = {
+								has_government = fascism
+							}
+							has_stability < 0.5
+						}
+					}
+					add_ideas = ALT_wavering_loyaltyf
+				}
+				else_if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_unquestionable_authorityn
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.1
+				forced_surrender_limit = 1
+				political_power_gain = 0.5
+				war_support_factor = 0.1
+				neutrality_drift = 0.03
+			}
+		}
+		ALT_wavering_loyaltyf = {
+			picture = ALT_wavering_loyalty
+			allowed = {
+				AND = {
+					tag = ALT
+					has_government = fascism
+				}
+			}
+			available = {
+				has_stability < 0.5
+				has_war = no
+				has_government = fascism
+			}
+			cancel = {
+				OR = {
+					has_stability > 0.5
+					has_war = yes
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_government = fascism
+						has_stability > 0.5
+					}
+					add_ideas = ALT_unquestionable_authorityf
+				}
+				else_if = {
+					limit = {
+							has_government = fascism
+							has_stability < 0.5
+							has_war = yes
+					}
+					add_ideas = ALT_suspended_belieff
+				}
+				else_if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_wavering_loyaltyn
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.1
+				political_power_gain = -0.5
+				neutrality_drift = -0.03
+			}
+		}
+		ALT_suspended_belieff = {
+			picture = ALT_suspended_belief
+			allowed = {
+				AND = {
+					tag = ALT
+					has_government = fascism
+				}
+			}
+			available = {
+				has_stability < 0.5
+				has_war = yes
+				has_government = fascism
+			}
+			cancel = {
+				OR = {
+					has_stability > 0.5
+					has_war = no
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_government = fascism
+						has_stability < 0.5
+						has_war = no
+					}
+					add_ideas = ALT_wavering_loyaltyf
+				}
+				else_if = {
+					limit = {
+						has_government = fascism
+						has_stability > 0.5
+					}
+					add_ideas = ALT_unquestionable_authorityf
+				}
+				else_if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_suspended_beliefn
 				}
 			}
 			removal_cost = -1
@@ -664,6 +789,475 @@ ideas = {
 				consumer_goods_factor = -0.15
 				trade_opinion_factor = 0.2
 				production_speed_buildings_factor = 0.05
+			}
+		}
+		ALT_intelligence_agency = {
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+			}
+		}
+		ALT_intelligence_agency1 = {
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				decryption_factor = 0.1
+				army_intel_to_others = -5
+				civilian_intel_to_others = -5
+				army_intel_factor = 0.05
+				civilian_intel_factor = 0.05
+			}
+		}
+		ALT_intelligence_agency2 = {
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				drift_defence_factor = 0.1
+				intelligence_agency_defense = 0.1
+				army_intel_to_others = -10
+				civilian_intel_to_others = -10
+			}
+		}
+		ALT_intelligence_agency3 = {
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				decryption_factor = 0.1
+				drift_defence_factor = 0.1
+				intelligence_agency_defense = 0.1
+				army_intel_to_others = -15
+				civilian_intel_to_others = -15
+				army_intel_factor = 0.05
+				civilian_intel_factor = 0.05
+			}
+		}
+		ALT_information_network = {
+			picture = ALT_information_network
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				party_popularity_stability_factor = 0.1
+				decryption_power_factor = 0.15
+				intel_network_gain_factor = 0.1
+			}
+		}
+		ALT_information_network1n = {
+			picture = ALT_information_network
+			removal_cost = -1
+			available = {
+				has_government = neutrality
+			}
+			cancel = {
+				NOT = {
+					has_government = neutrality
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { 
+						has_government = fascism
+					}
+					add_ideas = ALT_information_network1f
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					add_ideas = ALT_information_network1c
+				}
+				else_if = {
+					limit = { 
+						has_government = democratic
+					}
+					add_ideas = ALT_information_network1d
+				}
+				else = {
+					add_ideas = ALT_information_network1s
+				}
+			}
+			modifier = {
+				stability_factor = 0.05
+				neutrality_drift = 0.03
+				decryption_power_factor = 0.15
+				intel_network_gain_factor = 0.1
+			}
+		}
+		ALT_information_network1f = {
+			picture = ALT_information_network
+			removal_cost = -1
+			available = {
+				has_government = fascism
+			}
+			cancel = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_information_network1n
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					add_ideas = ALT_information_network1c
+				}
+				else_if = {
+					limit = { 
+						has_government = democratic
+					}
+					add_ideas = ALT_information_network1d
+				}
+				else = {
+					add_ideas = ALT_information_network1s
+				}
+			}
+			modifier = {
+				stability_factor = 0.05
+				fascism_drift = 0.03
+				decryption_power_factor = 0.15
+				intel_network_gain_factor = 0.1
+			}
+		}
+		ALT_information_network1c = {
+			picture = ALT_information_network
+			removal_cost = -1
+			available = {
+				has_government = communism
+			}
+			cancel = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_information_network1n
+				}
+				else_if = {
+					limit = { 
+						has_government = fascism
+					}
+					add_ideas = ALT_information_network1f
+				}
+				else_if = {
+					limit = { 
+						has_government = democratic
+					}
+					add_ideas = ALT_information_network1d
+				}
+				else = {
+					add_ideas = ALT_information_network1s
+				}
+			}
+			modifier = {
+				stability_factor = 0.05
+				communism_drift = 0.03
+				decryption_power_factor = 0.15
+				intel_network_gain_factor = 0.1
+			}
+		}
+		ALT_information_network1d = {
+			picture = ALT_information_network
+			removal_cost = -1
+			available = {
+				has_government = democratic
+			}
+			cancel = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_information_network1n
+				}
+				else_if = {
+					limit = { 
+						has_government = fascism
+					}
+					add_ideas = ALT_information_network1f
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					add_ideas = ALT_information_network1c
+				}
+				else = {
+					add_ideas = ALT_information_network1s
+				}
+			}
+			modifier = {
+				stability_factor = 0.05
+				democratic_drift = 0.03
+				decryption_power_factor = 0.15
+				intel_network_gain_factor = 0.1
+			}
+		}
+		ALT_information_network1s = {
+			picture = ALT_information_network
+			removal_cost = -1
+			available = {
+				has_government = skirts
+			}
+			cancel = {
+				NOT = {
+					has_government = skirts
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_information_network1n
+				}
+				else_if = {
+					limit = { 
+						has_government = fascism
+					}
+					add_ideas = ALT_information_network1f
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					add_ideas = ALT_information_network1c
+				}
+				else = {
+					add_ideas = ALT_information_network1d
+				}
+			}
+			modifier = {
+				stability_factor = 0.05
+				skirts_drift = 0.03
+				decryption_power_factor = 0.15
+				intel_network_gain_factor = 0.1
+			}
+		}
+		ALT_information_network2n = {
+			picture = ALT_information_network
+			removal_cost = -1
+			available = {
+				has_government = neutrality
+			}
+			cancel = {
+				NOT = {
+					has_government = neutrality
+				}
+			}
+			on_remove = {
+				if = {
+					limit = { 
+						has_government = fascism
+					}
+					add_ideas = ALT_information_network2f
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					add_ideas = ALT_information_network2c
+				}
+				else_if = {
+					limit = { 
+						has_government = democratic
+					}
+					add_ideas = ALT_information_network2d
+				}
+				else = {
+					add_ideas = ALT_information_network2s
+				}
+			}
+			modifier = {
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				neutrality_drift = 0.03
+				decryption_power_factor = 0.3
+				intel_network_gain_factor = 0.2
+			}
+		}
+		ALT_information_network2f = {
+			picture = ALT_information_network
+			removal_cost = -1
+			available = {
+				has_government = fascism
+			}
+			cancel = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_information_network2n
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					add_ideas = ALT_information_network2c
+				}
+				else_if = {
+					limit = { 
+						has_government = democratic
+					}
+					add_ideas = ALT_information_network2d
+				}
+				else = {
+					add_ideas = ALT_information_network2s
+				}
+			}
+			modifier = {
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				fascism_drift = 0.03
+				decryption_power_factor = 0.3
+				intel_network_gain_factor = 0.2
+			}
+		}
+		ALT_information_network2c = {
+			picture = ALT_information_network
+			removal_cost = -1
+			available = {
+				has_government = communism
+			}
+			cancel = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_information_network2n
+				}
+				else_if = {
+					limit = { 
+						has_government = fascism
+					}
+					add_ideas = ALT_information_network2f
+				}
+				else_if = {
+					limit = { 
+						has_government = democratic
+					}
+					add_ideas = ALT_information_network2d
+				}
+				else = {
+					add_ideas = ALT_information_network2s
+				}
+			}
+			modifier = {
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				communism_drift = 0.03
+				decryption_power_factor = 0.3
+				intel_network_gain_factor = 0.2
+			}
+		}
+		ALT_information_network2d = {
+			picture = ALT_information_network
+			removal_cost = -1
+			available = {
+				has_government = democratic
+			}
+			cancel = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_information_network2n
+				}
+				else_if = {
+					limit = { 
+						has_government = fascism
+					}
+					add_ideas = ALT_information_network2f
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					add_ideas = ALT_information_network2c
+				}
+				else = {
+					add_ideas = ALT_information_network2s
+				}
+			}
+			modifier = {
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				democratic_drift = 0.03
+				decryption_power_factor = 0.3
+				intel_network_gain_factor = 0.2
+			}
+		}
+		ALT_information_network2s = {
+			picture = ALT_information_network
+			removal_cost = -1
+			available = {
+				has_government = skirts
+			}
+			cancel = {
+				NOT = {
+					has_government = skirts
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_ideas = ALT_information_network2n
+				}
+				else_if = {
+					limit = { 
+						has_government = fascism
+					}
+					add_ideas = ALT_information_network2f
+				}
+				else_if = {
+					limit = { 
+						has_government = communism
+					}
+					add_ideas = ALT_information_network2c
+				}
+				else = {
+					add_ideas = ALT_information_network2d
+				}
+			}
+			modifier = {
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				skirts_drift = 0.03
+				decryption_power_factor = 0.3
+				intel_network_gain_factor = 0.2
 			}
 		}
 	}

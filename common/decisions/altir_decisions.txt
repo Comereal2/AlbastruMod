@@ -122,6 +122,9 @@ asaa_actions = {
 					tag = RIA
 					tag = ODZ
 					tag = YEN
+					tag = ENQ
+					tag = BLA
+					tag = MIR
 				}
 				exists = yes
 			}
@@ -174,6 +177,10 @@ asaa_actions = {
 					tag = BLU
 					tag = KAS
 					tag = CAM
+					tag = ARA
+					tag = APP
+					tag = KIZ
+					tag = TZE
 				}
 				exists = yes
 			}
@@ -1500,6 +1507,19 @@ ALT_foreign_investments_category = {
 			custom_effect_tooltip = ALT_investment_tons_debug_ctt
 		}
 	}
+	ALT_foreign_investments_debug_add_invested_flag_to_all = {
+		icon = GFX_decision_ALT_debug
+		visible = {
+			is_debug = yes
+			has_country_flag = foreign_investments_debug_enabled
+		}
+		cost = 0
+		complete_effect = {
+			every_country = {
+				set_country_flag = ALT_recieved_investment
+			}
+		}
+	}
 	ALT_generic_helios_investment = {
 		priority = 80
 		icon = GFX_decision_ALT_investment
@@ -1530,6 +1550,18 @@ ALT_foreign_investments_category = {
 		cancel_trigger = {
 			has_war_with = FROM
 		}
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = ALT_recieved_investment
+					}
+				}
+				FROM = {
+					set_country_flag = ALT_getting_investment
+				}
+			}
+		}
 		remove_effect = {
 			add_to_variable = {
 				var = ALT_investment_repayment_consumer_goods_factor
@@ -1557,6 +1589,15 @@ ALT_foreign_investments_category = {
 						level = 1
 						instant_build = yes
 					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = ALT_recieved_investment
+						}
+					}
+					set_country_flag = ALT_recieved_investment
+					clr_country_flag = ALT_getting_investment
 				}
 			}
 			custom_effect_tooltip = ALT_generic_helios_investment_ctt
@@ -1762,6 +1803,7 @@ ALT_foreign_investments_category = {
 					target = ROOT
 					modifier = ALT_recieved_investment
 				}
+				set_country_flag = ALT_expanded_railroads
 			}
 			#Add railroads between riassi states here
 			custom_effect_tooltip = ALT_generic_helios_investment_ctt

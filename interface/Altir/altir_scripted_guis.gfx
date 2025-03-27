@@ -4,4 +4,120 @@ SpriteTypes = {
 		name = "GFX_helios_map"
 		textureFile = "gfx/interface/gui/ALT/helios_map.png"
 	}
+	spriteType = {
+		name = "GFX_altir_map"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/altir_overlay.png"
+	}
+	spriteType = {
+		name = "GFX_appendicitopia_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/appendicitopiaYellow.png"
+	}
+	spriteType = {
+		name = "GFX_araj_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/arajYellow.png"
+	}
+	spriteType = {
+		name = "GFX_blackhill_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/blackhillYellow.png"
+	}
+	spriteType = {
+		name = "GFX_bluu_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/bluuYellow.png"
+	}
+	spriteType = {
+		name = "GFX_camerali_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/cameraliYellow.png"
+	}
+	spriteType = {
+		name = "GFX_enqiutia_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/enqiutiaYellow.png"
+	}
+	spriteType = {
+		name = "GFX_kastaryn_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/kastarynYellow.png"
+	}
+	spriteType = {
+		name = "GFX_kizixar_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/kizixarYellow.png"
+	}
+	spriteType = {
+		name = "GFX_mirzaistan_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/mirzaistanYellow.png"
+	}
+	spriteType = {
+		name = "GFX_odezya_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/odezyaYellow.png"
+	}
+	spriteType = {
+		name = "GFX_riassi_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/riassiYellow.png"
+	}
+	spriteType = {
+		name = "GFX_tzedekia_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/tzedekiaYellow.png"
+	}
+	spriteType = {
+		name = "GFX_placeholder1_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/placeholder1Yellow.png"
+	}
+	spriteType = {
+		name = "GFX_placeholder2_yellow"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiYellow/placeholder2Yellow.png"
+	}
+	spriteType = {
+		name = "GFX_appendicitopia_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/appendicitopiaGreen.png"
+	}
+	spriteType = {
+		name = "GFX_araj_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/arajGreen.png"
+	}
+	spriteType = {
+		name = "GFX_blackhill_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/blackhillGreen.png"
+	}
+	spriteType = {
+		name = "GFX_bluu_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/bluuGreen.png"
+	}
+	spriteType = {
+		name = "GFX_camerali_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/cameraliGreen.png"
+	}
+	spriteType = {
+		name = "GFX_enqiutia_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/enqiutiaGreen.png"
+	}
+	spriteType = {
+		name = "GFX_kastaryn_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/kastarynGreen.png"
+	}
+	spriteType = {
+		name = "GFX_kizixar_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/kizixarGreen.png"
+	}
+	spriteType = {
+		name = "GFX_mirzaistan_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/mirzaistanGreen.png"
+	}
+	spriteType = {
+		name = "GFX_odezya_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/odezyaGreen.png"
+	}
+	spriteType = {
+		name = "GFX_riassi_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/riassiGreen.png"
+	}
+	spriteType = {
+		name = "GFX_tzedekia_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/tzedekiaGreen.png"
+	}
+	spriteType = {
+		name = "GFX_placeholder1_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/placeholder1Green.png"
+	}
+	spriteType = {
+		name = "GFX_placeholder2_green"
+		textureFile = "gfx/interface/gui/ALT/investmentGuiGreen/placeholder2Green.png"
+	}
 }
