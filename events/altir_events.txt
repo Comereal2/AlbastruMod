@@ -51,10 +51,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = ALT
-		check_variable = {
-			var = focus_taken
-			value = 0
-		}
+		has_country_flag = focus_taken
 	}
 	option = {
 		name = altir.2.a
@@ -63,11 +60,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				check_variable = {
-					var = focus_taken
-					value = 0
-					compare = equals
-				}
+				has_country_flag = focus_taken
 			}
 			add_ideas = {
 				ALT_scientific_nation
@@ -476,11 +469,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				check_variable = {
-					var = focus_taken
-					value = 0
-					compare = equals
-				}
+				has_country_flag = focus_taken
 			}
 			country_event = {
 				id = altir.2

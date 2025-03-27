@@ -3,13 +3,13 @@ guiTypes = {
 	containerWindowType = {
 		name = "ALT_investment_gui"
 		position = { x = 0 y = 0 }
-		size = { width = 100% height = 500 }
+		size = { width = 100% height = 600 }
 
 		instantTextBoxType = {
 			name = "investment_gui_introduction"
 			position = {
 				x = -220
-				y = -240
+				y = -290
 			}
 			font = "hoi_30header"
 			text = "ALT_investment_gui_introduction"
@@ -17,10 +17,7 @@ guiTypes = {
 			orientation = center
 			maxWidth = 440
 			maxHeight = 30
-			pdx_tooltip = "ALT_investment_gui_introduction_tt"
 		}
-
-		
 
 		containerWindowType = {
 			name = "investment_gui_invested_countries_container"
@@ -29,19 +26,295 @@ guiTypes = {
 				y = 0
 			}
 			size = {
-				width = 90%
-				height = 400
+				width = 350
+				height = 350
 			}
 			iconType = {
 				name = "investment_gui_helios_map"
 				position = {
-					x = 0
-					y = 0
+					x = -95
+					y = -80
 				}
 				spriteType = "GFX_helios_map"
 				orientation = center
-				pdx_tooltip = "ALT_investment_gui_helios_map_tt"
+				pdx_tooltip = "investment_gui_map_tt"
 			}
+			iconType = {
+				name = "investment_gui_altir_map"
+				position = {
+					x = -32
+					y = 176
+				}
+				spriteType = "GFX_altir_map"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_appendicitopia_yellow"
+				position = {
+					x = 65
+					y = -38
+				}
+				spriteType = "GFX_appendicitopia_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_appendicitopia_green"
+				position = {
+					x = 65
+					y = -38
+				}
+				spriteType = "GFX_appendicitopia_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_araj_yellow"
+				position = {
+					x = 7
+					y = 12
+				}
+				spriteType = "GFX_araj_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_araj_green"
+				position = {
+					x = 7
+					y = 12
+				}
+				spriteType = "GFX_araj_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_blackhill_yellow"
+				position = {
+					x = 23
+					y = 112
+				}
+				spriteType = "GFX_blackhill_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_blackhill_green"
+				position = {
+					x = 23
+					y = 112
+				}
+				spriteType = "GFX_blackhill_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_bluu_yellow"
+				position = {
+					x = 86
+					y = 36
+				}
+				spriteType = "GFX_bluu_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_bluu_green"
+				position = {
+					x = 86
+					y = 36
+				}
+				spriteType = "GFX_bluu_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_camerali_yellow"
+				position = {
+					x = 142
+					y = -52
+				}
+				spriteType = "GFX_camerali_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_camerali_green"
+				position = {
+					x = 142
+					y = -52
+				}
+				spriteType = "GFX_camerali_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_enqiutia_yellow"
+				position = {
+					x = 98
+					y = 177
+				}
+				spriteType = "GFX_enqiutia_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_enqiutia_green"
+				position = {
+					x = 98
+					y = 177
+				}
+				spriteType = "GFX_enqiutia_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_kastaryn_yellow"
+				position = {
+					x = 55
+					y = 87
+				}
+				spriteType = "GFX_kastaryn_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_kastaryn_green"
+				position = {
+					x = 55
+					y = 87
+				}
+				spriteType = "GFX_kastaryn_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_kizixar_yellow"
+				position = {
+					x = 98
+					y = -60
+				}
+				spriteType = "GFX_kizixar_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_kizixar_green"
+				position = {
+					x = 98
+					y = -60
+				}
+				spriteType = "GFX_kizixar_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_mirzaistan_yellow"
+				position = {
+					x = -28
+					y = 68
+				}
+				spriteType = "GFX_mirzaistan_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_mirzaistan_green"
+				position = {
+					x = -28
+					y = 68
+				}
+				spriteType = "GFX_mirzaistan_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_odezya_yellow"
+				position = {
+					x = 19
+					y = 145
+				}
+				spriteType = "GFX_odezya_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_odezya_green"
+				position = {
+					x = 19
+					y = 145
+				}
+				spriteType = "GFX_odezya_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_riassi_yellow"
+				position = {
+					x = -30
+					y = 127
+				}
+				spriteType = "GFX_riassi_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_riassi_green"
+				position = {
+					x = -30
+					y = 127
+				}
+				spriteType = "GFX_riassi_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_tzedekia_yellow"
+				position = {
+					x = 106
+					y = -31
+				}
+				spriteType = "GFX_tzedekia_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_tzedekia_green"
+				position = {
+					x = 106
+					y = -31
+				}
+				spriteType = "GFX_tzedekia_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_placeholder1_yellow"
+				position = {
+					x = 0
+					y = 0
+				}
+				spriteType = "GFX_placeholder1_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_placeholder1_green"
+				position = {
+					x = 0
+					y = 0
+				}
+				spriteType = "GFX_placeholder1_green"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_placeholder2_yellow"
+				position = {
+					x = 0
+					y = 0
+				}
+				spriteType = "GFX_placeholder2_yellow"
+				orientation = center
+			}
+			iconType = {
+				name = "investment_gui_placeholder2_green"
+				position = {
+					x = 0
+					y = 0
+				}
+				spriteType = "GFX_placeholder2_green"
+				orientation = center
+			}
+		}
+
+		instantTextBoxType = {
+			name = "investment_gui_investment_return"
+			position = {
+				x = -220
+				y = 200
+			}
+			font = "hoi_30header"
+			text = "ALT_investment_gui_investment_return"
+			format = center
+			orientation = center
+			maxWidth = 440
+			maxHeight = 90
+			pdx_tooltip = "ALT_investment_gui_investment_return_tt"
 		}
 	}
 }

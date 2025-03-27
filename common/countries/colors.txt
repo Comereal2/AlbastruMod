@@ -73,6 +73,34 @@ RES = {
 	color = rgb { 66 122 101 }
 	color_ui = rgb { 66 122 101 }
 }
+APP = {
+	color = rgb { 200 20 20 }
+	color_ui = rgb { 200 20 20 }
+}
+ARA = {
+	color = rgb { 20 200 200 }
+	color_ui = rgb { 20 200 200 }
+}
+BLA = {
+	color = rgb { 255 30 30 }
+	color_ui = rgb { 255 30 30 }
+}
+ENQ = {
+	color = rgb { 20 200 20 }
+	color_ui = rgb { 20 200 20 }
+}
+KIZ = {
+	color = rgb { 200 20 200 }
+	color_ui = rgb { 200 20 200 }
+}
+MIR = {
+	color = rgb { 255 40 40 }
+	color_ui = rgb { 255 40 40 }
+}
+TZE = {
+	color = rgb { 200 200 50 }
+	color_ui = rgb { 200 200 50 }
+}
 GER = {
 	color = HSV { 0.1 0.15 0.4 }
 	color_ui = rgb { 138 155 116 }
