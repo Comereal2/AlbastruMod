@@ -79,7 +79,7 @@ recruit_character = ALT_lead_scientist
 recruit_character = ALT_anto_gabar
 recruit_character = ALT_laika
 add_ideas = {
-	ALT_unquestionable_authority
+	ALT_unquestionable_authorityn
 	ALT_ghost_of_the_helios_empire
 	ALT_technocratic_nation
 }

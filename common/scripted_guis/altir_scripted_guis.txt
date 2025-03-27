@@ -3,5 +3,139 @@ scripted_gui = {
 	ALT_investment_gui = {
 		window_name = "ALT_investment_gui"
 		context_type = decision_category
+		triggers = {
+			investment_gui_appendicitopia_yellow_visible = {
+				APP = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_appendicitopia_green_visible = {
+				APP = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_araj_yellow_visible = {
+				ARA = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_araj_green_visible = {
+				ARA = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_blackhill_yellow_visible = {
+				BLA = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_blackhill_green_visible = {
+				BLA = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_bluu_yellow_visible = {
+				BLU = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_bluu_green_visible = {
+				BLU = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_camerali_yellow_visible = {
+				CAM = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_camerali_green_visible = {
+				CAM = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_enqiutia_yellow_visible = {
+				ENQ = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_enqiutia_green_visible = {
+				ENQ = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_kastaryn_yellow_visible = {
+				KAS = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_kastaryn_green_visible = {
+				KAS = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_kizixar_yellow_visible = {
+				KIZ = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_kizixar_green_visible = {
+				KIZ = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_mirzaistan_yellow_visible = {
+				MIR = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_mirzaistan_green_visible = {
+				MIR = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_odezya_yellow_visible = {
+				ODZ = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_odezya_green_visible = {
+				ODZ = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_riassi_yellow_visible = {
+				RIA = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_riassi_green_visible = {
+				RIA = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_tzedekia_yellow_visible = {
+				TZE = {
+					has_country_flag = ALT_getting_investment
+				}
+			}
+			investment_gui_tzedekia_green_visible = {
+				TZE = {
+					has_country_flag = ALT_recieved_investment
+				}
+			}
+			investment_gui_placeholder1_yellow_visible = {
+				always = no
+			}
+			investment_gui_placeholder1_green_visible = {
+				always = no
+			}
+			investment_gui_placeholder2_yellow_visible = {
+				always = no
+			}
+			investment_gui_placeholder2_green_visible = {
+				always = no
+			}
+		}
 	}
 }
