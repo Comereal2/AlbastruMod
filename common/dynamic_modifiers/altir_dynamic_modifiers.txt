@@ -1,6 +1,6 @@
 #Author: Comereal
 ALT_investment_repayment = {
-	icon = ALT_investment_repayment
+	icon = GFX_idea_ALT_investment_repayment
 	enable = {
 		original_tag = ALT
 		has_completed_focus = ALT_finish_helios_investments

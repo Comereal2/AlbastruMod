@@ -136,4 +136,8 @@ spriteTypes = {
 		name = "GFX_idea_ALT_investment_repayment"
 		textureFile = "gfx/interface/ideas/ALT_investment_repayment.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ALT_intelligence_agency"
+		textureFile = "gfx/interface/ideas/ALT_intelligence_agency.dds"
+	}
 }
