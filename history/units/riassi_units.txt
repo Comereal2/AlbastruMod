@@ -1,3 +1,4 @@
+#Author: Ramon
 division_template = {
 	name = "National Guard"
 

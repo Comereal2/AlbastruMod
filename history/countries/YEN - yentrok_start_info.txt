@@ -1,3 +1,4 @@
+#Author: Ramon
 capital = 792
 
 oob = "yentrok_units"
