@@ -1,0 +1,36 @@
+
+state={
+	id=692
+	name="STATE_692"
+	manpower = 4113222
+	
+	state_category = large_city
+	resources={
+		aluminium=0
+		chromium=1
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = ARB
+		add_core_of = ARB
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3085 3086 3087 3088 3089 3090 
+	}
+	local_supplies=0.0 
+}

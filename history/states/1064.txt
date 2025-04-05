@@ -1,0 +1,36 @@
+
+state={
+	id=1064
+	name="STATE_1064"
+	manpower = 41396
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = LOM
+		add_core_of = LOM
+		
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		4344 
+	}
+	local_supplies=0.0 
+}

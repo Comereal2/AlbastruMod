@@ -1,0 +1,39 @@
+
+state={
+	id=97
+	name="STATE_97"
+	manpower = 4734409
+	
+	state_category = metropolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = TZE
+		add_core_of = TZE
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			
+			449 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		447 448 449 450 451 452 453 
+	}
+	local_supplies=0.0 
+}

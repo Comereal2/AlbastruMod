@@ -1,0 +1,39 @@
+
+state={
+	id=26
+	name="STATE_26"
+	manpower = 4638636
+	
+	state_category = metropolis
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = SUL
+		add_core_of = SUL
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 2
+			industrial_complex = 0
+			
+			126 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		122 123 124 125 126 127 128 
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=858
+	name="STATE_858"
+	manpower = 1897841
+	
+	state_category = rural
+	resources={
+		aluminium=1
+		chromium=0
+		oil=1
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = WOD
+		add_core_of = WOD
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3786 3787 3788 
+	}
+	local_supplies=0.0 
+}

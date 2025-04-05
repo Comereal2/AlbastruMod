@@ -1,0 +1,36 @@
+
+state={
+	id=60
+	name="STATE_60"
+	manpower = 491779
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = HEL
+		add_core_of = HEL
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		257 
+	}
+	local_supplies=0.0 
+}

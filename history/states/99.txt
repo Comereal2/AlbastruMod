@@ -1,0 +1,39 @@
+
+state={
+	id=99
+	name="STATE_99"
+	manpower = 2414765
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=1
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = ENQ
+		add_core_of = ENQ
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 1
+			457 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		457 458 459 
+	}
+	local_supplies=0.0 
+}

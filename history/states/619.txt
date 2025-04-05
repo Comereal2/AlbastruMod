@@ -1,0 +1,39 @@
+
+state={
+	id=619
+	name="STATE_619"
+	manpower = 3382873
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = ARB
+		add_core_of = ARB
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 1
+			2789 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2786 2787 2788 2789 2790 
+	}
+	local_supplies=0.0 
+}

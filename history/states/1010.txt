@@ -1,0 +1,39 @@
+
+state={
+	id=1010
+	name="STATE_1010"
+	manpower = 1713544
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = CAM
+		add_core_of = CAM
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			4246 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4246 4247 
+	}
+	local_supplies=0.0 
+}

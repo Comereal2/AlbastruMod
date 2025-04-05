@@ -1,0 +1,39 @@
+
+state={
+	id=257
+	name="STATE_257"
+	manpower = 4465394
+	
+	state_category = large_city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = TZE
+		add_core_of = TZE
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			
+			1233 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1231 1232 1233 1234 1235 1236 
+	}
+	local_supplies=0.0 
+}

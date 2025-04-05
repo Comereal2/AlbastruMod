@@ -1,0 +1,39 @@
+
+state={
+	id=986
+	name="STATE_986"
+	manpower = 4869466
+	
+	state_category = large_town
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=10
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = ARA
+		add_core_of = ARA
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			4206 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4204 4205 4206 4207 4208 4209 4210 4211 
+	}
+	local_supplies=0.0 
+}

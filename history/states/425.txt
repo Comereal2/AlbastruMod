@@ -1,0 +1,39 @@
+
+state={
+	id=425
+	name="STATE_425"
+	manpower = 4165894
+	
+	state_category = large_town
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=4
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = ORI
+		add_core_of = ORI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			1923 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1918 1919 1920 1921 1922 1923 
+	}
+	local_supplies=0.0 
+}

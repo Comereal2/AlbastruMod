@@ -1,0 +1,36 @@
+
+state={
+	id=313
+	name="STATE_313"
+	manpower = 4172455
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = TZE
+		add_core_of = TZE
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1446 1447 1448 1449 1450 1451 
+	}
+	local_supplies=0.0 
+}

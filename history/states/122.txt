@@ -1,0 +1,36 @@
+
+state={
+	id=122
+	name="STATE_122"
+	manpower = 4891083
+	
+	state_category = large_city
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ALT
+		add_core_of = ALT
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		583 584 585 586 587 588 589 
+	}
+	local_supplies=0.0 
+}

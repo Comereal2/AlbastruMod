@@ -1,0 +1,39 @@
+
+state={
+	id=208
+	name="STATE_208"
+	manpower = 3154128
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = APP
+		add_core_of = APP
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			1007 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1007 1008 1009 1010 
+	}
+	local_supplies=0.0 
+}

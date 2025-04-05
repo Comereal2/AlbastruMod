@@ -1,0 +1,39 @@
+
+state={
+	id=559
+	name="STATE_559"
+	manpower = 10428193
+	
+	state_category = megalopolis
+	resources={
+		aluminium=1
+		chromium=4
+		oil=3
+		rubber=19
+		steel=3
+		tungsten=1
+	}
+
+	history={
+		owner = LOM
+		add_core_of = LOM
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 2
+			
+			2501 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2487 2488 2489 2490 2491 2492 2493 2494 2495 2496 2497 2498 2499 2500 2501 2502 2503 
+	}
+	local_supplies=0.0 
+}

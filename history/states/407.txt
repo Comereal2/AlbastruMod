@@ -1,0 +1,39 @@
+
+state={
+	id=407
+	name="STATE_407"
+	manpower = 6579299
+	
+	state_category = metropolis
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = CYN
+		add_core_of = CYN
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			dockyard = 1
+			1819 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1811 1812 1813 1814 1815 1816 1817 1818 1819 1820 
+	}
+	local_supplies=0.0 
+}

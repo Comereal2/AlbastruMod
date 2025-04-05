@@ -1,0 +1,36 @@
+
+state={
+	id=297
+	name="STATE_297"
+	manpower = 3329466
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = HEL
+		add_core_of = HEL
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1393 1394 1395 1396 1397 
+	}
+	local_supplies=0.0 
+}

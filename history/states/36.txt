@@ -1,0 +1,39 @@
+
+state={
+	id=36
+	name="STATE_36"
+	manpower = 3778356
+	
+	state_category = large_city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = VAL
+		add_core_of = VAL
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			169 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		165 166 167 168 169 
+	}
+	local_supplies=0.0 
+}

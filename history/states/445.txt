@@ -1,0 +1,39 @@
+
+state={
+	id=445
+	name="STATE_445"
+	manpower = 5593145
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=6
+		oil=0
+		rubber=10
+		steel=2
+		tungsten=0
+	}
+
+	history={
+		owner = ORI
+		add_core_of = ORI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 1
+			2017 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2012 2013 2014 2015 2016 2017 2018 2019 2020 
+	}
+	local_supplies=0.0 
+}

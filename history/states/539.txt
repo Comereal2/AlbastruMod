@@ -1,0 +1,36 @@
+
+state={
+	id=539
+	name="STATE_539"
+	manpower = 5258983
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=2
+		tungsten=1
+	}
+
+	history={
+		owner = WOD
+		add_core_of = WOD
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		2386 2387 2388 2389 2390 2391 2392 2393 
+	}
+	local_supplies=0.0 
+}

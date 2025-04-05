@@ -1,0 +1,39 @@
+
+state={
+	id=920
+	name="STATE_920"
+	manpower = 752443
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = WOD
+		add_core_of = WOD
+		
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			4005 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4005 
+	}
+	local_supplies=0.0 
+}

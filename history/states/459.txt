@@ -1,0 +1,39 @@
+
+state={
+	id=459
+	name="STATE_459"
+	manpower = 4138469
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = CYN
+		add_core_of = CYN
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			2080 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2080 2081 2082 2083 2084 2085 
+	}
+	local_supplies=0.0 
+}

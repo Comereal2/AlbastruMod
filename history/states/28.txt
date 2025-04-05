@@ -1,0 +1,36 @@
+
+state={
+	id=28
+	name="STATE_28"
+	manpower = 1975260
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = SUL
+		add_core_of = SUL
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		134 135 136 
+	}
+	local_supplies=0.0 
+}
