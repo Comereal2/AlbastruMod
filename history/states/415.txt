@@ -1,0 +1,39 @@
+
+state={
+	id=415
+	name="STATE_415"
+	manpower = 2613291
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=1
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = KAI
+		add_core_of = KAI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			1851 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1851 1852 1853 1854 
+	}
+	local_supplies=0.0 
+}

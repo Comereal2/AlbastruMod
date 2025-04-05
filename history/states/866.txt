@@ -1,0 +1,36 @@
+
+state={
+	id=866
+	name="STATE_866"
+	manpower = 3733929
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3808 3809 3810 3811 3812 
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,39 @@
+
+state={
+	id=990
+	name="STATE_990"
+	manpower = 1083664
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ARB
+		add_core_of = ARB
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			4217 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4217 
+	}
+	local_supplies=0.0 
+}

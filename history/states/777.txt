@@ -1,0 +1,36 @@
+
+state={
+	id=777
+	name="STATE_777"
+	manpower = 6344526
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = HEX
+		add_core_of = HEX
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3436 3437 3438 3439 3440 3441 3442 3443 3444 
+	}
+	local_supplies=0.0 
+}

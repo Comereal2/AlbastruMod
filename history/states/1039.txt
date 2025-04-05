@@ -1,0 +1,39 @@
+
+state={
+	id=1039
+	name="STATE_1039"
+	manpower = 1550038
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = GEM
+		add_core_of = GEM
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			4300 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4300 4301 
+	}
+	local_supplies=0.0 
+}

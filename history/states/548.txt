@@ -1,0 +1,36 @@
+
+state={
+	id=548
+	name="STATE_548"
+	manpower = 3803416
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = LOM
+		add_core_of = LOM
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		2425 2426 2427 2428 2429 2430 
+	}
+	local_supplies=0.0 
+}

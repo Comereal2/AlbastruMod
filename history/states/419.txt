@@ -1,0 +1,36 @@
+
+state={
+	id=419
+	name="STATE_419"
+	manpower = 5317920
+	
+	state_category = large_city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = KAI
+		add_core_of = KAI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1875 1876 1877 1878 1879 1880 1881 1882 
+	}
+	local_supplies=0.0 
+}

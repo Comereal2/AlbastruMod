@@ -1,0 +1,39 @@
+
+state={
+	id=357
+	name="STATE_357"
+	manpower = 6141554
+	
+	state_category = metropolis
+	resources={
+		aluminium=2
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = BLU
+		add_core_of = BLU
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			
+			1656 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1650 1651 1652 1653 1654 1655 1656 1657 1658 
+	}
+	local_supplies=0.0 
+}

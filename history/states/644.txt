@@ -1,0 +1,36 @@
+
+state={
+	id=644
+	name="STATE_644"
+	manpower = 3726596
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=6
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		2895 2896 2897 2898 2899 2900 
+	}
+	local_supplies=0.0 
+}

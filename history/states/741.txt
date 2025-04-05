@@ -1,0 +1,39 @@
+
+state={
+	id=741
+	name="STATE_741"
+	manpower = 1895167
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=2
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 1
+			3277 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		3277 3278 3279 
+	}
+	local_supplies=0.0 
+}

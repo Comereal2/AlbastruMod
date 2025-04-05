@@ -1,0 +1,39 @@
+
+state={
+	id=760
+	name="STATE_760"
+	manpower = 1910370
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = PRU
+		add_core_of = PRU
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			3366 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		3365 3366 
+	}
+	local_supplies=0.0 
+}

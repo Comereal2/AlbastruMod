@@ -1,0 +1,39 @@
+
+state={
+	id=58
+	name="STATE_58"
+	manpower = 2101167
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=4
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = BLU
+		add_core_of = BLU
+		
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			250 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		250 251 252 
+	}
+	local_supplies=0.0 
+}

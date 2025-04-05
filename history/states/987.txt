@@ -1,0 +1,39 @@
+
+state={
+	id=987
+	name="STATE_987"
+	manpower = 2193940
+	
+	state_category = rural
+	resources={
+		aluminium=2
+		chromium=0
+		oil=0
+		rubber=4
+		steel=2
+		tungsten=0
+	}
+
+	history={
+		owner = ARA
+		add_core_of = ARA
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			4213 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4212 4213 4214 
+	}
+	local_supplies=0.0 
+}

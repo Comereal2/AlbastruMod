@@ -1,0 +1,39 @@
+
+state={
+	id=475
+	name="STATE_475"
+	manpower = 967765
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = KAI
+		add_core_of = KAI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			2150 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2150 
+	}
+	local_supplies=0.0 
+}

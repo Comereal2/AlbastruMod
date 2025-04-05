@@ -1,0 +1,39 @@
+
+state={
+	id=215
+	name="STATE_215"
+	manpower = 4803589
+	
+	state_category = metropolis
+	resources={
+		aluminium=1
+		chromium=0
+		oil=1
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = MIR
+		add_core_of = MIR
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			dockyard = 1
+			1051 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1050 1051 1052 1053 1054 1055 1056 
+	}
+	local_supplies=0.0 
+}

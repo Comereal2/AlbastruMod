@@ -1,0 +1,39 @@
+
+state={
+	id=95
+	name="STATE_95"
+	manpower = 5843135
+	
+	state_category = large_city
+	resources={
+		aluminium=2
+		chromium=0
+		oil=3
+		rubber=10
+		steel=3
+		tungsten=1
+	}
+
+	history={
+		owner = RIA
+		add_core_of = RIA
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			443 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		437 438 439 440 441 442 443 444 445 
+	}
+	local_supplies=0.0 
+}

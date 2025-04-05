@@ -1,0 +1,39 @@
+
+state={
+	id=241
+	name="STATE_241"
+	manpower = 2296613
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ENQ
+		add_core_of = ENQ
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			1168 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1168 1169 1170 
+	}
+	local_supplies=0.0 
+}

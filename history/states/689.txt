@@ -1,0 +1,39 @@
+
+state={
+	id=689
+	name="STATE_689"
+	manpower = 3495965
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=2
+	}
+
+	history={
+		owner = LOM
+		add_core_of = LOM
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 1
+			3075 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		3072 3073 3074 3075 3076 
+	}
+	local_supplies=0.0 
+}

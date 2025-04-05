@@ -1,0 +1,36 @@
+
+state={
+	id=256
+	name="STATE_256"
+	manpower = 5177475
+	
+	state_category = metropolis
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = ALT
+		add_core_of = ALT
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1224 1225 1226 1227 1228 1229 1230 
+	}
+	local_supplies=0.0 
+}

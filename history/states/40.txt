@@ -1,0 +1,36 @@
+
+state={
+	id=40
+	name="STATE_40"
+	manpower = 2126496
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=0
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = SUL
+		add_core_of = SUL
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		179 180 181 
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,39 @@
+
+state={
+	id=318
+	name="STATE_318"
+	manpower = 3916259
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = ENQ
+		add_core_of = ENQ
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 1
+			1475 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1474 1475 1476 1477 1478 1479 
+	}
+	local_supplies=0.0 
+}

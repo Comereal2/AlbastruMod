@@ -1,0 +1,36 @@
+
+state={
+	id=431
+	name="STATE_431"
+	manpower = 7732212
+	
+	state_category = megalopolis
+	resources={
+		aluminium=3
+		chromium=0
+		oil=0
+		rubber=1
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = KAI
+		add_core_of = KAI
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 2
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1950 1951 1952 1953 1954 1955 1956 1957 1958 1959 1960 1961 
+	}
+	local_supplies=0.0 
+}

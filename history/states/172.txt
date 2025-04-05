@@ -1,0 +1,39 @@
+
+state={
+	id=172
+	name="STATE_172"
+	manpower = 4658302
+	
+	state_category = large_city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=2
+	}
+
+	history={
+		owner = ENQ
+		add_core_of = ENQ
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			
+			842 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		840 841 842 843 844 845 846 
+	}
+	local_supplies=0.0 
+}

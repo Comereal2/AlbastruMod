@@ -1,0 +1,36 @@
+
+state={
+	id=508
+	name="STATE_508"
+	manpower = 3467829
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=7
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = HEL
+		add_core_of = HEL
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		2254 2255 2256 2257 2258 2259 
+	}
+	local_supplies=0.0 
+}

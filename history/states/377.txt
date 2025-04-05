@@ -1,0 +1,36 @@
+
+state={
+	id=377
+	name="STATE_377"
+	manpower = 1733489
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = RIA
+		add_core_of = RIA
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1716 1717 
+	}
+	local_supplies=0.0 
+}

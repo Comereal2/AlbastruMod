@@ -47,6 +47,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_altir_map"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_appendicitopia_yellow"
@@ -56,6 +57,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_appendicitopia_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_appendicitopia_green"
@@ -65,6 +67,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_appendicitopia_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_araj_yellow"
@@ -74,6 +77,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_araj_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_araj_green"
@@ -83,6 +87,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_araj_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_blackhill_yellow"
@@ -92,6 +97,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_blackhill_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_blackhill_green"
@@ -101,6 +107,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_blackhill_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_bluu_yellow"
@@ -110,6 +117,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_bluu_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_bluu_green"
@@ -119,6 +127,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_bluu_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_camerali_yellow"
@@ -128,6 +137,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_camerali_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_camerali_green"
@@ -137,6 +147,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_camerali_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_enqiutia_yellow"
@@ -146,6 +157,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_enqiutia_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_enqiutia_green"
@@ -155,6 +167,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_enqiutia_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_kastaryn_yellow"
@@ -164,6 +177,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_kastaryn_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_kastaryn_green"
@@ -173,6 +187,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_kastaryn_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_kizixar_yellow"
@@ -182,6 +197,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_kizixar_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_kizixar_green"
@@ -191,6 +207,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_kizixar_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_mirzaistan_yellow"
@@ -200,6 +217,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_mirzaistan_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_mirzaistan_green"
@@ -209,6 +227,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_mirzaistan_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_odezya_yellow"
@@ -218,6 +237,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_odezya_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_odezya_green"
@@ -227,6 +247,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_odezya_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_riassi_yellow"
@@ -236,6 +257,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_riassi_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_riassi_green"
@@ -245,6 +267,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_riassi_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_tzedekia_yellow"
@@ -254,6 +277,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_tzedekia_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_tzedekia_green"
@@ -263,6 +287,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_tzedekia_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_placeholder1_yellow"
@@ -272,6 +297,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_placeholder1_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_placeholder1_green"
@@ -281,6 +307,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_placeholder1_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_placeholder2_yellow"
@@ -290,6 +317,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_placeholder2_yellow"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 			iconType = {
 				name = "investment_gui_placeholder2_green"
@@ -299,6 +327,7 @@ guiTypes = {
 				}
 				spriteType = "GFX_placeholder2_green"
 				orientation = center
+				pdx_tooltip = "investment_gui_map_tt"
 			}
 		}
 

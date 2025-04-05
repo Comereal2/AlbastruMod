@@ -1,0 +1,39 @@
+
+state={
+	id=22
+	name="STATE_22"
+	manpower = 4971942
+	
+	state_category = large_city
+	resources={
+		aluminium=0
+		chromium=3
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = SUL
+		add_core_of = SUL
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			
+			100 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		100 101 102 103 104 105 106 
+	}
+	local_supplies=0.0 
+}

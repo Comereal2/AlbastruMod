@@ -1,0 +1,36 @@
+
+state={
+	id=134
+	name="STATE_134"
+	manpower = 7404047
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = TZE
+		add_core_of = TZE
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 2
+			
+			
+		}
+		
+	}
+
+	provinces={
+		653 654 655 656 657 658 659 660 661 662 663 
+	}
+	local_supplies=0.0 
+}

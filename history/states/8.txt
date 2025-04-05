@@ -1,0 +1,39 @@
+
+state={
+	id=8
+	name="STATE_8"
+	manpower = 4932656
+	
+	state_category = metropolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = VAL
+		add_core_of = VAL
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			dockyard = 1
+			30 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		24 25 26 27 28 29 30 
+	}
+	local_supplies=0.0 
+}

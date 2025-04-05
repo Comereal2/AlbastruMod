@@ -1,0 +1,39 @@
+
+state={
+	id=720
+	name="STATE_720"
+	manpower = 5544173
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=2
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = ARB
+		add_core_of = ARB
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 0
+			dockyard = 1
+			3190 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		3184 3185 3186 3187 3188 3189 3190 3191 
+	}
+	local_supplies=0.0 
+}

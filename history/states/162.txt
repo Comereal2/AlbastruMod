@@ -1,0 +1,39 @@
+
+state={
+	id=162
+	name="STATE_162"
+	manpower = 1343981
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = HEL
+		add_core_of = HEL
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			804 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		804 805 
+	}
+	local_supplies=0.0 
+}

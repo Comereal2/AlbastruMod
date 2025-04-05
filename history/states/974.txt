@@ -1,0 +1,39 @@
+
+state={
+	id=974
+	name="STATE_974"
+	manpower = 1168678
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			4172 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4172 
+	}
+	local_supplies=0.0 
+}

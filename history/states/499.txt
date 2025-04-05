@@ -1,0 +1,39 @@
+
+state={
+	id=499
+	name="STATE_499"
+	manpower = 213948
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = CYN
+		add_core_of = CYN
+		
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			2242 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2242 
+	}
+	local_supplies=0.0 
+}

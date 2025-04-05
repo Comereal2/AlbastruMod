@@ -1,0 +1,36 @@
+
+state={
+	id=339
+	name="STATE_339"
+	manpower = 5232794
+	
+	state_category = metropolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = RIA
+		add_core_of = RIA
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 2
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1558 1559 1560 1561 1562 1563 1564 1565 
+	}
+	local_supplies=0.0 
+}

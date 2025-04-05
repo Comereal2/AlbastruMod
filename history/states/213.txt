@@ -1,0 +1,36 @@
+
+state={
+	id=213
+	name="STATE_213"
+	manpower = 8095143
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = ALT
+		add_core_of = ALT
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 3
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1034 1035 1036 1037 1038 1039 1040 1041 1042 1043 1044 1045 
+	}
+	local_supplies=0.0 
+}

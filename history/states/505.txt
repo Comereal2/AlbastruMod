@@ -1,0 +1,39 @@
+
+state={
+	id=505
+	name="STATE_505"
+	manpower = 2224319
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=6
+		oil=0
+		rubber=5
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = NOR
+		add_core_of = NOR
+		
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 1
+			2250 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2248 2249 2250 
+	}
+	local_supplies=0.0 
+}

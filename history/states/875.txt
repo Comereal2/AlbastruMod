@@ -1,0 +1,39 @@
+
+state={
+	id=875
+	name="STATE_875"
+	manpower = 4029155
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=7
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 1
+			3846 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		3841 3842 3843 3844 3845 3846 
+	}
+	local_supplies=0.0 
+}

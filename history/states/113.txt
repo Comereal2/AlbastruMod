@@ -1,0 +1,36 @@
+
+state={
+	id=113
+	name="STATE_113"
+	manpower = 4270382
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ALT
+		add_core_of = ALT
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		534 535 536 537 538 539 
+	}
+	local_supplies=0.0 
+}

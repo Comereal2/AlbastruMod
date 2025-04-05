@@ -1,0 +1,39 @@
+
+state={
+	id=504
+	name="STATE_504"
+	manpower = 159588
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = NOR
+		add_core_of = NOR
+		
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			2247 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2247 
+	}
+	local_supplies=0.0 
+}

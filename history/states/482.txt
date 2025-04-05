@@ -1,0 +1,39 @@
+
+state={
+	id=482
+	name="STATE_482"
+	manpower = 6048547
+	
+	state_category = city
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=9
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = NOR
+		add_core_of = NOR
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 1
+			2167 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2167 2168 2169 2170 2171 2172 2173 2174 2175 2176 
+	}
+	local_supplies=0.0 
+}

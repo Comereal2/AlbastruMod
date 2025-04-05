@@ -1,0 +1,39 @@
+
+state={
+	id=877
+	name="STATE_877"
+	manpower = 2183011
+	
+	state_category = town
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=3
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			3850 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		3849 3850 3851 
+	}
+	local_supplies=0.0 
+}
