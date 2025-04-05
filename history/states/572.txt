@@ -1,0 +1,39 @@
+
+state={
+	id=572
+	name="STATE_572"
+	manpower = 4727430
+	
+	state_category = large_city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = HEX
+		add_core_of = HEX
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			dockyard = 1
+			2566 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2560 2561 2562 2563 2564 2565 2566 
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=840
+	name="STATE_840"
+	manpower = 2619437
+	
+	state_category = town
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = WOD
+		add_core_of = WOD
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3696 3697 3698 3699 
+	}
+	local_supplies=0.0 
+}

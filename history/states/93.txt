@@ -1,0 +1,39 @@
+
+state={
+	id=93
+	name="STATE_93"
+	manpower = 2243658
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ALT
+		add_core_of = ALT
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			426 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		426 427 428 
+	}
+	local_supplies=0.0 
+}

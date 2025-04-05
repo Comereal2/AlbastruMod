@@ -1,0 +1,36 @@
+
+state={
+	id=785
+	name="STATE_785"
+	manpower = 361947
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = HEX
+		add_core_of = HEX
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3476 
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=216
+	name="STATE_216"
+	manpower = 3141058
+	
+	state_category = large_town
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = KIZ
+		add_core_of = KIZ
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1057 1058 1059 1060 
+	}
+	local_supplies=0.0 
+}

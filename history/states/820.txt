@@ -1,0 +1,39 @@
+
+state={
+	id=820
+	name="STATE_820"
+	manpower = 8727463
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=1
+		oil=0
+		rubber=0
+		steel=2
+		tungsten=2
+	}
+
+	history={
+		owner = LOM
+		add_core_of = LOM
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 2
+			industrial_complex = 1
+			
+			3617 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		3605 3606 3607 3608 3609 3610 3611 3612 3613 3614 3615 3616 3617 3618 
+	}
+	local_supplies=0.0 
+}

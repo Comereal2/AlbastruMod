@@ -1,0 +1,39 @@
+
+state={
+	id=531
+	name="STATE_531"
+	manpower = 6677382
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = HEX
+		add_core_of = HEX
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			dockyard = 1
+			2352 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2346 2347 2348 2349 2350 2351 2352 2353 2354 2355 
+	}
+	local_supplies=0.0 
+}

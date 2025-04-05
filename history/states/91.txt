@@ -1,0 +1,39 @@
+
+state={
+	id=91
+	name="STATE_91"
+	manpower = 6323331
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=1
+		oil=1
+		rubber=5
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = APP
+		add_core_of = APP
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			413 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		413 414 415 416 417 418 419 420 421 
+	}
+	local_supplies=0.0 
+}

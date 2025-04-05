@@ -1,0 +1,36 @@
+
+state={
+	id=201
+	name="STATE_201"
+	manpower = 1723524
+	
+	state_category = town
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = BLU
+		add_core_of = BLU
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		969 970 
+	}
+	local_supplies=0.0 
+}

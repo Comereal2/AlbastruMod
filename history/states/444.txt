@@ -1,0 +1,36 @@
+
+state={
+	id=444
+	name="STATE_444"
+	manpower = 3076032
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = CYN
+		add_core_of = CYN
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		2007 2008 2009 2010 2011 
+	}
+	local_supplies=0.0 
+}

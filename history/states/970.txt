@@ -1,0 +1,39 @@
+
+state={
+	id=970
+	name="STATE_970"
+	manpower = 957143
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=1
+		oil=0
+		rubber=2
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = BLU
+		add_core_of = BLU
+		
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			4165 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4165 
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=546
+	name="STATE_546"
+	manpower = 5088955
+	
+	state_category = city
+	resources={
+		aluminium=1
+		chromium=0
+		oil=1
+		rubber=0
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = WOD
+		add_core_of = WOD
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		2415 2416 2417 2418 2419 2420 2421 2422 
+	}
+	local_supplies=0.0 
+}

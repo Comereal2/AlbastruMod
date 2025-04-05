@@ -1,0 +1,36 @@
+
+state={
+	id=878
+	name="STATE_878"
+	manpower = 1649094
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=4
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = LOM
+		add_core_of = LOM
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3852 3853 
+	}
+	local_supplies=0.0 
+}

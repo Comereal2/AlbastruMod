@@ -1,0 +1,36 @@
+
+state={
+	id=588
+	name="STATE_588"
+	manpower = 7839802
+	
+	state_category = metropolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = WOD
+		add_core_of = WOD
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 2
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		2631 2632 2633 2634 2635 2636 2637 2638 2639 2640 2641 2642 2643 
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,39 @@
+
+state={
+	id=128
+	name="STATE_128"
+	manpower = 6924288
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ENQ
+		add_core_of = ENQ
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			dockyard = 1
+			618 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		618 619 620 621 622 623 624 625 626 627 
+	}
+	local_supplies=0.0 
+}

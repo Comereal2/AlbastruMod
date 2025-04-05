@@ -1,0 +1,36 @@
+
+state={
+	id=393
+	name="STATE_393"
+	manpower = 2020912
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = BLU
+		add_core_of = BLU
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1770 1771 1772 
+	}
+	local_supplies=0.0 
+}

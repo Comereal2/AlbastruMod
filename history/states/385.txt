@@ -1,0 +1,36 @@
+
+state={
+	id=385
+	name="STATE_385"
+	manpower = 8224529
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = ALT
+		add_core_of = ALT
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 2
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1736 1737 1738 1739 1740 1741 1742 1743 1744 1745 1746 1747 1748 
+	}
+	local_supplies=0.0 
+}

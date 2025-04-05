@@ -1,0 +1,39 @@
+
+state={
+	id=101
+	name="STATE_101"
+	manpower = 7786451
+	
+	state_category = metropolis
+	resources={
+		aluminium=0
+		chromium=8
+		oil=0
+		rubber=16
+		steel=2
+		tungsten=0
+	}
+
+	history={
+		owner = BLU
+		add_core_of = BLU
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			dockyard = 1
+			473 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		465 466 467 468 469 470 471 472 473 474 475 476 477 
+	}
+	local_supplies=0.0 
+}

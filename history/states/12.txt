@@ -1,0 +1,39 @@
+
+state={
+	id=12
+	name="STATE_12"
+	manpower = 6230232
+	
+	state_category = megalopolis
+	resources={
+		aluminium=1
+		chromium=3
+		oil=1
+		rubber=2
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = VAL
+		add_core_of = VAL
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			dockyard = 1
+			59 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		53 54 55 56 57 58 59 60 61 
+	}
+	local_supplies=0.0 
+}

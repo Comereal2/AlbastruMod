@@ -1,0 +1,36 @@
+
+state={
+	id=136
+	name="STATE_136"
+	manpower = 3966914
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=3
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = MIR
+		add_core_of = MIR
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		666 667 668 669 670 671 
+	}
+	local_supplies=0.0 
+}

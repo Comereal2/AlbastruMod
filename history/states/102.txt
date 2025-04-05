@@ -1,0 +1,36 @@
+
+state={
+	id=102
+	name="STATE_102"
+	manpower = 6357150
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = KIZ
+		add_core_of = KIZ
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			
+			
+		}
+		
+	}
+
+	provinces={
+		478 479 480 481 482 483 484 485 486 
+	}
+	local_supplies=0.0 
+}

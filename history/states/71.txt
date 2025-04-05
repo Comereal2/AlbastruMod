@@ -1,0 +1,36 @@
+
+state={
+	id=71
+	name="STATE_71"
+	manpower = 8861774
+	
+	state_category = megalopolis
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = TZE
+		add_core_of = TZE
+		
+		buildings = {
+			infrastructure = 4
+			
+			arms_factory = 1
+			industrial_complex = 3
+			
+			
+		}
+		
+	}
+
+	provinces={
+		311 312 313 314 315 316 317 318 319 320 321 322 323 
+	}
+	local_supplies=0.0 
+}

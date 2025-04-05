@@ -1,0 +1,36 @@
+
+state={
+	id=75
+	name="STATE_75"
+	manpower = 1682786
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = BLU
+		add_core_of = BLU
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		341 342 
+	}
+	local_supplies=0.0 
+}

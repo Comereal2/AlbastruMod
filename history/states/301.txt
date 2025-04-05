@@ -1,0 +1,39 @@
+
+state={
+	id=301
+	name="STATE_301"
+	manpower = 4180479
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = ALT
+		add_core_of = ALT
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			1407 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1405 1406 1407 1408 1409 1410 
+	}
+	local_supplies=0.0 
+}

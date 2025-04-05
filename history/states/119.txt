@@ -1,0 +1,39 @@
+
+state={
+	id=119
+	name="STATE_119"
+	manpower = 4762000
+	
+	state_category = metropolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=3
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = HEL
+		add_core_of = HEL
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 2
+			industrial_complex = 0
+			
+			570 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		565 566 567 568 569 570 571 
+	}
+	local_supplies=0.0 
+}

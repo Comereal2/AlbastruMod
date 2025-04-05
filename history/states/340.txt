@@ -1,0 +1,36 @@
+
+state={
+	id=340
+	name="STATE_340"
+	manpower = 5529427
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = APP
+		add_core_of = APP
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1566 1567 1568 1569 1570 1571 1572 1573 
+	}
+	local_supplies=0.0 
+}

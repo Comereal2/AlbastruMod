@@ -1,0 +1,39 @@
+
+state={
+	id=408
+	name="STATE_408"
+	manpower = 3928411
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=2
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = NOR
+		add_core_of = NOR
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			1825 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1821 1822 1823 1824 1825 1826 
+	}
+	local_supplies=0.0 
+}

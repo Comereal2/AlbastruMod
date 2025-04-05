@@ -1,0 +1,39 @@
+
+state={
+	id=52
+	name="STATE_52"
+	manpower = 2699520
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ISL
+		add_core_of = ISL
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			224 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		221 222 223 224 
+	}
+	local_supplies=0.0 
+}

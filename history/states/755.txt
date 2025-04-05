@@ -1,0 +1,36 @@
+
+state={
+	id=755
+	name="STATE_755"
+	manpower = 7016118
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=1
+		oil=1
+		rubber=0
+		steel=2
+		tungsten=2
+	}
+
+	history={
+		owner = PRU
+		add_core_of = PRU
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 3
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3335 3336 3337 3338 3339 3340 3341 3342 3343 3344 
+	}
+	local_supplies=0.0 
+}

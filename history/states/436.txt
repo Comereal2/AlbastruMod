@@ -1,0 +1,36 @@
+
+state={
+	id=436
+	name="STATE_436"
+	manpower = 3305318
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=3
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = ORI
+		add_core_of = ORI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1982 1983 1984 1985 1986 
+	}
+	local_supplies=0.0 
+}

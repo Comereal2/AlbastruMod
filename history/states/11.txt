@@ -1,0 +1,39 @@
+
+state={
+	id=11
+	name="STATE_11"
+	manpower = 6442774
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=2
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = SUL
+		add_core_of = SUL
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			dockyard = 1
+			44 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		43 44 45 46 47 48 49 50 51 52 
+	}
+	local_supplies=0.0 
+}

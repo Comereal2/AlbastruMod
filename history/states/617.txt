@@ -1,0 +1,36 @@
+
+state={
+	id=617
+	name="STATE_617"
+	manpower = 4362862
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=0
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = WOD
+		add_core_of = WOD
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		2775 2776 2777 2778 2779 2780 2781 
+	}
+	local_supplies=0.0 
+}

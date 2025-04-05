@@ -1,0 +1,39 @@
+
+state={
+	id=224
+	name="STATE_224"
+	manpower = 305828
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ODZ
+		add_core_of = ODZ
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			1101 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1101 
+	}
+	local_supplies=0.0 
+}

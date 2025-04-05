@@ -1,0 +1,36 @@
+
+state={
+	id=488
+	name="STATE_488"
+	manpower = 2166590
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ORI
+		add_core_of = ORI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		2207 2208 2209 
+	}
+	local_supplies=0.0 
+}

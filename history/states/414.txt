@@ -1,0 +1,39 @@
+
+state={
+	id=414
+	name="STATE_414"
+	manpower = 3345196
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=7
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = NOR
+		add_core_of = NOR
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			1848 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1846 1847 1848 1849 1850 
+	}
+	local_supplies=0.0 
+}

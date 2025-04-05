@@ -1,0 +1,36 @@
+
+state={
+	id=33
+	name="STATE_33"
+	manpower = 3608128
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = SUL
+		add_core_of = SUL
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		150 151 152 153 154 
+	}
+	local_supplies=0.0 
+}

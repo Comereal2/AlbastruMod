@@ -1,0 +1,39 @@
+
+state={
+	id=48
+	name="STATE_48"
+	manpower = 3162669
+	
+	state_category = city
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ISL
+		add_core_of = ISL
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			210 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		208 209 210 211 
+	}
+	local_supplies=0.0 
+}

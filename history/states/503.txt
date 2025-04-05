@@ -1,0 +1,39 @@
+
+state={
+	id=503
+	name="STATE_503"
+	manpower = 226861
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ORI
+		add_core_of = ORI
+		
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			2246 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2246 
+	}
+	local_supplies=0.0 
+}

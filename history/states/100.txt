@@ -1,0 +1,39 @@
+
+state={
+	id=100
+	name="STATE_100"
+	manpower = 3832071
+	
+	state_category = large_city
+	resources={
+		aluminium=0
+		chromium=9
+		oil=1
+		rubber=1
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = ODZ
+		add_core_of = ODZ
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			463 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		460 461 462 463 464 
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=64
+	name="STATE_64"
+	manpower = 1368327
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = APP
+		add_core_of = APP
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		277 278 
+	}
+	local_supplies=0.0 
+}

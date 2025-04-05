@@ -1,0 +1,39 @@
+
+state={
+	id=516
+	name="STATE_516"
+	manpower = 6052186
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=13
+		steel=2
+		tungsten=2
+	}
+
+	history={
+		owner = HEL
+		add_core_of = HEL
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			2291 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2291 2292 2293 2294 2295 2296 2297 2298 2299 2300 
+	}
+	local_supplies=0.0 
+}

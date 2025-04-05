@@ -1,0 +1,39 @@
+
+state={
+	id=772
+	name="STATE_772"
+	manpower = 1337939
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			3416 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		3416 3417 
+	}
+	local_supplies=0.0 
+}

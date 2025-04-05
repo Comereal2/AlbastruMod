@@ -1,0 +1,36 @@
+
+state={
+	id=657
+	name="STATE_657"
+	manpower = 2055382
+	
+	state_category = rural
+	resources={
+		aluminium=1
+		chromium=0
+		oil=1
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = HEX
+		add_core_of = HEX
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		2949 2950 2951 
+	}
+	local_supplies=0.0 
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=198
+	name="STATE_198"
+	manpower = 3138585
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=4
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = APP
+		add_core_of = APP
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		943 944 945 946 
+	}
+	local_supplies=0.0 
+}

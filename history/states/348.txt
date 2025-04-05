@@ -1,0 +1,39 @@
+
+state={
+	id=348
+	name="STATE_348"
+	manpower = 2191503
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=2
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = RIA
+		add_core_of = RIA
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			1610 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1609 1610 1611 
+	}
+	local_supplies=0.0 
+}

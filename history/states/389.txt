@@ -1,0 +1,36 @@
+
+state={
+	id=389
+	name="STATE_389"
+	manpower = 3740978
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = KIZ
+		add_core_of = KIZ
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1754 1755 1756 1757 1758 
+	}
+	local_supplies=0.0 
+}

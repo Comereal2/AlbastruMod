@@ -1,0 +1,36 @@
+
+state={
+	id=63
+	name="STATE_63"
+	manpower = 4648848
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=1
+		oil=0
+		rubber=7
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = BLU
+		add_core_of = BLU
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		270 271 272 273 274 275 276 
+	}
+	local_supplies=0.0 
+}

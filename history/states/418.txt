@@ -1,0 +1,39 @@
+
+state={
+	id=418
+	name="STATE_418"
+	manpower = 7990240
+	
+	state_category = megalopolis
+	resources={
+		aluminium=1
+		chromium=0
+		oil=1
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = KAI
+		add_core_of = KAI
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 0
+			dockyard = 1
+			1871 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1862 1863 1864 1865 1866 1867 1868 1869 1870 1871 1872 1873 1874 
+	}
+	local_supplies=0.0 
+}
