@@ -1,0 +1,39 @@
+
+state={
+	id=981
+	name="STATE_981"
+	manpower = 38615
+	
+	state_category = pastoral
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		
+		buildings = {
+			infrastructure = 1
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			4179 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4179 
+	}
+	local_supplies=0.0 
+}

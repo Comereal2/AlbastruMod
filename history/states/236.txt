@@ -1,0 +1,36 @@
+
+state={
+	id=236
+	name="STATE_236"
+	manpower = 4036761
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=8
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = BLU
+		add_core_of = BLU
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1145 1146 1147 1148 1149 1150 
+	}
+	local_supplies=0.0 
+}

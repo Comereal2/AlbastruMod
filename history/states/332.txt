@@ -1,0 +1,39 @@
+
+state={
+	id=332
+	name="STATE_332"
+	manpower = 3281999
+	
+	state_category = large_town
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=6
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = HEL
+		add_core_of = HEL
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			1526 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1524 1525 1526 1527 1528 
+	}
+	local_supplies=0.0 
+}

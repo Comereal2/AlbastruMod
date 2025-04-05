@@ -1,0 +1,39 @@
+
+state={
+	id=1034
+	name="STATE_1034"
+	manpower = 4236930
+	
+	state_category = city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = GEM
+		add_core_of = GEM
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			4287 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4286 4287 4288 4289 4290 4291 
+	}
+	local_supplies=0.0 
+}

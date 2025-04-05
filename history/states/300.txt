@@ -1,0 +1,36 @@
+
+state={
+	id=300
+	name="STATE_300"
+	manpower = 2620479
+	
+	state_category = town
+	resources={
+		aluminium=1
+		chromium=0
+		oil=1
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ODZ
+		add_core_of = ODZ
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1401 1402 1403 1404 
+	}
+	local_supplies=0.0 
+}

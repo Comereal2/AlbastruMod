@@ -1,0 +1,39 @@
+
+state={
+	id=1017
+	name="STATE_1017"
+	manpower = 1156156
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=1
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = CAM
+		add_core_of = CAM
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 1
+			4262 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4262 
+	}
+	local_supplies=0.0 
+}

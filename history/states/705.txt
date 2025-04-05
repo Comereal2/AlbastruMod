@@ -1,0 +1,36 @@
+
+state={
+	id=705
+	name="STATE_705"
+	manpower = 3274202
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = PRU
+		add_core_of = PRU
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 1
+			industrial_complex = 0
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3139 3140 3141 3142 3143 
+	}
+	local_supplies=0.0 
+}

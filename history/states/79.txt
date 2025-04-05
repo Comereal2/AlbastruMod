@@ -1,0 +1,36 @@
+
+state={
+	id=79
+	name="STATE_79"
+	manpower = 4260735
+	
+	state_category = large_city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = ALT
+		add_core_of = ALT
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		354 355 356 357 358 359 
+	}
+	local_supplies=0.0 
+}

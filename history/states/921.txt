@@ -1,0 +1,36 @@
+
+state={
+	id=921
+	name="STATE_921"
+	manpower = 5920279
+	
+	state_category = metropolis
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=2
+		tungsten=0
+	}
+
+	history={
+		owner = LOM
+		add_core_of = LOM
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		4006 4007 4008 4009 4010 4011 4012 4013 4014 
+	}
+	local_supplies=0.0 
+}

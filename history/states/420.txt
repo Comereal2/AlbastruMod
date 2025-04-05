@@ -1,0 +1,39 @@
+
+state={
+	id=420
+	name="STATE_420"
+	manpower = 15090671
+	
+	state_category = megalopolis
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=2
+		tungsten=0
+	}
+
+	history={
+		owner = CYN
+		add_core_of = CYN
+		
+		buildings = {
+			infrastructure = 4
+			
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 2
+			1895 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1883 1884 1885 1886 1887 1888 1889 1890 1891 1892 1893 1894 1895 1896 1897 1898 1899 1900 1901 1902 1903 1904 1905 1906 
+	}
+	local_supplies=0.0 
+}

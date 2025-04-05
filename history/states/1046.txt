@@ -1,0 +1,39 @@
+
+state={
+	id=1046
+	name="STATE_1046"
+	manpower = 2252576
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = RES
+		add_core_of = RES
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			4311 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		4310 4311 4312 
+	}
+	local_supplies=0.0 
+}

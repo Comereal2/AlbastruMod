@@ -1,0 +1,36 @@
+
+state={
+	id=192
+	name="STATE_192"
+	manpower = 6440226
+	
+	state_category = megalopolis
+	resources={
+		aluminium=1
+		chromium=3
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = ODZ
+		add_core_of = ODZ
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 3
+			
+			
+		}
+		
+	}
+
+	provinces={
+		910 911 912 913 914 915 916 917 918 
+	}
+	local_supplies=0.0 
+}

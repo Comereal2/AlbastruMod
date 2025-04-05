@@ -1,0 +1,39 @@
+
+state={
+	id=140
+	name="STATE_140"
+	manpower = 4306808
+	
+	state_category = large_city
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = KIZ
+		add_core_of = KIZ
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			
+			701 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		696 697 698 699 700 701 
+	}
+	local_supplies=0.0 
+}

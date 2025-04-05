@@ -1,0 +1,39 @@
+
+state={
+	id=491
+	name="STATE_491"
+	manpower = 6701405
+	
+	state_category = metropolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = CYN
+		add_core_of = CYN
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			dockyard = 1
+			2225 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2220 2221 2222 2223 2224 2225 2226 2227 2228 2229 2230 
+	}
+	local_supplies=0.0 
+}

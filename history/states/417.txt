@@ -1,0 +1,36 @@
+
+state={
+	id=417
+	name="STATE_417"
+	manpower = 2325435
+	
+	state_category = town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ORI
+		add_core_of = ORI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1859 1860 1861 
+	}
+	local_supplies=0.0 
+}

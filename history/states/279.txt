@@ -1,0 +1,39 @@
+
+state={
+	id=279
+	name="STATE_279"
+	manpower = 6562517
+	
+	state_category = metropolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=9
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = ODZ
+		add_core_of = ODZ
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 1
+			
+			1316 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1316 1317 1318 1319 1320 1321 1322 1323 1324 1325 
+	}
+	local_supplies=0.0 
+}

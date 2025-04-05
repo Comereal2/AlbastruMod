@@ -1,0 +1,39 @@
+
+state={
+	id=523
+	name="STATE_523"
+	manpower = 2395891
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=5
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = BLA
+		add_core_of = BLA
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			2314 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2312 2313 2314 2315 
+	}
+	local_supplies=0.0 
+}

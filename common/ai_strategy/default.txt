@@ -1,0 +1,532 @@
+# Written by Henrik "Groogy" Hansson
+# Modified by Daniel "Da9L" Sjöberg
+
+default_unit_production = {
+	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 4
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 2
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 40
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 25
+	}
+}
+
+
+
+
+default_surplus_management = {
+	# If we manage to get all equipment we want, keep producing more stuff according to this
+	enable = {
+		always = yes  # For now, applies to everyone
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = infantry_equipment
+		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = support_equipment
+		value = 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = artillery_equipment
+		value = 5
+	}
+
+	ai_strategy = {  # Potentially move into a "specialization" strategy
+		type = equipment_production_surplus_management
+		id = anti_air_equipment
+		value = 3
+	}
+
+	ai_strategy = {  # Potentially move into a "specialization" strategy
+		type = equipment_production_surplus_management
+		id = anti_tank_equipment
+		value = 2
+	}
+
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = convoy
+		value = 5
+	}
+}
+
+
+bba_support_boosts = {
+
+	enable = {
+		is_historical_focus_on = yes
+		date < 1939.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = support_equipment
+		value = 15
+	}
+}
+
+
+default_pp_spend_amount = {
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 100
+	}
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 100
+	}
+}
+
+default_paratroopers_production = {
+	enable = {
+		ai_wants_divisions >  12 #Massively decreasing the amount of paratroopers the AI wants
+	}
+	abort = {
+		ai_wants_divisions < 13 #Massively decreasing the amount of paratroopers the AI wants
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+}
+
+default_major_SF_para = {
+	enable = {
+		is_major = yes
+		has_tech = special_forces_paratroopers
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 4
+	}
+}
+
+default_major_SF_marines = {
+	enable = {
+		is_major = yes
+		has_tech = special_forces_marines
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 2
+	}
+}
+
+
+default_garrison_production = {
+	enable = {
+		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
+		is_major = yes
+	}
+	abort = {
+		ai_wants_divisions < 13 #Massively decreasing the amount of garrison and suppression the AI wants
+		is_major = no
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 5
+	}
+}
+
+default_mountaineers_production = {
+	enable = {
+		ai_wants_divisions > 11 #Decreasing the amount of mountaineers the AI wants
+	}
+	abort = {
+		ai_wants_divisions < 12 #Decreasing the amount of mountaineers the AI wants
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 3
+	}
+}
+
+default_mobile_production = {
+	enable = {
+		ai_wants_divisions > 11
+		has_tech = motorised_infantry
+	}
+	abort = {
+		ai_wants_divisions < 12
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 2
+	}
+}
+
+default_armored_production = {
+	enable = {
+		ai_wants_divisions > 49
+	}
+	abort = {
+		ai_wants_divisions < 50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 2
+	}
+}
+
+highered_armored_production = {
+	enable = {
+		num_of_military_factories > 69
+	}
+	abort = {
+		num_of_military_factories < 70
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 5
+	}
+}
+
+default_railway_gun_management = {
+	enable = {
+		num_divisions > 150
+		is_major = yes
+		has_dlc = "No Step Back"
+	}
+	abort = {
+		num_divisions < 120
+	}
+
+	ai_strategy = { # This will add the specified value to the RAILWAY_GUN_PRODUCTION_BASE_DIVISIONS_RATIO_PERCENT define and use that as the desired railway guns / divisions ratio (in %)
+		type = railway_gun_divisions_ratio
+		value = 4
+	}
+
+}
+
+default_stockpile_management = {
+	enable = {
+		num_divisions > 150
+	}
+
+	abort = {
+		num_divisions < 130
+	}
+
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 35 # add this to default PRODUCTION_EQUIPMENT_SURPLUS_FACTOR
+	}
+}
+
+default_market_stockpile_management = {
+	enable = {
+		always = yes
+		# NOT = { original_tag = GER } # commented until actually needs override
+	}
+	abort_when_not_enabled = yes
+
+	# Hold your trains there, partner
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = train
+		value = 20  # only start considering selling trains if surplus more than 20
+	}
+	ai_strategy = {
+		type = equipment_market_min_for_sale
+		id = train
+		value = 5  # only put up for sale in chunks of 5
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_factor
+		id = train
+		value = -50  # put fewer trains up for sale
+	}
+
+	# Better not put all your boats up for sail
+	# ai_strategy = {  # Commented because handled dynamically in code through the EQUIPMENT_MARKET_WANTED_CONVOY_USAGE_RATIO define
+	# 	type = equipment_market_for_sale_threshold
+	# 	id = convoy
+	# 	value = 100  # only start considering selling convoys if surplus more than 100
+	# }
+	ai_strategy = {
+		type = equipment_market_min_for_sale
+		id = convoy
+		value = 20  # only put up for sale in chunks of 20
+	}
+
+	# Don't let all your planes just fly out the window.
+	# Only sell planes if we have more than one airwing in surplus.
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = fighter
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = cas
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = cv_fighter
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = cv_cas
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = tactical_bomber
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = strategic_bomber
+		value = 100
+	}
+}
+
+default_market_stockpile_management_if_at_war = {
+	enable = {
+		has_war = yes
+		# something something preparing for war?
+		# NOT = { original_tag = GER } # commented until actually needs override
+	}
+	abort_when_not_enabled = yes
+
+	# Don't sell stuff that we need for the war
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = infantry
+		value = 20000
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = support
+		value = 6000
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = artillery
+		value = 1000
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = fighter
+		value = 200
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = motorized
+		value = 1000
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = train
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = convoy
+		value = 50
+	}
+}
+
+ask_foreign_manpower_as_major = {
+	enable = {
+		is_major = yes
+		garrison_manpower_need > 200000
+	}
+
+	abort = {
+		garrison_manpower_need < 100000
+	}
+
+	ai_strategy = {
+		type = asking_foreign_garrison
+		value = 100
+		# id = ITA # id is optionnal. If it is filled, the value will just apply for this country. If not, the value will apply for all countries.
+	}
+}
+
+put_garrisons_on_high_prio = {
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = garrison_reinforcement_priority
+		value = 100 # positive is high prio, negative is low prio
+	}
+}
+
+default_produce_some_trucks_for_buffer = {
+	enable = {
+		num_of_military_factories > 12
+		has_tech = tech_trucks
+		has_equipment = { motorized_equipment < 3000 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 1
+	}
+}
+
+default_area_priority = {
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = continent_1
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = continent_2
+		value = 100
+	}
+		ai_strategy = {
+		type = area_priority
+		id = continent_3
+		value = 100
+	}
+		ai_strategy = {
+		type = area_priority
+		id = continent_4
+		value = 100
+	}
+		ai_strategy = {
+		type = area_priority
+		id = continent_5
+		value = 100
+	}
+		ai_strategy = {
+		type = area_priority
+		id = continent_6
+		value = 100
+	}
+		ai_strategy = {
+		type = area_priority
+		id = continent_7
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 0
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 0
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 0
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 0
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 0
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 0
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = australia
+		value = 0
+	}
+
+}

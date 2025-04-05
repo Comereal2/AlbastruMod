@@ -1,0 +1,36 @@
+
+state={
+	id=333
+	name="STATE_333"
+	manpower = 5537728
+	
+	state_category = metropolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=1
+		rubber=0
+		steel=0
+		tungsten=1
+	}
+
+	history={
+		owner = ENQ
+		add_core_of = ENQ
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 0
+			industrial_complex = 2
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1529 1530 1531 1532 1533 1534 1535 1536 
+	}
+	local_supplies=0.0 
+}

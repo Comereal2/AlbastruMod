@@ -1,0 +1,36 @@
+
+state={
+	id=900
+	name="STATE_900"
+	manpower = 6330352
+	
+	state_category = megalopolis
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=2
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = LOM
+		add_core_of = LOM
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 2
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3933 3934 3935 3936 3937 3938 3939 3940 3941 
+	}
+	local_supplies=0.0 
+}

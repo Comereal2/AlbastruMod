@@ -1,0 +1,39 @@
+
+state={
+	id=438
+	name="STATE_438"
+	manpower = 1245235
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=1
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = ORI
+		add_core_of = ORI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 0
+			
+			1992 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		1992 1993 
+	}
+	local_supplies=0.0 
+}

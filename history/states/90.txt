@@ -1,0 +1,39 @@
+
+state={
+	id=90
+	name="STATE_90"
+	manpower = 8068628
+	
+	state_category = megalopolis
+	resources={
+		aluminium=0
+		chromium=0
+		oil=2
+		rubber=15
+		steel=1
+		tungsten=1
+	}
+
+	history={
+		owner = BLU
+		add_core_of = BLU
+		
+		buildings = {
+			infrastructure = 3
+			
+			arms_factory = 1
+			industrial_complex = 1
+			
+			407 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		400 401 402 403 404 405 406 407 408 409 410 411 412 
+	}
+	local_supplies=0.0 
+}

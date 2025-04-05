@@ -1,0 +1,39 @@
+
+state={
+	id=483
+	name="STATE_483"
+	manpower = 1872311
+	
+	state_category = rural
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = KAI
+		add_core_of = KAI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			2177 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2177 2178 2179 
+	}
+	local_supplies=0.0 
+}

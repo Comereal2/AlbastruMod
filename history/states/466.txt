@@ -1,0 +1,39 @@
+
+state={
+	id=466
+	name="STATE_466"
+	manpower = 4170582
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=4
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = NOR
+		add_core_of = NOR
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			2108 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2103 2104 2105 2106 2107 2108 
+	}
+	local_supplies=0.0 
+}

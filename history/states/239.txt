@@ -1,0 +1,36 @@
+
+state={
+	id=239
+	name="STATE_239"
+	manpower = 3127707
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=0
+		tungsten=0
+	}
+
+	history={
+		owner = APP
+		add_core_of = APP
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		1158 1159 1160 1161 
+	}
+	local_supplies=0.0 
+}

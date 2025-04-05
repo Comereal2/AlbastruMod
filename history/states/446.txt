@@ -1,0 +1,39 @@
+
+state={
+	id=446
+	name="STATE_446"
+	manpower = 5249773
+	
+	state_category = city
+	resources={
+		aluminium=1
+		chromium=0
+		oil=0
+		rubber=0
+		steel=2
+		tungsten=0
+	}
+
+	history={
+		owner = KAI
+		add_core_of = KAI
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			2026 = {
+				naval_base = 1
+			}
+			
+		}
+		
+	}
+
+	provinces={
+		2021 2022 2023 2024 2025 2026 2027 2028 
+	}
+	local_supplies=0.0 
+}

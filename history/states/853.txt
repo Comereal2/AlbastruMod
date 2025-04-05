@@ -1,0 +1,36 @@
+
+state={
+	id=853
+	name="STATE_853"
+	manpower = 2600912
+	
+	state_category = large_town
+	resources={
+		aluminium=0
+		chromium=0
+		oil=0
+		rubber=0
+		steel=1
+		tungsten=0
+	}
+
+	history={
+		owner = HEX
+		add_core_of = HEX
+		
+		buildings = {
+			infrastructure = 2
+			
+			arms_factory = 0
+			industrial_complex = 1
+			
+			
+		}
+		
+	}
+
+	provinces={
+		3762 3763 3764 3765 
+	}
+	local_supplies=0.0 
+}
