@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 36
+capital = 118
 oob = "altir_units"
 set_research_slots = 4
 # Starting tech

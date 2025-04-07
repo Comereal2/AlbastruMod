@@ -1,14 +1,7 @@
 #Author: Comereal
 #CURRENT STUFF TO CHANGE WHEN MERGE HAPPENS
-# ALT_ask_bluu_for_support - uncomment event call
-# ALT_follow_valtheronesia - uncomment event call
 # ALT_the_alliance_finalized and its sub-tree - add all ASAA tags to invite inside decision
-# ALT_demand_lost_lands - add the events for demanding land from RIA + add perma claims
 # ALT_build_railways - add the railways
-# ALT_finish_apache_construction - give buildings in Altiria
-# ALT_threaten_enqiutia - add the stuff once(and if) enqiutia gets added
-# ALT_reclaim_the_helios_empire - add available block and completion effect
-# ALT_send_out_diplomats - add completion effect
 # Complete event altir.22
 focus_tree = {
 	id = ALT_focus_tree
@@ -130,9 +123,9 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.15
 			}
-			#VAL = {
-			#	country_event = { altir.11 }
-			#}
+			VAL = {
+				country_event = altir.11
+			}
 		}
 	}
 	focus = {
@@ -161,9 +154,9 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.15
 			}
-			#BLU = {
-			#	country_event = { altir.12 }
-			#}
+			BLU = {
+				country_event = altir.12
+			}
 		}
 	}
 	focus = {
@@ -1788,7 +1781,7 @@ focus_tree = {
 		}
 		bypass = {
 			NOT = {
-				country_exists = HOL
+				country_exists = RIA
 			}
 		}
 		cost = 5
@@ -1797,6 +1790,11 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			RIA = {
+				country_event = altir.25
+			}
 		}
 	}
 	focus = {
@@ -2101,7 +2099,7 @@ focus_tree = {
 		}
 		bypass = {
 			NOT = {
-				#Country Exists Enqiutia
+				country_exists = ENQ
 			}
 		}
 		search_filters = {
@@ -2109,7 +2107,9 @@ focus_tree = {
 			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward = {
-			#Give Enqiutia demand territory event
+			ENQ = {
+				country_event = altir.28
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2134,13 +2134,166 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		available = {
-			#Controls Riassi, Odezya and parts of Enqiutia
+			custom_trigger_tooltip = {
+				tooltip = ALT_reclaim_the_helios_empire_altir_req_tt
+				all_core_state = {
+					is_fully_controlled_by = ALT
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALT_reclaim_the_helios_empire_rias_req_tt
+				has_full_control_of_state = 270
+				has_full_control_of_state = 158
+				has_full_control_of_state = 284
+				has_full_control_of_state = 335
+				has_full_control_of_state = 221
+				has_full_control_of_state = 348
+				has_full_control_of_state = 322
+				has_full_control_of_state = 202
+				has_full_control_of_state = 328
+				has_full_control_of_state = 209
+				has_full_control_of_state = 339
+				has_full_control_of_state = 163
+				has_full_control_of_state = 377
+				has_full_control_of_state = 185
+				has_full_control_of_state = 115
+				has_full_control_of_state = 138
+				has_full_control_of_state = 262
+				has_full_control_of_state = 254
+				has_full_control_of_state = 197
+				has_full_control_of_state = 169
+				has_full_control_of_state = 370
+				has_full_control_of_state = 188
+				has_full_control_of_state = 74
+				has_full_control_of_state = 95
+				has_full_control_of_state = 334
+				has_full_control_of_state = 88
+				has_full_control_of_state = 275
+				has_full_control_of_state = 121
+				has_full_control_of_state = 70
+				has_full_control_of_state = 86
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALT_reclaim_the_helios_empire_odezya_req_tt
+				has_full_control_of_state = 279
+				has_full_control_of_state = 345
+				has_full_control_of_state = 177
+				has_full_control_of_state = 61
+				has_full_control_of_state = 199
+				has_full_control_of_state = 123
+				has_full_control_of_state = 380
+				has_full_control_of_state = 349
+				has_full_control_of_state = 219
+				has_full_control_of_state = 195
+				has_full_control_of_state = 73
+				has_full_control_of_state = 300
+				has_full_control_of_state = 220
+				has_full_control_of_state = 316
+				has_full_control_of_state = 100
+				has_full_control_of_state = 192
+				has_full_control_of_state = 364
+				has_full_control_of_state = 329
+				has_full_control_of_state = 337
+				has_full_control_of_state = 506
+				has_full_control_of_state = 247
+				has_full_control_of_state = 69
+				has_full_control_of_state = 324
+				has_full_control_of_state = 224
+				has_full_control_of_state = 125
+				has_full_control_of_state = 375
+				has_full_control_of_state = 181
+				has_full_control_of_state = 259
+				has_full_control_of_state = 109
+				has_full_control_of_state = 358
+				has_full_control_of_state = 498
+				has_full_control_of_state = 501
+				has_full_control_of_state = 502
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALT_reclaim_the_helios_empire_enqiutia_req_tt
+				has_full_control_of_state = 214
+				has_full_control_of_state = 241
+				has_full_control_of_state = 383
+				has_full_control_of_state = 99
+			}
 		}
 		completion_reward = { 
 			set_cosmetic_tag = HELIOS_EMPIRE_ALT
 			add_stability = 0.05
 			add_war_support = 0.05
-			#Gain cores on Helios Empire Territory
+			custom_effect_tooltip = ALT_reclaim_the_helios_empire_ctt
+			hidden_effect = {
+				#Rias
+				add_state_core = 270
+				add_state_core = 158
+				add_state_core = 284
+				add_state_core = 335
+				add_state_core = 221
+				add_state_core = 348
+				add_state_core = 322
+				add_state_core = 202
+				add_state_core = 328
+				add_state_core = 209
+				add_state_core = 339
+				add_state_core = 163
+				add_state_core = 377
+				add_state_core = 185
+				add_state_core = 115
+				add_state_core = 138
+				add_state_core = 262
+				add_state_core = 254
+				add_state_core = 197
+				add_state_core = 169
+				add_state_core = 370
+				add_state_core = 188
+				add_state_core = 74
+				add_state_core = 95
+				add_state_core = 334
+				add_state_core = 88
+				add_state_core = 275
+				add_state_core = 121
+				add_state_core = 70
+				add_state_core = 86
+				#Odezya
+				add_state_core = 279
+				add_state_core = 345
+				add_state_core = 177
+				add_state_core = 61
+				add_state_core = 199
+				add_state_core = 123
+				add_state_core = 380
+				add_state_core = 349
+				add_state_core = 219
+				add_state_core = 195
+				add_state_core = 73
+				add_state_core = 300
+				add_state_core = 220
+				add_state_core = 316
+				add_state_core = 100
+				add_state_core = 192
+				add_state_core = 364
+				add_state_core = 329
+				add_state_core = 337
+				add_state_core = 506
+				add_state_core = 247
+				add_state_core = 69
+				add_state_core = 324
+				add_state_core = 224
+				add_state_core = 125
+				add_state_core = 375
+				add_state_core = 181
+				add_state_core = 259
+				add_state_core = 109
+				add_state_core = 358
+				add_state_core = 498
+				add_state_core = 501
+				add_state_core = 502
+				#Enqiutia
+				add_state_core = 214
+				add_state_core = 241
+				add_state_core = 383
+				add_state_core = 99
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2322,7 +2475,23 @@ focus_tree = {
 			}
 		}
 		completion_reward = { 
-			#Add dockyard, max infrastructure and two civs to Altiria
+			118 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				set_building_level = {
+					type = infrastructure
+					level = 5
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2685,6 +2854,23 @@ focus_tree = {
 			focus = ALT_increase_global_influence
 		}
 		completion_reward = {
+			every_country = {
+				if = {
+					limit = {
+						has_country_flag = ALT_recieved_investment
+					}
+					add_opinion_modifier = {
+						target = ALT
+						modifier = ALT_altirian_diplomats_invested
+					}
+				}
+				else = {
+					add_opinion_modifier = {
+						target = ALT
+						modifier = ALT_altirian_diplomats
+					}
+				}
+			}
 			#Add relations with nations, extra for the ones you invested into
 		}
 		ai_will_do = {
