@@ -1,1 +1,7 @@
 From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
+715;2236;sea;5498;-1;-1;-1;-1;;Owcoziemie
+1171;2236;sea;5498;-1;-1;-1;-1;;Owcoziemie2
+715;2237;sea;5502;-1;-1;-1;-1;;Lenicowka-mainland
+2237;2238;sea;5502;-1;-1;-1;-1;;Lenicowka-Gory
+850;1777;sea;5492;-1;-1;-1;-1;;SunkenIsle-mainland
+1153;1788;sea;5492;-1;-1;-1;-1;;Nearland-mainland

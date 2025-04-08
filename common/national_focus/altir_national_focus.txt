@@ -1518,8 +1518,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_find_another_use
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1552,8 +1550,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_find_another_use
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1586,8 +1582,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_find_another_use
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1613,8 +1607,6 @@ focus_tree = {
 			focus = ALT_further_faction_integration3
 			focus = ALT_further_faction_integration4
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1664,8 +1656,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ALT_the_beginning_of_a_great_alliance
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1696,8 +1686,6 @@ focus_tree = {
 			focus = ALT_altir_stands_alone
 		}
 		cost = 5
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1723,8 +1711,6 @@ focus_tree = {
 			focus = ALT_altir_stands_alone
 		}
 		cost = 5
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1752,8 +1738,6 @@ focus_tree = {
 			country_exists = ODZ
 		}
 		cost = 5
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1785,9 +1769,6 @@ focus_tree = {
 			}
 		}
 		cost = 5
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1818,9 +1799,6 @@ focus_tree = {
 				fascism > 0.3
 			}
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1850,9 +1828,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_coup_odezya
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_ANNEXATION
@@ -2015,9 +1990,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ALT_coup_odezya
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -2040,9 +2012,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_isolate_riassi
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_ANNEXATION
@@ -2310,8 +2279,6 @@ focus_tree = {
 			has_idea = ALT_scientific_nation
 		}
 		cost = 5
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -2697,9 +2664,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_propose_capital_renovation
 		}
-		available = {
-			#Has invested into Tarvozzia at least once
-		}
 		completion_reward = { 
 			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
@@ -2720,7 +2684,13 @@ focus_tree = {
 			focus = ALT_connect_our_networks
 		}
 		available = {
-			#Has completed at least 10 investments of any type in helios
+			custom_trigger_tooltip = {
+				tooltip = ALT_finish_helios_investments_att
+				check_variable = {
+					var = ALT_investment_repayment_building_construction_speed_factor
+					value > 0
+				}
+			}
 		}
 		cancelable = no
 		completion_reward = { 
