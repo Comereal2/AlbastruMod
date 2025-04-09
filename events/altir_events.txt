@@ -800,7 +800,10 @@ country_event = {
 	}
 	option = {
 		name = altir.22.b
-		#Add victory points to neutral island
+		add_victory_points = {
+			province = 4164
+			value = 5
+		}
 	}
 }
 

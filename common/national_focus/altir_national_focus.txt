@@ -2,7 +2,6 @@
 #CURRENT STUFF TO CHANGE WHEN MERGE HAPPENS
 # ALT_the_alliance_finalized and its sub-tree - add all ASAA tags to invite inside decision
 # ALT_build_railways - add the railways
-# Complete event altir.22
 focus_tree = {
 	id = ALT_focus_tree
 	country = {
