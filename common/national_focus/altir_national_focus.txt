@@ -2685,10 +2685,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ALT_finish_helios_investments_att
-				check_variable = {
-					var = ALT_investment_repayment_building_construction_speed_factor
-					value > 0
-				}
+				has_country_flag = ALT_invested
 			}
 		}
 		cancelable = no
