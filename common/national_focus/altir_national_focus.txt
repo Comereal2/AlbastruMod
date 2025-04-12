@@ -996,6 +996,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -1120,6 +1121,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -1770,6 +1772,7 @@ focus_tree = {
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
 		}
 		completion_reward = {
 			RIA = {
@@ -1855,6 +1858,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -2301,6 +2305,7 @@ focus_tree = {
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -2395,6 +2400,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_build_railways
 		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
 		completion_reward = { 
 			add_equipment_bonus = {
 				name = ALT_less_cars
@@ -2475,6 +2483,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = ALT_finish_apache_construction
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = { 
 			every_owned_state = {
@@ -3133,7 +3144,7 @@ focus_tree = {
 			focus = ALT_control_global_information_spread
 		}
 		completion_reward = { 
-
+			
 		}
 		ai_will_do = {
 			factor = 1

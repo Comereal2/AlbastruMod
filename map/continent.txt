@@ -1,16 +1,6 @@
 continents = {
-	Iusweop
-	Jund
-	Uzerd
-	Cliask
-	
-	
-	#Vanilla continents kept in for compatibility. Removing them breaks a lot of references to them
-	europe
-	north_america
-	south_america
-	australia
-	africa
-	asia
-	middle_east
+	Sulia
+	Orium
+	Helios
+	Lomezia
 }

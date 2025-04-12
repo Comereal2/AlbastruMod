@@ -1,0 +1,165 @@
+
+continent = {
+	name = Helios
+	army = {
+		male = {
+			
+		}
+	}
+	
+	navy = {
+		male = {
+			"GFX_portrait_europe_generic_navy_4"
+			"GFX_portrait_europe_generic_navy_5"
+			"GFX_portrait_europe_generic_navy_6"
+			"GFX_portrait_europe_generic_navy_7"
+		}
+	}
+	
+	political = {
+		communism = {
+				male = { 
+					
+			}
+		}
+		democratic = {
+				male = { 
+					
+			}
+		}
+		fascism = {
+				male = { 
+					
+			}
+		}
+		neutrality = {
+				male = { 
+					
+			}
+		}
+	}
+
+}
+
+continent = {
+	name = Lomezia
+	army = {
+		male = {
+			
+		}
+	}
+	
+	navy = {
+		male = {
+			"GFX_portrait_europe_generic_navy_4"
+			"GFX_portrait_europe_generic_navy_5"
+			"GFX_portrait_europe_generic_navy_6"
+			"GFX_portrait_europe_generic_navy_7"
+		}
+	}
+
+	political = {
+		communism = {
+				male = { 
+					
+			}
+		}
+		democratic = {
+				male = { 
+					
+			}
+		}
+		fascism = {
+				male = { 
+						
+			}
+		}
+		neutrality = {
+				male = { 
+						
+			}
+		}
+	}
+
+}
+
+continent = {
+	name = Sulia
+	army = {
+		male = {
+			
+		}
+	}
+	
+	navy = {
+		male = {
+			
+		}
+	}
+	
+	political = {
+		communism = {
+				male = { 
+					
+			}
+		}
+		democratic = {
+				male = { 
+					
+			}
+		}
+		fascism = {
+				male = { 
+					
+			}
+		}
+		neutrality = {
+				male = { 
+					 
+			}
+		}
+	}
+
+}
+
+continent = {
+	name = Orium
+	army = {
+		male = {
+			
+		}
+	}
+	
+	navy = {
+		male = {
+			"GFX_portrait_europe_generic_navy_4"
+			"GFX_portrait_europe_generic_navy_5"
+			"GFX_portrait_europe_generic_navy_6"
+			"GFX_portrait_europe_generic_navy_7"
+		}
+	}
+	
+	political = {
+		communism = {
+				male = { 
+					
+			}
+		}
+		democratic = {
+				male = {
+					
+			}
+		}
+		fascism = {
+				male = {
+					
+			}
+		}
+		neutrality = {
+				male = {
+					
+			}
+		}
+	}
+
+}
