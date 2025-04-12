@@ -1,7 +1,7 @@
 
 state={
 	id=138
-	name="Riastok"
+	name="STATE_138"
 	manpower = 10486442
 	
 	state_category = megalopolis
