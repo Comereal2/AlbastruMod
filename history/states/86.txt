@@ -1,7 +1,7 @@
 
 state={
 	id=86
-	name="STATE_86"
+	name="Zorplid"
 	manpower = 3664953
 	
 	state_category = large_town

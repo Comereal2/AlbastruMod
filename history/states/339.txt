@@ -1,7 +1,7 @@
 
 state={
 	id=339
-	name="STATE_339"
+	name="Blazkin"
 	manpower = 5232794
 	
 	state_category = metropolis
