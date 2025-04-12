@@ -2507,7 +2507,7 @@ focus_tree = {
 	###########################
 	focus = {
 		id = ALT_look_for_foreign_investments
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_investor
 		cost = 5
 		x = 8
 		y = 0
@@ -2524,7 +2524,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_propose_capital_renovation
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_bluu_renovation
 		cost = 5
 		x = -2
 		y = 1
@@ -2624,7 +2624,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_colaborate_with_odezya
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_colaborrate_with_odezya
 		cost = 5
 		x = 0
 		y = 1
@@ -2655,7 +2655,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_place_statues_across_tarvozzia
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_statue
 		cost = 5
 		x = 0
 		y = 1
@@ -2777,7 +2777,7 @@ focus_tree = {
 	###########################
 	focus = {
 		id = ALT_increase_global_influence
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_globe
 		cost = 5
 		x = 4
 		y = 3
@@ -2811,7 +2811,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_send_out_diplomats
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_ARG_in_memory_of_yrigoyen
 		cost = 5
 		x = 3
 		y = 1
@@ -2845,7 +2845,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_create_international_tv_channel
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_tv_channel
 		cost = 5
 		x = -2
 		y = 2
@@ -2917,7 +2917,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_expand_cryptology_departments
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_cryptology
 		cost = 5
 		x = -1
 		y = 1
@@ -2935,7 +2935,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_create_the_spahs
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_low_cost_housing
 		cost = 5
 		x = 1
 		y = 1
@@ -2966,7 +2966,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_expand_spy_training
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_vatican_agents
 		cost = 5
 		x = -3
 		y = 1
@@ -2996,7 +2996,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_develop_radio_jammers
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_energy
 		cost = 5
 		x = 1
 		y = 1
@@ -3028,7 +3028,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_control_global_information_spread
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_secret_service_agency
 		cost = 5
 		x = 2
 		y = 2
@@ -3120,7 +3120,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_spread_proaltirian_propaganda
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_propaganda
 		cost = 5
 		x = 1
 		y = 1
@@ -3141,7 +3141,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALT_stop_anti_altir_movements
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_ALT_censorship
 		cost = 5
 		x = -1
 		y = 1

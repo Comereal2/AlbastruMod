@@ -1115,6 +1115,7 @@ ALT_bop_category = {
 				tooltip_side = ALT_scientist_side
 			}
 			add_tech_bonus = {
+				name = ALT_generic_industry_bonus
 				bonus = 0.25
 				uses = 1
 				category = industry
