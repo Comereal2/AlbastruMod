@@ -160,4 +160,12 @@ spriteTypes = {
 		name = "GFX_goal_ALT_propaganda"
 		textureFile = "gfx/interface/goals/ALT_propaganda.png"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_kip_bases"
+		textureFile = "gfx/interface/goals/ALT_kip_bases.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_threaten"
+		textureFile = "gfx/interface/goals/ALT_threaten.png"
+	}
 }
