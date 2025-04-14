@@ -21,5 +21,5 @@ replace_path="map"
 replace_path="map/strategicregions"
 replace_path="map/supplyareas"
 
-name="AltirIRL"
+name="Albastru Region Mod"
 supported_version="1.16.*"

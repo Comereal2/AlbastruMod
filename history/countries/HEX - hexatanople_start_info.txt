@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 28
+capital = 575
 oob = "hexatanople_units"
 set_research_slots = 3
 # Starting tech

@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 51
+capital = 523
 oob = "blackhill_units"
 set_research_slots = 3
 # Starting tech

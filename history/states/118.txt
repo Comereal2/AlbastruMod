@@ -28,7 +28,6 @@ state={
 			
 			562 = {
 				naval_base = 5
-				supply_node = 5
 			}
 		}
 		

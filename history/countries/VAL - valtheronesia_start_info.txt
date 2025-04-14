@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 785
+capital = 8
 oob = "valtheronesia_units"
 set_research_slots = 3
 set_technology = {

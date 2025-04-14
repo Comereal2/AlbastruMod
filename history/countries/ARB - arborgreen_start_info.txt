@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 27
+capital = 885
 oob = "Arborgreen_units"
 set_research_slots = 3
 # Starting tech

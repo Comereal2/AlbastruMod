@@ -1,4 +1,4 @@
-﻿capital = 167
+﻿capital = 791
 set_oob = "woood_units"
 # Starting tech
 set_technology = {

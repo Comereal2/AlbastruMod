@@ -18,6 +18,11 @@ state={
 		owner = ISL
 		add_core_of = ISL
 		
+		add_victory_points = {
+			province = 198
+			value = 2
+		}
+
 		buildings = {
 			infrastructure = 3
 			

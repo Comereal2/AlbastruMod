@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 23
+capital = 958
 oob = "kastaryn_units"
 set_research_slots = 3
 # Starting tech
