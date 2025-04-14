@@ -2,7 +2,7 @@
 #TODO:
 #ADD RELATIONS WITH CYNTHRA
 #PRISM GROUP BENEFITS/SPIRITS
-capital = 16
+capital = 1034
 oob = "gemnoviag_units"
 set_research_slots = 3
 set_technology = {

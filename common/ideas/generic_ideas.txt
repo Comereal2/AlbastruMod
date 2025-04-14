@@ -1,0 +1,22 @@
+ideas = {
+	country = {
+		thigh_high_production = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = skirts
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				skirts_drift = 0.1
+				mobilization_speed = 0.15
+			}
+		}
+	}
+}

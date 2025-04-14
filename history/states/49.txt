@@ -18,13 +18,18 @@ state={
 		owner = ISL
 		add_core_of = ISL
 		
+		add_victory_points = {
+			province = 215
+			value = 2
+		}
+
 		buildings = {
 			infrastructure = 3
 			
 			arms_factory = 1
 			industrial_complex = 0
 			
-			214 = {
+			215 = {
 				naval_base = 1
 			}
 			

@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 15
+capital = 859
 oob = "cryingRiver_units"
 set_research_slots = 3
 # Starting tech

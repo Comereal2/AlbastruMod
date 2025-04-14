@@ -18,6 +18,11 @@ state={
 		owner = KAS
 		add_core_of = KAS
 		
+		add_victory_points = {
+			province = 4144
+			value = 10
+		}
+
 		buildings = {
 			infrastructure = 2
 			

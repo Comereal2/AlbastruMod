@@ -15,7 +15,8 @@ state={
 	}
 
 	history={
-		
+		owner = APP
+		add_core_of = APP
 		
 		buildings = {
 			infrastructure = 1
