@@ -37,10 +37,14 @@ bookmarks = {
 			history = "RIA_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-			
+				RIA_young_democracy_idea
+				RIA_booming_economy_idea
+				RIA_no_military_idea
 			}
 			focuses = {
-			
+				RIA_stock_market_crash
+				RIA_grand_coalition
+				RIA_treading_the_line
 			}
 		}
 

@@ -1,5 +1,5 @@
 #Author: Ramon
-capital = 31
+capital = 138
 oob = "riassi_units"
 set_convoys = 20
 set_research_slots = 3
