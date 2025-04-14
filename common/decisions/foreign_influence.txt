@@ -231,6 +231,54 @@ foreign_influence = {
 		}
 	}
 
+	thigh_high_production = {
+
+		icon = eng_propaganda_campaigns
+
+		days_remove = 120
+
+		available = {
+			FROM = {
+				is_puppet_of = ROOT
+				skirts < 0.9
+			}
+			OR = {
+				political_power_daily > 0.5
+				has_political_power > 60
+			}
+		}
+
+		visible = {
+			has_government = skirts
+			FROM = {
+				is_puppet_of = ROOT
+				skirts < 0.99
+			}
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_puppet_of = ROOT
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				add_timed_idea = { idea = thigh_high_production days = 120 }
+			}
+		}
+
+		modifier = {
+			political_power_cost = 0.5
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
 	police_action = {
 
 		icon = generic_prepare_civil_war

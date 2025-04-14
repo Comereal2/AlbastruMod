@@ -18,6 +18,11 @@ state={
 		owner = VAL
 		add_core_of = VAL
 		
+		add_victory_points = {
+			province = 28
+			value = 5
+		}
+
 		buildings = {
 			infrastructure = 3
 			

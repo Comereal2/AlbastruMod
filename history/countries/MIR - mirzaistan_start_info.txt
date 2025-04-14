@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 30
+capital = 315
 oob = "mirzaistan_units"
 set_research_slots = 3
 # Starting tech

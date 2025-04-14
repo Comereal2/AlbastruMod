@@ -17,7 +17,10 @@ state={
 	history={
 		owner = BLU
 		add_core_of = BLU
-		
+		add_victory_points = {
+			province = 1386
+			value = 10
+		}
 		buildings = {
 			infrastructure = 2
 			

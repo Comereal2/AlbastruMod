@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 6
+capital = 506
 oob = "odezya_units"
 set_research_slots = 3
 # Starting tech

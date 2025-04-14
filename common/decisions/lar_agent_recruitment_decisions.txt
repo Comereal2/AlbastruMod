@@ -1,6 +1,6 @@
 lar_local_recruitment = {
-	#unlocks decisions to recruit in Europe
-	recruit_in_europe = {
+	#unlocks decisions to recruit in helios
+	recruit_in_helios = {
 
 		#icon = generic_research
 
@@ -11,22 +11,22 @@ lar_local_recruitment = {
 		visible = {
 			capital_scope = {
 				NOT = {
-					is_on_continent = europe
+					is_on_continent = helios
 				}
 			}
 			OR = {
 				any_owned_state = {
-					is_on_continent = europe
+					is_on_continent = helios
 				}
 				any_allied_country = {
 					any_owned_state = {
-						is_on_continent = europe
+						is_on_continent = helios
 					}
 				}
 				any_of_scopes = {
 					array = subjects
 					any_owned_state = {
-						is_on_continent = europe
+						is_on_continent = helios
 					}
 				}
 			}
@@ -42,7 +42,7 @@ lar_local_recruitment = {
 		days_remove = 90
 
 		remove_effect = {
-			set_country_flag = europe_recruitment_unlocked
+			set_country_flag = helios_recruitment_unlocked
 		}
 
 		ai_will_do = {
@@ -50,8 +50,8 @@ lar_local_recruitment = {
 		}
 	}
 
-	recruit_in_europe_state = {
-
+	recruit_in_helios_state = {
+		name = recruit_in_europe_state
 		icon = onmap_recruit_operative
 
 		available = {
@@ -60,13 +60,13 @@ lar_local_recruitment = {
 
 		target_root_trigger = {
 			OR = {
-				has_country_flag = europe_recruitment_unlocked
-				capital_scope = { is_on_continent = europe }
+				has_country_flag = helios_recruitment_unlocked
+				capital_scope = { is_on_continent = helios }
 			}
-			NOT = { has_country_flag = europe_recruitment_in_process }
+			NOT = { has_country_flag = helios_recruitment_in_process }
 		}
 
-		state_target = europe
+		state_target = helios
 		target_trigger = {
 			FROM = {
 				OR = {
@@ -91,10 +91,10 @@ lar_local_recruitment = {
 		}
 		visible = {
 			OR = {
-				has_country_flag = europe_recruitment_unlocked
-				capital_scope = { is_on_continent = europe }
+				has_country_flag = helios_recruitment_unlocked
+				capital_scope = { is_on_continent = helios }
 			}
-			NOT = { has_country_flag = europe_recruitment_in_process }
+			NOT = { has_country_flag = helios_recruitment_in_process }
 		}
 
 		fire_only_once = no
@@ -103,7 +103,7 @@ lar_local_recruitment = {
 		days_re_enable = 180
 		on_map_mode = map_only
 		complete_effect = {
-			set_country_flag = { flag = europe_recruitment_in_process days = 180 value = 1 }
+			set_country_flag = { flag = helios_recruitment_in_process days = 180 value = 1 }
 			if = {
 				limit = {
 					num_of_operatives < num_operative_slots
@@ -126,8 +126,8 @@ lar_local_recruitment = {
 			base = 0
 		}
 	}
-#unlocks decisions to recruit in Europe
-	recruit_in_north_america = {
+#unlocks decisions to recruit in helios
+	recruit_in_lomezia = {
 
 		#icon = generic_research
 
@@ -138,22 +138,22 @@ lar_local_recruitment = {
 		visible = {
 			capital_scope = {
 				NOT = {
-					is_on_continent = north_america
+					is_on_continent = lomezia
 				}
 			}
 			OR = {
 				any_owned_state = {
-					is_on_continent = north_america
+					is_on_continent = lomezia
 				}
 				any_allied_country = {
 					any_owned_state = {
-						is_on_continent = north_america
+						is_on_continent = lomezia
 					}
 				}
 				any_of_scopes = {
 					array = subjects
 					any_owned_state = {
-						is_on_continent = north_america
+						is_on_continent = lomezia
 					}
 				}
 			}
@@ -169,7 +169,7 @@ lar_local_recruitment = {
 		days_remove = 90
 
 		remove_effect = {
-			set_country_flag = north_america_recruitment_unlocked
+			set_country_flag = lomezia_recruitment_unlocked
 		}
 
 		ai_will_do = {
@@ -177,7 +177,7 @@ lar_local_recruitment = {
 		}
 	}
 
-	recruit_in_north_america_state = {
+	recruit_in_lomezia_state = {
 
 		icon = onmap_recruit_operative
 		name = recruit_in_europe_state
@@ -185,13 +185,13 @@ lar_local_recruitment = {
 			
 		}
 
-		state_target = north_america
+		state_target = lomezia
 		target_root_trigger = {
 			OR = {
-				has_country_flag = north_america_recruitment_unlocked
-				capital_scope = { is_on_continent = north_america }
+				has_country_flag = lomezia_recruitment_unlocked
+				capital_scope = { is_on_continent = lomezia }
 			}
-			NOT = { has_country_flag = north_america_recruitment_in_process }
+			NOT = { has_country_flag = lomezia_recruitment_in_process }
 		}
 		target_trigger = {
 			FROM = {
@@ -219,10 +219,10 @@ lar_local_recruitment = {
 		}
 		visible = {
 			OR = {
-				has_country_flag = north_america_recruitment_unlocked
-				capital_scope = { is_on_continent = north_america }
+				has_country_flag = lomezia_recruitment_unlocked
+				capital_scope = { is_on_continent = lomezia }
 			}
-			NOT = { has_country_flag = north_america_recruitment_in_process }
+			NOT = { has_country_flag = lomezia_recruitment_in_process }
 		}
 
 		fire_only_once = no
@@ -231,7 +231,7 @@ lar_local_recruitment = {
 		days_re_enable = 180
 		on_map_mode = map_only
 		complete_effect = {
-			set_country_flag = { flag = north_america_recruitment_in_process days = 180 value = 1 }
+			set_country_flag = { flag = lomezia_recruitment_in_process days = 180 value = 1 }
 			if = {
 				limit = {
 					num_of_operatives < num_operative_slots
@@ -255,8 +255,8 @@ lar_local_recruitment = {
 		}
 	}
 
-	#unlocks decisions to recruit in south_america
-	recruit_in_south_america = {
+	#unlocks decisions to recruit in sulia
+	recruit_in_sulia = {
 
 		#icon = generic_research
 
@@ -267,22 +267,22 @@ lar_local_recruitment = {
 		visible = {
 			capital_scope = {
 				NOT = {
-					is_on_continent = south_america
+					is_on_continent = sulia
 				}
 			}
 			OR = {
 				any_owned_state = {
-					is_on_continent = south_america
+					is_on_continent = sulia
 				}
 				any_allied_country = {
 					any_owned_state = {
-						is_on_continent = south_america
+						is_on_continent = sulia
 					}
 				}
 				any_of_scopes = {
 					array = subjects
 					any_owned_state = {
-						is_on_continent = south_america
+						is_on_continent = sulia
 					}
 				}
 			}
@@ -298,7 +298,7 @@ lar_local_recruitment = {
 		days_remove = 90
 
 		remove_effect = {
-			set_country_flag = south_america_recruitment_unlocked
+			set_country_flag = sulia_recruitment_unlocked
 		}
 
 		ai_will_do = {
@@ -306,7 +306,7 @@ lar_local_recruitment = {
 		}
 	}
 
-	recruit_in_south_america_state = {
+	recruit_in_sulia_state = {
 
 		icon = onmap_recruit_operative
 		name = recruit_in_europe_state
@@ -314,13 +314,13 @@ lar_local_recruitment = {
 			
 		}
 
-		state_target = south_america
+		state_target = sulia
 		target_root_trigger = {
 			OR = {
-				has_country_flag = south_america_recruitment_unlocked
-				capital_scope = { is_on_continent = south_america }
+				has_country_flag = sulia_recruitment_unlocked
+				capital_scope = { is_on_continent = sulia }
 			}
-			NOT = { has_country_flag = south_america_recruitment_in_process }
+			NOT = { has_country_flag = sulia_recruitment_in_process }
 		}
 		target_trigger = {
 			FROM = {
@@ -348,10 +348,10 @@ lar_local_recruitment = {
 		}
 		visible = {
 			OR = {
-				has_country_flag = south_america_recruitment_unlocked
-				capital_scope = { is_on_continent = south_america }
+				has_country_flag = sulia_recruitment_unlocked
+				capital_scope = { is_on_continent = sulia }
 			}
-			NOT = { has_country_flag = south_america_recruitment_in_process }
+			NOT = { has_country_flag = sulia_recruitment_in_process }
 		}
 
 		fire_only_once = no
@@ -360,7 +360,7 @@ lar_local_recruitment = {
 		days_re_enable = 180
 		on_map_mode = map_only
 		complete_effect = {
-			set_country_flag = { flag = south_america_recruitment_in_process days = 180 value = 1 }
+			set_country_flag = { flag = sulia_recruitment_in_process days = 180 value = 1 }
 			if = {
 				limit = {
 					num_of_operatives < num_operative_slots
@@ -384,8 +384,8 @@ lar_local_recruitment = {
 		}
 	}
 
-	#unlocks decisions to recruit in africa
-	recruit_in_africa = {
+	#unlocks decisions to recruit in orium
+	recruit_in_orium = {
 
 		#icon = generic_research
 
@@ -396,22 +396,22 @@ lar_local_recruitment = {
 		visible = {
 			capital_scope = {
 				NOT = {
-					is_on_continent = africa
+					is_on_continent = orium
 				}
 			}
 			OR = {
 				any_owned_state = {
-					is_on_continent = africa
+					is_on_continent = orium
 				}
 				any_allied_country = {
 					any_owned_state = {
-						is_on_continent = africa
+						is_on_continent = orium
 					}
 				}
 				any_of_scopes = {
 					array = subjects
 					any_owned_state = {
-						is_on_continent = africa
+						is_on_continent = orium
 					}
 				}
 			}
@@ -427,7 +427,7 @@ lar_local_recruitment = {
 		days_remove = 90
 
 		remove_effect = {
-			set_country_flag = africa_recruitment_unlocked
+			set_country_flag = orium_recruitment_unlocked
 		}
 
 		ai_will_do = {
@@ -435,7 +435,7 @@ lar_local_recruitment = {
 		}
 	}
 
-	recruit_in_africa_state = {
+	recruit_in_orium_state = {
 
 		icon = onmap_recruit_operative
 		name = recruit_in_europe_state
@@ -443,292 +443,18 @@ lar_local_recruitment = {
 			
 		}
 
-		state_target = africa
+		state_target = orium
 		target_root_trigger = {
 			OR = {
-				has_country_flag = africa_recruitment_unlocked
-				capital_scope = { is_on_continent = africa }
-			}
-			NOT = { has_country_flag = africa_recruitment_in_process }
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					AND = {
-						has_variable = historical_capital_for_country
-						var:historical_capital_for_country = {
-							OR = {
-								has_capitulated = yes
-								exists = no
-							}
-							NOT = { tag = ROOT }
-						}
-					}
-					AND = {
-						is_capital = yes
-						CONTROLLER = {
-							NOT = {
-								tag = ROOT
-							}
-						}
-					}
-				}
-			}
-		}
-		visible = {
-			OR = {
-				has_country_flag = africa_recruitment_unlocked
-				capital_scope = { is_on_continent = africa }
-			}
-			NOT = { has_country_flag = africa_recruitment_in_process }
-		}
-
-		fire_only_once = no
-		cost = 0
-
-		days_re_enable = 180
-		on_map_mode = map_only
-		complete_effect = {
-			set_country_flag = { flag = africa_recruitment_in_process days = 180 value = 1 }
-			if = {
-				limit = {
-					num_of_operatives < num_operative_slots
-				}
-				custom_effect_tooltip = recruit_in_state_tt
-			}
-			else = {
-				custom_effect_tooltip = recruit_in_state_to_pool_tt
-			}
-			hidden_effect = {
-				create_operative_leader = {
-					bypass_recruitment = yes
-					nationalities = { FROM.OWNER }
-					portrait_tag_override = FROM.OWNER
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-
-	#unlocks decisions to recruit in middle_east
-	recruit_in_middle_east = {
-
-		#icon = generic_research
-
-		available = {
-			
-		}
-
-		visible = {
-			capital_scope = {
-				NOT = {
-					is_on_continent = middle_east
-				}
-			}
-			OR = {
-				any_owned_state = {
-					is_on_continent = middle_east
-				}
-				any_allied_country = {
-					any_owned_state = {
-						is_on_continent = middle_east
-					}
-				}
-				any_of_scopes = {
-					array = subjects
-					any_owned_state = {
-						is_on_continent = middle_east
-					}
-				}
-			}
-		}
-
-		fire_only_once = yes
-		cost = 50
-
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		days_remove = 90
-
-		remove_effect = {
-			set_country_flag = middle_east_recruitment_unlocked
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-
-	recruit_in_middle_east_state = {
-
-		icon = onmap_recruit_operative
-		name = recruit_in_europe_state
-		available = {
-			
-		}
-
-		state_target = middle_east
-		target_root_trigger = {
-			OR = {
-				has_country_flag = middle_east_recruitment_unlocked
-				capital_scope = { is_on_continent = middle_east }
-			}
-			NOT = { has_country_flag = middle_east_recruitment_in_process }
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					AND = {
-						has_variable = historical_capital_for_country
-						var:historical_capital_for_country = {
-							OR = {
-								has_capitulated = yes
-								exists = no
-							}
-							NOT = { tag = ROOT }
-						}
-					}
-					AND = {
-						is_capital = yes
-						CONTROLLER = {
-							NOT = {
-								tag = ROOT
-							}
-						}
-					}
-				}
-			}
-		}
-		visible = {
-			OR = {
-				has_country_flag = middle_east_recruitment_unlocked
-				capital_scope = { is_on_continent = middle_east }
-			}
-			NOT = { has_country_flag = middle_east_recruitment_in_process }
-		}
-
-		fire_only_once = no
-		cost = 0
-
-		days_re_enable = 180
-		on_map_mode = map_only
-		complete_effect = {
-			set_country_flag = { flag = middle_east_recruitment_in_process days = 180 value = 1 }
-			if = {
-				limit = {
-					num_of_operatives < num_operative_slots
-				}
-				custom_effect_tooltip = recruit_in_state_tt
-			}
-			else = {
-				custom_effect_tooltip = recruit_in_state_to_pool_tt
-			}
-			hidden_effect = {
-				create_operative_leader = {
-					bypass_recruitment = yes
-					nationalities = { FROM.OWNER }
-					portrait_tag_override = FROM.OWNER
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-
-	#unlocks decisions to recruit in asia
-	recruit_in_asia = {
-
-		#icon = generic_research
-
-		available = {
-			
-		}
-
-		visible = {
-			capital_scope = {
-				NOT = {
-					is_on_continent = asia
-				}
-			}
-			OR = {
-				any_owned_state = {
-					is_on_continent = asia
-				}
-				any_allied_country = {
-					any_owned_state = {
-						is_on_continent = asia
-					}
-				}
-				any_of_scopes = {
-					array = subjects
-					any_owned_state = {
-						is_on_continent = asia
-					}
-				}
-			}
-		}
-
-		fire_only_once = yes
-		cost = 50
-
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		days_remove = 90
-
-		remove_effect = {
-			set_country_flag = asia_recruitment_unlocked
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-
-	recruit_in_asia_state = {
-
-		icon = onmap_recruit_operative
-		name = recruit_in_europe_state
-		available = {
-			
-		}
-
-		state_target = asia
-		target_root_trigger = {
-			OR = {
-				has_country_flag = asia_recruitment_unlocked
+				has_country_flag = orium_recruitment_unlocked
 				capital_scope = {
-					is_on_continent = asia
+					is_on_continent = orium
 				}
 			}
-			NOT = {
-				tag = RAJ
-				tag = PAK
-				tag = BAN
-				tag = NEP
-				tag = BHU
-				tag = SRL
-			}
-			NOT = { has_country_flag = asia_recruitment_in_process }
+			NOT = { has_country_flag = orium_recruitment_in_process }
 		}
 		target_trigger = {
 			FROM = {
-				NOT = {
-					is_core_of = RAJ
-					is_core_of = PAK
-					is_core_of = BAN
-					is_core_of = NEP
-					is_core_of = BHU
-					is_core_of = SRL
-				}
 				OR = {
 					AND = {
 						has_variable = historical_capital_for_country
@@ -753,9 +479,9 @@ lar_local_recruitment = {
 		}
 		visible = {
 			OR = {
-				has_country_flag = asia_recruitment_unlocked
+				has_country_flag = orium_recruitment_unlocked
 				capital_scope = { 
-					is_on_continent = asia 
+					is_on_continent = orium 
 				}
 			}
 			NOT = {
@@ -766,7 +492,7 @@ lar_local_recruitment = {
 				tag = BHU
 				tag = SRL
 			}
-			NOT = { has_country_flag = asia_recruitment_in_process }
+			NOT = { has_country_flag = orium_recruitment_in_process }
 		}
 
 		fire_only_once = no
@@ -775,7 +501,7 @@ lar_local_recruitment = {
 		days_re_enable = 180
 		on_map_mode = map_only
 		complete_effect = {
-			set_country_flag = { flag = asia_recruitment_in_process days = 180 value = 1 }
+			set_country_flag = { flag = orium_recruitment_in_process days = 180 value = 1 }
 			if = {
 				limit = {
 					num_of_operatives < num_operative_slots
@@ -797,299 +523,5 @@ lar_local_recruitment = {
 		ai_will_do = {
 			base = 0
 		}
-	}
-
-	#unlocks decisions to recruit in australia
-	recruit_in_australia = {
-
-		#icon = generic_research
-
-		available = {
-			
-		}
-
-		visible = {
-			capital_scope = {
-				NOT = {
-					is_on_continent = australia
-				}
-			}
-			OR = {
-				any_owned_state = {
-					is_on_continent = australia
-				}
-				any_allied_country = {
-					any_owned_state = {
-						is_on_continent = australia
-					}
-				}
-				any_of_scopes = {
-					array = subjects
-					any_owned_state = {
-						is_on_continent = australia
-					}
-				}
-			}
-		}
-
-		fire_only_once = yes
-		cost = 50
-
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		days_remove = 90
-
-		remove_effect = {
-			set_country_flag = australia_recruitment_unlocked
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-
-	recruit_in_australia_state = {
-
-		icon = onmap_recruit_operative
-		name = recruit_in_europe_state
-		available = {
-			
-		}
-
-		state_target = australia
-		target_root_trigger = {
-			OR = {
-				has_country_flag = australia_recruitment_unlocked
-				capital_scope = { is_on_continent = australia }
-			}
-			NOT = { has_country_flag = australia_recruitment_in_process }
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					AND = {
-						has_variable = historical_capital_for_country
-						var:historical_capital_for_country = {
-							OR = {
-								has_capitulated = yes
-								exists = no
-							}
-							NOT = { tag = ROOT }
-						}
-					}
-					AND = {
-						is_capital = yes
-						CONTROLLER = {
-							NOT = {
-								tag = ROOT
-							}
-						}
-					}
-				}
-			}
-		}
-		visible = {
-			OR = {
-				has_country_flag = australia_recruitment_unlocked
-				capital_scope = { is_on_continent = australia }
-			}
-			NOT = { has_country_flag = australia_recruitment_in_process }
-		}
-
-		fire_only_once = no
-		cost = 0
-
-		days_re_enable = 180
-		on_map_mode = map_only
-		complete_effect = {
-			set_country_flag = { flag = australia_recruitment_in_process days = 180 value = 1 }
-			if = {
-				limit = {
-					num_of_operatives < num_operative_slots
-				}
-				custom_effect_tooltip = recruit_in_state_tt
-			}
-			else = {
-				custom_effect_tooltip = recruit_in_state_to_pool_tt
-			}
-			hidden_effect = {
-				create_operative_leader = {
-					bypass_recruitment = yes
-					nationalities = { FROM.OWNER }
-					portrait_tag_override = FROM.OWNER
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-
-	#unlocks decisions to recruit in india
-	recruit_in_india = {
-
-		#icon = generic_research
-
-		available = {
-			
-		}
-
-		visible = {
-			NOT = {
-				tag = RAJ
-				tag = PAK
-				tag = BAN
-				tag = NEP
-				tag = BHU
-			}
-			OR = {
-				any_owned_state = {
-					OR = {
-						is_core_of = RAJ
-						is_core_of = PAK
-						is_core_of = BAN
-						is_core_of = NEP
-						is_core_of = BHU
-						is_core_of = SRL
-					}
-				}
-				is_in_faction_with = RAJ
-				is_in_faction_with = PAK
-				is_in_faction_with = BAN
-				is_in_faction_with = NEP
-				is_in_faction_with = BHU
-				is_in_faction_with = SRL
-				any_of_scopes = {
-					array = subjects
-					any_owned_state = {
-						OR = {
-							is_core_of = RAJ
-							is_core_of = PAK
-							is_core_of = BAN
-							is_core_of = NEP
-							is_core_of = BHU
-							is_core_of = SRL
-						}
-					}
-				}
-			}
-		}
-
-		fire_only_once = yes
-		cost = 50
-
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		days_remove = 90
-
-		remove_effect = {
-			set_country_flag = india_recruitment_unlocked
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-
-	recruit_in_india_state = {
-
-		icon = onmap_recruit_operative
-		name = recruit_in_europe_state
-		available = {
-			
-		}
-
-		state_target = yes
-		target_root_trigger = {
-			OR = {
-				has_country_flag = india_recruitment_unlocked
-				tag = RAJ
-				tag = PAK
-				tag = BAN
-				tag = NEP
-				tag = BHU
-				tag = SRL
-			}
-			NOT = { has_country_flag = india_recruitment_in_process }
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					is_core_of = RAJ
-					is_core_of = PAK
-					is_core_of = BAN
-					is_core_of = NEP
-					is_core_of = BHU
-					is_core_of = SRL
-				}
-				OR = {
-					AND = {
-						has_variable = historical_capital_for_country
-						var:historical_capital_for_country = {
-							OR = {
-								has_capitulated = yes
-								exists = no
-							}
-							NOT = { tag = ROOT }
-						}
-					}
-					AND = {
-						is_capital = yes
-						CONTROLLER = {
-							NOT = {
-								tag = ROOT
-							}
-						}
-					}
-				}
-			}
-		}
-		visible = {
-			OR = {
-				has_country_flag = india_recruitment_unlocked
-				tag = RAJ
-				tag = PAK
-				tag = BAN
-				tag = NEP
-				tag = BHU
-				tag = SRL
-			}
-			NOT = { has_country_flag = india_recruitment_in_process }
-		}
-
-		fire_only_once = no
-		cost = 0
-
-		days_re_enable = 180
-		on_map_mode = map_only
-		complete_effect = {
-			set_country_flag = { flag = india_recruitment_in_process days = 180 value = 1 }
-			if = {
-				limit = {
-					num_of_operatives < num_operative_slots
-				}
-				custom_effect_tooltip = recruit_in_state_tt
-			}
-			else = {
-				custom_effect_tooltip = recruit_in_state_to_pool_tt
-			}
-			hidden_effect = {
-				create_operative_leader = {
-					bypass_recruitment = yes
-					nationalities = { FROM.OWNER }
-					portrait_tag_override = FROM.OWNER
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-	
+	}	
 }

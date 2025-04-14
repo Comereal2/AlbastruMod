@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 26
+capital = 143
 oob = "tzedekia_units"
 set_research_slots = 3
 # Starting tech

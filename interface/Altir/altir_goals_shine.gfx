@@ -124,4 +124,56 @@ spriteTypes = {
 		name = "GFX_goal_ALT_promote_public_transport_shine"
 		textureFile = "gfx/interface/goals/ALT_promote_public_transport.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_tv_channel_shine"
+		textureFile = "gfx/interface/goals/ALT_tv_channel.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_censorship_shine"
+		textureFile = "gfx/interface/goals/ALT_censorship.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_cryptology_shine"
+		textureFile = "gfx/interface/goals/ALT_cryptography.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_statue_shine"
+		textureFile = "gfx/interface/goals/ALT_statue.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_colaborrate_with_odezya_shine"
+		textureFile = "gfx/interface/goals/ALT_colaborrate_with_odezya.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_bluu_renovation_shine"
+		textureFile = "gfx/interface/goals/ALT_bluu_renovation.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_investor_shine"
+		textureFile = "gfx/interface/goals/ALT_investor.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_globe_shine"
+		textureFile = "gfx/interface/goals/ALT_globe.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_propaganda_shine"
+		textureFile = "gfx/interface/goals/ALT_propaganda.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_kip_bases_shine"
+		textureFile = "gfx/interface/goals/ALT_kip_bases.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_threaten_shine"
+		textureFile = "gfx/interface/goals/ALT_threaten.png"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_railroad_shine"
+		textureFile = "gfx/interface/goals/ALT_rias_railroads.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_return_on_investments_shine"
+		textureFile = "gfx/interface/goals/ALT_return_on_investments.dds"
+	}
 }

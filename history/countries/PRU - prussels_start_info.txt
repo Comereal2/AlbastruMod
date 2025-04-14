@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 17
+capital = 603
 oob = "prussels_units"
 set_research_slots = 3
 # Starting tech

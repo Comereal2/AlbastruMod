@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_skirts_group"
+		texturefile = "gfx/interface/ideologies/skirts_group.dds"
+	}
+}

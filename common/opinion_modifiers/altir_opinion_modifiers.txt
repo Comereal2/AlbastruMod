@@ -4,4 +4,12 @@ opinion_modifiers = {
 		value = 30
 		decay = 1
 	}
+	ALT_altirian_diplomats = {
+		value = 20
+		decay = 1
+	}
+	ALT_altirian_diplomats_invested = {
+		value = 30
+		decay = 0.5
+	}
 }
