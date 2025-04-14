@@ -168,4 +168,12 @@ spriteTypes = {
 		name = "GFX_goal_ALT_threaten_shine"
 		textureFile = "gfx/interface/goals/ALT_threaten.png"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_railroad_shine"
+		textureFile = "gfx/interface/goals/ALT_rias_railroads.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ALT_return_on_investments_shine"
+		textureFile = "gfx/interface/goals/ALT_return_on_investments.dds"
+	}
 }

@@ -236,6 +236,12 @@ ALT_create_international_tv_channel: "Create an International TV Channel"
 ALT_create_international_tv_channel_desc: "Television can help our government reach people of older ages, ones which may not look on the internet for information. By creating a free international channel spreading the Altirian side of the story, we can convince many people to belive what we tell them."
 ALT_stop_anti_altir_movements: "Stop Anti-Altir Movements"
 ALT_stop_anti_altir_movements_desc: "Even with our government controlling information, different anti-altir movements will still exist. However now we can limit their spread and popularity by making their promotion appear less around the internet."
+#Army
+ALT_create_the_new_armed_forces: "Create the New Armed Forces"
+ALT_create_the_new_armed_forces_desc: ""
+#Navy
+ALT_expand_altiria_dockyards: "Expand Altiria Dockyards"
+ALT_expand_altiria_dockyards_desc: ""
 #Production bonuses, idk where to put these
 ALT_less_cars: "Less Cars"
 ALT_more_trains: "More Trains"
