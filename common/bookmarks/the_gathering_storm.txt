@@ -2,7 +2,7 @@ bookmarks = {
 	bookmark = {
 		name = "GATHERING_STORM_NAME"
 		desc = "GATHERING_STORM_DESC"
-		date = 1936.1.1.12
+		date = 2024.11.11.01
 		picture = "GFX_select_date_1936"
 		default = yes
 		default_country = "ALT"
@@ -11,10 +11,14 @@ bookmarks = {
 			history = "ALT_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				
+				ALT_wavering_loyaltyn
+				ALT_ghost_of_the_helios_empire
+				ALT_technocratic_nation
 			}
 			focuses = {
-			
+				ALT_concentrate_power
+				ALT_build_apache
+				ALT_abolish_the_supreme_suzerain
 			}
 		}
 		
@@ -33,13 +37,61 @@ bookmarks = {
 			history = "RIA_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-			
+				RIA_young_democracy_idea
+				RIA_booming_economy_idea
+				RIA_no_military_idea
 			}
 			focuses = {
-			
+				RIA_stock_market_crash
+				RIA_grand_coalition
+				RIA_treading_the_line
+			}
+		}
+
+		"ODZ"={
+			history = "ODZ_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+				
 			}
 		}
 		
+		"BLU"={
+			history = "BLU_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"WOD"={
+			history = "WOD_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"VAL"={
+			history = "VAL_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
 		}

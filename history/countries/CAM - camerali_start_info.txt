@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 20
+capital = 1013
 oob = "camerali_units"
 set_research_slots = 3
 # Starting tech

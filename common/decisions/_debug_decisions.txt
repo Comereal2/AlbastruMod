@@ -234,24 +234,6 @@ debug_decisions = {
 				tech_engineers2 = 1
 				popup = no
 			}
-
-			if = {
-				limit = {
-					tag = ITA
-				}
-				complete_national_focus = ITA_italian_tankettes
-				complete_national_focus = ITA_self_propelled_guns
-				complete_national_focus = ITA_end_fiat_ansaldo_duopoly
-				complete_national_focus = ITA_ferrea_mole_ferreo_cuore
-			}
-			else_if = {
-				limit = {
-					tag = SOV
-				}
-				complete_national_focus = SOV_superior_war_machines
-				complete_national_focus = SOV_soviet_artillery
-				complete_national_focus = SOV_they_will_know_fear
-			}
 		}
 	}
 
@@ -276,33 +258,6 @@ debug_decisions = {
 			add_ideas = add_production_efficiency
 		}
 	}
-
-	#nuke_target_debug = {
-	#	icon = generic_research
-#
-	#	available = {
-	#		is_ai = no
-	#		is_debug = yes
-	#	}
-#
-	#	visible = {
-	#		is_ai = no
-	#		is_debug = yes
-	#		has_global_flag = show_debug_decisions_flag
-	#	}
-#
-	#	fire_only_once = no
-	#	cost = 0
-#
-	#	complete_effect = {
-	#		TIB = {
-	#			launch_nuke = {
-	#				province = 9950
-	#				use_nuke = no
-	#			}	
-	#		}
-	#	}
-	#}
 		
 	remove_efficiency_growth_debug = {
 		icon = generic_research
@@ -487,7 +442,6 @@ debug_decisions = {
 
 	FRA_capture_operative_debug = {
 		available = {
-			NOT = { TAG = FRA }
 			num_of_operatives > 0
 		}
 
@@ -519,7 +473,6 @@ debug_decisions = {
 
 	FRA_turn_operative_debug = {
 		available = {
-			NOT = { TAG = FRA }
 			num_of_operatives > 0
 		}
 

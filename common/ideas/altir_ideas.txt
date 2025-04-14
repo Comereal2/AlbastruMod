@@ -564,6 +564,7 @@ ideas = {
 			picture = ALT_develop_facilities
 			removal_cost = -1
 			modifier = {
+				research_speed_factor = 0.1
 				production_speed_facility_factor = 0.1
 				scientist_breakthrough_bonus_factor = 0.1
 			}

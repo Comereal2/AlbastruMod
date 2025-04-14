@@ -15,7 +15,8 @@ state={
 	}
 
 	history={
-		
+		owner = ALT
+		add_core_of = ALT
 		
 		buildings = {
 			infrastructure = 2

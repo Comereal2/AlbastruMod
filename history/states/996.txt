@@ -15,7 +15,8 @@ state={
 	}
 
 	history={
-		
+		owner = ARB
+		add_core_of = ARB
 		
 		buildings = {
 			infrastructure = 2

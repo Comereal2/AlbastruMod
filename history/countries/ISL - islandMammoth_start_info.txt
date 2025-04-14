@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 18
+capital = 47
 oob = "islandMammoth_units"
 set_research_slots = 3
 # Starting tech

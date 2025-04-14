@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 7
+capital = 420
 oob = "cynthra_units"
 set_research_slots = 3
 # Starting tech
