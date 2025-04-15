@@ -2,7 +2,7 @@
 state={
 	id=494
 	name="STATE_494"
-	manpower = 31128
+	manpower = 24018
 	
 	state_category = pastoral
 	resources={
@@ -22,12 +22,7 @@ state={
 			infrastructure = 2
 			
 			arms_factory = 0
-			industrial_complex = 0
-			
-			2237 = {
-				naval_base = 1
-			}
-			
+			industrial_complex = 0			
 		}
 		
 	}

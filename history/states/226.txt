@@ -10,7 +10,7 @@ state={
 		chromium=0
 		oil=0
 		rubber=0
-		steel=0
+		steel=10
 		tungsten=0
 	}
 
