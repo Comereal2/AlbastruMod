@@ -38,8 +38,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ALT_concentrate_power
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		cancelable = no
 		search_filters = {
@@ -77,8 +75,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_abolish_the_supreme_suzerain
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -204,8 +200,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ALT_a_bright_red_future
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -269,8 +263,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ALT_towards_a_democratic_altir
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -299,13 +291,57 @@ focus_tree = {
 			focus = ALT_create_a_democracy
 			focus = ALT_establish_free_elections
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_control_the_elections
+		icon = GFX_focus_generic_self_management
+		x = 2
+		y = 1
+		relative_position_id = ALT_create_a_democracy
+		cost = 10
+		prerequisite = {
+			focus = ALT_create_a_democracy
+			focus = ALT_a_red_centralized_government
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = var:current_party_ideology_group
+				popularity = 0.15
+			}
+			add_stability = -0.05
+			add_political_power = 70
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_reassure_the_people
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		relative_position_id = ALT_control_the_elections
+		cost = 5
+		prerequisite = {
+			focus = ALT_control_the_elections
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			remove_ideas = ALT_unstable_society
 		}
 		ai_will_do = {
 			factor = 1
@@ -321,8 +357,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_a_red_centralized_government
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -356,8 +390,6 @@ focus_tree = {
 			focus = ALT_create_a_democracy
 			focus = ALT_a_red_centralized_government
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -386,8 +418,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ALT_abolish_the_supreme_suzerain
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -428,8 +458,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ALT_continue_the_status_quo
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -456,8 +484,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_revise_foreign_policy
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -515,8 +541,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ALT_revise_foreign_policy
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -545,8 +569,6 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ALT_preventionist_approach
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -576,8 +598,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_isolationist_approach
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -602,8 +622,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_focus_on_the_economy
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -632,8 +650,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_focus_on_the_economy
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -667,8 +683,6 @@ focus_tree = {
 				range > ALT_balance_range
 			}
 		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1444,6 +1458,7 @@ focus_tree = {
 			}
 			NOT = {
 				has_idea = ALT_scientific_nation
+				has_completed_focus = ALT_abolish_the_supreme_suzerain
 			}
 		}
 		prerequisite = {
@@ -1478,6 +1493,7 @@ focus_tree = {
 			}
 			NOT = {
 				has_idea = ALT_scientific_nation
+				has_completed_focus = ALT_abolish_the_supreme_suzerain
 			}
 		}
 		prerequisite = {
@@ -1512,6 +1528,7 @@ focus_tree = {
 			}
 			NOT = {
 				has_idea = ALT_scientific_nation
+				has_completed_focus = ALT_abolish_the_supreme_suzerain
 			}
 		}
 		prerequisite = {
@@ -1544,6 +1561,7 @@ focus_tree = {
 			}
 			NOT = {
 				has_idea = ALT_scientific_nation
+				has_completed_focus = ALT_abolish_the_supreme_suzerain
 			}
 		}
 		prerequisite = {
@@ -1576,6 +1594,7 @@ focus_tree = {
 			}
 			NOT = {
 				has_idea = ALT_scientific_nation
+				has_completed_focus = ALT_abolish_the_supreme_suzerain
 			}
 		}
 		prerequisite = {
@@ -2334,6 +2353,13 @@ focus_tree = {
 		cost = 5
 		x = 11
 		y = 0
+		offset = {
+			trigger = {
+				has_completed_focus = ALT_abolish_the_supreme_suzerain
+			}
+			x = -17
+			y = 0
+		}
 		relative_position_id = ALT_concentrate_power
 		select_effect = {
 			set_country_flag = focus_taken
