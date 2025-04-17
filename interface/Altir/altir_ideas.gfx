@@ -117,14 +117,6 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/ALT_odezyan_trade.dds"
 	}
 	spriteType = {
-		name = "GFX_portrait_ALT_anto_gabar_small"
-		textureFile = "gfx/interface/ideas/ALT_anto_gabar.png"
-	}
-	spriteType = {
-		name = "GFX_portrait_ALT_laika_small"
-		textureFile = "gfx/interface/ideas/ALT_laika.dds"
-	}
-	spriteType = {
 		name = "GFX_idea_ALT_tourism_influx"
 		textureFile = "gfx/interface/ideas/ALT_tourism_influx.dds"
 	}

@@ -1,3 +1,14 @@
+#Author: Comereal
+generic_core_with_compliance = {
+	icon = generic_state
+	priority = 10
+	allowed = {
+		always = yes
+	}
+	visible_when_empty = no
+}
+
+#Base game
 debug_decisions = {
 	icon = generic_research
 	visible = {

@@ -16,4 +16,32 @@ spriteTypes = {
 		name = "GFX_portrait_ALT_lead_scientist"
 		textureFile = "gfx/leaders/ALT/LeadScientist.png"
 	}
+	spriteType = {
+		name = "GFX_portrait_ALT_anto_gabar_small"
+		textureFile = "gfx/interface/ideas/ALT_anto_gabar.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALT_laika_small"
+		textureFile = "gfx/interface/ideas/ALT_laika.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALT_sasha_dobrovna_small"
+		textureFile = "gfx/interface/ideas/ALT_sasha_dobrovna.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALT_kamila_arbali_small"
+		textureFile = "gfx/interface/ideas/ALT_kamila_arbali.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALT_kacor_prese_small"
+		textureFile = "gfx/interface/ideas/ALT_kacor_prese.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALT_rasi_stova_small"
+		textureFile = "gfx/interface/ideas/ALT_rasi_stova.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ALT_warlo_lugio_small"
+		textureFile = "gfx/interface/ideas/ALT_warlo_lugio.dds"
+	}
 }

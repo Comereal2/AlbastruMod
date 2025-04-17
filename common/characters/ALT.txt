@@ -124,4 +124,83 @@ characters = {
 			}
 		}
 	}
+	ALT_sasha_dobrovna = {
+		name = "Sasha Dobrovna"
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_ALT_sasha_dobrovna_small"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = ALT_sasha_dobrovna
+			traits = { 
+				leftist_intellectual
+			}
+		}
+	}
+	ALT_kamila_arbali = {
+		name = "Kamila Arbali"
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_ALT_kamila_arbali_small"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = ALT_kamila_arbali
+			traits = { 
+				womens_rights_activist
+			}
+		}
+	}
+	ALT_kacor_prese = {
+		name = "Kacor Prese"
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_ALT_kacor_prese_small"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = ALT_kacor_prese
+			traits = { 
+				the_king_of_the_castle
+			}
+		}
+	}
+	ALT_rasi_stova = {
+		name = "Rasi Stovy"
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_ALT_rasi_stova_small"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = ALT_rasi_stova
+			traits = { 
+				nazi_sympathizer
+			}
+		}
+	}
+	ALT_warlo_lugio = {
+		name = "Warlo Lugio"
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_ALT_warlo_lugio_small"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			traits = { 
+				silent_workhorse
+			}
+		}
+	}
 }
