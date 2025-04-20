@@ -635,32 +635,8 @@ focus_tree = {
 			focus = RIA_finalize_economic_recovery
 		}
 
-		completion_reward = {
-			build_railway = {
-			    level = 2
-			    path = { 915 9882 3915 6766 }
-			    start_province = 915
-			    target_province = 6766
-			}
-			build_railway = {
-			    level = 1
-			    path = { 6878 9857 932 3735 13233 }
-			    start_province = 6878
-			    target_province = 13233
-			}
-			build_railway = {
-			    level = 1
-			    path = { 11709 752 11718 3771 6618 620 }
-			    start_province = 11709
-			    target_province = 620
-			}
-			build_railway = {
-			    level = 1
-			    path = { 3598 6792 11565 }
-			    start_province = 3598
-			    target_province = 11565
-			}
-			
+		completion_reward = { #REDO WHEN STATES ARE DONE
+
 			add_timed_idea = {
 				idea = RIA_building_railways_idea
 				days = 70
@@ -682,67 +658,7 @@ focus_tree = {
 			NOT = { has_idea = RIA_building_railways_idea }
 		}
 
-		completion_reward = {
-			build_railway = {
-			    level = 2
-			    path = { 6766 943 9723 6960 }
-			    start_province = 6766
-			    target_province = 6960
-			}
-			build_railway = {
-				level = 1
-				path = { 6960 3946 9853 9824 }
-				start_province = 6960
-				target_province = 9824
-			}
-			build_railway = {
-			    level = 2
-			    path = { 9824 854 9764 }
-			    start_province = 9824
-			    target_province = 9764
-			}
-			build_railway = {
-				level = 1
-				path = { 9764 6812 6966 13223 3954 3816 }
-				start_province = 9764
-				target_province = 3816
-			}
-			build_railway = {
-			    level = 1
-			    path = { 6766 3749 11699 11697 743 6756 740 }
-			    start_province = 6766
-			    target_province = 740
-			}
-			build_railway = {
-			    level = 1
-			    path = { 6766 11702 6775 11720 9717 9737 }
-			    start_province = 6766
-			    target_province = 9737
-			}
-			build_railway = {
-			    level = 1
-			    path = { 6766 3915 9882 915 11821 9813 3816 }
-			    start_province = 6766
-			    target_province = 3816
-			}
-			build_railway = {
-			    level = 1
-			    path = { 6960 9898 }
-			    start_province = 6960
-			    target_province = 9898
-			}
-			build_railway = {
-			    level = 2
-			    path = { 3816 6878 9857 932 3735 13233 740 }
-			    start_province = 3816
-			    target_province = 740
-			}
-			build_railway = {
-			    level = 2
-			    path = { 9737 6777 9710 743 }
-			    start_province = 9737
-			    target_province = 743
-			}
+		completion_reward = { #REDO
 			
 			add_timed_idea = {
 				idea = RIA_building_railways_idea
@@ -764,45 +680,8 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = RIA_building_railways_idea }
 		}
-		completion_reward = {
+		completion_reward = { #REDO
 			
-			build_railway = {
-			    level = 2
-			    path = { 6766 943 9723 6960 3946 9853 9824 854 9764 }
-			    start_province = 6766
-			    target_province = 9764
-			}
-			build_railway = {
-				level = 2
-				path = { 9764 6812 6966 13223 3954 3816 }
-				start_province = 9764
-				target_province = 3816
-			}
-			build_railway = {
-			    level = 2
-			    path = { 6766 3915 9882 915 11821 9813 3816 }
-			    start_province = 6766
-			    target_province = 3816
-			}
-			build_railway = {
-			    level = 2
-			    path = { 3816 6878 9857 932 3735 13233 740 }
-			    start_province = 3816
-			    target_province = 740
-			}
-			build_railway = {
-			    level = 2
-			    path = { 6766 3749 11699 11697 743 6756 740 }
-			    start_province = 6766
-			    target_province = 740
-			}
-			build_railway = {
-			    level = 2
-			    path = { 6766 11702 6775 11720 9717 9737 }
-			    start_province = 6766
-			    target_province = 9737
-			}
-
 			
 			add_timed_idea = {
 				idea = RIA_building_railways_idea
@@ -940,7 +819,7 @@ focus_tree = {
 			add_ideas = RIA_tourism_industry_idea
 			custom_effect_tooltip = RIA_expand_the_tourism_industry_ctt
 			random_owned_controlled_state = {
-				prioritize = { 31 }
+				prioritize = { 138 }
 				if = {
 					limit = { 
 						is_controlled_by = ROOT
@@ -1164,7 +1043,7 @@ focus_tree = {
 
 		completion_reward = {
 			random_core_state = {
-				prioritize = { 166 }
+				prioritize = { 169 }
 				limit = {
 					is_fully_controlled_by = ROOT
 				}
@@ -1233,7 +1112,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				prioritize = { 19 }
+				prioritize = { 339 }
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
@@ -1263,7 +1142,7 @@ focus_tree = {
 			focus = RIA_modernize_the_roads
 		}
 		completion_reward = { 
-			31 = {
+			138 = {
 				if = { 
 					limit = {
 						free_building_slots = {
@@ -3115,8 +2994,8 @@ focus_tree = {
 		}
 
 		available = {
-			controls_state = 172
-			controls_state = 792
+			controls_state = 95
+			controls_state = 74
 		}
 		completion_reward = { 
 			release_autonomy = {
