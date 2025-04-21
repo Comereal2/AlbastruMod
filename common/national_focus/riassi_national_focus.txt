@@ -1702,6 +1702,7 @@ focus_tree = {
 				ruling_party = communism
 				elections_allowed = no
 			}
+			complete_national_focus = RIA_return_of_the_communists
 		}
 	}
 	focus = {
@@ -2413,7 +2414,7 @@ focus_tree = {
 		id = RIA_defense_of_the_nation
 		icon = GFX_goal_generic_small_arms
 		cost = 5
-		x = 50
+		x = 75
 		y = 0
 
 		available = {
@@ -2654,7 +2655,7 @@ focus_tree = {
 		id = RIA_hold_new_elections
 		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
 		cost = 10
-		x = 70
+		x = 60
 		y = 0
 
 		available = {
@@ -3409,6 +3410,35 @@ focus_tree = {
 					}
 				}
 			}
+		}
+	}
+	focus = {
+		id = RIA_return_of_the_communists
+		icon = G #add
+		cost = 0
+		x = 60
+		y = 7
+
+		available = {
+			always = no
+		}
+
+	}
+	focus = {
+		id = RIA_eliminate_capitalism
+		icon = G #add
+		cost = 7
+		relative_position_id = RIA_return_of_the_communists
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = RIA_return_of_the_communists
+		}
+
+		completion_reward = { 
+			add_ideas = limited_exports
+
 		}
 	}
 }
