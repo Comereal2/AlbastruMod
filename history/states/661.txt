@@ -15,8 +15,8 @@ state={
 	}
 
 	history={
-		owner = LOM
-		add_core_of = LOM
+		owner = UNI
+		add_core_of = UNI
 		
 		buildings = {
 			infrastructure = 1
