@@ -1,0 +1,26 @@
+on_actions = {
+
+	#ROOT is subject FROM is previous overlord
+	on_subject_free = {
+		effect = {
+			drop_cosmetic_tag = yes
+		}
+	}
+
+	#ROOT is subject FROM is overlord
+	on_subject_autonomy_level_change = {
+		effect = {
+			#Add to commonwealth tech group
+			if = {
+				limit = {
+					OR = {
+						has_autonomy_state = autonomy_colony
+						has_autonomy_state = autonomy_dominion
+					}
+					OVERLORD = { is_in_tech_sharing_group = commonwealth_research }
+				}
+				add_to_tech_sharing_group = commonwealth_research				
+			}
+		}
+	}
+}

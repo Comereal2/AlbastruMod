@@ -11,7 +11,7 @@ state={
 		oil=0
 		rubber=0
 		steel=0
-		tungsten=0
+		tungsten=8
 	}
 
 	history={
@@ -19,6 +19,11 @@ state={
 		add_core_of = ALT
 		add_core_of = RAV
 		
+		add_victory_points = {
+			province = 347
+			value = 5
+		}
+
 		buildings = {
 			infrastructure = 3
 			
