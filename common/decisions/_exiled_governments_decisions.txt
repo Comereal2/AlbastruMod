@@ -334,12 +334,7 @@ governments_in_exile = {
 		    	}
 		    }
 		}
-
-		#targeted_modifier = {
-		#	tag = ETH
-		#	targeted_legitimacy_daily = -1
-		#	democratic_drift = 0.05
-		#}
+		
 		complete_effect = {
 			FROM = {
 				add_timed_idea = {

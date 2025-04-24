@@ -331,7 +331,7 @@ civil_war_anti_exploiter_punitive_action = {
 		division_template = {
 			name = "Anti-Exploit Punitive Brigade"
 			priority = 1
-			division_names_group = ENG_MAR_01
+			division_names_group = ALT_CAV_01
 			is_locked = yes
 			regiments = {
 				infantry = { x = 0 y = 0 }

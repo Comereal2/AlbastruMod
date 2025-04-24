@@ -2,22 +2,6 @@ equipments = {
 	small_plane_airframe = {
 		year = 2021
 
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -802,22 +786,6 @@ equipments = {
 	cv_small_plane_airframe = {
 		year = 2021
 
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
-
 		is_archetype = yes
 		is_convertable = yes
 		carrier_capable = yes
@@ -1431,22 +1399,6 @@ equipments = {
 
 	medium_plane_airframe = {
 		year = 2021
-
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
 
 		is_archetype = yes
 		is_convertable = yes
@@ -2304,22 +2256,6 @@ equipments = {
 
 	large_plane_airframe = {
 		year = 2021
-
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
 
 		is_archetype = yes
 		is_convertable = yes
@@ -3298,22 +3234,6 @@ equipments = {
 	sam_missile_equipment = {
 		year = 2024
 
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
-
 		allow_mission_type = {
 			sam_mission
 		}
@@ -3408,22 +3328,6 @@ equipments = {
 	ballistic_missile_equipment = {
 		year = 2024
 
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
-
 		allow_mission_type = {
 			barrage_mission
 		}
@@ -3511,22 +3415,6 @@ equipments = {
 	guided_missile_equipment = {
 		year = 2024
 
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
-
 		allow_mission_type = {
 			strategic_bomber
 		}
@@ -3612,22 +3500,6 @@ equipments = {
 	mothership_equipment = {
 		year = 2030
 
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -3694,22 +3566,6 @@ equipments = {
 	strat_bomber_intercontinental_equipment = {
 		year = 2030
 
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
-
 		is_archetype = yes
 		is_convertable = no
 		picture = archetype_fighter_equipment
@@ -3774,23 +3630,7 @@ equipments = {
 
 	nuclear_missile_equipment = {
 		year = 2024
-
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
-
+		
 		allow_mission_type = {
 			drop_nuke
 		}

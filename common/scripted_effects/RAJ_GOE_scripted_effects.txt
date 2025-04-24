@@ -441,26 +441,6 @@ build_civ_in_indian_releasables_once = {
     }
 }
 
-remove_agrarian_society_if_void = { #removes martial races if conscription is completely gone
-    if = {
-        limit = {
-            check_variable = {
-                var = RAJ_agrarian_society_conscription_factor
-                value = 0
-                compare = greater_than_or_equals
-            }
-
-            has_dynamic_modifier = {
-                modifier = idea_RAJ_agrarian_society
-            }
-        }
-
-        remove_dynamic_modifier = {
-            modifier = idea_RAJ_agrarian_society
-        }
-    }
-}
-
 increase_taxes_threshold_by_4 = {
     
     custom_effect_tooltip = tier_threshold_increase_0

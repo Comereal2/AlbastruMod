@@ -255,14 +255,6 @@ AUS_austromarxism = {
 	command_power_gain_mult = AUS_austromarxism_command_power_gain_mult
 	planning_speed = AUS_austromarxism_planning_speed
 	max_planning_factor = AUS_austromarxism_max_planning_factor
-	remove_trigger = {
-		AND = {
-			has_completed_focus = AUS_revolution
-			NOT = {
-				has_government = communism
-			}
-		}
-	}
 }
 
 AUS_austrostalinism = {
@@ -284,14 +276,6 @@ AUS_austrostalinism = {
 	command_power_gain_mult = AUS_austromarxism_command_power_gain_mult
 	planning_speed = AUS_austromarxism_planning_speed
 	max_planning_factor = AUS_austromarxism_max_planning_factor
-	remove_trigger = {
-		AND = {
-			has_completed_focus = AUS_revolution
-			NOT = {
-				has_government = communism
-			}
-		}
-	}
 }
 
 AUS_austrotrotskyism = {
@@ -313,14 +297,6 @@ AUS_austrotrotskyism = {
 	command_power_gain_mult = AUS_austromarxism_command_power_gain_mult
 	planning_speed = AUS_austromarxism_planning_speed
 	max_planning_factor = AUS_austromarxism_max_planning_factor
-	remove_trigger = {
-		AND = {
-			has_completed_focus = AUS_revolution
-			NOT = {
-				has_government = communism
-			}
-		}
-	}
 }
 
 AUS_peoples_army = {
@@ -1604,17 +1580,6 @@ COG_rwandan_separatism_modifier = {
 
 	icon = GFX_modifiers_COG_rwandan_separatism
 
-	remove_trigger = {
-		OR = {
-			ROOT = { is_owned_and_controlled_by = RWA } # ROOT refers to the state on which the modifier is added
-			COG = {
-				has_completed_focus = COG_the_pro_german_mwami_focus
-				has_completed_focus = COG_the_umwami_of_rwanda_focus
-			}
-		}
-		
-	}
-
 	production_speed_buildings_factor = -0.1
 	resistance_target = 0.1
 	compliance_growth = -0.01
@@ -1625,15 +1590,6 @@ COG_burundian_separatism_modifier = {
 	enable = { always = yes } 
 	
 	icon = GFX_modifiers_COG_burundian_separatism
-
-	remove_trigger = {
-		OR = {
-			ROOT = { is_owned_and_controlled_by = BRD } # ROOT refers to the state on which the modifier is added
-			COG = {
-				has_completed_focus = COG_the_mwami_of_burundi_focus
-			}
-		}
-	}
 
 	production_speed_buildings_factor = -0.1
 	resistance_target = 0.1

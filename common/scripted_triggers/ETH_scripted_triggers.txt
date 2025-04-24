@@ -24,63 +24,29 @@ has_anarchist_government = {
 # Does Ethiopia (or anyone else that want to use this) have a Military Academy? 
 # Add triggers for those countries as needed 
 has_military_academy = {
-	IF = {
-		limit = { 
-			original_tag = ETH 
-		}
-		custom_trigger_tooltip = {
-			tooltip = has_military_academy_tt 
-			has_completed_focus = ETH_ecole_militaire_haile_selassie_1er
-		}
-	}
+	always = yes
 }
-
 
 # Does Ethiopia (or anyone else that want to use this) have a Naval Academy? 
 # Add triggers for those countries as needed 
 has_naval_academy = {
-	IF = {
-		limit = { 
-			original_tag = ETH 
-		}
-		custom_trigger_tooltip = {
-			tooltip = has_naval_academy_tt 
-			has_completed_focus = ETH_asmera_naval_college
-		}
-	}
+	always = yes
 }
 
 # Does Ethiopia (or anyone else that want to use this) have an Air Force Academy? 
 # Add triggers for those countries as needed 
 has_air_academy = {
-	IF = {
-		limit = { 
-			original_tag = ETH 
-		}
-		custom_trigger_tooltip = {
-			tooltip = has_air_academy_tt 
-			has_completed_focus = ETH_debre_zeyit_air_force_training_center
-		}
-	}
+	always = yes
 }
 # Does Ethiopia (or anyone else that want to use this) have an established Air Force? 
 # Add triggers for those countries as needed 
 has_air_force_command = {
-	IF = {
-		limit = { 
-			original_tag = ETH 
-		}
-		custom_trigger_tooltip = {
-			tooltip = has_air_force_command_tt 
-			has_completed_focus = ETH_the_ethiopian_air_force
-		}
-	}
+	always = yes
 }
 
 league_of_nations_is_active = {
 	custom_trigger_tooltip = {
 		tooltip = league_of_nations_is_active_tt
 		NOT = { has_global_flag = LoN_disbanded_flag }
-		ETH = { NOT = { has_completed_focus = ETH_international_mediation}}
 	}
 }

@@ -55,22 +55,6 @@ equipments = {
 	ship_hull_cruiser = {
 		year = 2010
 
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
-
 		is_archetype = yes
 		is_buildable = no
 		type = screen_ship
@@ -445,22 +429,6 @@ equipments = {
 
 	ship_hull_light = {
 		year = 2010
-
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
 
 		is_archetype = yes
 		is_buildable = no
@@ -974,22 +942,6 @@ equipments = {
 
 	ship_hull_submarine = {
 		year = 2010
-
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
 
 		is_archetype = yes
 		is_buildable = no
@@ -3067,22 +3019,6 @@ equipments = {
 	ship_hull_heavy = {
 		year = 2010
 
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
-
 		is_archetype = yes
 		is_buildable = no
 		type = capital_ship
@@ -4483,22 +4419,6 @@ equipments = {
 
 	ship_hull_carrier = {
 		year = 2010
-
-		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
-		}
 
 		is_archetype = yes
 		is_buildable = no
