@@ -20,6 +20,8 @@ set_technology = {
 	motorised_infantry = 1
 }
 
+recruit_character = ODZ_empress_elyndra_ii
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.1"
@@ -32,4 +34,34 @@ set_popularities = {
 	fascism = 5
 	communism = 5
 	neutrality = 80
+}
+
+set_party_name = {
+	ideology = neutrality
+	long_name = ODZ_neutrality_p_long
+	name = ODZ_neutrality_p
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = ODZ_fascism_p_long
+	name = ODZ_fascism_p
+}
+
+set_party_name = {
+	ideology = democratic
+	long_name = ODZ_democratic_p_long
+	name = ODZ_democratic_p
+}
+
+set_party_name = {
+	ideology = communism
+	long_name = ODZ_communism_p_long
+	name = ODZ_communism_p
+}
+
+set_party_name = {
+	ideology = skirts
+	long_name = ALT_skirts_p_long
+	name = ALT_skirts_p
 }

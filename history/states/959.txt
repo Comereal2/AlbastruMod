@@ -6,11 +6,11 @@ state={
 	
 	state_category = town
 	resources={
-		aluminium=1
+		aluminium=0
 		chromium=0
 		oil=0
-		rubber=8
-		steel=2
+		rubber=37
+		steel=0
 		tungsten=0
 	}
 
@@ -23,10 +23,6 @@ state={
 			
 			arms_factory = 1
 			industrial_complex = 0
-			
-			4151 = {
-				naval_base = 1
-			}
 			
 		}
 		

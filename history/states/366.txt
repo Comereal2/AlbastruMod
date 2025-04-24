@@ -6,12 +6,12 @@ state={
 	
 	state_category = large_town
 	resources={
-		aluminium=1
+		aluminium=0
 		chromium=0
 		oil=0
-		rubber=4
+		rubber=0
 		steel=0
-		tungsten=1
+		tungsten=0
 	}
 
 	history={
