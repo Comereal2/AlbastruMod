@@ -13,6 +13,15 @@
 #	}
 #
 
+is_unlikely_country_tag = {
+	OR = {
+		tag = YEN
+		tag = CRM
+		tag = CAR
+		tag = RAV
+	}
+}
+
 can_ROOT_get_wargoal_on_THIS = {
 	exists = yes
 	NOT = { is_in_faction_with = ROOT }
