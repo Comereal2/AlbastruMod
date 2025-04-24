@@ -17,17 +17,15 @@ state={
 	history={
 		owner = MIR
 		add_core_of = MIR
-		
+		add_victory_points = {
+			province = 4164
+			value = 5
+		}
 		buildings = {
 			infrastructure = 1
 			
 			arms_factory = 0
-			industrial_complex = 0
-			
-			4164 = {
-				naval_base = 1
-			}
-			
+			industrial_complex = 0			
 		}
 		
 	}

@@ -1,0 +1,319 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+
+defined_text = {
+	name = GetColorControlledFactoriesForNewIndustrializationProgram
+	text = {
+		trigger = {
+			NOT = { num_of_controlled_factories < ITA_new_industrialization_program_factories_required }
+		}
+		localization_key = SOV_propaganda_campaigns_taken_requirement_color_green
+	}
+	text = {
+		localization_key = SOV_propaganda_campaigns_taken_requirement_color_red
+	}
+}
+
+defined_text = { #Assuming ITA is either ROOT/FROM
+	name = GetEscortShipsSender
+	text = {
+		localization_key = ITA_cooperation_programs_deal_from_tt
+	}
+}
+
+defined_text = { #Assuming ITA is either ROOT/FROM (inverted so that if ITA is ROOT - then receiver is FROM)
+	name = GetEscortShipsReceiver
+	text = {
+		localization_key = ITA_cooperation_programs_deal_root_tt
+	}
+}
+
+
+##     ## #### ########  ########  ######## ##    ##    ##    ##  ######     ########  #######   #######  ##       ######## #### ########   ######  
+##     ##  ##  ##     ## ##     ## ##       ###   ##    ###   ## ##    ##       ##    ##     ## ##     ## ##          ##     ##  ##     ## ##    ## 
+##     ##  ##  ##     ## ##     ## ##       ####  ##    ####  ## ##             ##    ##     ## ##     ## ##          ##     ##  ##     ## ##       
+#########  ##  ##     ## ##     ## ######   ## ## ##    ## ## ##  ######        ##    ##     ## ##     ## ##          ##     ##  ########   ######  
+##     ##  ##  ##     ## ##     ## ##       ##  ####    ##  ####       ##       ##    ##     ## ##     ## ##          ##     ##  ##              ## 
+##     ##  ##  ##     ## ##     ## ##       ##   ###    ##   ### ##    ##       ##    ##     ## ##     ## ##          ##     ##  ##        ##    ## 
+##     ## #### ########  ########  ######## ##    ##    ##    ##  ######        ##     #######   #######  ########    ##    #### ##         ######  
+
+
+defined_text = {
+	name = GetResearchPenaltiesTooltip
+	text = {
+		localization_key = ITA_military_industry_dynamic_modifier_research_tt
+	}
+}
+
+defined_text = {
+	name = GetRsiOverlord
+	text = {
+		trigger = {
+			check_variable = { ITA_rsi_overlord = 0 compare = not_equals } #The overlord var is not empty
+		}
+		localization_key = ITA_rsi_overlord_tt
+	}
+	text = {
+		localization_key = generic_null
+	}
+}
+
+defined_text = {
+	name = GetRdsOverlord
+	text = {
+		trigger = {
+			check_variable = { ITA_rds_overlord = 0 compare = not_equals } #The overlord var is not empty
+		}
+		localization_key = ITA_rds_overlord_tt
+	}
+	text = {
+		localization_key = generic_null
+	}
+}
+
+defined_text = {
+	name = GetItalianConquestofParisDesc
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = ITA_grand_council
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ITA_comitato_di_liberazione_nazionale
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = news.114.d_council
+	}
+	text = {
+		localization_key = news.114.d_leader
+	}
+}
+
+
+defined_text = { #Text for the UK
+	name = GetItalyAsksEngland
+	text = {
+		trigger = {
+			has_country_flag = ITA_italy_asks_ethiopian_host_for_help
+		}
+		localization_key = BBA_italy_interaction_events.27.desc_hosting_ethiopia
+	}
+	text = {
+		localization_key = BBA_italy_interaction_events.27.desc_standard
+	}
+}
+
+#Italy negotiates for Somaliland
+defined_text = { 
+	name = NegotiatingItalianClaimsTitle
+	text = { #If Ethiopia refused to sign the peace deal
+		trigger = { 
+			FROM = {
+				has_country_flag = ETH_refused_forced_peace_flag
+			}	
+		}
+		localization_key = BBA_italy_interaction_events.31.t_refused_peace
+	}
+	text = { #If there is no war between Italy or Ethiopia, or England doesn't host Ethiopia's exiled government
+		localization_key = BBA_italy_interaction_events.31.t_negotiate_claims
+	}
+}
+#Italy negotiates for Somaliland
+defined_text = { 
+	name = GetRatifyStresaFrontEventDesc
+	text = { #If Italy signed a peace treaty with Ethiopia
+		trigger = { 
+			has_country_flag = ITA_italy_suing_for_peace_flag 	
+		}
+		localization_key = BBA_italy_interaction_events.31.desc_peace_signed
+	}
+	text = { #If Ethiopia refused to sign the peace deal
+		trigger = { 
+			FROM = {
+				has_country_flag = ETH_refused_forced_peace_flag
+			}	
+		}
+		localization_key = BBA_italy_interaction_events.31.desc_no_peace_deal
+	}
+	text = { #If there is no war between Italy or Ethiopia, or England doesn't host Ethiopia's exiled government
+		localization_key = BBA_italy_interaction_events.31.desc_no_war
+	}
+}
+
+defined_text = { #Italy's Negotiate Claims event for ENG
+	name = GetItalyWantsSocotra
+	text = {
+		trigger = {
+			ROOT = {
+				NOT = {
+					has_country_flag = ITA_italy_has_started_negotiations_flag
+				}
+			}
+		}
+		localization_key = BBA_italy_interaction_events.33.desc_first_negotiation
+	}
+	text = {
+		localization_key = BBA_italy_interaction_events.33.desc_continued_negotiation
+	}
+}
+
+defined_text = { #Italy's Negotiate Claims event for ENG
+	name = GetItalyWantsMalta
+	text = {
+		trigger = {
+			ROOT = {
+				NOT = {
+					has_country_flag = ITA_italy_has_started_negotiations_flag
+				}
+			}
+		}
+		localization_key = BBA_italy_interaction_events.35.desc_first_negotiation
+	}
+	text = {
+		localization_key = BBA_italy_interaction_events.35.desc_continued_negotiation
+	}
+}
+
+defined_text = { #Italy's Negotiate Claims event for FRA
+	name = GetItalyWantsTunisia
+	text = {
+		trigger = {
+			ROOT = {
+				NOT = {
+					has_country_flag = ITA_italy_has_started_negotiations_flag
+				}
+			}
+		}
+		localization_key = BBA_italy_interaction_events.34.desc_first_negotiation
+	}
+	text = {
+		localization_key = BBA_italy_interaction_events.34.desc_continued_negotiation
+	}
+}
+
+defined_text = { #Italy's Negotiate Claims event for FRA
+	name = GetItalyClaimsBalkan
+	text = {
+		trigger = {
+			ROOT = {
+				NOT = {
+					has_country_flag = ITA_italy_has_started_negotiations_flag
+				}
+			}
+		}
+		localization_key = BBA_italy_interaction_events.36.desc_first_negotiation
+	}
+	text = {
+		localization_key = BBA_italy_interaction_events.36.desc_continued_negotiation
+	}
+}
+
+defined_text = { #Text for Italy
+	name = GetItaloEthiopianPeaceDemands
+	text = {
+		trigger = {
+			FROM = { #England has the country flag
+				has_country_flag = ITA_italy_asks_ethiopian_host_for_help
+			}
+		}
+		localization_key = BBA_italo_ethiopian_war_events.500.desc_guarantees
+	}
+	text = {
+		localization_key = BBA_italo_ethiopian_war_events.500.desc_territories
+	}
+}
+
+defined_text = { #Text for England
+	name = GetItalyRefusesPeaceTalks
+	text = {
+		trigger = {
+			has_country_flag = ITA_italy_asks_ethiopian_host_for_help
+		}
+		localization_key = BBA_italo_ethiopian_war_events.502.desc_guarantees
+	}
+	text = {
+		localization_key = BBA_italo_ethiopian_war_events.502.desc_territories
+	}
+}
+
+
+
+#####################
+#### MISSIOLINIS ####
+#####################
+
+defined_text = { #Color for Strengthened Industry missiolini tooltip.
+	name = GetColorNumOfCivsMissiolinis
+	text = {
+		trigger = {
+			NOT = { num_of_civilian_factories < ITA_missiolinis_required_civs }
+		}
+		localization_key = SOV_propaganda_campaigns_taken_requirement_color_green
+	}
+	text = {
+		localization_key = SOV_propaganda_campaigns_taken_requirement_color_red
+	}
+}
+
+defined_text = { #Decolonization event 
+	name = GetDecolonizationEventDesc
+	text = { #No one Decolonized - DEFAULT
+		localization_key = BBA_italy_anti_colonialism_events.21.desc_rejected
+	}
+}
+
+defined_text = { #Proclamation of Anarchist Confederation
+	name = GetAnarchistConfederationEventDesc
+	text = { #Anarchist Spain does NOT exist - DEFAULT
+		localization_key = bba_news.111.desc_single_proclamation
+	}
+}
+
+# GFX FOR EVENTS
+
+defined_text = { #Pressure Government GFX
+	name = GetPressureGovernmentGFX
+	text = { #Default: Generic
+		localization_key = GFX_report_event_generic_sign_treaty2
+	}
+}
+
+defined_text = { #Promote Ideology GFX
+	name = GetPromotingIdeologyGFX
+	text = { #Default: Generic
+		localization_key = GFX_report_event_communist_leader
+	}
+}
+
+defined_text = { #Country Becomes Puppet GFX
+	name = GetCountryBecomesPuppetGFX
+	text = { #Default: Generic
+		localization_key = GFX_report_event_generic_military_parade
+	}
+}
+
+defined_text = { #Country Changes Government GFX
+	name = GetCountryChangesGovernmentGFX
+	text = { #Default: Generic
+		localization_key = GFX_report_event_fascist_militia
+	}
+}
+
+defined_text = { #Ultimatum GFX
+	name = GetUltimatumGFX
+	text = { #Default: Generic
+		localization_key = GFX_report_event_generic_read_write
+	}
+}

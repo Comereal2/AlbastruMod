@@ -4,10 +4,8 @@ ideas = {
 		ALT_unquestionable_authorityn = {
 			picture = ALT_unquestionable_authority
 			allowed = {
-				AND = {
-					tag = ALT
-					has_government = neutrality
-				}
+				tag = ALT
+				has_government = neutrality
 			}
 			available = {
 				has_stability > 0.5
@@ -24,12 +22,8 @@ ideas = {
 			on_remove = {
 				if = {
 					limit = {
-						AND = {
-							OR = {
-								has_government = neutrality
-							}
-							has_stability < 0.5
-						}
+						has_government = neutrality
+						has_stability < 0.5
 					}
 					add_ideas = ALT_wavering_loyaltyn
 				}
@@ -175,12 +169,8 @@ ideas = {
 			on_remove = {
 				if = {
 					limit = {
-						AND = {
-							OR = {
-								has_government = fascism
-							}
+							has_government = fascism
 							has_stability < 0.5
-						}
 					}
 					add_ideas = ALT_wavering_loyaltyf
 				}

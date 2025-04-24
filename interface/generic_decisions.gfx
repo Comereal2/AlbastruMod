@@ -1,0 +1,7 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = generic_state
+		textureFile = "gfx/interface/decisions/generic_state.dds"
+	}
+}

@@ -9,7 +9,7 @@ state={
 		aluminium=0
 		chromium=0
 		oil=0
-		rubber=5
+		rubber=46
 		steel=0
 		tungsten=0
 	}
@@ -17,7 +17,10 @@ state={
 	history={
 		owner = BLA
 		add_core_of = BLA
-		
+		add_victory_points = {
+			province = 2314
+			value = 5
+		}
 		buildings = {
 			infrastructure = 2
 			
