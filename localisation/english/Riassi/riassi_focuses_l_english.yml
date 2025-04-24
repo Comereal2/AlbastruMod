@@ -334,3 +334,6 @@ l_english:
 
  RIA_destroy_communism:0 "Destroy Communism"
  RIA_destroy_communism_desc:0 "NOT DONE"
+
+ RIA_return_of_the_communists: "Return of the Communists"
+ RIA_return_of_the_communists_desc: "The Communists are have returned to power after only 7 years of absence. It is clear that Rias can't manage anything else than communism."

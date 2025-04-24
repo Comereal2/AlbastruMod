@@ -824,5 +824,8 @@ ideas = {
 
 			}
 		}
+		RIA_communist_economy_idea = {
+			picture = G #add
+		}
 	}
 }
