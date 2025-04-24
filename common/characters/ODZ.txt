@@ -1,0 +1,18 @@
+#Author: Comereal
+characters = {
+	ODZ_empress_elyndra_ii = {
+		name = "Empress Elyndra II"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_empress_elyndra_ii"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = {
+				
+			}
+			id = -1
+		}
+	}
+}

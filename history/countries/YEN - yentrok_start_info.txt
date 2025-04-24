@@ -1,5 +1,5 @@
 #Author: Ramon
-capital = 792
+capital = 443
 
 oob = "yentrok_units"
 

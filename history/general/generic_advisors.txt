@@ -6,6 +6,7 @@ every_possible_country = {
 	limit = {
 		is_dynamic_country = no
 		NOT = {
+			original_tag = ALT original_tag = RIA original_tag = KAI original_tag = BLU original_tag = ODZ original_tag = VAL original_tag = WOD
 			has_allowed_idea_with_traits = { idea = communist_revolutionary characters = yes }
 		}
 	}
@@ -34,6 +35,7 @@ every_possible_country = {
 	limit = {
 		is_dynamic_country = no
 		NOT = {
+			original_tag = ALT original_tag = RIA original_tag = KAI original_tag = BLU original_tag = ODZ original_tag = VAL original_tag = WOD
 			has_allowed_idea_with_traits = { idea = democratic_reformer characters = yes }
 		}
 	}
@@ -62,6 +64,7 @@ every_possible_country = {
 	limit = {
 		is_dynamic_country = no
 		NOT = {
+			original_tag = ALT original_tag = RIA original_tag = KAI original_tag = BLU original_tag = ODZ original_tag = VAL original_tag = WOD
 			has_allowed_idea_with_traits = { idea = fascist_demagogue characters = yes }
 		}
 	}
@@ -90,6 +93,7 @@ every_possible_country = {
 	limit = {
 		has_dlc = "La Resistance"
 		NOT = {
+			original_tag = ALT original_tag = RIA original_tag = KAI original_tag = BLU original_tag = ODZ original_tag = VAL original_tag = WOD
 			has_allowed_idea_with_traits = { idea = head_of_intelligence characters = yes }
 		}
 
@@ -120,7 +124,7 @@ every_possible_country = {
 # Military advisors
 every_possible_country = {
 	limit = {
-		always = yes
+		NOT = { original_tag = ALT original_tag = RIA original_tag = KAI original_tag = BLU original_tag = ODZ original_tag = VAL original_tag = WOD }
 	}
 	# generic political advisors
 	generate_character = {

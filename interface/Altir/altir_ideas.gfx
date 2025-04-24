@@ -117,14 +117,6 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/ALT_odezyan_trade.dds"
 	}
 	spriteType = {
-		name = "GFX_portrait_ALT_anto_gabar_small"
-		textureFile = "gfx/interface/ideas/ALT_anto_gabar.png"
-	}
-	spriteType = {
-		name = "GFX_portrait_ALT_laika_small"
-		textureFile = "gfx/interface/ideas/ALT_laika.dds"
-	}
-	spriteType = {
 		name = "GFX_idea_ALT_tourism_influx"
 		textureFile = "gfx/interface/ideas/ALT_tourism_influx.dds"
 	}
@@ -139,5 +131,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_ALT_intelligence_agency"
 		textureFile = "gfx/interface/ideas/ALT_intelligence_agency.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_information_network"
+		textureFile = "gfx/interface/ideas/ALT_network.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_kip_expanded"
+		textureFile = "gfx/interface/ideas/ALT_kip_expanded.png"
 	}
 }

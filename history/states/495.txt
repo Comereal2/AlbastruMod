@@ -2,7 +2,7 @@
 state={
 	id=495
 	name="STATE_495"
-	manpower = 37563
+	manpower = 12677
 	
 	state_category = pastoral
 	resources={
@@ -17,16 +17,13 @@ state={
 	history={
 		owner = ALT
 		add_core_of = ALT
+		add_core_of = RAV
 		
 		buildings = {
 			infrastructure = 2
 			
 			arms_factory = 0
 			industrial_complex = 0
-			
-			2238 = {
-				naval_base = 1
-			}
 			
 		}
 		

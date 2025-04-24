@@ -1,0 +1,7 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_empress_elyndra_ii"
+		textureFile = "gfx/leaders/ODZ/EmpressElyndraII.png"
+	}
+}

@@ -1,0 +1,14 @@
+ALT_CAV_01 = {
+	name = "Cavalry Brigade"
+	for_countries = { ALT }
+	can_use = { always = yes }
+	division_types = { "cavalry" }
+	fallback_name = "%d Dywizja Kawalerska"
+}
+ALT_MOT_01 = {
+	name = "Motorized Division"
+	for_countries = { ALT }
+	can_use = { always = yes }
+	division_types = { "motorized" }
+	fallback_name = "%d Dywizja Specjalna"
+}

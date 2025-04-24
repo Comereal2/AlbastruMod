@@ -9,6 +9,7 @@ HELIOS_EMPIRE_ALT = {
 	color_ui = rgb { 219 215 0 }
 }
 
+#Base game
 MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }

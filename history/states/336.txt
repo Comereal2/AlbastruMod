@@ -7,27 +7,24 @@ state={
 	state_category = metropolis
 	resources={
 		aluminium=0
-		chromium=2
+		chromium=0
 		oil=0
 		rubber=0
-		steel=1
-		tungsten=0
+		steel=4
+		tungsten=17
 	}
 
 	history={
 		owner = ALT
 		add_core_of = ALT
+		add_core_of = RAV
 		
 		buildings = {
 			infrastructure = 3
-			
+			air_base = 4
 			arms_factory = 0
-			industrial_complex = 1
-			dockyard = 1
-			1547 = {
-				naval_base = 1
-			}
-			
+			industrial_complex = 3
+			synthetic_refinery = 1	
 		}
 		
 	}

@@ -1,0 +1,9 @@
+on_actions = {
+
+	#ROOT is subject FROM is previous overlord
+	on_subject_free = {
+		effect = {
+			drop_cosmetic_tag = yes
+		}
+	}
+}

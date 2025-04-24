@@ -11,12 +11,13 @@ state={
 		oil=0
 		rubber=0
 		steel=0
-		tungsten=1
+		tungsten=10
 	}
 
 	history={
 		owner = ALT
 		add_core_of = ALT
+		add_core_of = RAV
 		
 		buildings = {
 			infrastructure = 2

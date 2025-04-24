@@ -17,6 +17,7 @@ state={
 	history={
 		owner = RIA
 		add_core_of = RIA
+		add_core_of = YEN
 		
 		buildings = {
 			infrastructure = 2
