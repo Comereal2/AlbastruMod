@@ -1,12 +1,13 @@
 #Author: Lloyd
+
+
+#REMOVED FROM GAME TEMPORARILY
+
+
 focus_tree = {
 	id = KAI_focus_tree
 	country = {
 		factor = 0
-		modifier = {
-			add = 10
-			tag = KAI
-		}
 	}
 	default = no
 	continuous_focus_position = {

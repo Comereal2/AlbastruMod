@@ -118,6 +118,10 @@ RAV = {
 	color = rgb { 31 69 181 }
 	color_ui = rgb { 31 69 181 }
 }
+DRA = {
+	color = rgb { 200 20 200 }
+	color_ui = rgb { 200 20 200 }
+}
 #Regional placeholders
 SUL = {
 	color = rgb { 0 255 0 }

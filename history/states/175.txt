@@ -25,10 +25,6 @@ state={
 			arms_factory = 0
 			industrial_complex = 0
 			dockyard = 1
-			852 = {
-				naval_base = 1
-			}
-			
 		}
 		
 	}
