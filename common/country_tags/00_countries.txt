@@ -33,6 +33,7 @@ CRM = "countries/Crystalmoor.txt"
 CAR = "countries/Carelia.txt"
 RAV = "countries/Raveliar.txt"
 DRA = "countries/DragonTooth.txt"
+DWE = "countries/Dwellers.txt"
 
 #Regional placeholders
 SUL = "countries/SuliaPlaceholder.txt"

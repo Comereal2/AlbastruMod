@@ -2360,6 +2360,9 @@ focus_tree = {
 			x = -17
 			y = 0
 		}
+		available = {
+			controls_state = 118
+		}
 		relative_position_id = ALT_concentrate_power
 		select_effect = {
 			set_country_flag = focus_taken
