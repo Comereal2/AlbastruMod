@@ -3202,7 +3202,7 @@ focus_tree = {
 			focus = ALT_create_international_tv_channel
 		}
 		completion_reward = { 
-
+			
 		}
 		ai_will_do = {
 			factor = 1
