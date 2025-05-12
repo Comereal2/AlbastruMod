@@ -1,0 +1,23 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_DRA_pheonix"
+		textureFile = "gfx/leaders/DRA/Pheonix.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_DRA_black_dragon"
+		textureFile = "gfx/leaders/DRA/BlackDragon.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_DRA_red_dragon"
+		textureFile = "gfx/leaders/DRA/RedDragon.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_DRA_blue_dragon"
+		textureFile = "gfx/leaders/DRA/BlueDragon.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_DRA_lifts_her_tail"
+		textureFile = "gfx/leaders/DRA/LiftsHerTail.dds"
+	}
+}

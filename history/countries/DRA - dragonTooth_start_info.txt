@@ -34,6 +34,12 @@ set_popularities = {
 	skirts = 5
 }
 
+recruit_character = DRA_pheonix
+recruit_character = DRA_black_dragon
+recruit_character = DRA_blue_dragon
+recruit_character = DRA_red_dragon
+recruit_character = DRA_lifts_her_tail
+
 set_party_name = {
 	ideology = neutrality
 	long_name = DRA_neutrality_p_long
