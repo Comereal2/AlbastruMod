@@ -1,1 +1,55 @@
-﻿
+﻿#Author: Comereal
+
+add_namespace = genericnews
+
+news_event = { #Clonmel at war
+	id = genericnews.1
+	title = genericnews.1.t
+	desc = genericnews.1.d
+	picture = GFX_genericnews_event_01
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #Clonmel
+		name = genericnews.1.a
+		trigger = {
+			tag = UNI
+		}
+	}
+	option = { #Fighting Clonmel
+		name = genericnews.1.b
+		trigger = {
+			has_war_with = UNI
+		}
+	}
+	option = { #Generic
+		name = genericnews.1.c
+		trigger = {
+			NOT = {
+				tag = UNI
+				has_war_with = UNI
+			}
+		}
+	}
+}
+
+news_event = { #Reunification of Helios empire
+	id = genericnews.2
+	title = genericnews.2.t
+	desc = genericnews.2.d
+	picture = GFX_genericnews_event_02
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = genericnews.2.a
+		trigger = {
+			has_cosmetic_tag = HELIOS_EMPIRE
+		}
+	}
+	option = {
+		name = genericnews.2.b
+		trigger = {
+			NOT = { has_cosmetic_tag = HELIOS_EMPIRE }
+		}
+	}
+}

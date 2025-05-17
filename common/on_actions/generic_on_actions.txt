@@ -1,0 +1,14 @@
+#Author: Comereal
+on_actions = {
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					tag = UNI
+				}
+				FROM = { save_event_target_as = war_dec_country }
+				news_event = genericnews.1
+			}
+		}
+	}
+}

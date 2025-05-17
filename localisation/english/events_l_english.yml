@@ -1,0 +1,11 @@
+﻿#Author: Comereal
+l_english:
+genericnews.1.t: "United Clonmel at War"
+genericnews.1.d: "The government of United Clonmel, a prominent dictatorship on the continent of Lomezia, has found itself in inevitable conflict with [?war_dec_country.GetName]. This country going to war has been a long time coming, being known for their unstable dictatorship and claims on foreign lands."
+genericnews.1.a: "Glory for Clonmel!"
+genericnews.1.b: "These men are fools"
+genericnews.1.c: "Can't they get along?"
+genericnews.2.t: "Reunification of the Helios Empire"
+genericnews.2.d: "The Helios Empire, a mighty superpower, which has been shattered last century and expected to never return, has been reunited and leaving the world to wonder how it will affect the delicate balance of power in the world."
+genericnews.2.a: "We are back baby!"
+genericnews.2.b: "Let us pray for them to be reasonable"

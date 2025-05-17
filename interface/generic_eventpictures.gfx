@@ -1,0 +1,11 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_genericnews_event_01"
+		textureFile = "gfx/event_pictures/Generic/news_event_01.dds"
+	}
+	spriteType = {
+		name = "GFX_genericnews_event_02"
+		textureFile = "gfx/event_pictures/Generic/news_event_02.dds"
+	}
+}

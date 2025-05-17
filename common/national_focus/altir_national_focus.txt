@@ -2210,7 +2210,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = { 
-			set_cosmetic_tag = HELIOS_EMPIRE_ALT
+			set_cosmetic_tag = HELIOS_EMPIRE
+			news_event = genericnews.2
 			add_stability = 0.05
 			add_war_support = 0.05
 			custom_effect_tooltip = ALT_reclaim_the_helios_empire_ctt
@@ -2332,7 +2333,8 @@ focus_tree = {
 				remove_idea = ALT_ghost_of_the_helios_empire
 				add_idea = ALT_the_helios_empire_of_the_present
 			}
-			set_cosmetic_tag = HELIOS_EMPIRE_ALT
+			set_cosmetic_tag = HELIOS_EMPIRE
+			news_event = genericnews.2
 		}
 		ai_will_do = {
 			factor = 1
