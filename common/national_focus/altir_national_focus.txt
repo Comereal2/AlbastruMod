@@ -2211,11 +2211,11 @@ focus_tree = {
 		}
 		completion_reward = { 
 			set_cosmetic_tag = HELIOS_EMPIRE
-			news_event = genericnews.2
 			add_stability = 0.05
 			add_war_support = 0.05
 			custom_effect_tooltip = ALT_reclaim_the_helios_empire_ctt
 			hidden_effect = {
+				news_event = genericnews.2
 				#Rias
 				add_state_core = 270
 				add_state_core = 158
@@ -2334,7 +2334,7 @@ focus_tree = {
 				add_idea = ALT_the_helios_empire_of_the_present
 			}
 			set_cosmetic_tag = HELIOS_EMPIRE
-			news_event = genericnews.2
+			hidden_effect = { news_event = genericnews.2 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -2994,19 +2994,81 @@ focus_tree = {
 			focus = ALT_increase_global_influence
 		}
 		completion_reward = { 
-			if = {
+			if = { #Completed radio jammers before spahs
 				limit = {
 					has_completed_focus = ALT_develop_radio_jammers
 				}
-				swap_ideas = {
-					remove_idea = ALT_intelligence_agency2
-					add_idea = ALT_intelligence_agency3
+				if = { #Completed pro-altirian propaganda and jammers before spahs
+					limit = {
+						has_completed_focus = ALT_spread_proaltirian_propaganda
+					}
+					if = {
+						limit = {
+							has_idea = ALT_intelligence_agency5r
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency5r
+							add_idea = ALT_intelligence_agency6r
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = ALT_intelligence_agency5t
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency5t
+							add_idea = ALT_intelligence_agency6t
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency5i
+							add_idea = ALT_intelligence_agency6i
+						}
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = ALT_intelligence_agency2
+						add_idea = ALT_intelligence_agency3
+					}
 				}
 			}
 			else = {
-				swap_ideas = {
-					remove_idea = ALT_intelligence_agency
-					add_idea = ALT_intelligence_agency1
+				if = { #Completed pro-altirian propaganda
+					limit = {
+						has_completed_focus = ALT_spread_proaltirian_propaganda
+					}
+					if = {
+						limit = {
+							has_idea = ALT_intelligence_agency4r
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4r
+							add_idea = ALT_intelligence_agency7r
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = ALT_intelligence_agency4t
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4t
+							add_idea = ALT_intelligence_agency7t
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4i
+							add_idea = ALT_intelligence_agency7i
+						}
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = ALT_intelligence_agency
+						add_idea = ALT_intelligence_agency1
+					}
 				}
 			}
 		}
@@ -3060,15 +3122,77 @@ focus_tree = {
 				limit = {
 					has_completed_focus = ALT_create_the_spahs
 				}
-				swap_ideas = {
-					remove_idea = ALT_intelligence_agency1
-					add_idea = ALT_intelligence_agency3
+				if = {
+					limit = {
+						has_completed_focus = ALT_spread_proaltirian_propaganda
+					}
+					if = {
+						limit = {
+							has_idea = ALT_intelligence_agency7r
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency7r
+							add_idea = ALT_intelligence_agency6r
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = ALT_intelligence_agency7t
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency7t
+							add_idea = ALT_intelligence_agency6t
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency7i
+							add_idea = ALT_intelligence_agency6i
+						}
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = ALT_intelligence_agency1
+						add_idea = ALT_intelligence_agency3
+					}
 				}
 			}
 			else = {
-				swap_ideas = {
-					remove_idea = ALT_intelligence_agency
-					add_idea = ALT_intelligence_agency2
+				if = {
+					limit = {
+						has_completed_focus = ALT_spread_proaltirian_propaganda
+					}
+					if = {
+						limit = {
+							has_idea = ALT_intelligence_agency4r
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4r
+							add_idea = ALT_intelligence_agency5r
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = ALT_intelligence_agency4t
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4t
+							add_idea = ALT_intelligence_agency5t
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4i
+							add_idea = ALT_intelligence_agency5i
+						}
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = ALT_intelligence_agency
+						add_idea = ALT_intelligence_agency2
+					}
 				}
 			}
 		}
@@ -3183,7 +3307,7 @@ focus_tree = {
 			focus = ALT_control_global_information_spread
 		}
 		completion_reward = { 
-			
+			country_event = altir.31
 		}
 		ai_will_do = {
 			factor = 1
@@ -3204,11 +3328,11 @@ focus_tree = {
 			focus = ALT_create_international_tv_channel
 		}
 		completion_reward = { 
-			
+			country_event = altir.32
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	#Shortcuts
+	#Shortcuts will be added if the tree gets too big
 }

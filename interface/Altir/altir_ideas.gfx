@@ -140,4 +140,12 @@ spriteTypes = {
 		name = "GFX_idea_ALT_kip_expanded"
 		textureFile = "gfx/interface/ideas/ALT_kip_expanded.png"
 	}
+	spriteType = {
+		name = "GFX_idea_ALT_prevent_resistance"
+		textureFile = "gfx/interface/ideas/ALT_prevent_resistance.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALT_improve_compliance"
+		textureFile = "gfx/interface/ideas/ALT_improve_compliance.dds"
+	}
 }
