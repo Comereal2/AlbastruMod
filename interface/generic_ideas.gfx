@@ -1,0 +1,7 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_generic_disease_outbreak"
+		textureFile = "gfx/interface/ideas/generic_disease_outbreak.dds"
+	}
+}

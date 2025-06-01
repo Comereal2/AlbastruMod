@@ -1,3 +1,22 @@
+#Author: Comereal
+
+disease_outbreak = {
+	icon = GFX_idea_generic_disease_outbreak
+	enable = {
+		has_global_flag = has_desease_outbreak
+	}
+	remove_trigger = {
+		NOT = {
+			has_global_flag = has_desease_outbreak
+		}
+	}
+	consumer_goods_factor = outbreak_consumer_goods_factor
+	monthly_population = outbreak_monthly_population
+	production_factory_efficiency_gain_factor = outbreak_production_factory_efficiency_gain_factor
+	production_speed_buildings_factor = outbreak_production_speed_buildings_factor
+	fuel_cost = outbreak_fuel_cost
+}
+
 sabotaged_resources = {
 	remove_trigger = { 
 		ROOT = {

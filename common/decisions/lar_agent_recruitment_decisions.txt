@@ -484,14 +484,6 @@ lar_local_recruitment = {
 					is_on_continent = orium 
 				}
 			}
-			NOT = {
-				tag = RAJ
-				tag = PAK
-				tag = BAN
-				tag = NEP
-				tag = BHU
-				tag = SRL
-			}
 			NOT = { has_country_flag = orium_recruitment_in_process }
 		}
 
