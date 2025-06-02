@@ -1,7 +1,7 @@
 #Author: Comereal
 generic_core_with_compliance = {
 	core_state = {
-		icon = generic_state
+		icon = GFX_decision_generic_state
 		cost = 30
 		state_target = yes
 		target_array = controlled_states
@@ -32,6 +32,66 @@ generic_core_with_compliance = {
 		}
 	}
 }
+generic_disease_outbreak = {
+	develop_cure = {
+		icon = generic_research
+		cost = 50
+		days_remove = 90
+		visible = {
+			has_global_flag = has_desease_outbreak
+		}
+		remove_effect = {
+			custom_effect_tooltip = incrase_cure_progress_tt
+			custom_effect_tooltip = decrease_disease_effects_tt
+			add_to_variable = {
+				var = global.cure_progress
+				value = 1
+			}
+			add_to_variable = {
+				var = outbreak_consumer_goods_factor
+				value = -0.05
+			}
+			add_to_variable = {
+				var = outbreak_monthly_population
+				value = 0.05
+			}
+			add_to_variable = {
+				var = outbreak_production_factory_efficiency_gain_factor
+				value = 0.05
+			}
+			add_to_variable = {
+				var = outbreak_production_speed_buildings_factor
+				value = 0.1
+			}
+			add_to_variable = {
+				var = outbreak_fuel_cost
+				value = 100
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						check_variable = {
+							var = global.cure_progress
+							value = 100
+							compare = greater_than_or_equals
+						}
+					}
+					clr_global_flag = has_desease_outbreak
+					every_country = {
+						remove_dynamic_modifier = {
+							modifier = disease_outbreak
+						}
+					}
+					news_event = genericnews.4
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
 #Modified base game
 political_actions = {
 	targeted_race_for_the_bomb = {

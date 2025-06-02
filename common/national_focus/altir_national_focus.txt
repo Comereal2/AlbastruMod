@@ -1951,7 +1951,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		completion_reward = { 
+		completion_reward = {
 			custom_effect_tooltip = ALT_propose_government_change_ctt
 		}
 		ai_will_do = {
@@ -1972,7 +1972,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_ANNEXATION
 		}
-		completion_reward = { 
+		completion_reward = {
 			custom_effect_tooltip = ALT_integrate_friendly_governments_ctt
 		}
 		ai_will_do = {
@@ -2069,7 +2069,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_ANNEXATION
 		}
-		completion_reward = { 
+		completion_reward = {
 			create_wargoal = {
 				target = ODZ
 				type = annex_everything
@@ -2209,12 +2209,13 @@ focus_tree = {
 				has_full_control_of_state = 99
 			}
 		}
-		completion_reward = { 
-			set_cosmetic_tag = HELIOS_EMPIRE_ALT
+		completion_reward = {
+			set_cosmetic_tag = HELIOS_EMPIRE
 			add_stability = 0.05
 			add_war_support = 0.05
 			custom_effect_tooltip = ALT_reclaim_the_helios_empire_ctt
 			hidden_effect = {
+				news_event = genericnews.2
 				#Rias
 				add_state_core = 270
 				add_state_core = 158
@@ -2332,7 +2333,10 @@ focus_tree = {
 				remove_idea = ALT_ghost_of_the_helios_empire
 				add_idea = ALT_the_helios_empire_of_the_present
 			}
-			set_cosmetic_tag = HELIOS_EMPIRE_ALT
+			set_cosmetic_tag = HELIOS_EMPIRE
+			hidden_effect = {
+				news_event = genericnews.2
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2359,6 +2363,9 @@ focus_tree = {
 			}
 			x = -17
 			y = 0
+		}
+		available = {
+			controls_state = 118
 		}
 		relative_position_id = ALT_concentrate_power
 		select_effect = {
@@ -2430,7 +2437,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		completion_reward = { 
+		completion_reward = {
 			add_equipment_bonus = {
 				name = ALT_less_cars
 				bonus = {
@@ -2475,7 +2482,7 @@ focus_tree = {
 				has_country_flag = apache_stage_3
 			}
 		}
-		completion_reward = { 
+		completion_reward = {
 			118 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -2514,7 +2521,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		completion_reward = { 
+		completion_reward = {
 			every_owned_state = {
 				limit = {
 					is_core_of = ROOT
@@ -2529,6 +2536,25 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_fund_the_blimp
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 4
+		y = 1
+		relative_position_id = ALT_build_apache
+		prerequisite = {
+			focus = ALT_build_apache
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
 		}
 		ai_will_do = {
 			factor = 1
@@ -2553,7 +2579,7 @@ focus_tree = {
 		select_effect = {
 			set_country_flag = focus_taken
 		}
-		completion_reward = { 
+		completion_reward = {
 			custom_effect_tooltip = ALT_look_for_foreign_investments_ctt
 		}
 		ai_will_do = {
@@ -2578,7 +2604,7 @@ focus_tree = {
 				}
 			}
 		}
-		completion_reward = { 
+		completion_reward = {
 			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
@@ -2603,7 +2629,7 @@ focus_tree = {
 				}
 			}
 		}
-		completion_reward = { 
+		completion_reward = {
 			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
@@ -2628,7 +2654,7 @@ focus_tree = {
 				}
 			}
 		}
-		completion_reward = { 
+		completion_reward = {
 			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
@@ -2653,7 +2679,7 @@ focus_tree = {
 				}
 			}
 		}
-		completion_reward = { 
+		completion_reward = {
 			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
@@ -2684,7 +2710,7 @@ focus_tree = {
 				}
 			}
 		}
-		completion_reward = { 
+		completion_reward = {
 			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
@@ -2701,7 +2727,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_propose_capital_renovation
 		}
-		completion_reward = { 
+		completion_reward = {
 			custom_effect_tooltip = ALT_unlock_investment_ctt
 		}
 		ai_will_do = {
@@ -2727,7 +2753,7 @@ focus_tree = {
 			}
 		}
 		cancelable = no
-		completion_reward = { 
+		completion_reward = {
 			custom_effect_tooltip = ALT_finish_helios_investments_lockout_ctt
 			if = {
 				limit = {
@@ -2797,7 +2823,7 @@ focus_tree = {
 		select_effect = {
 			set_country_flag = focus_taken
 		}
-		completion_reward = { 
+		completion_reward = {
 			118 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -2842,9 +2868,14 @@ focus_tree = {
 				name = "Alavar Taletti"
 				GFX = "GFX_operative_portrait_POL_witold_pilecki"
 				traits = {
-					operative_seducer operative_linguist operative_well_groomed
+					operative_seducer
+					operative_linguist
+					operative_well_groomed
 				}
-				nationalities = { ALT ODZ }
+				nationalities = {
+					ALT
+					ODZ
+				}
 				gender = male
 			}
 			upgrade_intelligence_agency = upgrade_diplo_training
@@ -2928,7 +2959,7 @@ focus_tree = {
 					}
 				}
 				else_if = {
-					limit = { 
+					limit = {
 						has_government = communism
 					}
 					swap_ideas = {
@@ -2937,7 +2968,7 @@ focus_tree = {
 					}
 				}
 				else_if = {
-					limit = { 
+					limit = {
 						has_government = democratic
 					}
 					swap_ideas = {
@@ -2970,7 +3001,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_increase_global_influence
 		}
-		completion_reward = { 
+		completion_reward = {
 			upgrade_intelligence_agency = upgrade_form_department
 			upgrade_intelligence_agency = upgrade_decryption_boost
 		}
@@ -2988,20 +3019,85 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_increase_global_influence
 		}
-		completion_reward = { 
+		completion_reward = {
 			if = {
+				#Completed radio jammers before spahs
 				limit = {
 					has_completed_focus = ALT_develop_radio_jammers
 				}
-				swap_ideas = {
-					remove_idea = ALT_intelligence_agency2
-					add_idea = ALT_intelligence_agency3
+				if = {
+					#Completed pro-altirian propaganda and jammers before spahs
+					limit = {
+						has_completed_focus = ALT_spread_proaltirian_propaganda
+					}
+					if = {
+						limit = {
+							has_idea = ALT_intelligence_agency5r
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency5r
+							add_idea = ALT_intelligence_agency6r
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = ALT_intelligence_agency5t
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency5t
+							add_idea = ALT_intelligence_agency6t
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency5i
+							add_idea = ALT_intelligence_agency6i
+						}
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = ALT_intelligence_agency2
+						add_idea = ALT_intelligence_agency3
+					}
 				}
 			}
 			else = {
-				swap_ideas = {
-					remove_idea = ALT_intelligence_agency
-					add_idea = ALT_intelligence_agency1
+				if = {
+					#Completed pro-altirian propaganda
+					limit = {
+						has_completed_focus = ALT_spread_proaltirian_propaganda
+					}
+					if = {
+						limit = {
+							has_idea = ALT_intelligence_agency4r
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4r
+							add_idea = ALT_intelligence_agency7r
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = ALT_intelligence_agency4t
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4t
+							add_idea = ALT_intelligence_agency7t
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4i
+							add_idea = ALT_intelligence_agency7i
+						}
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = ALT_intelligence_agency
+						add_idea = ALT_intelligence_agency1
+					}
 				}
 			}
 		}
@@ -3027,7 +3123,8 @@ focus_tree = {
 				name = "Linka Falowna"
 				gfx = ""
 				traits = {
-					operative_commando operative_demolition_expert
+					operative_commando
+					operative_demolition_expert
 				}
 				nationalities = {
 					ALT
@@ -3050,20 +3147,82 @@ focus_tree = {
 			focus = ALT_expand_cryptology_departments
 			focus = ALT_create_the_spahs
 		}
-		completion_reward = { 
+		completion_reward = {
 			if = {
 				limit = {
 					has_completed_focus = ALT_create_the_spahs
 				}
-				swap_ideas = {
-					remove_idea = ALT_intelligence_agency1
-					add_idea = ALT_intelligence_agency3
+				if = {
+					limit = {
+						has_completed_focus = ALT_spread_proaltirian_propaganda
+					}
+					if = {
+						limit = {
+							has_idea = ALT_intelligence_agency7r
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency7r
+							add_idea = ALT_intelligence_agency6r
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = ALT_intelligence_agency7t
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency7t
+							add_idea = ALT_intelligence_agency6t
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency7i
+							add_idea = ALT_intelligence_agency6i
+						}
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = ALT_intelligence_agency1
+						add_idea = ALT_intelligence_agency3
+					}
 				}
 			}
 			else = {
-				swap_ideas = {
-					remove_idea = ALT_intelligence_agency
-					add_idea = ALT_intelligence_agency2
+				if = {
+					limit = {
+						has_completed_focus = ALT_spread_proaltirian_propaganda
+					}
+					if = {
+						limit = {
+							has_idea = ALT_intelligence_agency4r
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4r
+							add_idea = ALT_intelligence_agency5r
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = ALT_intelligence_agency4t
+						}
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4t
+							add_idea = ALT_intelligence_agency5t
+						}
+					}
+					else = {
+						swap_ideas = {
+							remove_idea = ALT_intelligence_agency4i
+							add_idea = ALT_intelligence_agency5i
+						}
+					}
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = ALT_intelligence_agency
+						add_idea = ALT_intelligence_agency2
+					}
 				}
 			}
 		}
@@ -3105,7 +3264,7 @@ focus_tree = {
 					}
 				}
 				else_if = {
-					limit = { 
+					limit = {
 						has_government = communism
 					}
 					swap_ideas = {
@@ -3114,7 +3273,7 @@ focus_tree = {
 					}
 				}
 				else_if = {
-					limit = { 
+					limit = {
 						has_government = democratic
 					}
 					swap_ideas = {
@@ -3143,13 +3302,13 @@ focus_tree = {
 					add_ideas = ALT_information_network1f
 				}
 				else_if = {
-					limit = { 
+					limit = {
 						has_government = communism
 					}
 					add_ideas = ALT_information_network1c
 				}
 				else_if = {
-					limit = { 
+					limit = {
 						has_government = democratic
 					}
 					add_ideas = ALT_information_network1d
@@ -3177,8 +3336,8 @@ focus_tree = {
 			focus = ALT_develop_radio_jammers
 			focus = ALT_control_global_information_spread
 		}
-		completion_reward = { 
-			
+		completion_reward = {
+			country_event = altir.31
 		}
 		ai_will_do = {
 			factor = 1
@@ -3198,12 +3357,12 @@ focus_tree = {
 			focus = ALT_develop_radio_jammers
 			focus = ALT_create_international_tv_channel
 		}
-		completion_reward = { 
-
+		completion_reward = {
+			country_event = altir.32
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	#Shortcuts
+	#Shortcuts will be added if the tree gets too big
 }

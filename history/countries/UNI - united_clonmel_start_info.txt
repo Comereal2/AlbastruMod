@@ -1,5 +1,5 @@
 #Author: Comereal
-capital = 575
+capital = 626
 oob = "unitedClonmel_units"
 set_research_slots = 3
 # Starting tech

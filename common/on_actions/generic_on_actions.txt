@@ -1,0 +1,30 @@
+#Author: Comereal
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = welcome_event.1
+			}
+			every_country = {
+				news_event = { #Disease Outbreak
+					id = genericnews.3
+					days = 180
+				}
+			}
+		}
+	}
+	on_war_relation_added = { #Send out news event of Clonmel at war
+		effect = {
+			if = {
+				limit = {
+					tag = UNI
+				}
+				FROM = { save_event_target_as = war_dec_country }
+				news_event = genericnews.1
+			}
+		}
+	}
+}
