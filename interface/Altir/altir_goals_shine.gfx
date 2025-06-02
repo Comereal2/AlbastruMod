@@ -176,4 +176,8 @@ spriteTypes = {
 		name = "GFX_goal_ALT_return_on_investments_shine"
 		textureFile = "gfx/interface/goals/ALT_return_on_investments.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_ALT_blimp_shine"
+		textureFile = "gfx/interface/goals/ALT_blimp.dds"
+	}
 }
