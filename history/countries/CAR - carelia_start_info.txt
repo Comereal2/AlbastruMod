@@ -32,3 +32,33 @@ set_popularities = {
 	communism = 0
 	neutrality = 70
 }
+
+set_party_name = {
+	ideology = neutrality
+	long_name = CAR_neutrality_p_long
+	name = CAR_neutrality_p
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = CAR_fascism_p_long
+	name = CAR_fascism_p
+}
+
+set_party_name = {
+	ideology = democratic
+	long_name = CAR_democratic_p_long
+	name = CAR_democratic_p
+}
+
+set_party_name = {
+	ideology = communism
+	long_name = CAR_communism_p_long
+	name = CAR_communism_p
+}
+
+set_party_name = {
+	ideology = skirts
+	long_name = CAR_skirts_p_long
+	name = CAR_skirts_p
+}

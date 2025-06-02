@@ -1,0 +1,54 @@
+#Author: Comereal
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = alt_fragmentation_status
+						option = ALT_FRAGMENTED
+					}
+				}
+				ALT = {
+					release = CRM
+					release = CAR
+					release = RAV
+					release = DRA
+					release = DWE
+					remove_state_core = 301
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 65
+							state = 287
+							state = 107
+							state = 388
+							state = 327
+						}
+					}
+					remove_core_of = ALT
+					add_core_of = ENQ
+					transfer_state_to = ENQ
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 211
+							state = 238
+							state = 147
+							state = 165
+						}
+					}
+					remove_core_of = ALT
+					add_core_of = ODZ
+					transfer_state_to = ODZ
+				}
+				DRA = {
+					add_state_core = 301
+					transfer_state = 301
+				}
+			}
+		}
+	}
+}

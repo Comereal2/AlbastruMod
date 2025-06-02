@@ -1078,6 +1078,157 @@ country_event = { #Enqiutia refuses demands
 	}
 }
 
+country_event = { #Decide how to spread propaganda
+	id = altir.31
+	title = altir.31.t
+	desc = altir.31.d
+	is_triggered_only = yes
+	option = { #Radio
+		name = altir.31.a
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				has_completed_focus = ALT_develop_radio_jammers
+			}
+			if = {
+				limit = {
+					has_completed_focus = ALT_create_the_spahs
+				}
+				swap_ideas = {
+					remove_idea = ALT_intelligence_agency3
+					add_idea = ALT_intelligence_agency6r
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ALT_intelligence_agency2
+					add_idea = ALT_intelligence_agency5r
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				has_completed_focus = ALT_create_the_spahs
+			}
+			swap_ideas = {
+				remove_idea = ALT_intelligence_agency1
+				add_idea = ALT_intelligence_agency7r
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = ALT_intelligence_agency
+				add_idea = ALT_intelligence_agency4r
+			}
+		}
+	}
+	option = { #TV
+		name = altir.31.b
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				has_completed_focus = ALT_develop_radio_jammers
+			}
+			if = {
+				limit = {
+					has_completed_focus = ALT_create_the_spahs
+				}
+				swap_ideas = {
+					remove_idea = ALT_intelligence_agency3
+					add_idea = ALT_intelligence_agency6t
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ALT_intelligence_agency2
+					add_idea = ALT_intelligence_agency5t
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				has_completed_focus = ALT_create_the_spahs
+			}
+			swap_ideas = {
+				remove_idea = ALT_intelligence_agency1
+				add_idea = ALT_intelligence_agency7t
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = ALT_intelligence_agency
+				add_idea = ALT_intelligence_agency4t
+			}
+		}
+	}
+	option = { #Internet
+		name = altir.31.c
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				has_completed_focus = ALT_develop_radio_jammers
+			}
+			if = {
+				limit = {
+					has_completed_focus = ALT_create_the_spahs
+				}
+				swap_ideas = {
+					remove_idea = ALT_intelligence_agency3
+					add_idea = ALT_intelligence_agency6i
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ALT_intelligence_agency2
+					add_idea = ALT_intelligence_agency5i
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				has_completed_focus = ALT_create_the_spahs
+			}
+			swap_ideas = {
+				remove_idea = ALT_intelligence_agency1
+				add_idea = ALT_intelligence_agency7i
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = ALT_intelligence_agency
+				add_idea = ALT_intelligence_agency4i
+			}
+		}
+	}
+}
+
+country_event = { #Stop Anti-Altir movements
+	id = altir.32
+	title = altir.32.t
+	desc = altir.32.d
+	is_triggered_only = yes
+	option = { #Focus on resistance
+		name = altir.32.a
+		ai_chance = {
+			base = 1
+		}
+		add_ideas = ALT_prevent_resistance
+	}
+	option = { #Focus on compliance
+		name = altir.32.b
+		ai_chance = {
+			base = 1
+		}
+		add_ideas = ALT_improve_compliance
+	}
+}
+
 add_namespace = altirnews
 #The Skirt Takeover
 news_event = {

@@ -1,3 +1,22 @@
+#Author: Comereal
+
+disease_outbreak = {
+	icon = GFX_idea_generic_disease_outbreak
+	enable = {
+		has_global_flag = has_desease_outbreak
+	}
+	remove_trigger = {
+		NOT = {
+			has_global_flag = has_desease_outbreak
+		}
+	}
+	consumer_goods_factor = outbreak_consumer_goods_factor
+	monthly_population = outbreak_monthly_population
+	production_factory_efficiency_gain_factor = outbreak_production_factory_efficiency_gain_factor
+	production_speed_buildings_factor = outbreak_production_speed_buildings_factor
+	fuel_cost = outbreak_fuel_cost
+}
+
 sabotaged_resources = {
 	remove_trigger = { 
 		ROOT = {
@@ -1016,18 +1035,6 @@ RAJ_industrialized_personnel = {
 	icon = GFX_modifiers_generic_military_plans
 	state_resources_factor = 0.15
 	state_production_speed_buildings_factor = 0.15
-}
-
-
-PAR_protected_by_humaita = {
-	enable = {
-		PAR = { controls_province = 2173 } 
-	}
-	icon = GFX_modifiers_SOV_defend_moscow
-	local_org_regain = 0.15
-	recruitable_population_factor = 0.25
-	army_core_defence_factor = 0.1
-	supply_factor = 0.15
 }
 
 malaria = {

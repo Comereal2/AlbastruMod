@@ -17,7 +17,11 @@ state={
 	history={
 		owner = ALT
 		add_core_of = ALT
-		
+		add_core_of = DWE
+		add_victory_points = {
+			province = 576
+			value = 10
+		}
 		buildings = {
 			infrastructure = 3
 			

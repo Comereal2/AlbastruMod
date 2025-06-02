@@ -19,6 +19,8 @@ is_unlikely_country_tag = {
 		tag = CRM
 		tag = CAR
 		tag = RAV
+		tag = DRA
+		tag = DWE
 	}
 }
 

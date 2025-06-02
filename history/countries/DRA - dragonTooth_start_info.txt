@@ -1,0 +1,71 @@
+#Author: Comereal
+capital = 227
+set_research_slots = 3
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	basic_train = 1
+	motorised_infantry = 1
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 90
+	communism = 0
+	neutrality = 5
+	skirts = 5
+}
+
+recruit_character = DRA_pheonix
+recruit_character = DRA_black_dragon
+recruit_character = DRA_blue_dragon
+recruit_character = DRA_red_dragon
+recruit_character = DRA_lifts_her_tail
+
+set_party_name = {
+	ideology = neutrality
+	long_name = DRA_neutrality_p_long
+	name = DRA_neutrality_p
+}
+
+set_party_name = {
+	ideology = fascism
+	long_name = DRA_fascism_p_long
+	name = DRA_fascism_p
+}
+
+set_party_name = {
+	ideology = democratic
+	long_name = DRA_democratic_p_long
+	name = DRA_democratic_p
+}
+
+set_party_name = {
+	ideology = communism
+	long_name = DRA_communism_p_long
+	name = DRA_communism_p
+}
+
+set_party_name = {
+	ideology = skirts
+	long_name = DRA_skirts_p_long
+	name = DRA_skirts_p
+}

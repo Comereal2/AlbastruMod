@@ -463,7 +463,20 @@ allow_scorched_earth = {
 #  # #  # #   # #         # #    #  #  # #    
  ##  #  # #   # ###     ##  ###  #   ##  #     
 
-
+alt_fragmentation_status = {
+	name = "ALT_FRAGMENTATION_STATUS"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
+	}
+	option = {
+		name = ALT_FRAGMENTED
+		text = "RULE_OPTION_ALT_FRAGMENTED"
+		desc = "RULE_OPTION_ALT_FRAGMENTED_DESC"
+	}
+}
 
  #     #  ###       #####   #######  #######  #######  ###  #     #   #####    #####  
  #     #   #       #     #  #           #        #      #   ##    #  #     #  #     # 

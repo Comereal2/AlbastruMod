@@ -4018,33 +4018,6 @@ NZL = {
 	callsigns = { }
 }
 
-INS_HOL = {
-	male = {
-		names = {
-			Adriaan Albert Anthony Antonius Berend Bodo Carsten Christiaan Cornelis Dirk Ferdinand Freek Frits Gerard Godfried Govert Hendrik Henri Jacob Jacobus Jan "Jan Willem" Johan Johannes Laurens Mathias Matthijs Nicolaas Peter Petrus Philippus Pieter Quirinus Sijmen Theodorus Tjerk Willem
-		 }
-	}
-
-	female = {
-		names = { Coba Corrie Frieda Hannie Helena Ina Jet Joke Miep Reina Truus }
-	}
-
-	surnames = {
-	Boers "'t Mannetje" Best "Bischoff van Heemskerk" "de Visser" "den Hollander" "den Ouden" "Jacometti" "van den Bent" "van den Briel" "van den Hof" "van der Bijl" "van Helsdingen" "van Liempd" "van Setten" "van Voorst tot Voorst" "van Zinnicq Bergmann" "Wittert van Hoogland" Bosch Bruggink Bruinier Buijs Buurman Carstens "den Breejen" Elias Folmer Giesen Ham Harberts Hilberdink Hoogewerff Hoving Jaapies Janssen Jolles Kaak Kraak Krouwel Kuiper Landzaat Leegstra Lukkien Maas Migchelbrink Reijnierse Rijnders Roelofsen Sandberg Scherpenhuijzen Schippers Steen Tebrunsvelt Varwijk Verhoef Visscher Vos Winkelman
-	  }
-}
-
-INS = {
-	male = {
-		names = { Joko Fauzi Prabowo Ali Soemarno Henk Widji Teuku Hadi Azwar Mustafa Zaini Abdul Anak Ida Dewa }
-	}
-	female = {
-		names = { Diah Siti }
-	}
-	surnames = { Widodo Bowo Subianto Sadikin Sosroatmodjo Ngantung Permatasari Damono Wibowo Thukul Hartinah Gunawan Haryanto Suprianto Sabara Abubakar "Bagus Oka" "Bagus Mantra" Martha}
-	callsigns = { }
-}
-
 BHU = {
 	male = {
 		names = { Tsarong Chamba Trimon Penor Gendün Jamphel Norbhu Mipham Tsepon Andruk Namgang   }
@@ -4340,21 +4313,6 @@ RHD = {
 	callsigns = { }
 }
 
-PAK = {
-	male = {
-		names = {
-			Syad Ahmad Muhammed Aga Nawab Maulvi Karamat Abdul Nasir Maulana Ibraheem Bhai Hussain Malik Raees Choudhry Rahmat
-		}
-	}
-	female = {
-		names = { "Chand Kaur" "Ratan Kaur" "Kanwal Kaur" "Datar Kaur" "Nand Kaur" Mahtab Sunayna }
-	}
-	surnames = {
-			Khan Ali Malik Nabiullah Sadiq Shafi Pirbhai Ahmed Baig Johar
-	}
-	callsigns = { }
-}
-
 PHI = {
 	male = {
 		names = { Emilio Apolinario Andrés José Hermano Jacinto Mariano Deodato Ladislao Teodoro Valentíne Antonio León Simeón Arcadio Artemio Manuel  }
@@ -4442,52 +4400,8 @@ CHI = {
 	callsigns = { }
 }
 
-GXC = {
-	male = {
-		names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
-	}
-	female = {
-		names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
-	}
-	surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
-	callsigns = { }
-}
-
 # EAST ASIAN REICHSKOMMISSARIAT
 ROA = {
-	male = {
-		names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
-	}
-	female = {
-		names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
-	}
-	surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
-	callsigns = { }
-}
-
-PRC = {
-	male = {
-		names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
-	}
-	female = {
-		names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
-	}
-	surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
-	callsigns = { }
-}
-
-SHX = {
-	male = {
-		names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
-	}
-	female = {
-		names = { Li Bao Mulan Lanfen Mingzhu Qingling Mei Yingtai Feng "Zhi Ruo" Fei "Ru Shi" Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen Xiaoying Xiaoyuan Xiaoji Xiaolou }
-	}
-	surnames = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
-	callsigns = { }
-}
-
-XSM = {
 	male = {
 		names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu  }
 	}
@@ -4544,19 +4458,6 @@ MEN = {
 	callsigns = { }
 }
 
-MAN = {
-	male = {
-		names = {
-			Ma Deng Zhao Tong Guan Oboi Sonin Songgotu Suksaha Mingzhu Nalan Fu Hesehn Changlin
-		}
-	}
-	female = {
-		names = { Fen Jian Wen Hejing Hejia Hexiao Zhuangjing }
-	}
-	surnames = { Zhanshan Tiemei Shangzhi Linge Xiangying Xingde Kang'an }
-	callsigns = { }
-}
-
 TAN = {
 	male = {
 		names = {  Ma Deng Zhao Tong Guan Oboi Sonin Songgotu Suksaha Mingzhu Nalan Fu Hesehn Changlin  }
@@ -4576,22 +4477,6 @@ KOR = {
 		names = { "Ae-jung" Bora "Chae-won" "Hye-ja" "Ji-young" "Seong-ja" Sora "Yeo-jin" "Kyung-hee" }
 	}
 	surnames = { Kim Cho Lee Park Jeong Choe Jang Yun Rim Ryu Gang }
-	callsigns = { }
-}
-
-MAL = {
-	male = {
-		names = { Najib Muhammad Tengku Kadir "Tengku Kadir" Embok Eunos Ibrahim Pak Pandir Rashid Ahmad Nordin Abdul Amin Lokman Yaacob Elyas Mazlan }
-	}
-	female = {
-		names = {
-			Azura Merenui Metetini Miri Moea Moeata Moerani Mohea Nanihi "Nu’utea" Orama Poe Pear Poehina Poenui Poerava Puaiti
-			Puatea Puaura Ranitea Rarahu Raunui Raurii Tahiata Taiana Taina Tania Taurua Tautiare Tehani
-			Tehea Teora Tera Tevai Titaina Titaua Tuianu Tumata Unutea Urarii Vaea Vaiana Vaianu Vaiata Vaihere Vaimiti Vairea
-			Vaite Vaitiare
-		}
-	}
-	surnames = { Razak Yusof Ali Suloh Abdullah Yaacob Sako Maidin Boestamam Aziz Latiff Omar }
 	callsigns = { }
 }
 
