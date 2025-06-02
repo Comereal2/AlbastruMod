@@ -1,0 +1,70 @@
+#Author: Comereal
+characters = {
+	DRA_pheonix = {
+		name = "Pheonix"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_DRA_pheonix"
+			}
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = {
+				ALT_reborn
+			}
+		}
+	}
+	DRA_black_dragon = {
+		name = "Black Dragon"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_DRA_black_dragon"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {
+				ALT_dragonborn
+			}
+		}
+	}
+	DRA_blue_dragon = {
+		name = "Blue Dragon"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_DRA_blue_dragon"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			traits = {
+				ALT_dragonborn
+			}
+		}
+	}
+	DRA_red_dragon = {
+		name = "Red Dragon"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_DRA_red_dragon"
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = {
+				ALT_dragonborn
+			}
+		}
+	}
+	DRA_lifts_her_tail = {
+		name = "Lifts-Her-Tail"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_DRA_lifts_her_tail"
+			}
+		}
+		country_leader = {
+			ideology = tomboys
+		}
+	}
+}

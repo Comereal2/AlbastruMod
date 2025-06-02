@@ -501,41 +501,10 @@ foreign_influence = {
 			# priotize larger countries
 
 			modifier = {
-				# blocks our focus tree for libyan oil
-				tag = ITA
-				FROM = {
-					tag = LBA
-				}
-
-				factor = 0
-			}
-			modifier = {
-			# we dont want japan doing this and its not covered by the below size checks
-				tag = JAP
-				FROM = { tag = GUM }
-
-				factor = 0
-			}
-			modifier = {
-			# feels wierd to generate random ppl here over the nazis running the show and hoi doesnt have those except perhaps Von Neurath, but he didnt really run things past 41 so best just block it from ai while at war honestly.
-				tag = GER
-				FROM = { tag = CZE }
-				has_war = yes
-
-				factor = 0
-			}
-
-			modifier = {
 				# neutrals won't do collaboration until 1944 and they are at peace
 
 				has_government = neutrality
-				# allow neutral GER
-				not = { tag = GER }
-
-				OR = {
-					has_war = yes
-					date < 1944.01.01
-				}
+				has_war = yes
 
 				factor = 0
 			}
@@ -572,22 +541,6 @@ foreign_influence = {
 				}
 
 				check_variable = { num_cores_we_control < num_min_cores }
-
-				factor = 0
-			}
-
-			modifier = {
-			# [softly] Don't...
-				tag = TUR
-				FROM = { tag = KUR }
-
-				factor = 0
-			}
-			modifier = {
-				FROM = {
-					tag = POL
-					is_ai = no
-				}
 
 				factor = 0
 			}

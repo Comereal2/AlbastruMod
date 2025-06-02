@@ -782,14 +782,14 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
-		ALT_intelligence_agency = {
+		ALT_intelligence_agency = { #Original
 			picture = ALT_intelligence_agency
 			removal_cost = -1
 			modifier = {
 				operative_slot = 2
 			}
 		}
-		ALT_intelligence_agency1 = {
+		ALT_intelligence_agency1 = { #Create the SPAHS
 			picture = ALT_intelligence_agency
 			removal_cost = -1
 			modifier = {
@@ -801,7 +801,7 @@ ideas = {
 				civilian_intel_factor = 0.05
 			}
 		}
-		ALT_intelligence_agency2 = {
+		ALT_intelligence_agency2 = { #Radio Jammers
 			picture = ALT_intelligence_agency
 			removal_cost = -1
 			modifier = {
@@ -812,7 +812,7 @@ ideas = {
 				civilian_intel_to_others = -10
 			}
 		}
-		ALT_intelligence_agency3 = {
+		ALT_intelligence_agency3 = { #SPAHS + Radio Jammers
 			picture = ALT_intelligence_agency
 			removal_cost = -1
 			modifier = {
@@ -822,6 +822,150 @@ ideas = {
 				intelligence_agency_defense = 0.1
 				army_intel_to_others = -15
 				civilian_intel_to_others = -15
+				army_intel_factor = 0.05
+				civilian_intel_factor = 0.05
+			}
+		}
+		ALT_intelligence_agency4r = { #Base + event Radio
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.2
+				civilian_intel_to_others = 5
+			}
+		}
+		ALT_intelligence_agency4t = { #Base + event TV
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.15
+			}
+		}
+		ALT_intelligence_agency4i = { #Base + event Internet
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.3
+				civilian_intel_to_others = 10
+				army_intel_to_others = 5
+			}
+		}
+		ALT_intelligence_agency5r = { #Radio Jammers + event Radio
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.2
+				drift_defence_factor = 0.1
+				intelligence_agency_defense = 0.1
+				army_intel_to_others = -10
+				civilian_intel_to_others = -5
+			}
+		}
+		ALT_intelligence_agency5t = { #Radio Jammers + event TV
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.15
+				drift_defence_factor = 0.1
+				intelligence_agency_defense = 0.1
+				army_intel_to_others = -10
+				civilian_intel_to_others = -10
+			}
+		}
+		ALT_intelligence_agency5i = { #Radio Jammers + event Internet
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.3
+				drift_defence_factor = 0.1
+				intelligence_agency_defense = 0.1
+				army_intel_to_others = -5
+			}
+		}
+		ALT_intelligence_agency6r = { #All + event Radio
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.2
+				decryption_factor = 0.1
+				drift_defence_factor = 0.1
+				intelligence_agency_defense = 0.1
+				army_intel_to_others = -15
+				civilian_intel_to_others = -10
+				army_intel_factor = 0.05
+				civilian_intel_factor = 0.05
+			}
+		}
+		ALT_intelligence_agency6t = { #All + event TV
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.15
+				decryption_factor = 0.1
+				drift_defence_factor = 0.1
+				intelligence_agency_defense = 0.1
+				army_intel_to_others = -15
+				civilian_intel_to_others = -15
+				army_intel_factor = 0.05
+				civilian_intel_factor = 0.05
+			}
+		}
+		ALT_intelligence_agency6i = { #All + event Internet
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.3
+				decryption_factor = 0.1
+				drift_defence_factor = 0.1
+				intelligence_agency_defense = 0.1
+				army_intel_to_others = -10
+				civilian_intel_to_others = -5
+				army_intel_factor = 0.05
+				civilian_intel_factor = 0.05
+			}
+		}
+		ALT_intelligence_agency7r = { #SPAHS + event Radio
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.2
+				decryption_factor = 0.1
+				army_intel_to_others = -5
+				army_intel_factor = 0.05
+				civilian_intel_factor = 0.05
+			}
+		}
+		ALT_intelligence_agency7t = { #SPAHS + event TV
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.15
+				decryption_factor = 0.1
+				army_intel_to_others = -5
+				civilian_intel_to_others = -5
+				army_intel_factor = 0.05
+				civilian_intel_factor = 0.05
+			}
+		}
+		ALT_intelligence_agency7i = { #SPAHS + event Internet
+			picture = ALT_intelligence_agency
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				party_popularity_stability_factor = 0.3
+				decryption_factor = 0.1
+				civilian_intel_to_others = 5
 				army_intel_factor = 0.05
 				civilian_intel_factor = 0.05
 			}
@@ -1249,6 +1393,21 @@ ideas = {
 				skirts_drift = 0.03
 				decryption_power_factor = 0.3
 				intel_network_gain_factor = 0.2
+			}
+		}
+		ALT_prevent_resistance = {
+			picture = ALT_prevent_resistance
+			removal_cost = -1
+			modifier = {
+				required_garrison_factor = -0.1
+				resistance_target = -0.05
+			}
+		}
+		ALT_improve_compliance = {
+			picture = ALT_improve_compliance
+			removal_cost = -1
+			modifier = {
+				compliance_growth = 0.1
 			}
 		}
 	}

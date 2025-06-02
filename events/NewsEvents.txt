@@ -1,1 +1,157 @@
-﻿
+﻿#Author: Comereal
+
+add_namespace = genericnews
+
+news_event = { #Clonmel at war
+	id = genericnews.1
+	title = genericnews.1.t
+	desc = genericnews.1.d
+	picture = GFX_genericnews_event_01
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #Clonmel
+		name = genericnews.1.a
+		trigger = {
+			tag = UNI
+		}
+	}
+	option = { #Fighting Clonmel
+		name = genericnews.1.b
+		trigger = {
+			has_war_with = UNI
+		}
+	}
+	option = { #Generic
+		name = genericnews.1.c
+		trigger = {
+			NOT = {
+				tag = UNI
+				has_war_with = UNI
+			}
+		}
+	}
+}
+
+news_event = { #Reunification of Helios empire
+	id = genericnews.2
+	title = genericnews.2.t
+	desc = genericnews.2.d
+	picture = GFX_genericnews_event_02
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = genericnews.2.a
+		trigger = {
+			has_cosmetic_tag = HELIOS_EMPIRE
+		}
+	}
+	option = {
+		name = genericnews.2.b
+		trigger = {
+			NOT = { has_cosmetic_tag = HELIOS_EMPIRE }
+		}
+	}
+}
+
+news_event = { #Global, disease outbreak in Kastaryn
+	id = genericnews.3
+	title = genericnews.3.t
+	desc = genericnews.3.d
+	picture = GFX_genericnews_event_03
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = genericnews.3.a
+		hidden_effect = {
+			set_global_flag = has_desease_outbreak
+			set_variable = {
+				name = outbreak_consumer_goods_factor
+				value = 0.8
+			}
+			set_variable = {
+				name = outbreak_monthly_population
+				value = -0.2
+			}
+			set_variable = {
+				name = outbreak_production_factory_efficiency_gain_factor
+				value = -0.15
+			}
+			set_variable = {
+				name = outbreak_production_speed_buildings_factor
+				value = -0.3
+			}
+			set_variable = {
+				name = outbreak_fuel_cost
+				value = 0
+			}
+			set_variable = {
+				name = global.cure_progress
+				value = 0
+			}
+			add_dynamic_modifier = {
+				modifier = disease_outbreak
+			}
+		}
+	}
+}
+
+news_event = { #Disease cured
+	id = genericnews.4
+	title = genericnews.4.t
+	desc = genericnews.4.d
+	picture = GFX_genericnews_event_04
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = genericnews.4.a
+	}
+}
+
+add_namespace = welcome_event
+
+country_event = { #Welcome to the mod
+	id = welcome_event.1
+	title = welcome_event.1.t
+	desc = welcome_event.1.d
+	is_triggered_only = yes
+	option = {
+		name = welcome_event.1.a
+		country_event = welcome_event.2
+	}
+	option = {
+		name = welcome_event.1.b
+		country_event = welcome_event.3
+	}
+	option = {
+		name = welcome_event.1.c
+		add_political_power = 1
+	}
+}
+
+country_event = { #Mod history
+	id = welcome_event.2
+	title = welcome_event.2.t
+	desc = welcome_event.2.d
+	is_triggered_only = yes
+	option = {
+		name = welcome_event.generic_back
+		hidden_effect = {
+			country_event = welcome_event.1
+		}
+	}
+}
+
+country_event = { #Placeholder nations
+	id = welcome_event.3
+	title = welcome_event.3.t
+	desc = welcome_event.3.d
+	is_triggered_only = yes
+	option = {
+		name = welcome_event.generic_back
+		hidden_effect = {
+			country_event = welcome_event.1
+		}
+	}
+}
