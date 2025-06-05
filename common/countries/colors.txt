@@ -105,6 +105,10 @@ UNI = {
 	color = rgb { 100 188 4 }
 	color_ui = rgb { 100 188 4 }
 }
+ULA = {
+	color = rgb { 101 10 101 }
+	color_ui = rgb { 101 10 101 }
+}
 #Releasables
 CRM = {
 	color = rgb { 255 253 118 }

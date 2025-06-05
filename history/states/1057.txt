@@ -15,8 +15,8 @@ state={
 	}
 
 	history={
-		owner = LOM
-		add_core_of = LOM
+		owner = ULA
+		add_core_of = ULA
 		
 		buildings = {
 			infrastructure = 2
@@ -24,10 +24,6 @@ state={
 			arms_factory = 0
 			industrial_complex = 0
 			dockyard = 1
-			4333 = {
-				naval_base = 1
-			}
-			
 		}
 		
 	}

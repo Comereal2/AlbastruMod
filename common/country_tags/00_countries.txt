@@ -26,6 +26,7 @@ KIZ = "countries/Kizixar.txt"
 MIR = "countries/Mirzaistan.txt"
 TZE = "countries/Tzedekia.txt"
 UNI = "countries/UnitedClonmel.txt"
+ULA = "countries/Ulashat.txt"
 
 #Releasables
 YEN = "countries/Yentrok.txt"

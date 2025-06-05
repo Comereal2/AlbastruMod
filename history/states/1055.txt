@@ -15,8 +15,13 @@ state={
 	}
 
 	history={
-		owner = LOM
-		add_core_of = LOM
+		owner = ULA
+		add_core_of = ULA
+
+		add_victory_points = {
+			province = 4331
+			value = 10
+		}
 		
 		buildings = {
 			infrastructure = 2
