@@ -18,6 +18,10 @@ state={
 		owner = RES
 		add_core_of = RES
 		
+		victory_points = {
+			4309 10
+		}
+
 		buildings = {
 			infrastructure = 2
 			

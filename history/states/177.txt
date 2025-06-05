@@ -17,6 +17,7 @@ state={
 	history={
 		owner = ODZ
 		add_core_of = ODZ
+		add_claim_by = ALT
 		
 		buildings = {
 			infrastructure = 2

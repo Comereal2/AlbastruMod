@@ -18,13 +18,17 @@ state={
 		owner = ARA
 		add_core_of = ARA
 		
+		victory_points = {
+			4186 10
+		}
+
 		buildings = {
 			infrastructure = 2
 			
 			arms_factory = 0
 			industrial_complex = 0
 			dockyard = 1
-			4184 = {
+			4186 = {
 				naval_base = 1
 			}
 			
