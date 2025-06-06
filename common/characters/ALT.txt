@@ -203,4 +203,23 @@ characters = {
 			}
 		}
 	}
+	ALT_the_architect = {
+		name = "The Architect"
+		portraits = {
+			civilian = {
+				small = "GFX_portrait_ALT_the_architect_small"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = political_advisor
+			idea_token = ALT_the_architect
+			traits = { 
+				ALT_renovator
+			}
+			available = {
+				has_completed_focus = ALT_complete_nation_renovation
+			}
+		}
+	}
 }

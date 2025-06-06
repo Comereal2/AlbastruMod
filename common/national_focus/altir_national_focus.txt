@@ -2355,7 +2355,7 @@ focus_tree = {
 		id = ALT_build_apache
 		icon = GFX_goal_ALT_build_apache
 		cost = 5
-		x = 11
+		x = 12
 		y = 0
 		offset = {
 			trigger = {
@@ -2385,7 +2385,7 @@ focus_tree = {
 		id = ALT_expand_tourism
 		icon = GFX_goal_ALT_expand_tourism
 		cost = 5
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = ALT_build_apache
 		prerequisite = {
@@ -2397,7 +2397,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = ALT_tourism_influx
-				days = 365
+				days = 180
 			}
 		}
 		ai_will_do = {
@@ -2408,7 +2408,7 @@ focus_tree = {
 		id = ALT_build_railways
 		icon = GFX_goal_ALT_build_railways
 		cost = 5
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ALT_build_apache
 		prerequisite = {
@@ -2467,7 +2467,7 @@ focus_tree = {
 		id = ALT_finish_apache_construction
 		icon = GFX_goal_ALT_finish_apache_construction
 		cost = 5
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = ALT_build_apache
 		prerequisite = {
@@ -2508,7 +2508,7 @@ focus_tree = {
 	focus = {
 		id = ALT_expand_altirian_infrastructure
 		icon = GFX_goal_ALT_expand_altirian_infrastructure
-		cost = 10
+		cost = 7
 		x = 1
 		y = 1
 		relative_position_id = ALT_build_railways
@@ -2522,13 +2522,32 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
-			every_owned_state = {
+			random_owned_state = {
 				limit = {
 					is_core_of = ROOT
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
+					infrastructure < 3
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					infrastructure < 3
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					infrastructure < 3
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -2545,7 +2564,7 @@ focus_tree = {
 		id = ALT_fund_the_blimp
 		icon = GFX_goal_ALT_blimp
 		cost = 5
-		x = 4
+		x = 3
 		y = 1
 		relative_position_id = ALT_build_apache
 		prerequisite = {
@@ -2564,10 +2583,7 @@ focus_tree = {
 							building = industrial_complex
 							size > 1
 						}
-						non_damaged_building_level = {
-							building = infrastructure
-							level > 3
-						}
+						infrastructure > 3
 					}
 				}
 				random_owned_controlled_state = {
@@ -2577,10 +2593,7 @@ focus_tree = {
 							building = industrial_complex
 							size > 1
 						}
-						non_damaged_building_level = {
-							building = infrastructure
-							level > 3
-						}
+						infrastructure > 3
 					}
 					add_building_construction = {
 						type = industrial_complex
@@ -2595,6 +2608,60 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_spread_blimp_atms
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ALT_fund_the_blimp
+		prerequisite = {
+			focus = ALT_finish_apache_construction
+		}
+		prerequisite = {
+			focus = ALT_fund_the_blimp
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_complete_nation_renovation
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = ALT_expand_altirian_infrastructure
+		prerequisite = {
+			focus = ALT_promote_public_transport
+		}
+		prerequisite = {
+			focus = ALT_expand_altirian_infrastructure
+		}
+		prerequisite = {
+			focus = ALT_spread_blimp_atms
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_STABILITY
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			custom_effect_tooltip = empty_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ALT_the_architect
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	###########################

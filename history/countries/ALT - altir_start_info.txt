@@ -95,6 +95,7 @@ recruit_character = ALT_kamila_arbali
 recruit_character = ALT_kacor_prese
 recruit_character = ALT_rasi_stova
 recruit_character = ALT_warlo_lugio
+recruit_character = ALT_the_architect
 add_ideas = {
 	ALT_unquestionable_authorityn
 	ALT_ghost_of_the_helios_empire

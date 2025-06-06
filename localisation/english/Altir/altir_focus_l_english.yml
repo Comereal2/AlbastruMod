@@ -194,6 +194,10 @@ ALT_promote_public_transport_desc: "The Altirian lands are vast, however our tra
 ALT_fund_the_blimp: "Fund the Blimp"
 ALT_fund_the_blimp_desc: "The Blimp financial network has plans to be the international, multi-currency, provision-less transfer system of the region. Many banks have already expressed interest about simplifying transactions and the government should subsidize the project to allow for the non-profit to continue with its premise."
 ALT_fund_the_blimp_ctt: "Add §G2§! §YCivilian Factory§! to a state \nWith §G4+§! §YInfrastructure§! and §G2§! Building Slots \n(Currently none)"
+ALT_spread_blimp_atms: "Spread Blimp ATMs"
+ALT_spread_blimp_atms_desc: "With the finished construction of APACHE and the new wave of funding aimed towards Blimp, we can assure the system's dominance by placing many brand new ATMs across the nation specifically for the network."
+ALT_complete_nation_renovation: "Complete Nation Renovation"
+ALT_complete_nation_renovation_desc: "Since a few years ago, many projects have been completed to improve the Altirian infrastructure. In the end all of them proved very benefitial and will now bring in high returns."
 #Foreign Investments
 ALT_look_for_foreign_investments: "Look for Foreign Investments"
 ALT_look_for_foreign_investments_desc: "The Altirian economy is strong and stable, we should look outside of our nation for possible investments, which we can later use for our own benefit once they grow."

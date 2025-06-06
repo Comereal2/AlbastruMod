@@ -44,4 +44,8 @@ spriteTypes = {
 		name = "GFX_portrait_ALT_warlo_lugio_small"
 		textureFile = "gfx/interface/ideas/ALT_warlo_lugio.dds"
 	}
+	spriteType = {
+		name = "GFX_portrait_ALT_the_architect_small"
+		textureFile = "gfx/interface/ideas/ALT_the_architect.dds"
+	}
 }
