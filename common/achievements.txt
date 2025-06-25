@@ -1,16 +1,1 @@
-#Author: Comereal
-unique_id = albastru_mod_achievements_1
-
-what_the_dictator_couldnt = {
-	possible = {
-		difficulty > 1
-		has_start_date < 2024.11.12
-		has_any_custom_difficulty_setting = no
-        game_rules_allow_achievements = yes
-		tag = UNI
-	}
-
-	happened = {
-		has_country_flag = UNI_prussels_war_won
-	}
-}
+#Overwritten by /achievements
