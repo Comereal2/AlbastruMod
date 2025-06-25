@@ -2896,13 +2896,142 @@ focus_tree = {
 		id = ALT_create_the_new_armed_forces
 		icon = GFX_focus_generic_self_management
 		cost = 5
-		x = 5
+		x = 7
 		y = 0
 		relative_position_id = ALT_look_for_foreign_investments
 		select_effect = {
 			set_country_flag = focus_taken
 		}
 		completion_reward = {
+			army_experience = 10
+			if = {
+				limit = {
+					118 = { #Altiria
+						is_controlled_by = ALT
+						is_owned_by = ALT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+						}
+					}
+				}
+				118 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_focus_on_special_forces
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = ALT_create_the_new_armed_forces
+		prerequisite = {
+			focus = ALT_create_the_new_armed_forces
+		}
+		mutually_exclusive = {
+			focus = ALT_increase_military_personnel
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = tech_mountaineers
+					}
+				}
+				set_technology = {
+					tech_mountaineers = 1
+				}
+			}
+			add_unit_bonus = {
+				category_special_forces = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+				}
+				recon = {
+					recon = 0.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_increase_military_personnel
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = ALT_create_the_new_armed_forces
+		prerequisite = {
+			focus = ALT_create_the_new_armed_forces
+		}
+		mutually_exclusive = {
+			focus = ALT_focus_on_special_forces
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					120 = { #GMP
+						is_controlled_by = ALT
+						is_owned_by = ALT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+						}
+					}
+				}
+				120 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			upgrade_conscription_law = yes
 		}
 		ai_will_do = {
 			factor = 1

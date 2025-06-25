@@ -249,7 +249,11 @@ ALT_stop_anti_altir_movements: "Stop Anti-Altir Movements"
 ALT_stop_anti_altir_movements_desc: "Even with our government controlling information, different anti-altir movements will still exist. However now we can limit their spread and popularity by making their promotion appear less around the internet."
 #Army
 ALT_create_the_new_armed_forces: "Create the New Armed Forces"
-ALT_create_the_new_armed_forces_desc: ""
+ALT_create_the_new_armed_forces_desc: "While currently not under threat from neighbours, the Altirian Armed Forces are in dire need of restructurization after the collapse of the Helios Empire."
+ALT_focus_on_special_forces: "Focus on the Special Forces"
+ALT_focus_on_special_forces_desc: "With guerilla warfare becoming more and more obsolete, centralizing the military power of a nation into as few men as possible has become a viable strategy, aspecially for technologically advanced nations such as ours. By focusing on providing our special forces with the best equipment and training, we make sure that history will not have a repeat of the amount of casualties we suffered in previous wars."
+ALT_increase_military_personnel: "Increase Military Personnel"
+ALT_increase_military_personnel_desc: "A strong military is a strong nation and the strongest militaries are the ones with men on the field. The more men we are able to train and deploy onto the battlefield, the more likely we are to outlast any enemy during wartime."
 #Navy
 ALT_expand_altiria_dockyards: "Expand Altiria Dockyards"
 ALT_expand_altiria_dockyards_desc: ""

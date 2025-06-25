@@ -27,4 +27,20 @@ on_actions = {
 			}
 		}
 	}
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = UNI
+					}
+					FROM = {
+						tag = PRU
+						exists = no
+					}
+				}
+				UNI = { set_country_flag = UNI_prussels_war_won }
+			}
+		}
+	}
 }
