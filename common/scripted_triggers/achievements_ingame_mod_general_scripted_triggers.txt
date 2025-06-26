@@ -1,0 +1,801 @@
+#Original by: LimonenZitrone
+#Modified by: Comereal
+
+has_not_declared_a_war_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_NOT_DECLARED_A_WAR
+		NOT = { has_country_flag = has_started_a_war }
+	}
+}
+
+has_not_participated_in_a_war_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_NOT_PARTICIPATED_IN_A_WAR
+		NOT = { has_country_flag = has_participated_in_a_war }
+	}
+}
+
+has_researched_any_tech_ahead_of_time = {
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_RESEARCHED_ANY_TECH_AHEAD_OF_TIME
+		OR = {
+			AND = {
+				date < 1941.1.1
+				OR = {
+					# Infantry
+					has_tech = amphibious_mechanized_infantry
+					# Armor
+					## without NSB
+					has_tech = advanced_light_tank
+					has_tech = improved_medium_tank
+					has_tech = improved_heavy_tank
+					## with NSB
+					has_tech = engine_tech_3
+					has_tech = advanced_light_tank_chassis
+					has_tech = amphibious_drive
+					has_tech = armor_tech_3
+					# Artillery
+					has_tech = artillery3
+					has_tech = rocket_artillery2
+					has_tech = antiair3
+					has_tech = antitank3
+					# Engineering
+					has_tech = phased_array
+					has_tech = fire_control_methods_3
+					# Industry
+					has_tech = assembly_line_production
+					has_tech = concentrated_industry4
+					has_tech = dispersed_industry4
+					has_tech = advanced_oil_processing
+					has_tech = advanced_rubber_processing
+					has_tech = construction4
+					has_tech = excavation4
+				}
+			}
+			AND = {
+				date < 1942.1.1
+				OR = {
+					# Infantry
+					has_tech = infantry_at
+					has_tech = advanced_infantry_weapons
+					has_tech = extreme_environment_training
+					has_tech = survival_training
+					has_tech = support_weapons4
+					has_tech = mechanised_infantry2
+					has_tech = armored_car3
+					# Armor
+					## without NSB
+					has_tech = amphibious_tank_2
+					# Support Companies
+					has_tech = tech_engineers3
+					has_tech = tech_recon3
+					has_tech = tech_military_police3
+					has_tech = tech_maintenance_company3
+					has_tech = tech_field_hospital3
+					has_tech = tech_logistics_company3
+					has_tech = tech_signal_company3
+					# Artillery
+					has_tech = artillery4
+					has_tech = rocket_artillery3
+					has_tech = antiair4
+					has_tech = antitank4
+					# Engineering
+					has_tech = monopulse_radar
+					has_tech = advanced_computing_machine
+					has_tech = advanced_encryption
+					has_tech = advanced_decryption
+					# Naval
+					## with MtG
+					has_tech = homing_torpedo
+					has_tech = improved_light_shell
+					has_tech = improved_medium_shell
+					has_tech = improved_heavy_shell
+					has_tech = advanced_naval_mines
+					OR = {
+						AND = {
+							has_dlc = "By Blood Alone"
+							has_tech = airdrop_mines_bba
+						}
+						AND = {
+							NOT = { has_dlc = "By Blood Alone" }
+							has_tech = airdrop_mines
+						}
+					}
+				}
+			}
+			AND = {
+				date < 1943.1.1
+				OR = {
+					# Infantry
+					has_tech = infantry_at2
+					has_tech = paratroopers3
+					has_tech = marines3
+					has_tech = tech_mountaineers3
+					has_tech = night_vision
+					has_tech = amphibious_mechanized_infantry_2
+					# Armor
+					## without NSB
+					has_tech = advanced_medium_tank
+					has_tech = advanced_heavy_tank
+					has_tech = super_heavy_tank
+					## with NSB
+					has_tech = advanced_medium_tank_chassis
+					has_tech = advanced_heavy_tank_chassis
+					has_tech = super_heavy_tank_chassis
+					# Artillery
+					has_tech = artillery5
+					has_tech = rocket_artillery4
+					has_tech = antiair5
+					has_tech = antitank5
+					# Engineering
+					has_tech = experimental_rockets
+					has_tech = nuclear_reactor
+					# Industry
+					has_tech = flexible_line
+					has_tech = streamlined_line
+					has_tech = concentrated_industry5
+					has_tech = dispersed_industry5
+					has_tech = modern_oil_processing
+					has_tech = modern_rubber_processing
+					has_tech = construction5
+					has_tech = excavation5
+					# Air
+					## with BBA
+					has_tech = engines_4
+				}
+			}
+			AND = {
+				date < 1944.1.1
+				OR = {
+					# Infantry
+					has_tech = advanced_infantry_weapons2
+					has_tech = elite_forces
+					has_tech = mechanised_infantry3
+					# Armor
+					## with NSB
+					has_tech = engine_tech_4
+					has_tech = armor_tech_4
+					# Naval
+					## without MtG
+					has_tech = advanced_destroyer
+					has_tech = advanced_light_cruiser
+					has_tech = advanced_heavy_cruiser
+					has_tech = advanced_battleship
+					has_tech = heavy_battleship2
+					has_tech = advanced_carrier
+					has_tech = advanced_submarine
+					has_tech = tank_landing_craft
+					## with MtG
+					has_tech = advanced_ship_hull_light
+					has_tech = modern_depth_charges
+					has_tech = advanced_ship_hull_cruiser
+					has_tech = advanced_ship_hull_heavy
+					has_tech = advanced_ship_hull_carrier
+					has_tech = modern_ship_torpedo_launcher
+					has_tech = advanced_ship_hull_submarine
+					has_tech = improved_submarine_snorkel
+					has_tech = advanced_light_battery
+					has_tech = advanced_medium_battery
+					has_tech = advanced_heavy_battery
+					OR = {
+						AND = {
+							has_dlc = "By Blood Alone"
+							has_tech = airsweep_mines_bba
+						}
+						AND = {
+							NOT = { has_dlc = "By Blood Alone" }
+							has_tech = airsweep_mines
+						}
+					}
+					has_tech = mtg_tank_landing_craft
+					# Air
+					## with BBA
+					has_tech = advanced_small_airframe
+					has_tech = advanced_medium_airframe
+					has_tech = advanced_large_airframe
+					## without BBA
+					has_tech = fighter3
+					has_tech = cv_fighter3
+					has_tech = CAS3
+					has_tech = cv_CAS3
+					has_tech = naval_bomber3
+					has_tech = cv_naval_bomber3
+					has_tech = heavy_fighter3
+					has_tech = tactical_bomber3
+					has_tech = strategic_bomber3
+					# Engineering
+					has_tech = rocket_engines
+					has_tech = jet_engines
+				}
+			}
+			AND = {
+				date < 1945.1.1
+				OR = {
+					# Support Companies
+					has_tech = tech_engineers4
+					has_tech = tech_recon4
+					has_tech = tech_military_police4
+					has_tech = tech_maintenance_company4
+					has_tech = tech_field_hospital4
+					has_tech = tech_logistics_company4
+					has_tech = tech_signal_company4
+					# Armor
+					## without NSB
+					has_tech = main_battle_tank
+					## with NSB
+					has_tech = main_battle_tank_chassis
+					# Naval
+					## with MtG
+					has_tech = modern_naval_mines
+					# Air
+					## with BBA
+					has_tech = modern_small_airframe
+					has_tech = modern_medium_airframe
+					## without BBA
+					has_tech = jet_fighter1
+					has_tech = jet_tactical_bomber1
+					# Engineering
+					has_tech = improved_rocket_engines
+					has_tech = nukes
+				}
+			}
+			AND = {
+				date < 1946.1.1
+				OR = {
+					# Infantry
+					has_tech = night_vision2
+					# Engineering
+					has_tech = advanced_rocket_engines
+				}
+			}
+			AND = {
+				date < 1950.1.1
+				OR = {
+					# Air
+					## with BBA
+					has_tech = modern_large_airframe
+					## without BBA
+					has_tech = jet_fighter2
+					has_tech = jet_tactical_bomber2
+					has_tech = jet_strategic_bomber1
+				}
+			}
+		}
+	}
+}
+
+has_not_researched_and_is_not_researching_electronics = {
+	NOT = { has_tech = electronic_mechanical_engineering }
+	NOT = { has_tech = radio }
+	NOT = { has_tech = radio_detection }
+	NOT = { has_tech = cavity_magnatron }
+	NOT = { has_tech = centimetric_radar }
+	NOT = { has_tech = phased_array }
+	NOT = { has_tech = monopulse_radar }
+	NOT = { has_tech = mechanical_computing }
+	NOT = { has_tech = computing_machine }
+	NOT = { has_tech = improved_computing_machine }
+	NOT = { has_tech = advanced_computing_machine }
+	NOT = { has_tech = basic_encryption }
+	NOT = { has_tech = basic_decryption }
+	NOT = { has_tech = improved_encryption }
+	NOT = { has_tech = improved_decryption }
+	NOT = { has_tech = advanced_encryption }
+	NOT = { has_tech = advanced_decryption }
+	NOT = { has_tech = fire_control_methods_1 }
+	NOT = { has_tech = fire_control_methods_2 }
+	NOT = { has_tech = fire_control_methods_3 }
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_IS_NOT_RESEARCHING_ELECTRONICS
+		NOT = { is_researching_technology = electronic_mechanical_engineering }
+		NOT = { is_researching_technology = radio }
+		NOT = { is_researching_technology = radio_detection }
+		NOT = { is_researching_technology = cavity_magnatron }
+		NOT = { is_researching_technology = centimetric_radar }
+		NOT = { is_researching_technology = phased_array }
+		NOT = { is_researching_technology = monopulse_radar }
+		NOT = { is_researching_technology = mechanical_computing }
+		NOT = { is_researching_technology = computing_machine }
+		NOT = { is_researching_technology = improved_computing_machine }
+		NOT = { is_researching_technology = advanced_computing_machine }
+		NOT = { is_researching_technology = basic_encryption }
+		NOT = { is_researching_technology = basic_decryption }
+		NOT = { is_researching_technology = improved_encryption }
+		NOT = { is_researching_technology = improved_decryption }
+		NOT = { is_researching_technology = advanced_encryption }
+		NOT = { is_researching_technology = advanced_decryption }
+		NOT = { is_researching_technology = fire_control_methods_1 }
+		NOT = { is_researching_technology = fire_control_methods_2 }
+		NOT = { is_researching_technology = fire_control_methods_3 }
+	}
+}
+
+has_researched_all_possible_tech = {
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_INFANTRY_TECH
+		has_tech = support_weapons4
+		has_tech = night_vision2
+		has_tech = advanced_infantry_weapons2
+		has_tech = infantry_at2
+		has_tech = mechanised_infantry3
+		OR = {
+			NOT = { has_dlc = "Man the Guns" }
+			has_tech = amphibious_mechanized_infantry_2
+		}
+		OR = {
+			NOT = { has_dlc = "La Resistance" }
+			has_tech = armored_car3
+		}
+		has_tech = marines3
+		has_tech = paratroopers3
+		has_tech = tech_mountaineers3
+		OR = {
+			has_dlc = "Arms Against Tyranny"
+			has_tech = elite_forces
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_SUPPORT_TECH
+		has_tech = sp_armored_engineer_tech
+		has_tech = sp_armored_maintenance_tech
+		has_tech = sp_armored_signal_tech
+		OR = {
+			NOT = { has_dlc = "Gotterdammerung" }
+			has_tech = sp_armored_motorized_military_police_tech
+		}
+		OR = {
+			NOT = { has_dlc = "Gotterdammerung" }
+			has_tech = sp_helicopter_med_evac_tech
+		}
+		OR = {
+			NOT = { has_dlc = "Gotterdammerung" }
+			has_tech = sp_helicopter_transport_pods_tech
+		}
+		has_tech = tech_engineers4
+		has_tech = tech_recon4
+		has_tech = tech_military_police4
+		has_tech = tech_maintenance_company4
+		has_tech = tech_field_hospital4
+		has_tech = tech_logistics_company4
+		has_tech = tech_signal_company4
+		has_tech = wartime_train
+		OR = {
+			NOT = { has_dlc = "No Step Back" }
+			has_tech = railway_gun
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_ARMOR_TECH
+		OR = {
+			AND = {
+				NOT = { has_dlc = "No Step Back" }
+				has_tech = improved_light_tank
+				has_tech = advanced_light_tank
+				has_tech = basic_medium_tank
+				has_tech = improved_medium_tank
+				has_tech = advanced_medium_tank
+				has_tech = basic_heavy_tank
+				has_tech = advanced_heavy_tank
+				has_tech = super_heavy_tank
+				has_tech = main_battle_tank
+			}
+			AND = {
+				has_dlc = "No Step Back"
+				has_tech = engine_tech_4
+				has_tech = armor_tech_4
+				has_tech = basic_light_tank_chassis
+				has_tech = advanced_light_tank_chassis
+				has_tech = amphibious_drive
+				has_tech = basic_medium_tank_chassis
+				has_tech = improved_medium_tank_chassis
+				has_tech = advanced_medium_tank_chassis
+				has_tech = advanced_heavy_tank_chassis
+				has_tech = super_heavy_tank_chassis
+				has_tech = main_battle_tank_chassis
+				has_tech = sp_armored_advanced_flamethrower_tech
+			}
+		}
+		OR = {
+			NOT = { has_dlc = "Man the Guns" }
+			has_dlc = "No Step Back"
+			has_tech = amphibious_tank_2
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_ARTILLERY_TECH
+		has_tech = antiair5
+		has_tech = artillery5
+		has_tech = rocket_artillery4
+		has_tech = antitank5
+	}
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_NAVAL_TECH
+		OR = {
+			AND = {
+				NOT = { has_dlc = "Man the Guns" }
+				has_tech = early_destroyer
+				has_tech = basic_destroyer
+				has_tech = improved_destroyer
+				has_tech = advanced_destroyer
+				has_tech = early_light_cruiser
+				has_tech = basic_light_cruiser
+				has_tech = improved_light_cruiser
+				has_tech = advanced_light_cruiser
+				has_tech = early_heavy_cruiser
+				has_tech = basic_heavy_cruiser
+				has_tech = improved_heavy_cruiser
+				has_tech = advanced_heavy_cruiser
+				has_tech = early_battlecruiser
+				has_tech = basic_battlecruiser
+				has_tech = early_battleship
+				has_tech = basic_battleship
+				has_tech = improved_battleship
+				has_tech = advanced_battleship
+				has_tech = heavy_battleship
+				has_tech = heavy_battleship2
+				has_tech = transport
+				has_tech = landing_craft
+				has_tech = tank_landing_craft
+				has_tech = early_carrier
+				has_tech = basic_carrier
+				has_tech = improved_carrier
+				has_tech = advanced_carrier
+				has_tech = early_submarine
+				has_tech = basic_submarine
+				has_tech = improved_submarine
+				has_tech = advanced_submarine
+			}
+			AND = {
+				has_dlc = "Man the Guns"
+				has_tech = advanced_ship_hull_light
+				has_tech = smoke_generator
+				has_tech = modern_depth_charges
+				has_tech = improved_sonar
+				has_tech = advanced_ship_hull_cruiser
+				has_tech = improved_airplane_launcher
+				has_tech = ship_hull_super_heavy
+				has_tech = advanced_ship_hull_heavy
+				has_tech = improved_heavy_armor_scheme
+				has_tech = advanced_ship_hull_carrier
+				has_tech = advanced_ship_hull_submarine
+				has_tech = improved_submarine_snorkel
+				has_tech = advanced_light_battery
+				has_tech = advanced_medium_battery
+				has_tech = advanced_heavy_battery
+				has_tech = advanced_dp_light_battery
+				has_tech = basic_dp_medium_battery
+				has_tech = homing_torpedo
+				has_tech = electric_torpedo
+				has_tech = modern_ship_torpedo_launcher
+				has_tech = damage_control_3
+				has_tech = fire_control_methods_3
+				has_tech = improved_submarine_mine_laying
+				has_tech = degaussing
+				OR = {
+					AND = {
+						has_dlc = "By Blood Alone"
+						has_tech = airdrop_mines_bba
+						has_tech = airsweep_mines_bba
+					}
+					AND = {
+						NOT = { has_dlc = "By Blood Alone" }
+						has_tech = airdrop_mines
+						has_tech = airsweep_mines
+					}
+				}
+				has_tech = mtg_tank_landing_craft
+			}
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_AIR_TECH
+		OR = {
+			AND = {
+				has_dlc = "By Blood Alone"
+				has_tech = modern_small_airframe
+				has_tech = modern_medium_airframe
+				has_tech = modern_large_airframe
+				has_tech = early_bombs
+				OR = {
+					NOT = { has_dlc = "La Resistance" }
+					has_tech = photo_reconnaisance
+				}
+				has_tech = aa_lmg
+				has_tech = survivability_studies
+				has_tech = aa_hmg
+				has_tech = aa_cannon_1
+				has_tech = aa_cannon_2
+				has_tech = engines_1
+				has_tech = engines_2
+				has_tech = engines_3
+				has_tech = engines_4
+				has_tech = range_improvements
+				has_tech = aircraft_construction
+			}
+			AND = {
+				NOT = { has_dlc = "By Blood Alone" }
+				has_tech = CAS3
+				has_tech = fighter3
+				has_tech = naval_bomber3
+				has_tech = jet_fighter2
+				has_tech = heavy_fighter3
+				has_tech = jet_tactical_bomber2
+				has_tech = jet_strategic_bomber1
+				OR = {
+					NOT = { has_dlc = "La Resistance" }
+					has_tech = scout_plane2
+				}
+			}
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_ENGINEERING_TECH
+		has_tech = monopulse_radar
+		has_tech = advanced_computing_machine
+		OR = {
+			NOT = { has_dlc = "Man the Guns" }
+			AND = {
+				has_tech = fire_control_methods_1
+				has_tech = fire_control_methods_2
+				has_tech = fire_control_methods_3
+			}
+		}
+		OR = {
+			has_dlc = "La Resistance"
+			AND = {
+				has_tech = basic_encryption
+				has_tech = basic_decryption
+				has_tech = improved_encryption
+				has_tech = improved_decryption
+				has_tech = advanced_encryption
+				has_tech = advanced_decryption
+			}
+		}
+		has_tech = nukes
+		has_tech = jet_engines
+		has_tech = advanced_rocket_engines
+		has_tech = sp_rockets_improved_guidance
+		OR = {
+			NOT = { has_dlc = "By Blood Alone" }
+			has_tech = sp_rockets_improved_rocket_bomber
+		}
+		has_tech = sp_rockets_dual_chamber_rocket_engine_2
+	}
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_INDUSTRY_TECH
+		OR = {
+			has_tech = flexible_line
+			has_tech = streamlined_line
+		}
+		OR = {
+			NOT = { has_dlc = "Death or Dishonor" }
+			has_tech = advanced_equipment_conversion
+		}
+		OR = {
+			has_tech = concentrated_industry5
+			has_tech = dispersed_industry5
+		}
+		has_tech = construction5
+		has_tech = excavation1
+		has_tech = excavation2
+		has_tech = excavation3
+		has_tech = excavation4
+		has_tech = excavation5
+	}
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_LAND_DOCTRINE_TECH
+		OR = {
+			# Mobile Warfare Doctrine
+			has_tech = werwolf_guerillas
+			has_tech = modern_blitzkrieg
+			# Superior Firepower Doctrine
+			has_tech = air_land_battle
+			has_tech = shock_and_awe
+			# Grand Battleplan Doctrine
+			has_tech = c3i_theory
+			has_tech = infiltration_in_depth
+			# Mass Assault Doctrine
+			has_tech = continuous_offensive
+			has_tech = guerilla_warfare
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_NAVAL_DOCTRINE_TECH
+		OR = {
+			# Fleet in Being
+			AND = {
+				has_tech = floating_fortress
+				has_tech = integrated_convoy_defence
+				has_tech = grand_battlefleet
+				has_tech = submarine_offensive
+			}
+			# Trade Interdiction
+			AND = {
+				has_tech = floating_fortress_ti
+				has_tech = naval_air_operations
+				has_tech = floating_airfield_ti
+				has_tech = combined_operations_raiding
+			}
+			# Base Strike
+			AND = {
+				has_tech = integrated_convoy_defence_bs
+				has_tech = submarine_offensive_bs
+				has_tech = carrier_battlegroups
+			}
+		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_RESEARCHED_AIR_DOCTRINE_TECH
+		OR = {
+			# Strategic Destruction
+			AND = {
+				has_tech = offensive_formations
+				has_tech = mass_destruction
+			}
+			# Battlefield Support
+			AND = {
+				has_tech = battlefield_support
+				has_tech = keypoint_bombing
+				has_tech = ground_support_integration
+				has_tech = forward_interception
+			}
+			# Operational Integrity
+			AND = {
+				has_tech = naval_strike_torpedo_tactics_oi
+				has_tech = carousel_bombing
+				has_tech = high_level_bombing
+			}
+		}
+	}
+}
+
+country_only_has_mechanized_infantry_units = {
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_ONLY_HAS_MECHANIZED_UNITS
+		# Infantry
+		OR = {
+			has_template_containing_unit = mechanized
+			has_template_containing_unit = amphibious_mechanized
+		}
+		NOT = { has_template_containing_unit = infantry }
+		NOT = { has_template_containing_unit = bicycle_battalion }
+		NOT = { has_template_containing_unit = marine }
+		NOT = { has_template_containing_unit = mountaineers }
+		NOT = { has_template_containing_unit = paratrooper }
+		NOT = { has_template_containing_unit = motorized }
+		NOT = { has_template_containing_unit = cavalry }
+		# Artillery
+		NOT = { has_template_containing_unit = artillery_brigade }
+		NOT = { has_template_containing_unit = rocket_artillery_brigade }
+		NOT = { has_template_containing_unit = motorized_rocket_brigade }
+		# Anti Tank
+		NOT = { has_template_containing_unit = anti_tank_brigade }
+		# Anti Air
+		NOT = { has_template_containing_unit = anti_air_brigade }
+		# Armor
+		## Tanks
+		NOT = { has_template_containing_unit = light_armor }
+		NOT = { has_template_containing_unit = medium_armor }
+		NOT = { has_template_containing_unit = heavy_armor }
+		NOT = { has_template_containing_unit = super_heavy_armor }
+		NOT = { has_template_containing_unit = modern_armor }
+		## Tank Variants
+		NOT = { has_template_containing_unit = light_sp_anti_air_brigade }
+		NOT = { has_template_containing_unit = medium_sp_anti_air_brigade }
+		NOT = { has_template_containing_unit = heavy_sp_anti_air_brigade }
+		NOT = { has_template_containing_unit = super_heavy_sp_anti_air_brigade }
+		NOT = { has_template_containing_unit = modern_sp_anti_air_brigade }
+		NOT = { has_template_containing_unit = light_sp_artillery_brigade }
+		NOT = { has_template_containing_unit = medium_sp_artillery_brigade }
+		NOT = { has_template_containing_unit = heavy_sp_artillery_brigade }
+		NOT = { has_template_containing_unit = super_heavy_sp_artillery_brigade }
+		NOT = { has_template_containing_unit = modern_sp_artillery_brigade }
+		NOT = { has_template_containing_unit = light_tank_destroyer_brigade }
+		NOT = { has_template_containing_unit = medium_tank_destroyer_brigade }
+		NOT = { has_template_containing_unit = heavy_tank_destroyer_brigade }
+		NOT = { has_template_containing_unit = super_heavy_tank_destroyer_brigade }
+		NOT = { has_template_containing_unit = modern_tank_destroyer_brigade }
+		## Amphibious Tanks
+		NOT = { has_template_containing_unit = amphibious_armor }
+	}
+}
+
+country_only_has_cavalry_units = {
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_ONLY_HAS_CAVALRY_UNITS
+		# Infantry
+		NOT = { has_template_containing_unit = mechanized }
+		NOT = { has_template_containing_unit = amphibious_mechanized }
+		NOT = { has_template_containing_unit = infantry }
+		NOT = { has_template_containing_unit = bicycle_battalion }
+		NOT = { has_template_containing_unit = marine }
+		NOT = { has_template_containing_unit = mountaineers }
+		NOT = { has_template_containing_unit = paratrooper }
+		NOT = { has_template_containing_unit = motorized }
+		has_template_containing_unit = cavalry
+		# Artillery
+		NOT = { has_template_containing_unit = artillery_brigade }
+		NOT = { has_template_containing_unit = rocket_artillery_brigade }
+		NOT = { has_template_containing_unit = motorized_rocket_brigade }
+		# Anti Tank
+		NOT = { has_template_containing_unit = anti_tank_brigade }
+		# Anti Air
+		NOT = { has_template_containing_unit = anti_air_brigade }
+		# Armor
+		## Tanks
+		NOT = { has_template_containing_unit = light_armor }
+		NOT = { has_template_containing_unit = medium_armor }
+		NOT = { has_template_containing_unit = heavy_armor }
+		NOT = { has_template_containing_unit = super_heavy_armor }
+		NOT = { has_template_containing_unit = modern_armor }
+		## Tank Variants
+		NOT = { has_template_containing_unit = light_sp_anti_air_brigade }
+		NOT = { has_template_containing_unit = medium_sp_anti_air_brigade }
+		NOT = { has_template_containing_unit = heavy_sp_anti_air_brigade }
+		NOT = { has_template_containing_unit = super_heavy_sp_anti_air_brigade }
+		NOT = { has_template_containing_unit = modern_sp_anti_air_brigade }
+		NOT = { has_template_containing_unit = light_sp_artillery_brigade }
+		NOT = { has_template_containing_unit = medium_sp_artillery_brigade }
+		NOT = { has_template_containing_unit = heavy_sp_artillery_brigade }
+		NOT = { has_template_containing_unit = super_heavy_sp_artillery_brigade }
+		NOT = { has_template_containing_unit = modern_sp_artillery_brigade }
+		NOT = { has_template_containing_unit = light_tank_destroyer_brigade }
+		NOT = { has_template_containing_unit = medium_tank_destroyer_brigade }
+		NOT = { has_template_containing_unit = heavy_tank_destroyer_brigade }
+		NOT = { has_template_containing_unit = super_heavy_tank_destroyer_brigade }
+		NOT = { has_template_containing_unit = modern_tank_destroyer_brigade }
+		## Amphibious Tanks
+		NOT = { has_template_containing_unit = amphibious_armor }
+	}
+}
+
+country_only_has_armor_units = {
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_ONLY_HAS_ARMOR_UNITS
+		# Infantry
+		NOT = { has_template_containing_unit = mechanized }
+		NOT = { has_template_containing_unit = amphibious_mechanized }
+		NOT = { has_template_containing_unit = infantry }
+		NOT = { has_template_containing_unit = bicycle_battalion }
+		NOT = { has_template_containing_unit = marine }
+		NOT = { has_template_containing_unit = mountaineers }
+		NOT = { has_template_containing_unit = paratrooper }
+		NOT = { has_template_containing_unit = motorized }
+		NOT = { has_template_containing_unit = cavalry }
+		# Artillery
+		NOT = { has_template_containing_unit = artillery_brigade }
+		NOT = { has_template_containing_unit = rocket_artillery_brigade }
+		NOT = { has_template_containing_unit = motorized_rocket_brigade }
+		# Anti Tank
+		NOT = { has_template_containing_unit = anti_tank_brigade }
+		# Anti Air
+		NOT = { has_template_containing_unit = anti_air_brigade }
+		# Armor
+		OR = {
+			## Tanks
+			has_template_containing_unit = light_armor
+			has_template_containing_unit = medium_armor
+			has_template_containing_unit = heavy_armor
+			has_template_containing_unit = super_heavy_armor
+			has_template_containing_unit = modern_armor
+			## Tank Variants
+			has_template_containing_unit = light_sp_anti_air_brigade
+			has_template_containing_unit = medium_sp_anti_air_brigade
+			has_template_containing_unit = heavy_sp_anti_air_brigade
+			has_template_containing_unit = super_heavy_sp_anti_air_brigade
+			has_template_containing_unit = modern_sp_anti_air_brigade
+			has_template_containing_unit = light_sp_artillery_brigade
+			has_template_containing_unit = medium_sp_artillery_brigade
+			has_template_containing_unit = heavy_sp_artillery_brigade
+			has_template_containing_unit = super_heavy_sp_artillery_brigade
+			has_template_containing_unit = modern_sp_artillery_brigade
+			has_template_containing_unit = light_tank_destroyer_brigade
+			has_template_containing_unit = medium_tank_destroyer_brigade
+			has_template_containing_unit = heavy_tank_destroyer_brigade
+			has_template_containing_unit = super_heavy_tank_destroyer_brigade
+			has_template_containing_unit = modern_tank_destroyer_brigade
+			## Amphibious Tanks
+			has_template_containing_unit = amphibious_armor
+		}
+	}
+}

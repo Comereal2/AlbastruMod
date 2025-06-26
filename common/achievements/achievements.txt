@@ -1,19 +1,12 @@
 #Author: Comereal
-unique_id = albastru_mod_achievements
+unique_id = custom_albastru_achievements
 
-albastru_mod_achievements_what_the_dictator_couldnt = {
+custom_albastru_achievement_1 = {
 	possible = {
-		difficulty > 1
-		has_start_date < 2024.11.12
-		has_any_custom_difficulty_setting = no
-        game_rules_allow_achievements = yes
-		tag = UNI
+		available_conditions_met_for_custom_albastru_achievement_1 = yes
 	}
 
 	happened = {
-		custom_trigger_tooltip = {
-			tooltip = UNI_prussels_war_won_achievement_tt
-			has_country_flag = UNI_prussels_war_won
-		}
+		unlock_conditions_met_for_custom_albastru_achievement_1 = yes
 	}
 }

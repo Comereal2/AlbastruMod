@@ -1,0 +1,308 @@
+#Original gui by: LimonenZitrone
+#Modified by: Comereal
+scripted_gui = {
+	open_custom_achievements_window = {
+		context_type = player_context
+
+		window_name = "open_custom_achievements_window"
+		parent_window_token = top_bar
+
+		visible = {
+			is_ai = no
+		}
+
+		effects = {
+			open_button_click = {
+				if = {
+					limit = {
+						has_variable = show_achievements
+					}
+					clear_variable = show_achievement_sort_menu
+					clear_variable = show_achievements
+				}
+				else = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { check_variable = { custom_achievements_array_albastru_visible^num > 0 } }
+							}
+						}
+						set_all_custom_albastru_achievements_in_visible_array = yes
+						if = {
+							limit = {
+								has_country_flag = unavailable_achievements_invisible
+							}
+							clr_country_flag = unavailable_achievements_invisible
+						}
+					}
+					set_variable = { show_achievements = 1 }
+					if = {
+						limit = {
+							NOT = { has_variable = show_achievements_list_selection }
+						}
+						set_variable = { show_achievements_list_selection = 1 }
+					}
+				}
+			}
+		}
+	}
+
+	custom_achievements_window = {
+		context_type = player_context
+
+		window_name = "custom_achievements_window"
+
+		dirty = show_achievements
+
+		visible = {
+			is_ai = no
+			has_variable = show_achievements
+		}
+
+		effects = {
+			close_button_click = {
+				clear_variable = show_achievement_sort_menu
+				clear_variable = show_achievements
+			}
+			refresh_button_click = {
+				update_custom_achievement_window = yes
+			}
+			show_sort_menu_button_click = {
+				set_variable = { show_achievement_sort_menu = 1 }
+				update_custom_achievement_window = yes
+			}
+			hide_sort_menu_button_click = {
+				clear_variable = show_achievement_sort_menu
+				update_custom_achievement_window = yes
+			}
+			select_albastru_achievements_button_click = {
+				set_variable = { show_achievements_list_selection = 1 }
+				update_custom_achievement_window = yes
+			}
+		}
+
+		triggers = {
+			show_sort_menu_button_visible = {
+				NOT = { has_variable = show_achievement_sort_menu }
+			}
+			hide_sort_menu_button_visible = {
+				has_variable = show_achievement_sort_menu
+			}
+			select_albastru_achievements_button_visible = {
+				NOT = { check_variable = { show_achievements_list_selection = 1 } }
+			}
+			achievement_category_albastru_icon_visible = {
+				check_variable = { show_achievements_list_selection = 1 }
+			}
+		}
+	}
+
+	custom_achievements_sort_menu_window_anchor = {
+		context_type = player_context
+
+		window_name = "custom_achievements_sort_menu_window_anchor"
+		parent_window_name = "custom_achievements_window"
+
+		visible = {
+			is_ai = no
+		}
+	}
+
+	custom_achievements_sort_menu_window = {
+		context_type = player_context
+
+		window_name = "custom_achievements_sort_menu_window"
+		parent_window_name = "custom_achievements_sort_menu_window_anchor_instance"
+
+		visible = {
+			is_ai = no
+			has_variable = show_achievement_sort_menu
+		}
+
+		effects = {
+			sort_achievements_only_available_visible_button_click = {
+				set_country_flag = unavailable_achievements_invisible
+				clr_country_flag = completed_achievements_invisible
+				sort_archievements_hide_unavailable = yes
+				clear_array = custom_achievements_array_albastru_hidden_manually
+				update_custom_achievement_window = yes
+			}
+			sort_achievements_all_visible_button_click = {
+				clr_country_flag = unavailable_achievements_invisible
+				clr_country_flag = completed_achievements_invisible
+				sort_archievements_show_unavailable = yes
+				clear_array = custom_achievements_array_albastru_hidden_manually
+				update_custom_achievement_window = yes
+			}
+			sort_completed_achievements_on_top_button_click = {
+				clr_country_flag = completed_achievements_invisible
+				sort_archievements_completed_first = yes
+				update_custom_achievement_window = yes
+			}
+			sort_completed_achievements_on_bottom_button_click = {
+				clr_country_flag = completed_achievements_invisible
+				sort_archievements_completed_last = yes
+				update_custom_achievement_window = yes
+			}
+			sort_hide_completed_achievements_button_click = {
+				set_country_flag = completed_achievements_invisible
+				sort_archievements_hide_completed = yes
+				update_custom_achievement_window = yes
+			}
+			sort_show_completed_achievements_button_click = {
+				clr_country_flag = completed_achievements_invisible
+				sort_archievements_show_completed = yes
+				update_custom_achievement_window = yes
+			}
+			sort_show_manually_hidden_achievements_button_click = {
+				if = {
+					limit = {
+						check_variable = { show_achievements_list_selection = 1 }
+					}
+					for_each_loop = {
+						array = custom_achievements_array_albastru_hidden_manually
+						value = v
+						add_to_array = { custom_achievements_array_albastru_visible = v }
+					}
+					clear_array = custom_achievements_array_albastru_hidden_manually
+				}
+				update_custom_achievement_window = yes
+			}
+		}
+
+		triggers = {
+			sort_achievements_only_available_visible_button_visible = {
+				NOT = { has_country_flag =  unavailable_achievements_invisible }
+			}
+			sort_achievements_all_visible_button_visible = {
+				has_country_flag =  unavailable_achievements_invisible
+			}
+			sort_completed_achievements_on_top_button_click_enabled = {
+				has_any_achievement_unlocked = yes
+			}
+			sort_completed_achievements_on_bottom_button_click_enabled = {
+				has_any_achievement_unlocked = yes
+			}
+			sort_hide_completed_achievements_button_visible = {
+				NOT = { has_country_flag =  completed_achievements_invisible }
+			}
+			sort_hide_completed_achievements_button_click_enabled = {
+				has_any_achievement_unlocked = yes
+			}
+			sort_show_completed_achievements_button_visible = {
+				has_country_flag =  completed_achievements_invisible
+			}
+			sort_show_manually_hidden_achievements_button_click_enabled = {
+				custom_trigger_tooltip = {
+					tooltip = HAS_HIDDEN_ONE_ACHIEVEMENT_MANUALLY_IN_SELECTED_CATEGORY
+					AND = {
+						check_variable = { show_achievements_list_selection = 1 }
+						check_variable = { custom_achievements_array_albastru_hidden_manually^num > 0 }
+					}
+				}
+			}
+		}
+	}
+
+	albastru_custom_achievements_list_window = {
+		context_type = player_context
+
+		window_name = "custom_achievements_list_window"
+		parent_window_name = "custom_achievement_list_anchor_window"
+
+		dirty = show_achievements
+
+		visible = {
+			is_ai = no
+			check_variable = { show_achievements_list_selection = 1 }
+		}
+
+		effects = {
+			hide_this_achievement_button_click = {
+				remove_from_array = { custom_achievements_array_albastru_visible = v }
+				add_to_array = { custom_achievements_array_albastru_hidden_manually = v }
+				update_custom_achievement_window = yes
+			}
+			hide_this_achievement_button_right_click = {
+				remove_from_array = { custom_achievements_array_albastru_visible = v }
+				add_to_array = { custom_achievements_array_albastru_visible = v }
+				update_custom_achievement_window = yes
+			}
+			hide_this_achievement_button_control_right_click = {
+				remove_from_array = { custom_achievements_array_albastru_visible = v }
+				add_to_array = { array = custom_achievements_array_albastru_visible value = v index = 0 }
+				update_custom_achievement_window = yes
+			}
+		}
+
+		triggers = {
+			hide_this_achievement_button_visible = {
+				check_variable = { custom_achievements_array_albastru_visible^num > 1 }
+			}
+			# Achievements:
+			achievement_background_glow_visible = {
+				set_temp_variable = { achievement_id = v }
+				has_unlocked_custom_achievement = yes
+			}
+			achievement_icon_click_enabled = {
+				set_temp_variable = { achievement_id = v }
+				if = {
+					limit = {
+						NOT = { has_unlocked_custom_achievement = yes }
+					}
+					round_temp_variable = achievement_id
+					meta_trigger = {
+						text = {
+							available_conditions_met_for_custom_albastru_achievement_[ENTRY] = yes
+							unlock_conditions_met_for_custom_albastru_achievement_[ENTRY] = yes
+						}
+						ENTRY = "[?achievement_id]"
+					}
+				}
+				set_temp_variable = { achievement_id = v }
+				has_unlocked_custom_achievement = yes
+			}
+			achievement_icon_locked_visible = {
+				set_temp_variable = { achievement_id = v }
+				NOT = { has_unlocked_custom_achievement = yes }
+				round_temp_variable = achievement_id
+				meta_trigger = {
+					text = {
+						available_conditions_met_for_custom_albastru_achievement_[ENTRY] = yes
+					}
+					ENTRY = "[?achievement_id]"
+				}
+			}
+			achievement_icon_locked_click_enabled = {
+				always = no
+			}
+			achievement_icon_unavailable_visible = {
+				set_temp_variable = { achievement_id = v }
+				NOT = { has_unlocked_custom_achievement = yes }
+				round_temp_variable = achievement_id
+				meta_trigger = {
+					text = {
+						NOT = { available_conditions_met_for_custom_albastru_achievement_[ENTRY] = yes }
+					}
+					ENTRY = "[?achievement_id]"
+				}
+			}
+		}
+
+		dynamic_lists = {
+			custom_achievement_list_gridbox = {
+				array = custom_achievements_array_albastru_visible
+				entry_container = custom_achievement_list_entry
+			}
+		}
+
+		properties = {
+			achievement_icon = {
+				image = "[This.GetCustomAchievementIcon]"
+			}
+			achievement_icon_locked = {
+				image = "[This.GetCustomAchievementIcon]"
+			}
+		}
+	}
+}

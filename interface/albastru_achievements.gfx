@@ -1,0 +1,7 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_custom_albastru_achievement_icon_1"
+		textureFile = "gfx/achievements/albastru_mod_achievements_what_the_dictator_couldnt.dds"
+	}
+}

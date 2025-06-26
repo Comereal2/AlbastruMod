@@ -1,0 +1,18 @@
+############################
+## Debug Console Commands ##
+############################
+
+d_custom_achievements_debug = {
+	if = {
+		limit = {
+			has_global_flag = custom_achievements_debug
+		}
+		clr_global_flag = custom_achievements_debug
+		log = "custom_achievements_debug disabled"
+	}
+	else = {
+		set_global_flag = custom_achievements_debug
+		log = "custom_achievements_debug enabled"
+	}
+	update_custom_achievement_window = yes
+}

@@ -1,0 +1,9 @@
+available_conditions_met_for_custom_albastru_achievement_1 = {
+	tag = UNI
+}
+unlock_conditions_met_for_custom_albastru_achievement_1 = {
+	custom_trigger_tooltip = {
+		tooltip = UNI_prussels_war_won_achievement_tt
+		has_country_flag = UNI_prussels_war_won
+	}
+}

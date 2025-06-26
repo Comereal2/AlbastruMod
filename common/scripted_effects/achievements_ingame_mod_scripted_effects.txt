@@ -1,0 +1,35 @@
+#Original by: LimonenZitrone
+#Modified by: Comereal
+
+#usage:
+## set_all_custom_albastru_achievements_in_visible_array = yes
+set_all_custom_albastru_achievements_in_visible_array = {
+	clear_array = custom_achievements_array_albastru_visible
+	clear_array = custom_achievements_array_albastru_hidden_manually
+	for_each_loop = {
+		array = global.custom_achievements_array_albastru
+		if = {
+			limit = {
+				NOT = { is_in_array = { custom_achievements_array_albastru_visible = v } }
+			}
+			add_to_array = { custom_achievements_array_albastru_visible = v }
+		}
+	}
+}
+
+# usage:
+## update_custom_achievement_window = yes
+update_custom_achievement_window = {
+	if = {
+		limit = {
+			has_variable = show_achievements
+		}
+		add_to_variable = { show_achievements = 1 }
+		if = {
+			limit = {
+				check_variable = { show_achievements > 1000 }
+			}
+			set_variable = { show_achievements = 1 }
+		}
+	}
+}

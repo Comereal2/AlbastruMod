@@ -1,5 +1,5 @@
 #Author: Pookie
-capital = 29
+capital = 415
 oob = "kairsoftia_units"
 set_research_slots = 3
 set_technology = {

@@ -1,0 +1,159 @@
+#Original gui by: LimonenZitrone
+#Modified by: Comereal
+on_actions = {
+	# not executed on a specific country
+	on_startup = {
+		effect = {
+			random_country = {
+				set_global_flag = custom_achievements_game_started
+				country_event = { id = setup.1 }
+			}
+		}
+	}
+
+	# ROOT is country
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				update_custom_achievement_window = yes
+			}
+		}
+	}
+
+	# ROOT is the attacker, FROM is the defender
+	on_war_relation_added = {
+		effect = {
+			# set flags for being at war
+			set_country_flag = custom_achievement_war_with_@FROM
+			FROM = {
+				set_country_flag = custom_achievement_war_with_@ROOT
+			}
+		}
+	}
+
+	# ROOT is the winner, FROM is annexed
+	on_annex = {
+		effect = {
+			# clear flags for being at war
+			clr_country_flag = custom_achievement_war_with_@FROM
+			FROM = {
+				clr_country_flag = custom_achievement_war_with_@ROOT
+			}
+		}
+	}
+
+	# ROOT is the winner, FROM is annexed
+	on_peace = {
+		effect = {
+			# clear flags for being at war
+			every_other_country = {
+				limit = {
+					has_country_flag = custom_achievement_war_with_@ROOT
+				}
+				clr_country_flag = custom_achievement_war_with_@ROOT
+			}
+			every_other_country = {
+				limit = {
+					ROOT = {
+						has_country_flag = custom_achievement_war_with_@PREV
+					}
+				}
+				ROOT = {
+					clr_country_flag = custom_achievement_war_with_@PREV
+				}
+			}
+		}
+	}
+
+	# ROOT is the country
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = has_participated_in_a_war }
+				}
+				set_country_flag = has_participated_in_a_war
+			}
+		}
+	}
+
+	# ROOT declared war, FROM is war target
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = has_started_a_war }
+				}
+				set_country_flag = has_started_a_war
+			}
+		}
+	}
+
+	#ROOT is winner, FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			# clear flags for being at war
+			every_other_country = {
+				limit = {
+					has_country_flag = custom_achievement_war_with_@ROOT
+				}
+				clr_country_flag = custom_achievement_war_with_@ROOT
+			}
+			every_other_country = {
+				limit = {
+					ROOT = {
+						has_country_flag = custom_achievement_war_with_@PREV
+					}
+				}
+				ROOT = {
+					clr_country_flag = custom_achievement_war_with_@PREV
+				}
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = custom_achievement_war_with_@FROM
+				}
+				clr_country_flag = custom_achievement_war_with_@FROM
+			}
+			every_other_country = {
+				limit = {
+					FROM = {
+						has_country_flag = custom_achievement_war_with_@PREV
+					}
+				}
+				FROM = {
+					clr_country_flag = custom_achievement_war_with_@PREV
+				}
+			}
+		}
+	}
+
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = custom_achievement_has_capitulated }
+				}
+				set_country_flag = custom_achievement_has_capitulated
+			}
+		}
+	}
+	
+	# ROOT is free nation, FROM is releaser
+	on_release_as_free = {
+		effect = {
+			FROM = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = custom_achievement_released_free_nation_from_own_states }
+					}
+					set_country_flag = custom_achievement_released_free_nation_from_own_states
+				}
+			}
+		}
+	}
+}

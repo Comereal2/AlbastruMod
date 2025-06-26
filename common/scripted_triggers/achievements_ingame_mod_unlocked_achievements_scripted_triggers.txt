@@ -1,0 +1,62 @@
+#Original by: LimonenZitrone
+#Modified by: Comereal
+
+# usage:
+## set_temp_variable = { achievement_id = 1.1 }
+## has_unlocked_custom_achievement = yes
+has_unlocked_custom_achievement = {
+	hidden_trigger = {
+		set_temp_variable = { achievement_id_temp = achievement_id }
+		OR = {
+			AND = {
+				set_temp_variable = { achievement_id = achievement_id_temp }
+				set_temp_variable = { achievement_category = 1 }
+				is_custom_achievement_in_category = yes
+				meta_trigger = {
+					text = {
+						has_completed_custom_achievement = {
+							mod = custom_albastru_achievements
+							achievement = custom_albastru_achievement_[ID]
+						}
+					}
+					ID = "[?achievement_id]"
+				}
+			}
+		}
+		set_temp_variable = { achievement_id = achievement_id_temp }
+	}
+}
+
+# usage:
+## has_any_achievement_unlocked = yes
+has_any_achievement_unlocked = {
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_COMPLETED_AT_LEAST_ONE_ACHIEVEMENT
+		has_any_custom_albastru_achievement_unlocked = yes
+	}
+}
+
+# usage:
+## has_any_custom_albastru_achievement_unlocked = yes
+has_any_custom_albastru_achievement_unlocked = {
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_MOD_HAS_COMPLETED_AT_LEAST_ONE_ALBASTRU_ACHIEVEMENT
+		any_of = {
+			array = global.custom_achievements_array_albastru
+			value = achievement_id
+			has_unlocked_custom_achievement = yes
+		}
+	}
+}
+
+# usage:
+## set_temp_variable = { achievement_category = 1 }
+## set_temp_variable = { achievement_id = 1.1 }
+## is_custom_achievement_in_category = yes
+is_custom_achievement_in_category = {
+	set_temp_variable = { achievement_category_check = achievement_id }
+	round_temp_variable = achievement_id
+	subtract_from_temp_variable = { achievement_category_check = achievement_id }
+	multiply_temp_variable = { achievement_category_check = 10 }
+	check_variable = { achievement_category_check = achievement_category }
+}

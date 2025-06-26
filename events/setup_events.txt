@@ -1,0 +1,68 @@
+@NUM_ACHIEVEMENTS_ALB = 1
+
+add_namespace = setup
+
+#Add all achievements to the array
+country_event = {
+	id = setup.1
+	title = setup.1.t
+	desc = setup.1.d
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clear_array = global.custom_achievements_array_albastru
+			for_loop_effect = {
+				start = 0
+				end = @NUM_ACHIEVEMENTS_ALB
+				set_temp_variable = { achievement_id = v }
+				add_to_temp_variable = { achievement_id = 1 }
+				add_to_array = { global.custom_achievements_array_albastru = achievement_id }
+			}
+			for_each_loop = {
+				array = global.custom_achievements_array_albastru
+				add_to_variable = { global.custom_achievements_array_albastru^i = 0.1 }
+			}
+
+			country_event = setup.2
+		}
+	}
+
+	option = {
+		name = setup.1.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+#Populate the _visible arrays
+country_event = {
+	id = setup.2
+	title = setup.2.t
+	desc = setup.2.d
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				set_all_custom_albastru_achievements_in_visible_array = yes
+			}
+		}
+	}
+
+	option = {
+		name = setup.2.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+#

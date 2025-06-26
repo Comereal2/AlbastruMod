@@ -1,6 +1,101 @@
 ﻿#Author: Comereal
 l_english:
-albastru_mod_achievements: "Albastru Mod Achievements"
-albastru_mod_achievements_what_the_dictator_couldnt_NAME: "What the Dictator Couldn't"
-albastru_mod_achievements_what_the_dictator_couldnt_DESC: "Lorem Ipsum"
+custom_albastru_achievements: "Albastru Mod Achievements"
+custom_albastru_achievement_1_NAME: "What the Dictator Couldn't"
+custom_albastru_achievement_1_DESC: "Lorem Ipsum"
 UNI_prussels_war_won_achievement_tt: "Defeated §YPrussels§!"
+
+
+l_english:
+ # GUI:
+ OPEN_CUSTOM_ACHIEVEMENTS_WINDOW_TT: "Open or close the list of §YIn-Game Achievements§!."
+
+ CUSTOM_ACHIEVEMENTS_TITLE: "Achievements"
+ CUSTOM_ACHIEVEMENTS_DESC: "In total you have unlocked §Y[?unlocked_custom_achievements_array^num]§! achievements in all categories at the moment."
+
+ CUSTOM_ACHIEVEMENTS_SORT_MENU_BUTTON_TEXT: "Sort Menu"
+ CUSTOM_ACHIEVEMENTS_SORT_MENU_BUTTON_TT: "§GClick§! to open or close the menu to sort achievements."
+
+ CUSTOM_ACHIEVEMENTS_REFRESH_BUTTON_TT: "Refresh"
+ CUSTOM_ACHIEVEMENTS_REFRESH_BUTTON_TT_DELAYED: "If you think that the displayed triggers are outdated, e.g. show as false while they are met, you can use this button to refresh them. Regardless of the display, if all triggers of an achievement are met when the achievements are checked, they will be unlocked."
+
+ CUSTOM_ALBASTRU_ACHIEVEMENTS: "Albastru Mod"
+ SELECT_CUSTOM_ALBASTRU_ACHIEVEMENTS_TT: "Select the achievements for §YAlbatru Mod§!."
+ SELECT_CUSTOM_ALBASTRU_ACHIEVEMENTS_TT_DELAYED: "There are §Y[?global.custom_achievements_array_albastru^num|0]§! achievements in total in the §YAlbastru Mod Achievements§! category, of which you can currently see §Y[?custom_achievements_array_albastru_visible^num|0]§!."
+ CUSTOM_ACHIEVEMENT_CATEGORY_SELECTED_TT: "Currently the achievements of this category are displayed."
+
+ CUSTOM_ACHIEVEMENTS_SORT_ACHIEVEMENTS_ONLY_AVAILABLE_VISIBLE: "Hide Unavailable"
+ CUSTOM_ACHIEVEMENTS_SORT_ACHIEVEMENTS_ONLY_AVAILABLE_VISIBLE_TT: "§GClick§! to hide all achievements that are §Yunavailable§! for you. This refers to achievements of which you don't fulfill the starting requirements (e.g. you are not a required tag). \nAchievements that have a red §RX§! on their icon are unavailable."
+ CUSTOM_ACHIEVEMENTS_SORT_ACHIEVEMENTS_ALL_VISIBLE: "Show Unavailable"
+ CUSTOM_ACHIEVEMENTS_SORT_ACHIEVEMENTS_ALL_VISIBLE_TT: "§GClick§! to show all achievements that are §Yunavailable§! for you again. This refers to achievements of which you don't fulfill the starting requirements (e.g. you are not a required tag). \nAchievements that have a red §RX§! on their icon are unavailable."
+ CUSTOM_ACHIEVEMENTS_SORT_COMPLETED_ACHIEVEMENTS_ON_TOP: "Completed First"
+ CUSTOM_ACHIEVEMENTS_SORT_COMPLETED_ACHIEVEMENTS_ON_TOP_TT: "§GClick§! to sort the list of achievements so that the achievements you §Ycompleted§! are listed on the top. \nOnly has an effect, if you completed at least one achievement."
+ CUSTOM_ACHIEVEMENTS_SORT_COMPLETED_ACHIEVEMENTS_ON_TOP_TT_DELAYED: "[!sort_completed_achievements_on_top_button_click_enabled]"
+ CUSTOM_ACHIEVEMENTS_SORT_COMPLETED_ACHIEVEMENTS_ON_BOTTOM: "Completed Last"
+ CUSTOM_ACHIEVEMENTS_SORT_COMPLETED_ACHIEVEMENTS_ON_BOTTOM_TT: "§GClick§! to sort the list of achievements so that the achievements you §Ycompleted§! are listed on the bottom. \nOnly has an effect, if you completed at least one achievement."
+ CUSTOM_ACHIEVEMENTS_SORT_COMPLETED_ACHIEVEMENTS_ON_BOTTOM_TT_DELAYED: "[!sort_completed_achievements_on_bottom_button_click_enabled]"
+ CUSTOM_ACHIEVEMENTS_SORT_HIDE_COMPLETED_ACHIEVEMENTS: "Hide Completed"
+ CUSTOM_ACHIEVEMENTS_SORT_HIDE_COMPLETED_ACHIEVEMENTS_TT: "§GClick§! to hide all achievements that you already §Ycompleted§! from the list."
+ CUSTOM_ACHIEVEMENTS_SORT_HIDE_COMPLETED_ACHIEVEMENTS_TT_DELAYED: "[!sort_hide_completed_achievements_button_click_enabled]"
+ CUSTOM_ACHIEVEMENTS_SORT_SHOW_COMPLETED_ACHIEVEMENTS: "Show Completed"
+ CUSTOM_ACHIEVEMENTS_SORT_SHOW_COMPLETED_ACHIEVEMENTS_TT: "§GClick§! to show all achievements that you already §Ycompleted§! again in the list."
+ CUSTOM_ACHIEVEMENTS_SORT_SHOW_MANUALLY_HIDDEN_ACHIEVEMENTS: "Show Hidden"
+ CUSTOM_ACHIEVEMENTS_SORT_SHOW_MANUALLY_HIDDEN_ACHIEVEMENTS_TT: "§GClick§! to show the achievements of the §Y[This.GetCustomAchievementCurrentSelectedAchievementsCategory]§! category again that you manually hid by clicking on their small §YX§! button on the right. \nThey will be put to the end of the list."
+ CUSTOM_ACHIEVEMENTS_SORT_SHOW_MANUALLY_HIDDEN_ACHIEVEMENTS_TT_DELAYED: "[!sort_show_manually_hidden_achievements_button_click_enabled]"
+
+ CUSTOM_ACHIEVEMENT_NAME: "[This.GetCustomAchievementName]"
+ CUSTOM_ACHIEVEMENT_DESC: "[This.GetCustomAchievementDesc]"
+ CUSTOM_ACHIEVEMENT_TT: "§Y[This.GetCustomAchievementName]§! \n§L[This.GetCustomAchievementDesc]§!"
+ CUSTOM_ACHIEVEMENT_TT_DELAYED: "[This.GetCustomAchievementDebugTooltip]"
+ CUSTOM_ACHIEVEMENT_TRIGGER_TT: "Unlock conditions: \n[!achievement_icon_click_enabled]"
+ CUSTOM_ACHIEVEMENT_UNAVAILABLE_CONDITIONS_TT: "Is available, if: \n[!achievement_icon_locked_visible]"
+ CUSTOM_ACHIEVEMENT_DEBUG_TT: "§RDebug Info:§! \nAchievement ID: §Y[?v|0]"
+
+ CUSTOM_ACHIEVEMENT_UNLOCKED_TT: "This achievement already was §GUNLOCKED§!."
+ CUSTOM_ACHIEVEMENT_LOCKED_TT: "This achievement is still §RLOCKED§!."
+ CUSTOM_ACHIEVEMENT_UNAVAILABLE_TT: "This achievement §RCANNOT§! be earned."
+
+ CUSTOM_ACHIEVEMENTS_HIDE_THIS_ACHIEVEMENT_BUTTON_TT: "§GClick§! to hide this achievement. \n§GRight-click§! to put this achievement at the end of the list. \n§GCtrl + Right-click§! to put this achievement at the top of the list."
+ CUSTOM_ACHIEVEMENTS_HIDE_THIS_ACHIEVEMENT_BUTTON_TT_DELAYED: "If you hide it, you can show it again by using the '§YShow hidden achievements§!' option in the menu to sort achievements."
+
+ # General Scripted Triggers:
+ ACHIEVEMENT_MOD_HAS_COMPLETED_AT_LEAST_ONE_ACHIEVEMENT: "Has unlocked at least §Y1§! achievement"
+ ACHIEVEMENT_MOD_HAS_COMPLETED_AT_LEAST_ONE_ALBASTRU_ACHIEVEMENT: "Has unlocked at least §Y1§! achievement in the §YAlbastru Mod§! category"
+ HAS_HIDDEN_ONE_ACHIEVEMENT_MANUALLY_IN_SELECTED_CATEGORY: "Did hide at least §Y1§! achievement of the §Y[This.GetCustomAchievementCurrentSelectedAchievementsCategory]§! category individually"
+
+ HAS_CAPITAL_IN_EUROPE: "Capital State is in §Y$CONTINENT_EUROPE$§!"
+
+ ACHIEVEMENT_MOD_HAS_NOT_DECLARED_A_WAR: "Has NOT declared a war"
+ ACHIEVEMENT_MOD_HAS_NOT_PARTICIPATED_IN_A_WAR: "Has NOT participated in a war"
+
+ ACHIEVEMENT_MOD_OWN_MEDITERRANEAN_ISLANDS: "All islands in the §YMediterranean Sea§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+ ACHIEVEMENT_MOD_OWN_CARIBBEAN_ISLANDS: "All islands in the $STRATEGIC_REGION_CARIBBEAN_SEA$: \n   Owned and controlled by §Y[Root.GetName]§!"
+
+ ACHIEVEMENT_MOD_OWN_NORTH_AMERICA_CONTINENT: "All states on the continent §Y$CONTINENT_NORTH_AMERICA$§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+ ACHIEVEMENT_MOD_OWN_SOUTH_AMERICA_CONTINENT: "All states on the continent §Y$CONTINENT_SOUTH_AMERICA$§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+ ACHIEVEMENT_MOD_OWN_AFRICA_CONTINENT: "All states on the continent §Y$CONTINENT_AFRICA$§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+ ACHIEVEMENT_MOD_OWNS_ONE_STATE_IN_EUROPE: "At least one state on the continent §Y$CONTINENT_EUROPE$§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+ ACHIEVEMENT_MOD_OWNS_ONE_STATE_IN_ASIA: "At least one state on the continent §Y$CONTINENT_ASIA$§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+ ACHIEVEMENT_MOD_OWNS_ONE_STATE_IN_AFRICA: "At least one state on the continent §Y$CONTINENT_AFRICA$§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+ ACHIEVEMENT_MOD_OWNS_ONE_STATE_IN_NORTH_AMERICA: "At least one state on the continent §Y$CONTINENT_NORTH_AMERICA$§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+ ACHIEVEMENT_MOD_OWNS_ONE_STATE_IN_SOUTH_AMERICA: "At least one state on the continent §Y$CONTINENT_SOUTH_AMERICA$§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+ ACHIEVEMENT_MOD_OWNS_ONE_STATE_IN_AUSTRALIA: "At least one state on the continent §Y$CONTINENT_AUSTRALIA$§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+ ACHIEVEMENT_MOD_OWNS_ONE_STATE_IN_MIDDLE_EAST: "At least one state on the continent §Y$CONTINENT_MIDDLE_EAST$§!:  \n   Owned and controlled by §Y[Root.GetName]§!"
+
+ ACHIEVEMENT_MOD_ONLY_HAS_MECHANIZED_UNITS: "All §Y[Root.GetAdjective]§! divisions and division templates only use §YMechanized Infantry§!"
+ ACHIEVEMENT_MOD_ONLY_HAS_CAVALRY_UNITS: "All §Y[Root.GetAdjective]§! divisions and division templates only use §YCavalry§!"
+ ACHIEVEMENT_MOD_ONLY_HAS_ARMOR_UNITS: "All §Y[Root.GetAdjective]§! divisions and division templates only use units of the type '§YArmor§!'"
+
+ ACHIEVEMENT_MOD_RESEARCHED_ANY_TECH_AHEAD_OF_TIME: "Has researched any technology (§Y1941§! or later) ahead of time"
+
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_INFANTRY_TECH: "Has researched all possible §Y$infantry_folder$§! technologies"
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_SUPPORT_TECH: "Has researched all possible §Y$support_folder$§! technologies"
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_ARMOR_TECH: "Has researched all possible §Y$armour_folder$§! technologies"
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_ARTILLERY_TECH: "Has researched all possible §Y$artillery_folder$§! technologies"
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_LAND_DOCTRINE_TECH: "One of the following must be true: \n   Has completed §Y$cat_mobile_warfare$§! \n   Has completed §Y$cat_superior_firepower$§! \n   Has completed §Y$cat_grand_battle_plan$§! \n   Has completed §Y$cat_mass_assault$§!"
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_NAVAL_TECH: "Has researched all possible §Y$naval_folder$§! technologies"
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_NAVAL_DOCTRINE_TECH: "One of the following must be true: \n   Has completed §Y$TITLE_FLEET_IN_BEING$§! \n   Has completed §Y$TITLE_TRADE_INTERDICTION$§! \n   Has completed §Y$TITLE_BASE_STRIKE$§!"
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_AIR_TECH: "Has researched all possible §Y$air_techs_folder$§! technologies"
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_AIR_DOCTRINE_TECH: "One of the following must be true: \n   Has completed §Y$TITLE_STRATEGIC_DESTRUCTION$§! \n   Has completed §Y$TITLE_BATTLEFIELD_SUPPORT$§! \n   Has completed §Y$TITLE_OPERATIONAL_INTEGRITY$§!"
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_ENGINEERING_TECH: "Has researched all possible §Y$electronics_folder$§! technologies"
+ ACHIEVEMENT_MOD_HAS_RESEARCHED_INDUSTRY_TECH: "Has researched all possible §Y$industry_folder$§! technologies"

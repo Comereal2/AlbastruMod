@@ -1,0 +1,33 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_achievement_icon_red_cross"
+		texturefile = "gfx/interface/achievement_icon_red_cross.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_achievement_list_entry_glow"
+		size = { x = 96 y = 96 }
+		textureFile = "gfx/interface/achievement_list_entry_glow.dds"
+		borderSize = { x = 32 y = 32 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_M"
+		texturefile = "gfx/keyicons/m.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_unknown_achievement_icon"
+		texturefile = "gfx/interface/unknown_achievement_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_achievement_sort_menu_indicator_icon"
+		texturefile = "gfx/interface/achievement_sort_menu_indicator_icon.dds"
+		noOfFrames = 2
+	}
+}

@@ -1,0 +1,108 @@
+#Original by: LimonenZitrone
+#Modified by: Comereal
+
+# usage:
+## sort_archievements_hide_unavailable = yes
+sort_archievements_hide_unavailable = {
+	# Albastru Achievements:
+	clear_array = custom_achievements_array_albastru_visible
+	for_each_loop = {
+		array = global.custom_achievements_array_albastru
+		value = v
+		set_temp_variable = { achievement_id = v }
+		round_temp_variable = achievement_id
+		if = {
+			limit = {
+				meta_trigger = {
+					text = {
+						available_conditions_met_for_custom_albastru_achievement_[ENTRY] = yes
+					}
+					ENTRY = "[?achievement_id]"
+				}
+			}
+			add_to_array = { custom_achievements_array_albastru_visible = v }
+		}
+	}
+}
+
+# usage:
+## sort_archievements_show_unavailable = yes
+sort_archievements_show_unavailable = {
+	# Albastru Achievements:
+	set_all_custom_albastru_achievements_in_visible_array = yes
+}
+
+# usage:
+## sort_archievements_hide_completed = yes
+sort_archievements_hide_completed = {
+	# Albastru Achievements:
+	for_each_loop = {
+		array = global.custom_achievements_array_albastru
+		set_temp_variable = { achievement_id = v }
+		if = {
+			limit = {
+				has_unlocked_custom_achievement = yes
+				is_in_array = { custom_achievements_array_albastru_visible = achievement_id }
+			}
+			remove_from_array = { custom_achievements_array_albastru_visible = achievement_id }
+		}
+	}
+}
+
+# usage:
+## sort_archievements_show_completed = yes
+sort_archievements_show_completed = {
+	# Albastru Achievements:
+	for_each_loop = {
+		array = global.custom_achievements_array_albastru
+		set_temp_variable = { achievement_id = v }
+		if = {
+			limit = {
+				has_unlocked_custom_achievement = yes
+				NOT = { is_in_array = { custom_achievements_array_albastru_visible = achievement_id } }
+			}
+			add_to_array = { custom_achievements_array_albastru_visible = achievement_id }
+			if = {
+				limit = {
+					is_in_array = { custom_achievements_array_albastru_hidden_manually = achievement_id }
+				}
+				remove_from_array = { custom_achievements_array_albastru_hidden_manually = achievement_id }
+			}
+		}
+	}
+}
+
+# usage:
+## sort_archievements_completed_first = yes
+sort_archievements_completed_first = {
+	# Albastru Achievements:
+	for_each_loop = {
+		array = global.custom_achievements_array_albastru
+		set_temp_variable = { achievement_id = v }
+		if = {
+			limit = {
+				has_unlocked_custom_achievement = yes
+			}
+			if = {
+				limit = {
+					is_in_array = { custom_achievements_array_albastru_visible = achievement_id }
+				}
+				remove_from_array = { custom_achievements_array_albastru_visible = achievement_id }
+			}
+			add_to_array = { array = custom_achievements_array_albastru_visible value = achievement_id index = 0 }
+			if = {
+				limit = {
+					is_in_array = { custom_achievements_array_albastru_hidden_manually = achievement_id }
+				}
+				remove_from_array = { custom_achievements_array_albastru_hidden_manually = achievement_id }
+			}
+		}
+	}
+}
+
+# usage:
+## sort_archievements_completed_last = yes
+sort_archievements_completed_last = {
+	sort_archievements_hide_completed = yes
+	sort_archievements_show_completed = yes
+}
