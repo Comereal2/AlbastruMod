@@ -747,6 +747,7 @@ country_event = {
 }
 
 country_event = {
+	#Trade with Odezya
 	id = altir.21
 	title = altir.21.t
 	desc = altir.21.d
@@ -787,6 +788,7 @@ country_event = {
 }
 
 country_event = {
+	#Build ASAA HQ
 	id = altir.22
 	title = altir.22.t
 	desc = altir.22.d
@@ -1226,6 +1228,49 @@ country_event = { #Stop Anti-Altir movements
 			base = 1
 		}
 		add_ideas = ALT_improve_compliance
+	}
+}
+
+country_event = { #Concentrate training choice
+	id = altir.33
+	title = altir.33.t
+	desc = altir.33.d
+	is_triggered_only = yes
+	option = { #Mountaineers
+		name = altir.33.a
+		add_unit_bonus = {
+			mountaineers = {
+				soft_attack = 0.25
+				breakthrough = 0.25
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Marines
+		name = altir.33.b
+		add_unit_bonus = {
+			marine = {
+				soft_attack = 0.25
+				breakthrough = 0.25
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Paratroopers
+		name = altir.33.c
+		add_unit_bonus = {
+			paratrooper = {
+				soft_attack = 0.25
+				breakthrough = 0.25
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
 	}
 }
 

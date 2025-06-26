@@ -87,6 +87,10 @@ focus_tree = {
 			country_event = {
 				id = altir.1
 			}
+			custom_effect_tooltip = event_preview_tt
+			custom_effect_tooltip = altir.1_preview_tt
+			show_ideas_tooltip = ALT_democracy_supported
+			show_ideas_tooltip = ALT_communism_supported
 		}
 		ai_will_do = {
 			factor = 1
@@ -121,6 +125,8 @@ focus_tree = {
 			VAL = {
 				country_event = altir.11
 			}
+			custom_effect_tooltip = event_preview_tt
+			custom_effect_tooltip = altir.11_preview_tt
 		}
 	}
 	focus = {
@@ -152,6 +158,8 @@ focus_tree = {
 			BLU = {
 				country_event = altir.12
 			}
+			custom_effect_tooltip = event_preview_tt
+			custom_effect_tooltip = altir.12_preview_tt
 		}
 	}
 	focus = {
@@ -917,6 +925,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = altir.21
+			custom_effect_tooltip = event_preview_tt
+			custom_effect_tooltip = altir.21_preview_tt
+			show_ideas_tooltip = ALT_odezyan_trade
 		}
 		ai_will_do = {
 			factor = 1
@@ -1044,6 +1055,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = altir.22
+			custom_effect_tooltip = event_preview_tt
+			custom_effect_tooltip = altir.22_preview_tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -1204,6 +1217,8 @@ focus_tree = {
 			country_event = {
 				id = altir.3
 			}
+			custom_effect_tooltip = event_preview_tt
+			custom_effect_tooltip = altir.3_preview_tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -2896,7 +2911,7 @@ focus_tree = {
 		id = ALT_create_the_new_armed_forces
 		icon = GFX_focus_generic_self_management
 		cost = 5
-		x = 7
+		x = 8
 		y = 0
 		relative_position_id = ALT_look_for_foreign_investments
 		select_effect = {
@@ -2948,7 +2963,7 @@ focus_tree = {
 		id = ALT_focus_on_special_forces
 		icon = GFX_focus_generic_self_management
 		cost = 10
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = ALT_create_the_new_armed_forces
 		prerequisite = {
@@ -3032,6 +3047,181 @@ focus_tree = {
 				}
 			}
 			upgrade_conscription_law = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_overhaul_all_training
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = ALT_focus_on_special_forces
+		prerequisite = {
+			focus = ALT_focus_on_special_forces
+		}
+		mutually_exclusive = {
+			focus = ALT_concentrate_training
+		}
+		completion_reward = {
+			add_unit_bonus = {
+				category_special_forces = {
+					soft_attack = 0.1
+					breakthrough = 0.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_concentrate_training
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = -0
+		y = 1
+		relative_position_id = ALT_focus_on_special_forces
+		prerequisite = {
+			focus = ALT_focus_on_special_forces
+		}
+		mutually_exclusive = {
+			focus = ALT_overhaul_all_training
+		}
+		completion_reward = { 
+			country_event = altir.33
+			custom_effect_tooltip = event_preview_tt
+			custom_effect_tooltip = altir.33_preview_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_build_military_complexes
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = ALT_focus_on_special_forces
+		prerequisite = {
+			focus = ALT_focus_on_special_forces
+			focus = ALT_increase_military_personnel
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = ALT_focus_on_special_forces
+				}
+				if = {
+					limit = {
+						330 = { #Dragon - base
+							is_controlled_by = ALT
+							is_owned_by = ALT
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+							}
+						}
+					}
+					330 = {
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+							}
+						}
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						free_building_slots = {
+							building = radar_station
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						free_building_slots = {
+							building = radar_station
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = ALT_increase_military_personnel
+				}
+				if = {
+					limit = {
+						330 = { #Dragon - base
+							is_controlled_by = ALT
+							is_owned_by = ALT
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+							}
+						}
+					}
+					330 = {
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+							}
+						}
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = ALT_build_military_complexes_nilltt
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -3571,6 +3761,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = altir.31
+			custom_effect_tooltip = event_preview_tt
+			custom_effect_tooltip = altir.31_preview_tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -3592,6 +3784,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = altir.32
+			custom_effect_tooltip = event_preview_tt
+			custom_effect_tooltip = altir.32_preview_tt
+			show_ideas_tooltip = ALT_prevent_resistance
+			show_ideas_tooltip = ALT_improve_compliance
 		}
 		ai_will_do = {
 			factor = 1
