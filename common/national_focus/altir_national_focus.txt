@@ -87,10 +87,18 @@ focus_tree = {
 			country_event = {
 				id = altir.1
 			}
-			custom_effect_tooltip = event_preview_tt
-			custom_effect_tooltip = altir.1_preview_tt
-			show_ideas_tooltip = ALT_democracy_supported
-			show_ideas_tooltip = ALT_communism_supported
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value = 1
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.1_preview_tt
+				show_ideas_tooltip = ALT_democracy_supported
+				show_ideas_tooltip = ALT_communism_supported
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -125,8 +133,16 @@ focus_tree = {
 			VAL = {
 				country_event = altir.11
 			}
-			custom_effect_tooltip = event_preview_tt
-			custom_effect_tooltip = altir.11_preview_tt
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value > -1
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.11_preview_tt
+			}
 		}
 	}
 	focus = {
@@ -158,8 +174,16 @@ focus_tree = {
 			BLU = {
 				country_event = altir.12
 			}
-			custom_effect_tooltip = event_preview_tt
-			custom_effect_tooltip = altir.12_preview_tt
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value > -1
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.12_preview_tt
+			}
 		}
 	}
 	focus = {
@@ -925,9 +949,27 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = altir.21
-			custom_effect_tooltip = event_preview_tt
-			custom_effect_tooltip = altir.21_preview_tt
-			show_ideas_tooltip = ALT_odezyan_trade
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value = 0
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.altir.21_preview_partially_hidden_tt
+			}
+			else_if = {
+				limit = { 
+					has_global_flag = {
+						flag = expand_events
+						value = 1
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.altir.21_preview_tt
+				show_ideas_tooltip = ALT_odezyan_trade
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1055,8 +1097,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = altir.22
-			custom_effect_tooltip = event_preview_tt
-			custom_effect_tooltip = altir.22_preview_tt
+			if = {
+				limit = { 
+					has_global_flag = {
+						flag = expand_events
+						value > -1
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.22_preview_tt
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1217,8 +1267,16 @@ focus_tree = {
 			country_event = {
 				id = altir.3
 			}
-			custom_effect_tooltip = event_preview_tt
-			custom_effect_tooltip = altir.3_preview_tt
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value > -1
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.3_preview_tt
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -3001,7 +3059,7 @@ focus_tree = {
 		id = ALT_increase_military_personnel
 		icon = GFX_focus_generic_self_management
 		cost = 10
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = ALT_create_the_new_armed_forces
 		prerequisite = {
@@ -3092,8 +3150,50 @@ focus_tree = {
 		}
 		completion_reward = { 
 			country_event = altir.33
-			custom_effect_tooltip = event_preview_tt
-			custom_effect_tooltip = altir.33_preview_tt
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value = 0
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.33_preview_partially_hidden_tt
+			}
+			else_if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value = 1
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.33_preview_tt
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_hold_the_line
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_increase_military_personnel
+		prerequisite = {
+			focus = ALT_increase_military_personnel
+		}
+		completion_reward = { 
+			add_unit_bonus = {
+				infantry = {
+					plains = {
+						soft_attack = 0.5
+					}
+					max_organisation = 2.5
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -3761,8 +3861,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = altir.31
-			custom_effect_tooltip = event_preview_tt
-			custom_effect_tooltip = altir.31_preview_tt
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value = 0
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.31_preview_partially_hidden_tt
+			}
+			else_if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value = 1
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.31_preview_tt
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -3784,10 +3902,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = altir.32
-			custom_effect_tooltip = event_preview_tt
-			custom_effect_tooltip = altir.32_preview_tt
-			show_ideas_tooltip = ALT_prevent_resistance
-			show_ideas_tooltip = ALT_improve_compliance
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value = 0
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.altir.32_preview_partially_hidden_tt
+			}
+			else_if = {
+				limit = { 
+					has_global_flag = {
+						flag = expand_events
+						value = 1
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.32_preview_tt
+				show_ideas_tooltip = ALT_prevent_resistance
+				show_ideas_tooltip = ALT_improve_compliance
+			}
 		}
 		ai_will_do = {
 			factor = 1

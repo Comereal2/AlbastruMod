@@ -2,7 +2,43 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			if = {
+			if = { #Event descriptions
+				limit = {
+					has_game_rule = {
+						rule = expand_event_info_in_focus
+						option = HIDDEN
+					}
+				}
+				set_global_flag = {
+					flag = expand_events
+					value = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = expand_event_info_in_focus
+						option = PARTIALLY_HIDDEN
+					}
+				}
+				set_global_flag = {
+					flag = expand_events
+					value = 0
+				}
+			}
+			else_if = {
+				limit = { 
+					has_game_rule = {
+						rule = expand_event_info_in_focus
+						option = SHOWN
+					}
+				}
+				set_global_flag = {
+					flag = expand_events
+					value = 1
+				}
+			}
+			if = { #Altir Fragmentation
 				limit = {
 					has_game_rule = {
 						rule = alt_fragmentation_status
