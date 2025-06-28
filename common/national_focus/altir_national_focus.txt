@@ -3188,9 +3188,6 @@ focus_tree = {
 		completion_reward = { 
 			add_unit_bonus = {
 				infantry = {
-					plains = {
-						soft_attack = 0.5
-					}
 					max_organisation = 2.5
 				}
 			}
