@@ -262,6 +262,8 @@ ALT_overhaul_all_training: "Overhaul All Training"
 ALT_overhaul_all_training_desc: "While specialization and concentration of all firepower into the hands of few is important, the diversity of said few is also really valuable to every nation."
 ALT_concentrate_training: "Concentrate Training"
 ALT_concentrate_training_desc: "The current specialization does not go far enough. By focusing our strength on only one type of special forces, we make sure that they are unbeatable."
+ALT_hold_the_line: "Hold the Line"
+ALT_hold_the_line_desc: "Stronger men make stronger armies. By going back to guerilla warfare, we can make sure that our men will last longer in battle than anybody else."
 #Navy
 ALT_expand_altiria_dockyards: "Expand Altiria Dockyards"
 ALT_expand_altiria_dockyards_desc: ""
