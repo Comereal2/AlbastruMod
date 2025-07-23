@@ -48,12 +48,9 @@ ENG = "countries/United Kingdom.txt"
 SOV = "countries/Soviet Union.txt"
 FRA	= "countries/France.txt"
 ITA = "countries/Italy.txt"
-SWE	= "countries/Sweden.txt"
-POL	= "countries/Poland.txt"
-SPR = "countries/Spain.txt"
-CHI = "countries/China.txt"
 JAP = "countries/Japan.txt"
 USA = "countries/USA.txt"
+
 
 dynamic_tags  = yes # any tags after this is used for temporary civil wars
 D01	= "countries/D01.txt"

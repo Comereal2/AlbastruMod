@@ -712,21 +712,6 @@ debug_decisions = {
 		visible = {
 			has_country_flag = generic_purchase_dreadnoughts_flag
 		}
-		available = {
-			NOT = {
-				USA = {
-					OR = {
-						has_civil_war = yes
-						has_capitulated = yes
-						has_opinion = {
-							target = FROM
-							value < 50
-						}
-					}					
-				}
-			}
-			
-		}
 		days_remove = 1
 		remove_effect = {
 			every_other_country = {
