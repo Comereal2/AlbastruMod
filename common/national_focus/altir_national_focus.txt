@@ -1360,7 +1360,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ALT_invite_south_helios
+		id = ALT_invite_south_helios_focus
 		icon = GFX_goal_ALT_invite_south_helios
 		x = 0
 		y = 1
@@ -1383,7 +1383,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ALT_invite_northern_helios
+		id = ALT_invite_northern_helios_focus
 		icon = GFX_goal_ALT_invite_north_helios
 		x = -4
 		y = 1
@@ -1432,7 +1432,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ALT_invite_sulia
+		id = ALT_invite_sulia_focus
 		icon = GFX_goal_ALT_invite_sulia
 		x = 0
 		y = 1
@@ -1461,7 +1461,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ALT_invite_orium
+		id = ALT_invite_orium_focus
 		icon = GFX_goal_ALT_invite_orium
 		x = -2
 		y = 1
@@ -1490,7 +1490,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ALT_invite_lomezia
+		id = ALT_invite_lomezia_focus
 		icon = GFX_goal_ALT_invite_lomezia
 		x = 2
 		y = 1
@@ -2012,7 +2012,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ALT_propose_government_change
+		id = ALT_propose_government_changes
 		icon = GFX_goal_ALT_propose_changes_to_governments
 		cost = 10
 		x = 0
@@ -2037,9 +2037,9 @@ focus_tree = {
 		cost = 10
 		x = 0
 		y = 1
-		relative_position_id = ALT_propose_government_change
+		relative_position_id = ALT_propose_government_changes
 		prerequisite = {
-			focus = ALT_propose_government_change
+			focus = ALT_propose_government_changes
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL

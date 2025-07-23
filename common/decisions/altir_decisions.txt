@@ -137,7 +137,7 @@ asaa_actions = {
 		}
 		visible = {
 			OR = {
-				has_completed_focus = ALT_invite_south_helios
+				has_completed_focus = ALT_invite_south_helios_focus
 				has_country_flag = asaa_debug_enabled
 			}
 		}
@@ -193,7 +193,7 @@ asaa_actions = {
 		}
 		visible = {
 			OR = {
-				has_completed_focus = ALT_invite_northern_helios
+				has_completed_focus = ALT_invite_northern_helios_focus
 				has_country_flag = asaa_debug_enabled
 			}
 		}
@@ -247,7 +247,7 @@ asaa_actions = {
 		}
 		visible = {
 			OR = {
-				has_completed_focus = ALT_invite_lomezia
+				has_completed_focus = ALT_invite_lomezia_focus
 				has_country_flag = asaa_debug_enabled
 			}
 		}
@@ -299,7 +299,7 @@ asaa_actions = {
 		}
 		visible = {
 			OR = {
-				has_completed_focus = ALT_invite_orium
+				has_completed_focus = ALT_invite_orium_focus
 				has_country_flag = asaa_debug_enabled
 			}
 		}
@@ -350,7 +350,7 @@ asaa_actions = {
 		}
 		visible = {
 			OR = {
-				has_completed_focus = ALT_invite_sulia
+				has_completed_focus = ALT_invite_sulia_focus
 				has_country_flag = asaa_debug_enabled
 			}
 		}
@@ -1371,7 +1371,7 @@ ALT_spread_fascism_category = {
 			}
 		}
 		available = {
-			has_completed_focus = ALT_propose_government_change
+			has_completed_focus = ALT_propose_government_changes
 			FROM = {
 				fascism > 0.3
 			}

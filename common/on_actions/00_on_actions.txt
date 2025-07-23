@@ -161,30 +161,6 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
-			if = {
-				limit = {
-					FROM = {
-						OR = {
-							has_idea = american_protection_drift_democratic
-							has_idea = american_protection_drift_communism
-							has_idea = american_protection_drift_fascism
-							has_idea = american_protection_defence_democratic
-							has_idea = american_protection_defence_communism
-							has_idea = american_protection_defence_fascism
-						}
-					}
-					OR = {
-						has_idea = american_protection_drift_democratic
-						has_idea = american_protection_drift_communism
-						has_idea = american_protection_drift_fascism
-						has_idea = american_protection_defence_democratic
-						has_idea = american_protection_defence_communism
-						has_idea = american_protection_defence_fascism
-					}
-				}
-				FROM = { country_event = { id = usa.16 days = 1 } }
-			}
-
 			#If prepared by siphoning equipment, receive equipment back
 			if = {
 				limit = {
@@ -238,14 +214,6 @@ on_actions = {
 				limit = {
 					NOT = { has_government = fascism }
 					has_civil_war = no
-					NOT = {
-						AND = {
-							FROM = {
-								original_tag = SPR
-							}
-							original_tag = SPR
-						}
-					}
 				}
 				news_event = { id = country_capitulated.0 days = 0 }
 			}
