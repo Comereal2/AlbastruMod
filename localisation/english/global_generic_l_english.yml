@@ -1,0 +1,6 @@
+﻿#Author: Comereal
+l_english:
+event_preview_tt: "\nEvent Preview:"
+compact_unit_effect_2_tt: "£$UNIT_ICON$ $UNIT$: \n - $MODIFIER_1$ §G$VALUE_1$§! \n - $MODIFIER_2$ §G$VALUE_2$§!"
+compact_unit_effect_3_tt: "$compact_unit_effect_2_tt$ \n - $MODIFIER_3$ §G$VALUE_3$§!"
+compact_unit_effect_4_tt: "$compact_unit_effect_3_tt$ \n - $MODIFIER_4$ §G$VALUE_4$§!"

@@ -3186,11 +3186,22 @@ focus_tree = {
 			focus = ALT_increase_military_personnel
 		}
 		completion_reward = { 
-			add_unit_bonus = {
-				infantry = {
-					soft_attack = 0.05
-					max_organisation = 2.5
+			hidden_effect = {
+				add_unit_bonus = {
+					infantry = {
+						soft_attack = 0.05
+						max_organisation = 2.5
+					}
 				}
+			}
+			custom_effect_tooltip = {
+				localization_key = compact_unit_effect_2_tt
+				UNIT_ICON = GFX_unit_infantry_icon_small
+				UNIT = infantry
+				MODIFIER_1 = STAT_ARMY_SOFT_ATTACK
+				VALUE_1 = "+5%"
+				MODIFIER_2 = STAT_COMMON_MAX_ORG
+				VALUE_2 = "+2.5"
 			}
 		}
 		ai_will_do = {
@@ -3319,6 +3330,119 @@ focus_tree = {
 			}
 			else = {
 				custom_effect_tooltip = ALT_build_military_complexes_nilltt
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_create_transit_lines
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_build_military_complexes
+		prerequisite = {
+			focus = ALT_build_military_complexes
+		}
+		completion_reward = { 
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				path = { 
+					1278
+					359
+					356
+					1240
+					587
+				}
+				start_province = 1278
+				target_province = 587
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				path = {
+					1683
+					1120
+					1258
+					1260
+					426
+				}
+				start_province = 1683
+				target_province = 426
+			}
+			if = {
+				limit = {
+					has_tech = railway_gun
+				}
+				create_railway_gun = {
+					equipment = railway_gun_equipment_1
+					name = ALT_create_transit_lines_railway_gun
+					location = 1100
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_expand_artilery_production
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ALT_hold_the_line
+		prerequisite = {
+			focus = ALT_hold_the_line
+		}
+		completion_reward = { 
+			hidden_effect = {
+				add_unit_bonus = {
+					artillery = {
+						soft_attack = 0.05
+						breakthrough = 0.05
+					}
+				}
+			}
+			custom_effect_tooltip = {
+				localization_key = compact_unit_effect_2_tt
+				UNIT_ICON = GFX_unit_artillery_icon_small
+				UNIT = artillery
+				MODIFIER_1 = STAT_ARMY_SOFT_ATTACK
+				VALUE_1 = "+5%"
+				MODIFIER_2 = STAT_ARMY_BREAKTHROUGH
+				VALUE_2 = "+5%"
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = ALT_support_special_forces
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ALT_overhaul_all_training
+		prerequisite = {
+			focus = ALT_overhaul_all_training
+			focus = ALT_concentrate_training
+		}
+		completion_reward = { 
+			add_unit_bonus = {
+				rangers_support = {
+					recon = 0.1
+				}
+				pioneer_support = {
+					entrenchment = 0.1
+				}
+				airborne_light_armor = {
+					maximum_speed = 0.05
+				}
 			}
 		}
 		ai_will_do = {
