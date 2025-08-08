@@ -1,31 +1,4 @@
 on_actions = {
-	on_ruling_party_change = { 
-		# temp var old_ideology_token is available for effects
-		effect = {
-			if = {
-				limit = {
-					has_government = democratic
-					has_idea = democratic_opposition
-				}
-				remove_ideas = democratic_opposition
-			}
-			if = {
-				limit = {
-					has_government = democratic
-					has_idea = democratic_opposition_idea_1
-				}
-				remove_ideas = democratic_opposition_idea_1
-			}
-			if = {
-				limit = {
-					has_government = democratic
-					has_idea = democratic_opposition_idea_2
-				}
-				remove_ideas = democratic_opposition_idea_2
-			}
-		}
-	}
-	
 	#FROM - Country (owner)
 	#ROOT - leader
 	#FROMFROM - original owner for exiled leaders

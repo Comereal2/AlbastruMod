@@ -433,6 +433,47 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = ALT_decentralize_the_country
+		icon = GFX_focus_generic_self_management
+		x = -1
+		y = 1
+		relative_position_id = ALT_establish_free_elections
+		cost = 5
+		prerequisite = {
+			focus = ALT_establish_free_elections
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			custom_override_tooltip = {
+				tooltip = ALT_decentralize_the_country_ctt
+				every_owned_state = {
+					find_highest_in_array = {
+						array = var:core_countries
+						value = v
+						index = i
+					}
+					limit = {
+						OR = {
+							NOT = {
+								is_core_of = ALT
+							}
+							check_variable = {
+								var = i
+								value > 0
+							}
+						}
+					}
+					ALT_release_or_add_to_existing_country = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = ALT_concentrate_power
 		icon = GFX_focus_AFG_retire_the_uncles
 		x = 13

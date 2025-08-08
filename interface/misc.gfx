@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_skirts_group"
+		texturefile = "gfx/interface/ideologies/skirts_group.dds"
+	}
+	spriteType = {
+		name = "GFX_autonomy_permament_supervised_state_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_permament_supervised_state.dds"
+	}
+}

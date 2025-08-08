@@ -1,0 +1,45 @@
+#Author: Comereal
+
+ALT_release_or_add_to_existing_country = {
+	for_each_loop = {
+		array = var:core_countries
+		value = v
+		break = break
+		if = {
+			limit = {
+				country_exists = v
+				ALT = {
+					NOT = { tag = v }
+					has_subject = v
+				}	
+			}
+			transfer_state_to = v
+			set_variable = {
+				var = break
+				value = 1
+			}
+		}
+	}
+	for_each_loop = {
+		array = var:core_countries
+		value = v
+		break = break
+		if = {
+			limit = {
+				ALT = { NOT = { tag = v } }
+			}
+			ALT = {
+				release_puppet_on_controlled = v
+				set_autonomy = {
+					target = v
+					autonomy_state = autonomy_permament_supervised_state
+					freedom_level = 0.5
+				}
+			}
+			set_variable = {
+				var = break
+				value = 1
+			}
+		}
+	}
+}
