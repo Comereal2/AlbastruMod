@@ -272,6 +272,7 @@ focus_tree = {
 					has_government = democratic
 				}
 				set_politics = {
+					ruling_party = democratic
 					elections_allowed = no
 				}
 			}
@@ -348,9 +349,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-			add_popularity = {
-				ideology = var:current_party_ideology_group
-				popularity = 0.15
+			custom_override_tooltip = {
+				tooltip = ALT_control_the_elections_ctt
+				add_popularity = {
+					ideology = var:current_party_ideology_group
+					popularity = 0.15
+				}
 			}
 			add_stability = -0.05
 			add_political_power = 70
@@ -427,6 +431,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
+			add_ideas = RIA_young_democracy_idea
 		}
 		ai_will_do = {
 			factor = 1
@@ -449,18 +454,13 @@ focus_tree = {
 			custom_override_tooltip = {
 				tooltip = ALT_decentralize_the_country_ctt
 				every_owned_state = {
-					find_highest_in_array = {
-						array = var:core_countries
-						value = v
-						index = i
-					}
 					limit = {
 						OR = {
 							NOT = {
 								is_core_of = ALT
 							}
 							check_variable = {
-								var = i
+								var = core_countries^num
 								value > 0
 							}
 						}
@@ -468,6 +468,7 @@ focus_tree = {
 					ALT_release_or_add_to_existing_country = yes
 				}
 			}
+			remove_ideas = ALT_unstable_society
 		}
 		ai_will_do = {
 			factor = 1
@@ -727,7 +728,6 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_INDUSTRY
-			FOCUS_FILTER_BALANCE_OF_POWER
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -836,6 +836,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_BALANCE_OF_POWER
 		}
 		completion_reward = {
 			custom_effect_tooltip = ALT_dig_up_more_resources_ctt
@@ -1820,7 +1821,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ALT_altir_stands_alone
 		}
-		cost = 5
+		cost = 12
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -2131,11 +2132,14 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-			every_country = {
-				limit = {
-					has_guaranteed = RIA
+			custom_override_tooltip = {
+				tooltip = ALT_isolate_riassi_ctt
+				every_country = {
+					limit = {
+						has_guaranteed = RIA
+					}
+					country_event = altir.20
 				}
-				country_event = altir.20
 			}
 		}
 	}

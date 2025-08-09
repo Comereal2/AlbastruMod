@@ -2,7 +2,7 @@
 
 ALT_release_or_add_to_existing_country = {
 	for_each_loop = {
-		array = var:core_countries
+		array = core_countries
 		value = v
 		break = break
 		if = {
@@ -21,7 +21,7 @@ ALT_release_or_add_to_existing_country = {
 		}
 	}
 	for_each_loop = {
-		array = var:core_countries
+		array = core_countries
 		value = v
 		break = break
 		if = {
