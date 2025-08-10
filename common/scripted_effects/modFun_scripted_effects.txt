@@ -1,4 +1,8 @@
 #Author: Comereal
 roll_lootbox = {
-	
+	random_list = {
+		1 = {
+			add_political_power = 100
+		}
+	}
 }
