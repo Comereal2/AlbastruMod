@@ -7,22 +7,18 @@ lootboxes = {
 		cost = 100
 		visible = {
 			OR = {
-				has_game_rule = {
-					rule = enable_gambling
-					option = ENABLED
-				}
-				has_game_rule = {
-					rule = enable_gambling
-					option = ENABLED_AI_FOCUS
-				}
 				AND = {
-					has_game_rule = {
-						rule = enable_gambling
-						option = ENABLED_FOR_PLAYER
+					has_global_flag = {
+						flag = lootboxes
+						value = 0
 					}
 					is_ai = no
 				}
-			}
+				has_global_flag = {
+					flag = lootboxes
+					value > 0
+				}
+			}			
 		}
 		complete_effect = {
 			custom_override_tooltip = {
@@ -34,9 +30,9 @@ lootboxes = {
 			base = 999999
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = enable_gambling
-					option = ENABLED
+				has_global_flag = {
+					flag = lootboxes
+					value = 1
 				}
 				has_political_power < 1000
 			}

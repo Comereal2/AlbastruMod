@@ -2,6 +2,54 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			if = { #Lootboxes
+				limit = {
+					has_game_rule = {
+						rule = enable_gambling
+						option = DISABLED
+					}
+				}
+				set_global_flag = {
+					flag = lootboxes
+					value = -1
+				}
+			}
+			else_if = {
+				limit = { 
+					has_game_rule = {
+						rule = enable_gambling
+						option = ENABLED
+					}
+				}
+				set_global_flag = {
+					flag = lootboxes
+					value = 1
+				}
+			}
+			else_if = {
+				limit = { 
+					has_game_rule = {
+						rule = enable_gambling
+						option = ENABLED_AI_FOCUS
+					}
+				}
+				set_global_flag = {
+					flag = lootboxes
+					value = 2
+				}
+			}
+			else_if = {
+				limit = { 
+					has_game_rule = {
+						rule = enable_gambling
+						option = ENABLED_FOR_PLAYER
+					}
+				}
+				set_global_flag = {
+					flag = lootboxes
+					value = 0
+				}
+			}
 			if = { #Event descriptions
 				limit = {
 					has_game_rule = {
