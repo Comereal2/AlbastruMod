@@ -1,0 +1,4 @@
+#Author: Comereal
+roll_lootbox = {
+	
+}

@@ -51,6 +51,42 @@ expand_event_info_in_focus = {
 	}
 }
 
+#   #  ###  ####      ##### #   # #   #
+## ## #   # #   #     #     #   # ##  #
+# # # #   # #   #     ##### #   # # # #
+#   # #   # #   #     #     #   # #  ##
+#   #  ###  ####      #      ###  #   #
+
+enable_gambling = {
+	name = "RULE_ENABLE_GAMBLING"
+	group = "RULE_GROUP_MOD_FUN"
+	icon = "GFX_paradrops"
+	option = {
+		name = "DISABLED"
+		text = "RULE_ENABLE_GAMBLING_DISABLED"
+		desc = "RULE_ENABLE_GAMBLING_DISABLED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ENABLED_FOR_PLAYER"
+		text = "RULE_ENABLE_GAMBLING_ENABLED_FOR_PLAYER"
+		desc = "RULE_ENABLE_GAMBLING_ENABLED_FOR_PLAYER_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = "ENABLED"
+		text = "RULE_ENABLE_GAMBLING_ENABLED"
+		desc = "RULE_ENABLE_GAMBLING_ENABLED_DESC"
+		allow_achievements = no
+	}
+	option = {
+		name = "ENABLED_AI_FOCUS"
+		text = "RULE_ENABLE_GAMBLING_ENABLED_AI_FOCUS"
+		desc = "RULE_ENABLE_GAMBLING_ENABLED_AI_FOCUS_DESC"
+		allow_achievements = no
+	}
+}
+
 ####   ###   #### #####
 #   # #   # #     #
 ####  #####  ###  #####

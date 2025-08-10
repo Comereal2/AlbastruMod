@@ -1,0 +1,7 @@
+#Author: Comereal
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lootbox_icon"
+		textureFile = "gfx/interface/gui/Generic/LootboxIcon.dds"
+	}
+}

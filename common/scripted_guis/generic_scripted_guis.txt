@@ -1,0 +1,6 @@
+scripted_gui = {
+	GENERIC_lootbox_gui = {
+		window_name = "GENERIC_lootbox_gui"
+		context_type = decision_category
+	}
+}

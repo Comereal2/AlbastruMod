@@ -1,0 +1,45 @@
+#Author: Comereal
+
+lootboxes = {
+	spin = {
+		priority = 1
+		icon = GFX_decision_roll_lootbox
+		cost = 100
+		visible = {
+			OR = {
+				has_game_rule = {
+					rule = enable_gambling
+					option = ENABLED
+				}
+				has_game_rule = {
+					rule = enable_gambling
+					option = ENABLED_AI_FOCUS
+				}
+				AND = {
+					has_game_rule = {
+						rule = enable_gambling
+						option = ENABLED_FOR_PLAYER
+					}
+					is_ai = no
+				}
+			}
+		}
+		complete_effect = {
+			custom_override_tooltip = {
+				tooltip = lootbox_spin_tooltip
+				roll_lootbox = yes
+			}
+		}
+		ai_will_do = {
+			base = 999999
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = enable_gambling
+					option = ENABLED
+				}
+				has_political_power < 1000
+			}
+		}
+	}
+}

@@ -16,4 +16,12 @@ spriteTypes = {
 		name = GFX_decision_generic_death
 		textureFile = "gfx/interface/decisions/generic_death.dds"
 	}
+	spriteType = {
+		name = GFX_decision_category_lootbox
+		textureFile = "gfx/interface/decisions/generic_lootbox_category.dds"
+	}
+	spriteType = {
+		name = GFX_decision_roll_lootbox
+		textureFile = "gfx/interface/decisions/generic_roll_lootbox.dds"
+	}
 }

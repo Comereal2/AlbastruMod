@@ -1,5 +1,10 @@
 ﻿#Author: Comereal
 l_english:
+#Mod fun categories
+lootboxes: "Lootboxes"
+#Mod fun decisions
+spin: "§YOpen Lootbox§!"
+lootbox_spin_tooltip: "§GGAMBLE ALL THE WAY!§!"
 #Generic categories
 generic_core_with_compliance: "Core with Compliance"
 generic_disease_outbreak: "Disease Outbreak"

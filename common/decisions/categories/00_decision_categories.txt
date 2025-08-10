@@ -1,4 +1,14 @@
 #Author: Comereal
+lootboxes = {
+	icon = GFX_decision_category_lootbox
+	priority = 99999999
+	allowed = {
+		always = yes
+	}
+	scripted_gui = GENERIC_lootbox_gui
+	visible_when_empty = no
+}
+
 generic_core_with_compliance = {
 	icon = GFX_decision_category_generic_state
 	priority = 10
