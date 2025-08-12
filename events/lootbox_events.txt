@@ -1,0 +1,154 @@
+#Author: Comereal
+
+add_namespace = lootbox
+
+country_event = { #Refund
+	id = lootbox.1
+	title = lootbox.1.t
+	desc = lootbox.1.d
+	is_triggered_only = yes
+	option = {
+		name = lootbox.good
+		add_political_power = 100
+	}
+}
+
+country_event = { #Empty lootbox
+	id = lootbox.2
+	title = lootbox.2.t
+	desc = lootbox.2.d
+	is_triggered_only = yes
+	option = {
+		name = lootbox.horrible
+	}
+}
+
+country_event = { #Mega pp lootbox
+	id = lootbox.3
+	title = lootbox.3.t
+	desc = lootbox.3.d
+	is_triggered_only = yes
+	option = {
+		name = lootbox.awesome
+		add_political_power = 200
+	}
+}
+
+country_event = { #Half refund lootbox
+	id = lootbox.4
+	title = lootbox.4.t
+	desc = lootbox.4.d
+	is_triggered_only = yes
+	option = {
+		name = lootbox.bad
+		add_political_power = 50
+	}
+}
+
+country_event = { #Civilian factory
+	id = lootbox.5
+	title = lootbox.5.t
+	desc = lootbox.5.d
+	is_triggered_only = yes
+	option = {
+		name = lootbox.good
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size = 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = { #Arms factory
+	id = lootbox.6
+	title = lootbox.6.t
+	desc = lootbox.6.d
+	is_triggered_only = yes
+	option = {
+		name = lootbox.good
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size = 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = { # Infrastructure
+	id = lootbox.7
+	title = lootbox.7.t
+	desc = lootbox.7.d
+	is_triggered_only = yes
+	option = {
+		name = lootbox.good
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = infrastructure
+					size = 1
+					include_locked = yes
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = { # Stability
+	id = lootbox.8
+	title = lootbox.8.t
+	desc = lootbox.8.d
+	is_triggered_only = yes
+	option = {
+		name = lootbox.good
+		add_stability = 0.05
+	}
+}
+
+country_event = { # Strikes!
+	id = lootbox.9
+	title = lootbox.9.t
+	desc = lootbox.9.d
+	is_triggered_only = yes
+	option = {
+		name = lootbox.9.a
+		add_ideas = strikes_1 
+		country_event = stability.22
+	}
+}
+
+country_event = { # War support
+	id = lootbox.10
+	title = lootbox.10.t
+	desc = lootbox.10.d
+	is_triggered_only = yes
+	option = {
+		name = lootbox.good
+		add_war_support = 0.05
+	}
+}

@@ -1,8 +1,15 @@
 #Author: Comereal
 roll_lootbox = {
-	random_list = {
-		1 = {
-			add_political_power = 100
+	set_temp_variable_to_random = {
+		var = random_num
+		min = 1
+		max = 11 #Number of lootbox events + 1 because this is exclusive
+		integer = yes
+	}
+	meta_effect = {
+		text = {
+			country_event = lootbox.[RAND_NUM]
 		}
+		RAND_NUM = "[?random_num|0]"
 	}
 }
