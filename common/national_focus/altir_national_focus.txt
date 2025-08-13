@@ -335,9 +335,42 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = ALT_seek_closer_ties_with_valtheronesia
+		icon = GFX_focus_generic_self_management
+		x = -1
+		y = 1
+		relative_position_id = ALT_a_red_centralized_government
+		cost = 10
+		prerequisite = {
+			focus = ALT_a_red_centralized_government
+		}
+		available = {
+			has_idea = ALT_centralized_economy
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			country_event = altir.34
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = expand_events
+						value > -1
+					}
+				}
+				custom_effect_tooltip = event_preview_tt
+				custom_effect_tooltip = altir.34_preview_tt
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
 		id = ALT_control_the_elections
 		icon = GFX_focus_generic_self_management
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = ALT_create_a_democracy
 		cost = 10

@@ -118,6 +118,8 @@ ALT_follow_valtheronesia_desc: "Our friends in Valtheronesia are some of the fir
 ALT_centralize_the_economy: "Centralize the Economy"
 ALT_centralize_the_economy_desc: "There is only one way for an economy to function, its when the state has complete control over it. We should reform our own to do so as well."
 ALT_centralize_the_economy_ctt: "\nAfter the reforms"
+ALT_seek_closer_ties_with_valtheronesia: "Seek Closer Ties with Valtheronesia"
+ALT_seek_closer_ties_with_valtheronesia_desc: "Valtheronesia is one of the most stable communist nations of he region and one of our closest neighbours, we can probably strike a deal with them of mutual cooperation."
 ALT_eliminate_extremists: "Eliminate Extremists"
 ALT_eliminate_extremists_desc: "There are many people in Altir who believe the Supreme Suzerain should be in a stronger position as a leader, they are not welcome in our nation and shall be deported to more radical regimes."
 ALT_coup_odezya: "Coup Odezya"
@@ -296,3 +298,4 @@ altir.32_preview_partially_hidden_tt: " Lets you decide on the §Yprevention str
 altir.32_preview_tt: " Lets you decide on the §Yprevention strategy§!, granting one of the following:"
 altir.33_preview_partially_hidden_tt: "Rewards bonuses to a §Yspecial force§! of your choosing"
 altir.33_preview_tt: " Rewards:\n  Breakthrough: §G+25%§!\n  Soft attack: §G+25%§!\n To a §Yspecial force§! of your choosing"
+altir.34_preview_tt: "Lets us decide what to do with the islands of the §YWest Helios Sea§!"

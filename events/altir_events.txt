@@ -1274,6 +1274,272 @@ country_event = { #Concentrate training choice
 	}
 }
 
+country_event = { #Seek closer ties with Val
+	id = altir.34
+	title = altir.34.t
+	desc = altir.34.d
+	is_triggered_only = yes
+	option = { #Buy islands
+		name = altir.34.a
+		VAL = {
+			country_event = altir.35
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Sell islands
+		name = altir.34.b
+		VAL = {
+			country_event = altir.36
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Set up independent communist state
+		name = altir.34.c
+		VAL = {
+			country_event = altir.37
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Altir wants to buy islands
+	id = altir.35
+	title = altir.35.t
+	desc = altir.35.d
+	is_triggered_only = yes
+	option = { #Sure
+		name = altir.35.a
+		ALT = {
+			country_event = altir.38
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Counteroffer
+		name = altir.35.b
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Refuse all negotiations
+		name = altir.35.c
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Altir wants to sell islands
+	id = altir.36
+	title = altir.36.t
+	desc = altir.36.d
+	is_triggered_only = yes
+	option = { #Sure
+		name = altir.36.a
+		ALT = {
+			country_event = altir.39
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Counteroffer
+		name = altir.35.b
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Refuse all negotiations
+		name = altir.35.c
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Altir wants to set up an independent state
+	id = altir.37
+	title = altir.37.t
+	desc = altir.37.d
+	is_triggered_only = yes
+	option = { #Sure
+		name = altir.37.a
+		ALT = {
+			country_event = altir.40
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Counteroffer
+		name = altir.35.b
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Refuse all negotiations
+		name = altir.35.c
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Valtheronesia agrees to sell islands
+	id = altir.38
+	title = altir.38.t
+	desc = altir.38.d
+	is_triggered_only = yes
+	option = {
+		name = altir.38.a
+		ai_chance = {
+			base = 1
+		}
+		add_state_core = 400
+		add_state_core = 399
+		add_state_core = 397
+		add_state_core = 396
+		transfer_state = 400
+		transfer_state = 399
+		transfer_state = 397
+		transfer_state = 396
+		give_resource_rights = {
+			receiver = VAL
+			state = 400
+		}
+		give_resource_rights = {
+			receiver = VAL
+			state = 399
+		}
+		give_resource_rights = {
+			receiver = VAL
+			state = 397
+		}
+		give_resource_rights = {
+			receiver = VAL
+			state = 396
+		}
+		give_resource_rights = {
+			receiver = VAL
+			state = 402
+		}
+		give_resource_rights = {
+			receiver = VAL
+			state = 401
+		}
+		give_resource_rights = {
+			receiver = VAL
+			state = 496
+		}
+		give_resource_rights = {
+			receiver = VAL
+			state = 497
+		}
+	}
+}
+
+country_event = { #Valtheronesia agrees to buy islands
+	id = altir.39
+	title = altir.39.t
+	desc = altir.39.d
+	is_triggered_only = yes
+	option = {
+		name = altir.39.a
+		ai_chance = {
+			base = 1
+		}
+		VAL = {
+			add_state_core = 401
+			add_state_core = 402
+			add_state_core = 496
+			add_state_core = 497
+			transfer_state = 401
+			transfer_state = 402
+			transfer_state = 496
+			transfer_state = 497
+			give_resource_rights = {
+				receiver = ALT
+				state = 400
+			}
+			give_resource_rights = {
+				receiver = ALT
+				state = 399
+			}
+			give_resource_rights = {
+				receiver = ALT
+				state = 397
+			}
+			give_resource_rights = {
+				receiver = ALT
+				state = 396
+			}
+			give_resource_rights = {
+				receiver = ALT
+				state = 402
+			}
+			give_resource_rights = {
+				receiver = ALT
+				state = 401
+			}
+			give_resource_rights = {
+				receiver = ALT
+				state = 496
+			}
+			give_resource_rights = {
+				receiver = ALT
+				state = 497
+			}
+		}
+	}
+}
+
+country_event = { #Valtheronesia agrees to set up an independent state
+	id = altir.40
+	title = altir.40.t
+	desc = altir.40.d
+	is_triggered_only = yes
+	option = {
+		name = altir.40.a
+		ai_chance = {
+			base = 1
+		}
+		release = CRY
+		CRY = {
+			add_state_core = 496
+			add_state_core = 497
+			transfer_state = 496
+			transfer_state = 497
+			add_state_core = 400
+			add_state_core = 399
+			add_state_core = 397
+			add_state_core = 396
+			transfer_state = 400
+			transfer_state = 399
+			transfer_state = 397
+			transfer_state = 396
+			set_cosmetic_tag = WEST_HELIOS_ISLAND_FED
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			set_popularities = {
+				communism = 0.8
+				democratic = 0.05
+				fascism = 0.05
+				neutrality = 0.05
+				skirts = 0.05
+			}
+		}
+	}
+}
+
 add_namespace = altirnews
 #The Skirt Takeover
 news_event = {
