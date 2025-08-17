@@ -1323,6 +1323,10 @@ country_event = { #Altir wants to buy islands
 		}
 	}
 	option = { #Counteroffer
+		trigger = {
+			is_ai = no
+		}
+		country_event = altir.42
 		name = altir.35.b
 		ai_chance = {
 			base = 1
@@ -1332,6 +1336,9 @@ country_event = { #Altir wants to buy islands
 		name = altir.35.c
 		ai_chance = {
 			base = 1
+		}
+		ALT = {
+			country_event = altir.41
 		}
 	}
 }
@@ -1351,6 +1358,10 @@ country_event = { #Altir wants to sell islands
 		}
 	}
 	option = { #Counteroffer
+		trigger = {
+			is_ai = no
+		}
+		country_event = altir.42
 		name = altir.35.b
 		ai_chance = {
 			base = 1
@@ -1360,6 +1371,9 @@ country_event = { #Altir wants to sell islands
 		name = altir.35.c
 		ai_chance = {
 			base = 1
+		}
+		ALT = {
+			country_event = altir.41
 		}
 	}
 }
@@ -1379,6 +1393,10 @@ country_event = { #Altir wants to set up an independent state
 		}
 	}
 	option = { #Counteroffer
+		trigger = {
+			is_ai = no
+		}
+		country_event = altir.42
 		name = altir.35.b
 		ai_chance = {
 			base = 1
@@ -1389,10 +1407,13 @@ country_event = { #Altir wants to set up an independent state
 		ai_chance = {
 			base = 1
 		}
+		ALT = {
+			country_event = altir.41
+		}
 	}
 }
 
-country_event = { #Valtheronesia agrees to sell islands
+country_event = { #X agrees to sell islands
 	id = altir.38
 	title = altir.38.t
 	desc = altir.38.d
@@ -1410,42 +1431,44 @@ country_event = { #Valtheronesia agrees to sell islands
 		transfer_state = 399
 		transfer_state = 397
 		transfer_state = 396
-		give_resource_rights = {
-			receiver = VAL
-			state = 400
-		}
-		give_resource_rights = {
-			receiver = VAL
-			state = 399
-		}
-		give_resource_rights = {
-			receiver = VAL
-			state = 397
-		}
-		give_resource_rights = {
-			receiver = VAL
-			state = 396
-		}
-		give_resource_rights = {
-			receiver = VAL
-			state = 402
-		}
-		give_resource_rights = {
-			receiver = VAL
-			state = 401
-		}
-		give_resource_rights = {
-			receiver = VAL
-			state = 496
-		}
-		give_resource_rights = {
-			receiver = VAL
-			state = 497
+		FROM = {
+			give_resource_rights = {
+				receiver = THIS
+				state = 400
+			}
+			give_resource_rights = {
+				receiver = THIS
+				state = 399
+			}
+			give_resource_rights = {
+				receiver = THIS
+				state = 397
+			}
+			give_resource_rights = {
+				receiver = THIS
+				state = 396
+			}
+			give_resource_rights = {
+				receiver = THIS
+				state = 402
+			}
+			give_resource_rights = {
+				receiver = THIS
+				state = 401
+			}
+			give_resource_rights = {
+				receiver = THIS
+				state = 496
+			}
+			give_resource_rights = {
+				receiver = THIS
+				state = 497
+			}
 		}
 	}
 }
 
-country_event = { #Valtheronesia agrees to buy islands
+country_event = { #X agrees to buy islands
 	id = altir.39
 	title = altir.39.t
 	desc = altir.39.d
@@ -1455,7 +1478,7 @@ country_event = { #Valtheronesia agrees to buy islands
 		ai_chance = {
 			base = 1
 		}
-		VAL = {
+		FROM = {
 			add_state_core = 401
 			add_state_core = 402
 			add_state_core = 496
@@ -1465,42 +1488,42 @@ country_event = { #Valtheronesia agrees to buy islands
 			transfer_state = 496
 			transfer_state = 497
 			give_resource_rights = {
-				receiver = ALT
+				receiver = PREV
 				state = 400
 			}
 			give_resource_rights = {
-				receiver = ALT
+				receiver = PREV
 				state = 399
 			}
 			give_resource_rights = {
-				receiver = ALT
+				receiver = PREV
 				state = 397
 			}
 			give_resource_rights = {
-				receiver = ALT
+				receiver = PREV
 				state = 396
 			}
 			give_resource_rights = {
-				receiver = ALT
+				receiver = PREV
 				state = 402
 			}
 			give_resource_rights = {
-				receiver = ALT
+				receiver = PREV
 				state = 401
 			}
 			give_resource_rights = {
-				receiver = ALT
+				receiver = PREV
 				state = 496
 			}
 			give_resource_rights = {
-				receiver = ALT
+				receiver = PREV
 				state = 497
 			}
 		}
 	}
 }
 
-country_event = { #Valtheronesia agrees to set up an independent state
+country_event = { #X agrees to set up an independent state
 	id = altir.40
 	title = altir.40.t
 	desc = altir.40.d
@@ -1510,10 +1533,14 @@ country_event = { #Valtheronesia agrees to set up an independent state
 		ai_chance = {
 			base = 1
 		}
-		release = CRY
+		ALT = { release = CRY }
 		CRY = {
+			add_state_core = 401
+			add_state_core = 402
 			add_state_core = 496
 			add_state_core = 497
+			transfer_state = 401
+			transfer_state = 402
 			transfer_state = 496
 			transfer_state = 497
 			add_state_core = 400
@@ -1530,12 +1557,166 @@ country_event = { #Valtheronesia agrees to set up an independent state
 				elections_allowed = no
 			}
 			set_popularities = {
-				communism = 0.8
-				democratic = 0.05
-				fascism = 0.05
-				neutrality = 0.05
-				skirts = 0.05
+				communism = 80
+				democratic = 5
+				fascism = 5
+				neutrality = 5
+				skirts = 5
 			}
+		}
+	}
+}
+
+country_event = { #Valtheronesia refuses all negotiations
+	id = altir.41
+	title = altir.41.t
+	desc = altir.41.d
+	is_triggered_only = yes
+	option = {
+		name = altir.41.a
+		add_stability = 0.05
+		add_war_support = 0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Val counter-offer UI
+	id = altir.42
+	title = altir.42.t
+	desc = altir.42.d
+	is_triggered_only = yes
+		option = { #Buy islands
+		name = altir.34.a
+		ALT = {
+			country_event = altir.43
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Sell islands
+		name = altir.34.b
+		ALT = {
+			country_event = altir.44
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Set up independent communist state
+		name = altir.34.c
+		ALT = {
+			country_event = altir.45
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #Val wants to buy islands
+	id = altir.43
+	title = altir.35.t
+	desc = altir.35.d
+	is_triggered_only = yes
+	option = { #Sure
+		name = altir.35.a
+		VAL = {
+			country_event = altir.39
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Counteroffer
+		trigger = {
+			is_ai = no
+		}
+		country_event = altir.34
+		name = altir.35.b
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Refuse all negotiations
+		name = altir.35.c
+		ai_chance = {
+			base = 1
+		}
+		VAL = {
+			country_event = altir.41
+		}
+	}
+}
+
+country_event = { #Val wants to sell islands
+	id = altir.44
+	title = altir.36.t
+	desc = altir.36.d
+	is_triggered_only = yes
+	option = { #Sure
+		name = altir.36.a
+		VAL = {
+			country_event = altir.38
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Counteroffer
+		trigger = {
+			is_ai = no
+		}
+		country_event = altir.34
+		name = altir.35.b
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Refuse all negotiations
+		name = altir.35.c
+		ai_chance = {
+			base = 1
+		}
+		VAL = {
+			country_event = altir.41
+		}
+	}
+}
+
+country_event = { #Val wants to set up an independent state
+	id = altir.45
+	title = altir.37.t
+	desc = altir.37.d
+	is_triggered_only = yes
+	option = { #Sure
+		name = altir.37.a
+		VAL = {
+			country_event = altir.40
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Counteroffer
+		trigger = {
+			is_ai = no
+		}
+		country_event = altir.34
+		name = altir.35.b
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #Refuse all negotiations
+		name = altir.35.c
+		ai_chance = {
+			base = 1
+		}
+		VAL = {
+			country_event = altir.41
 		}
 	}
 }
