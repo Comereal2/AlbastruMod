@@ -1614,6 +1614,7 @@ ALT_foreign_investments_category = {
 		days_re_enable = 30
 		cancel_trigger = {
 			has_war_with = FROM
+			FROM = { exists = no }
 		}
 		complete_effect = {
 			if = {
@@ -1685,6 +1686,8 @@ ALT_foreign_investments_category = {
 		}
 		available = {
 			has_completed_focus = ALT_build_new_kip_bases
+			KAS = { exists = yes }
+			NOT = { has_war_with = KAS }
 		}
 		cost = 150
 		modifier = {
@@ -1694,6 +1697,7 @@ ALT_foreign_investments_category = {
 		fire_only_once = yes
 		cancel_trigger = {
 			has_war_with = KAS
+			KAS = { exists = no }
 		}
 		remove_effect = {
 			add_to_variable = {
@@ -1784,6 +1788,8 @@ ALT_foreign_investments_category = {
 		}
 		available = {
 			has_completed_focus = ALT_propose_capital_renovation
+			BLU = { exists = yes }
+			NOT = { has_war_with = BLU }
 		}
 		cost = 150
 		modifier = {
@@ -1793,6 +1799,7 @@ ALT_foreign_investments_category = {
 		fire_only_once = yes
 		cancel_trigger = {
 			has_war_with = BLU
+			BLU = { exists = no }
 		}
 		remove_effect = {
 			add_to_variable = {
@@ -1845,6 +1852,8 @@ ALT_foreign_investments_category = {
 		}
 		available = {
 			has_completed_focus = ALT_make_railroads_in_rias
+			RIA = { exists = yes }
+			NOT = { has_war_with = RIA }
 		}
 		cost = 150
 		modifier = {
@@ -1854,6 +1863,7 @@ ALT_foreign_investments_category = {
 		fire_only_once = yes
 		cancel_trigger = {
 			has_war_with = RIA
+			RIA = { exists = no }
 		}
 		remove_effect = {
 			add_to_variable = {
@@ -1891,6 +1901,8 @@ ALT_foreign_investments_category = {
 		}
 		available = {
 			has_completed_focus = ALT_place_statues_across_tarvozzia
+			ENQ = { exists = yes }
+			NOT = { has_war_with = ENQ }
 		}
 		cost = 150
 		modifier = {
@@ -1899,7 +1911,7 @@ ALT_foreign_investments_category = {
 		days_remove = 150
 		fire_only_once = yes
 		cancel_trigger = {
-			has_war_with = BLU
+			has_war_with = ENQ
 		}
 		remove_effect = {
 			add_to_variable = {
@@ -1940,6 +1952,10 @@ ALT_foreign_investments_category = {
 		}
 		available = {
 			has_completed_focus = ALT_colaborate_with_odezya
+			ODZ = { exists = yes }
+			NOT = { has_war_with = ODZ }
+			KAS = { exists = yes }
+			NOT = { has_war_with = KAS }
 		}
 		cost = 150
 		modifier = {
@@ -1950,6 +1966,8 @@ ALT_foreign_investments_category = {
 		cancel_trigger = {
 			has_war_with = ODZ
 			has_war_with = KAS
+			ODZ = { exists = no }
+			KAS = { exists = no }
 		}
 		remove_effect = {
 			add_to_variable = {
@@ -1999,6 +2017,8 @@ ALT_foreign_investments_category = {
 		}
 		available = {
 			has_completed_focus = ALT_connect_our_networks
+			RIA = { exists = yes }
+			NOT = { has_war_with = RIA }
 		}
 		cost = 150
 		modifier = {
@@ -2008,6 +2028,7 @@ ALT_foreign_investments_category = {
 		fire_only_once = yes
 		cancel_trigger = {
 			has_war_with = RIA
+			RIA = { exists = no }
 		}
 		remove_effect = {
 			add_to_variable = {
