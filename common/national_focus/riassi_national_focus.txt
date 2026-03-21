@@ -3041,6 +3041,7 @@ focus_tree = {
 		}
 
 		completion_reward = { 
+			add_political_power = 150
 			if = {
 				limit = {
 				    has_idea = RIA_no_corruption_idea
