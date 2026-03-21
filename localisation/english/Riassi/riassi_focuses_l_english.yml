@@ -270,13 +270,13 @@ l_english:
  RIA_democratic_win_desc:0 "Emekri and the Democrats have won the recent election! Let's see what they get up to over the next four years."
 
  RIA_expand_the_welfare_state:0 "Expand the Welfare State"
- RIA_expand_the_welfare_state_desc:0 "NOT DONE"
+ RIA_expand_the_welfare_state_desc:0 "The key for making a modern nation succeed is simple, just expand the Welfare State!"
 
  RIA_the_greatest_welfare_state:0 "The Greatest Welfare State"
- RIA_the_greatest_welfare_state_desc:0 "NOT DONE"
+ RIA_the_greatest_welfare_state_desc:0 "It is not enough to have a good Welfare State, Rias needs the greatest Welfare State Albastru has ever seen! Only then can Rias truly become the best nation in the world."
 
  RIA_true_equality:0 "True Equality"
- RIA_true_equality_desc:0 "NOT DONE"
+ RIA_true_equality_desc:0 "While equality has existed for a while on paper, the fact is that women still earn less and have worse opportunities in society. It is time for the government to take matters into their own hands to fix this once and for all."
 
  RIA_open_borders:0 "Open the Borders"
  RIA_open_borders_desc:0 "We are priviledged to have such good lives here in Rias. However, there are a lot of people all around Albastru who do not have that priviledge. Despite the help we give them, some of them still suffer. Let's allow them to come here, after all, everyone deserves to have a good life."
@@ -297,19 +297,19 @@ l_english:
  RIA_expand_personal_liberties_desc:0 "NOT DONE"
  
  RIA_cozy_up_with_big_business:0 "Cozy up with Big Business"
- RIA_cozy_up_with_big_business_desc:0 "NOT DONE"
+ RIA_cozy_up_with_big_business_desc:0 "Big businesses are the key to growing the Riassi economy, so the government should make sure to welcome them in to the nation with open arms. Let's give them some positions in the government too while we're at it!"
 
  RIA_shrink_the_government:0 "Shrink the Government"
  RIA_shrink_the_government_desc:0 "NOT DONE"
 
  RIA_privatise_education:0 "Privatise Education"
- RIA_privatise_education_desc:0 "NOT DONE"
+ RIA_privatise_education_desc:0 "Education is not profitable for the state, but if it was in the hands of private companies, the education of our people could generate a lot of income for the nation."
 
  RIA_deregulate_the_economy:0 "Deregulate the Economy"
- RIA_deregulate_the_economy_desc:0 "NOT DONE"
+ RIA_deregulate_the_economy_desc:0 "Regulations only serve to hinder economic growth, so we have to get rid of them."
 
  RIA_privatise_industries:0 "Privatise Industries"
- RIA_privatise_industries_desc:0 "NOT DONE"
+ RIA_privatise_industries_desc:0 "State owned industries are inefficient and have no place in a modern, capitalist economy."
 
  RIA_conservative_win:0 "Conservative Win"
  RIA_conservative_win_desc:0 "The Rias Unite have won the election. Now they have the mandate to return old traditions to Rias and undoing many communist policies."
