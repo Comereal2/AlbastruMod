@@ -17,7 +17,7 @@ RIA = {
 	male = {
 		names = {
 			Zeltrik Klorvan Moprel Quistor Jorpanik Vextrol Zipnak Skeldru Likesk Prieln Xoer Donalb Dolaf Emekri Abreo Ipible Mack Iglige Ceravi Lahar Qwasit Mexrop Nimon Yster
-			Fabrjio Stjen Alxel Simbja
+			Fabrjio Stjen Alxel Simbja Kriuso Sanem
 		}
 	}
 	female = {
@@ -25,7 +25,7 @@ RIA = {
 	}
 
 	surnames = {
-		Grytelik Zonkaram Veltramin Ossik Jallvoker Trellasik Fronkapel Lippotrek Yempranok Makkapakka Ninkram Nonky Og-pog Carlrossn Garicram Voulvram Grenoram Embreram Xijkarm
+		Grytelik Zonkaram Veltramin Ossik Jallvoker Trellasik Fronkapel Bergram Lippotrek Vertek Yempranok Makkapakka Ninkram Nonky Og-pog Carlrossn Garicram Voulvram Grenoram Embreram Xijkarm
 
 	}
 
